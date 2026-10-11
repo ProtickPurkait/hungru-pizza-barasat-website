@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en-IN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#f4f4f1" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+    <!--seo:start-->
+    <title>Pizza in Barasat | 100+ Pizzas from ₹120 | Hungru Pizza</title>
+    <meta name="description" content="Hungru Pizza at Colony More, Barasat: over 100 veg and chicken pizzas from ₹120, cheese burst on any of them, momos, burgers and cold coffee." />
+    <!--seo:end-->
+    <!--preload-->
+  </head>
+  <body>
+    <div id="root" data-path="/"><!--app--></div>
+    <script>
+      // The server falls back to this file for unknown URLs. If the prerendered page in
+      // #root is for a different path, clear it so the app renders the right page (404).
+      (function () {
+        var root = document.getElementById("root");
+        var p = location.pathname.replace(/index\.html$/, "");
+        if (p.charAt(p.length - 1) !== "/") p += "/";
+        if (root && root.getAttribute("data-path") !== p) root.innerHTML = "";
+      })();
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

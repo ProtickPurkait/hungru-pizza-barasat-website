@@ -1,0 +1,23 @@
+/* Admin panel styles: the site's tokens and fonts (theme.css) plus a few editor-only pieces. */
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "../theme.css";
+
+@layer components {
+  /* Form labels in the editor: plain and readable, not the condensed display face. */
+  .field-label {
+    font-size: 0.875rem;
+    font-weight: 620;
+    color: var(--color-ink);
+  }
+  .field-hint {
+    font-size: 0.8rem;
+    line-height: 1.45;
+    color: var(--color-ash-600);
+  }
+  /* Thin scrollbars for the editor's scrolling columns */
+  .thin-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-ash-300) transparent;
+  }
+}

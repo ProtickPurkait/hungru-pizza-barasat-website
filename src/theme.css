@@ -1,0 +1,423 @@
+/* The site has one (light) theme, with a dark "ground" only for the closing
+   order band and the footer. shadcn's `dark:` styles only apply inside a
+   .dark wrapper, which is never used, so a phone in dark mode still gets the
+   right colours. */
+@custom-variant dark (&:where(.dark, .dark *));
+/* Large screens with a real mouse (hover previews) */
+@custom-variant pointer-lg (@media (hover: hover) and (pointer: fine) and (min-width: 64rem));
+
+/* ------------------------------------------------------------------
+   Type: one family, three axes.
+   Bricolage Grotesque (SIL OFL) is self-hosted as a single variable file,
+   cut down to the characters the site uses (src/assets/fonts). Its optical
+   size axis follows the font size on its own (chunky ink-trapped headings,
+   open body text) and its width axis gives the narrower display cuts.
+   Glyphs it does not cover (₹, ★) fall back to the system font.
+------------------------------------------------------------------- */
+@font-face {
+  font-family: "Bricolage Grotesque";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200 800;
+  font-stretch: 75% 100%;
+  src: url("./assets/fonts/bricolage-grotesque-var-latin.woff2") format("woff2");
+  unicode-range: U+0020-007E, U+00A0, U+00A9, U+00B0, U+00B7, U+00D7, U+00E9, U+2013-2014, U+2018-2019, U+201C-201D, U+2022, U+2026;
+}
+/* Fallback tuned to Bricolage's metrics (ascent 930, descent 270 per 1000), so text barely moves when the font arrives. */
+@font-face {
+  font-family: "Bricolage Fallback";
+  src: local("Arial"), local("Helvetica Neue"), local("Roboto");
+  size-adjust: 102%;
+  ascent-override: 91%;
+  descent-override: 26.5%;
+  line-gap-override: 0%;
+}
+
+/* ------------------------------------------------------------------
+   Hungru Pizza tokens
+   Taken from Hungru's own printed menu: deep maroon boards with yellow
+   headers. Maroon (#800000, the menu's exact colour) is the one accent on a
+   neutral grey page, and buttons are maroon with white text (8.5:1, WCAG AAA).
+   The dark ground is the maroon of the menu boards, and on it the accent
+   turns to cheese yellow, as the menu's headings do (13:1).
+   Green and brown are kept only for the Indian veg / non-veg marks.
+------------------------------------------------------------------- */
+@theme {
+  --font-sans: "Bricolage Grotesque", "Bricolage Fallback", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Bricolage Grotesque", "Bricolage Fallback", ui-sans-serif, system-ui, sans-serif;
+
+  /* neutral greys */
+  --color-ash-50: #f6f6f4;
+  --color-ash-100: #ececea;
+  --color-ash-200: #dededa;
+  --color-ash-300: #c2c1bb;
+  --color-ash-400: #9a9992;
+  --color-ash-500: #74736c;
+  --color-ash-600: #5b5a54;
+  --color-ash-700: #43423d;
+  --color-ash-800: #2d2c29;
+  --color-ash-900: #1e1d1b;
+  --color-ash-950: #141312;
+
+  /* Hungru maroon. 600 is the brand colour itself; 950 is the dark ground. */
+  --color-maroon-50: #fbf0ef;
+  --color-maroon-100: #f5d9d7;
+  --color-maroon-500: #9b1018;
+  --color-maroon-600: #800000;
+  --color-maroon-700: #640000;
+  --color-maroon-900: #3d0707;
+  --color-maroon-950: #2a0505;
+
+  /* Cheese yellow, the menu's headings: only ever on dark grounds */
+  --color-cheese-300: #ffe27a;
+  --color-cheese-400: #ffd23f;
+
+  /* surfaces */
+  --color-ground: #f4f4f1;
+  --color-ground-2: #e9e8e4;
+  --color-sheet: #fbfbf9;
+  --color-ink: #161514;
+
+  /* FSSAI food marks: veg is a green square with a dot, non-veg a brown square with a triangle */
+  --color-veg: #2e7d32;
+  --color-nonveg: #7b3f12;
+
+  --color-whatsapp: #25d366;
+  --color-whatsapp-600: #1fb857;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --animate-marquee: marquee 48s linear infinite;
+  --animate-draw: draw 1.6s cubic-bezier(0.65, 0, 0.35, 1) 0.2s both;
+  /* The pizza in the home hero: one slow turn every 24 seconds, like a pizza on a turntable */
+  --animate-pizza-spin: pizza-spin 24s linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes draw {
+    from {
+      stroke-dashoffset: 1;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  @keyframes pizza-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+:root {
+  /* One shape rule: buttons and chips are pills, fields are 10px, photos and panels use --cut. */
+  --radius: 0.625rem;
+  --background: var(--color-ground);
+  --foreground: var(--color-ink);
+  --card: var(--color-sheet);
+  --card-foreground: var(--color-ink);
+  --popover: var(--color-sheet);
+  --popover-foreground: var(--color-ink);
+  --primary: var(--color-maroon-500);
+  --primary-foreground: #ffffff;
+  --secondary: var(--color-ash-950);
+  --secondary-foreground: #ffffff;
+  --muted: var(--color-ash-100);
+  --muted-foreground: var(--color-ash-600);
+  --accent: var(--color-ash-100);
+  --accent-foreground: var(--color-ink);
+  --destructive: #b42318;
+  --border: var(--color-ash-200);
+  /* field borders need 3:1 against white (ash-500 is 4.7:1) */
+  --input: var(--color-ash-500);
+  /* shadcn's soft ring is replaced by the global :focus-visible outline below */
+  --ring: transparent;
+  --focus: var(--color-ink);
+  /* corner radius of photos and panels */
+  --cut: 18px;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 4px);
+  --radius-xl: calc(var(--radius) + 8px);
+}
+
+/* Page container: 1280px max, 16px gutters on phones. */
+@utility wrap {
+  width: 100%;
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+  @media (width >= 40rem) {
+    padding-inline: 1.5rem;
+  }
+  @media (width >= 64rem) {
+    padding-inline: 2rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 6rem;
+  }
+  body {
+    @apply bg-background font-sans text-foreground antialiased;
+    font-optical-sizing: auto;
+    font-stretch: 100%;
+    font-variant-numeric: lining-nums;
+  }
+  /* Headings: Bricolage at display size, a little narrow, heavy and tight. */
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-stretch: 84%;
+    font-weight: 740;
+    letter-spacing: -0.022em;
+    line-height: 0.98;
+    text-wrap: balance;
+  }
+  ::selection {
+    background: var(--color-maroon-600);
+    color: #fff;
+  }
+  /* One stroke weight for every icon */
+  svg.lucide {
+    stroke-width: 1.75;
+  }
+}
+
+@layer components {
+  /* Small caps used for labels and the odd section marker. */
+  .label {
+    font-stretch: 100%;
+    font-size: 0.72rem;
+    font-weight: 640;
+    letter-spacing: 0.09em;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  /* Display numbers and prices */
+  .figure {
+    font-family: var(--font-display);
+    font-stretch: 80%;
+    font-weight: 760;
+    font-variant-numeric: tabular-nums lining-nums;
+    letter-spacing: -0.02em;
+    line-height: 0.9;
+  }
+
+  /* Photos and panels: rounded like a dough ball. --cut sets the radius. */
+  .round-panel {
+    clip-path: inset(0 round var(--cut));
+  }
+
+  /* Dark ground, the maroon of Hungru's menu boards: the closing order band and the footer. */
+  .ground-dark {
+    --focus: var(--color-cheese-300);
+    --muted-foreground: var(--color-ash-300);
+    --border: rgb(255 255 255 / 0.14);
+    background-color: var(--color-maroon-950);
+    color: #fff;
+  }
+
+  /* A light panel placed on the dark ground (the order form) gets the light tokens back. */
+  .ground-light {
+    --focus: var(--color-ink);
+    --muted-foreground: var(--color-ash-600);
+    --border: var(--color-ash-200);
+    color: var(--color-ink);
+  }
+
+  /* Toppings scattered over a slice, like the dots on the slice in the Hungru logo: very faint, for dark grounds */
+  .dot-texture {
+    background-image:
+      radial-gradient(circle at 12% 18%, rgb(255 255 255 / 0.03) 0 7px, transparent 8px),
+      radial-gradient(circle at 63% 41%, rgb(255 255 255 / 0.024) 0 4px, transparent 5px),
+      radial-gradient(circle at 38% 72%, rgb(255 255 255 / 0.024) 0 10px, transparent 11px),
+      radial-gradient(circle at 84% 86%, rgb(255 255 255 / 0.02) 0 5px, transparent 6px),
+      radial-gradient(circle at 91% 12%, rgb(255 210 63 / 0.05) 0 3px, transparent 4px);
+    background-size:
+      190px 170px,
+      150px 130px,
+      260px 230px,
+      120px 140px,
+      210px 190px;
+  }
+
+  /* Flour on the counter: a light dusting behind the order ticket */
+  .flour-dust {
+    background-color: var(--color-sheet);
+    background-image:
+      radial-gradient(circle, rgb(22 21 20 / 0.09) 0 1px, transparent 1.5px),
+      radial-gradient(circle, rgb(22 21 20 / 0.06) 0 1.2px, transparent 1.7px);
+    background-size:
+      23px 19px,
+      37px 31px;
+    background-position:
+      0 0,
+      11px 7px;
+  }
+
+  /* Kitchen order ticket: thermal paper with torn, zig-zag top and bottom edges. */
+  .ticket {
+    --tooth: 14px;
+    background: #fff;
+    mask:
+      conic-gradient(from 135deg at top, #0000, #000 1deg 89deg, #0000 90deg) top / var(--tooth) 51% repeat-x,
+      conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) bottom / var(--tooth) 51% repeat-x;
+    padding-block: calc(var(--tooth) / 2 + 1.25rem);
+  }
+
+  /* Text link with a drawn underline */
+  .link-draw {
+    background: linear-gradient(currentColor, currentColor) left bottom / 100% 1.5px no-repeat;
+    transition: background-size 0.35s var(--ease-out-expo);
+    padding-bottom: 2px;
+  }
+  .link-draw:hover {
+    background-size: 0% 1.5px;
+    background-position: right bottom;
+  }
+
+  /* Outlined display type (marquee) */
+  .type-outline {
+    color: transparent;
+    -webkit-text-stroke: 1.25px var(--color-ash-400);
+  }
+
+  /* Below-the-fold block: the browser skips its layout and images until it is near the screen. */
+  .defer-render {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 900px;
+  }
+
+  /* Big tappable options (pizza builder). The whole card is the label for its input. */
+  .radio-card {
+    cursor: pointer;
+    position: relative;
+    border: 1.5px solid var(--color-ash-300);
+    border-radius: var(--radius);
+    background: var(--color-sheet);
+    transition:
+      border-color 0.2s ease,
+      background-color 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+  .radio-card:hover {
+    border-color: var(--color-ash-600);
+  }
+  .radio-card:has(input:checked) {
+    border-color: var(--color-ink);
+    background: #fff;
+    box-shadow: inset 4px 0 0 var(--color-maroon-600);
+  }
+  .radio-card:has(input:disabled) {
+    cursor: not-allowed;
+    opacity: 0.55;
+  }
+
+  /* Scroll reveal. Only hidden once the app is running (main.tsx adds html.js). */
+  html.js .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+      opacity 0.8s var(--ease-out-expo),
+      transform 0.8s var(--ease-out-expo);
+  }
+  html.js .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Hero toppings (HeroToppings.tsx): each one swings slowly between two poses, at its own pace.
+     The resting pose (no motion) keeps its own turn, so they never all line up. */
+  .topping-float {
+    transform: rotate(var(--r0, 0deg));
+    animation: topping-float var(--dur, 10s) ease-in-out var(--delay, 0s) infinite alternate;
+  }
+
+  /* Header slides away while scrolling down (set by Header.tsx), back on scroll up or focus. */
+  .site-header {
+    transition: transform 0.35s var(--ease-out-expo);
+  }
+  .site-header.is-tucked:not(:focus-within) {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes topping-float {
+  from {
+    transform: translate3d(0, 0, 0) rotate(var(--r0, 0deg));
+  }
+  to {
+    transform: translate3d(var(--dx, 0px), var(--dy, -14px), 0) rotate(var(--r1, 12deg));
+  }
+}
+
+/* Unlayered on purpose: beats `outline-none` utilities so focus is always visible. */
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.js .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-marquee,
+  .animate-pizza-spin,
+  .topping-float {
+    animation: none !important;
+  }
+}
+
+/* Hide scrollbar on horizontally scrolling rows */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}

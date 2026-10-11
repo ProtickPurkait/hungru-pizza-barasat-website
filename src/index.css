@@ -1,0 +1,6 @@
+/* Design tokens, fonts and shared components: src/theme.css. The admin panel
+   (src/admin) has its own stylesheet, so its classes stay out of the site CSS. */
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "./theme.css";
+@source not "./admin";

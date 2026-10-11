@@ -1,0 +1,4477 @@
+{
+  "business": {
+    "name": "Hungru Pizza",
+    "category": "Pizza café",
+    "tagline": "Best Pizza, Best Value",
+    "address": {
+      "street": "2610/9, Krishnanagar Road, Colony More",
+      "locality": "Barasat",
+      "region": "West Bengal",
+      "postalCode": "700126",
+      "country": "IN",
+      "full": "2610/9, Krishnanagar Road, Colony More, Barasat, West Bengal 700126"
+    },
+    "phone": {
+      "display": "+91 98330 48397",
+      "tel": "+919833048397"
+    },
+    "whatsapp": "919833048397",
+    "hours": {
+      "display": "Open every day, 12 noon to 10:30 pm",
+      "short": "12 noon to 10:30 pm, all 7 days",
+      "opens": "12:00",
+      "closes": "22:30"
+    },
+    "rating": {
+      "value": 4.7,
+      "count": 415
+    },
+    "googleReviewsUrl": "https://maps.google.com/?cid=16296390334704196092",
+    "mapsQuery": "Hungru Pizza Barasat, Colony More, Barasat, West Bengal 700126",
+    "siteUrl": "https://www.hungrupizza.example",
+    "demoMode": true,
+    "logo": {
+      "image": "hungruLogo",
+      "imageDark": "hungruLogo",
+      "icon": "hungruIcon",
+      "name": "hide"
+    },
+    "orderOnline": [
+      {
+        "label": "Zomato",
+        "url": "https://www.zomato.com/kolkata/hungru-pizza-1-barasat/order"
+      },
+      {
+        "label": "Swiggy",
+        "url": "https://www.swiggy.com/city/kolkata/hungru-pizza-barasat-barasat-rest1018590"
+      }
+    ],
+    "social": [
+      {
+        "label": "Facebook",
+        "url": "https://www.facebook.com/profile.php?id=61569856790290"
+      }
+    ]
+  },
+  "pageSeo": {
+    "home": {
+      "title": "Pizza in Barasat | 100+ Pizzas from ₹120",
+      "description": "Hungru Pizza at Colony More, Barasat: over 100 veg and chicken pizzas from ₹120, cheese burst on any of them, momos, burgers and cold coffee."
+    },
+    "services": {
+      "title": "Menu and Prices | Veg and Chicken Pizza, Momos",
+      "description": "The full Hungru Pizza menu with prices: 44 veg and 52 chicken pizzas in 8 and 10 inch, kullad and kids' pizzas, starters, momos, burgers and drinks."
+    },
+    "projects": {
+      "title": "Photos | Pizzas, Momos and Drinks",
+      "description": "Photos of our pizzas, kids' pizzas, momos, burgers and drinks. Tap any picture to see it bigger and order it from us on WhatsApp."
+    },
+    "builder": {
+      "title": "Build Your Own Pizza | See the Price as You Go",
+      "description": "Choose 8 or 10 inch, cheese burst, extra cheese and up to 6 toppings at our menu add-on prices, watch the price add up, then send it on WhatsApp."
+    },
+    "about": {
+      "title": "About Us | Pizza Café at Colony More, Barasat",
+      "description": "Hungru Pizza is a pizza café at Colony More, Barasat: Best Pizza, Best Value. Over 100 pizzas, friendly staff and a place to sit down with friends."
+    },
+    "contact": {
+      "title": "Contact and Directions | Colony More, Barasat",
+      "description": "Call or WhatsApp +91 98330 48397, or visit 2610/9, Krishnanagar Road, Colony More, Barasat 700126. Open every day, 12 noon to 10:30 pm."
+    },
+    "notFound": {
+      "title": "Page Not Found",
+      "description": "This page does not exist. See the Hungru Pizza menu, build your own pizza or order on WhatsApp."
+    },
+    "shareImage": "paneerPizzaTop",
+    "businessDescription": "{category} at Colony More, Barasat. Over 100 veg and chicken pizzas in 8 and 10 inch, cheese burst on any pizza, kullad and kids' pizzas, starters, momos, burgers, sandwiches and drinks."
+  },
+  "photos": {
+    "paneerPizzaTop": {
+      "src": "1665033628673-7de125eb6b12",
+      "alt": "A paneer pizza with capsicum, seen from above on a dark table"
+    },
+    "paneerSliceLift": {
+      "src": "1672717973894-40efe25310db",
+      "alt": "A slice of paneer pizza with olives and capsicum lifted from the pan, cheese stretching"
+    },
+    "paneerCloseUp": {
+      "src": "1596458397260-255807e979f1",
+      "alt": "Close-up of paneer cubes, black olives and yellow capsicum on melted cheese"
+    },
+    "panPizzaCorn": {
+      "src": "1788602564374-cbb02c00d5e8",
+      "alt": "A pan pizza with sweet corn, capsicum and tomato, a slice being lifted out"
+    },
+    "loadedVegPizza": {
+      "src": "1788600018968-f759dbe30c9a",
+      "alt": "A vegetable pizza loaded with tomato, capsicum, onion and jalapeños"
+    },
+    "cheesePull": {
+      "src": "1712652080841-9e480a2c43ec",
+      "alt": "A slice of cheese pizza lifted on a server, with long strands of melted cheese"
+    },
+    "sliceLift": {
+      "src": "1672856398893-2fb52d807874",
+      "alt": "A slice of pizza lifted with a spatula, melted cheese stretching"
+    },
+    "paddlePizza": {
+      "src": "1613564834361-9436948817d1",
+      "alt": "A loaded pizza on a wooden serving paddle on a dark table"
+    },
+    "sausagePizza": {
+      "src": "1604382354936-07c5d9983bd3",
+      "alt": "A pizza topped with sausage slices, mushrooms, olives and capsicum on an orange table"
+    },
+    "chickenPeppers": {
+      "src": "1615719413546-198b25453f85",
+      "alt": "A pizza with chicken, capsicum and onion, with bread rolls and peppers on the side"
+    },
+    "greenChilli": {
+      "src": "1595357081381-c34f5634adef",
+      "alt": "Close-up of a pizza with chicken, green chilli and melted cheese"
+    },
+    "slicePull": {
+      "src": "1600028068383-ea11a7a101f3",
+      "alt": "A hand pulling a slice from a pizza with tomato and mozzarella"
+    },
+    "cheesyGarlic": {
+      "src": "1761344788266-5f6957aeea33",
+      "alt": "Cheesy garlic bread with herbs on a dark tray"
+    },
+    "steamedMomos": {
+      "src": "1694923450868-b432a8ee52aa",
+      "alt": "A plate of steamed momos with a bowl of dipping sauce"
+    },
+    "friedMomos": {
+      "src": "1738608084602-f9543952188e",
+      "alt": "Fried momos around a bowl of red chilli sauce"
+    },
+    "chickenBurgers": {
+      "src": "1606149059549-6042addafc5a",
+      "alt": "Two crispy fried chicken burgers stacked on a table, with fries"
+    },
+    "grilledSandwich": {
+      "src": "1528735602780-2552fd46c7af",
+      "alt": "Grilled sandwiches cut into triangles, with three small dips"
+    },
+    "friesBasket": {
+      "src": "1630384060421-cb20d0e0649d",
+      "alt": "French fries in a small wire basket"
+    },
+    "periPeriFries": {
+      "src": "1598679253544-2c97992403ea",
+      "alt": "Seasoned fries with a creamy dip"
+    },
+    "wingsBasket": {
+      "src": "1608039755401-742074f0548d",
+      "alt": "Crispy fried chicken wings in a paper-lined basket"
+    },
+    "chickenBasket": {
+      "src": "1768204039907-77a974159ef0",
+      "alt": "A basket of chicken strips, popcorn chicken and fries, with dips"
+    },
+    "fishFry": {
+      "src": "1611599538235-128e54f1250f",
+      "alt": "Crumb-fried fish fillets with fries and a dip in a checked paper basket"
+    },
+    "coldCoffee": {
+      "src": "1517701550927-30cf4ba1dba5",
+      "alt": "A tall glass of iced coffee with milk swirling through it"
+    },
+    "virginMojito": {
+      "src": "1653542772393-71ffa417b1c4",
+      "alt": "A virgin mojito with mint, lime and crushed ice"
+    },
+    "blueLagoon": {
+      "src": "1783705956680-195b93288b17",
+      "alt": "A bright blue drink with a slice of lime on the rim"
+    },
+    "oreoShake": {
+      "src": "1572490122747-3968b75cc699",
+      "alt": "An Oreo milkshake topped with chocolate cream and a cookie"
+    },
+    "chocoLava": {
+      "src": "1617305855058-336d24456869",
+      "alt": "A chocolate lava cake cut open, molten chocolate running out"
+    },
+    "clayCups": {
+      "src": "1761483281417-778013dc0177",
+      "alt": "Tea being poured into small clay kullad cups"
+    },
+    "friendsCafe": {
+      "src": "1753351057883-cdb5458333eb",
+      "alt": "Four friends sharing a pizza at a café table"
+    },
+    "friendsSharing": {
+      "src": "1581542241119-a3094c6702a2",
+      "alt": "Friends sharing slices of cheesy pizza"
+    },
+    "tableSharing": {
+      "src": "1606066889831-35faf6fa6ff6",
+      "alt": "People sharing pizza and snacks at a table"
+    },
+    "deliveryNight": {
+      "src": "1617347454431-f49d7ff5c3b1",
+      "alt": "A delivery rider on a red scooter in city traffic at night"
+    },
+    "hungruLogo": {
+      "src": "/images/uploads/hungru-logo.webp",
+      "alt": "Hungru Pizza logo: Best Pizza, Best Value",
+      "width": 481,
+      "height": 272
+    },
+    "hungruIcon": {
+      "src": "/images/uploads/hungru-icon.png",
+      "alt": "Hungru Pizza icon",
+      "width": 512,
+      "height": 512
+    },
+    "heroPizza": {
+      "src": "/images/uploads/hungru-hero-pizza.webp",
+      "alt": "A chicken and onion pizza with BBQ sauce on a round plate, seen from above",
+      "width": 880,
+      "height": 880
+    },
+    "kidsFrog": {
+      "src": "/images/uploads/hungru-kids-frog-pizza.webp",
+      "alt": "Hungru's Baby Frog Pizza: a frog face of paneer, tomato and olive eyes on a wooden board",
+      "width": 249,
+      "height": 342
+    },
+    "kidsLion": {
+      "src": "/images/uploads/hungru-kids-lion-pizza.webp",
+      "alt": "Hungru's Cutie Lion Pizza: chicken keema with olive eyes, a sausage nose and onion whiskers",
+      "width": 254,
+      "height": 345
+    },
+    "kidsHalloween": {
+      "src": "/images/uploads/hungru-kids-halloween-pizza.webp",
+      "alt": "Hungru's Mini Halloween Pizza: a mummy wrapped in strips of melted cheese",
+      "width": 270,
+      "height": 363
+    }
+  },
+  "copy": {
+    "nav": {
+      "home": "Home",
+      "services": "Menu",
+      "projects": "Gallery",
+      "builder": "Build a pizza",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "buttons": {
+      "call": "Call to order",
+      "callShort": "Call",
+      "whatsapp": "Order on WhatsApp",
+      "whatsappShort": "WhatsApp",
+      "whatsappChat": "Order on WhatsApp",
+      "seeDetails": "See this menu"
+    },
+    "header": {
+      "location": "Colony More, Barasat"
+    },
+    "footer": {
+      "tagline": "Best Pizza, Best Value",
+      "blurb": "A pizza café at Colony More, Barasat, with over 100 pizzas, momos, burgers and cold coffee. Eat in, take away or order online.",
+      "servicesTitle": "Menu",
+      "areasTitle": "Nearby",
+      "contactTitle": "Order and visit",
+      "orderOnlineTitle": "Also on",
+      "socialTitle": "Follow us",
+      "credit": "Demo by Fenlark"
+    },
+    "whatsapp": {
+      "general": "Hi {business}, I'd like to place an order.",
+      "service": "Hi {business}, I'd like to order from your {service} menu.",
+      "area": "Hi {business}, I'm in {area}. I'd like to order for home delivery.",
+      "project": "Hi {business}, I saw \"{project}\" on your website. I'd like to order it.",
+      "orderStart": "Hi {business}, I'd like to place an *order*.",
+      "orderEnd": "Please confirm the total and the time.",
+      "builderStart": "Hi {business}, I built a pizza on your website:",
+      "builderEnd": "Please confirm the total and the time."
+    },
+    "ctaBand": {
+      "eyebrow": "Order now",
+      "title": "Hungry? Send us your order",
+      "lead": "Tell us what you want and whether you will pick it up or want it delivered. WhatsApp opens with your order written out, and we reply with the total and the time.",
+      "points": [
+        "Over 100 pizzas, from ₹120",
+        "Cheese burst on any pizza",
+        "Eat in, take away or delivery"
+      ],
+      "talkPrompt": "Rather call?"
+    },
+    "form": {
+      "name": "Your name",
+      "phone": "Phone number",
+      "phonePlaceholder": "98330 12345",
+      "area": "Deliver to",
+      "areaPlaceholder": "Choose your area",
+      "pickup": "Pickup from the café",
+      "when": "When do you want it?",
+      "whenPlaceholder": "Choose a time",
+      "order": "Your order",
+      "orderPlaceholder": "e.g. 1 Tandoori Paneer Pizza (10 inch, cheese burst), 1 plate chicken fried momos, 2 cold coffee",
+      "message": "Anything else?",
+      "messagePlaceholder": "e.g. Less chilli please. Second floor, next to the medicine shop.",
+      "menuNote": "Not sure what to get? Ask us on WhatsApp what is popular today.",
+      "submit": "Send order on WhatsApp",
+      "submitNote": "Opens WhatsApp with your order filled in. Nothing is charged until we confirm.",
+      "privacyNote": "We use your details only for this order. [Privacy policy](/privacy-policy/)",
+      "successTitle": "Almost done. Press send in WhatsApp.",
+      "successText": "Your order is written out in WhatsApp. Just press **send** and we reply with the total and the time ({hours}).",
+      "reopen": "Open WhatsApp again",
+      "orCall": "Or call {phone}",
+      "edit": "Change my order"
+    },
+    "home": {
+      "hero": {
+        "eyebrow": "Pizza café, Colony More, Barasat",
+        "title": "Best pizza.",
+        "titleAccent": "Best value.",
+        "titleLine2": "",
+        "lead": "Over 100 veg and chicken pizzas from ₹120, any of them cheese burst. Plus momos, burgers and cold coffee, every day from 12 noon.",
+        "promises": [
+          "8 inch = 4 slices, 10 inch = 8",
+          "Cheese burst on any pizza",
+          "Rated 4.7 on Google"
+        ],
+        "photo": "heroPizza"
+      },
+      "services": {
+        "title": "The menu, in six parts",
+        "lead": "Veg and chicken pizzas in two sizes, kullad and kids' pizzas, and everything you might want with them.",
+        "link": "Full menu and prices"
+      },
+      "projects": {
+        "title": "From our kitchen",
+        "lead": "Tap a photo to see it bigger. Like one? Order it on WhatsApp from there.",
+        "link": "See all photos",
+        "filters": [
+          "pizzas",
+          "snacks",
+          "drinks"
+        ],
+        "count": 6
+      },
+      "areas": {
+        "title": "Around Barasat",
+        "lead": "Eat in at Colony More, take it away, or have it delivered nearby. Pick your area to see how."
+      },
+      "faqTitle": "Questions people ask us"
+    },
+    "howWeWork": {
+      "title": "How ordering works",
+      "lead": "Pick it, send it, and we make it. Then eat in, take it home or have it brought to you."
+    },
+    "builderTeaser": {
+      "eyebrow": "Build your own",
+      "title": "Make it your way. See the price as you go.",
+      "lead": "Start with an 8 or 10 inch cheesy pizza, then add cheese burst, extra cheese and up to six toppings at our menu add-on prices. Send it to us on WhatsApp when it looks right.",
+      "button": "Build a pizza",
+      "exampleLink": "Start from this example",
+      "exampleLabel": "Example order",
+      "example": {
+        "size": "regular",
+        "base": "cheese-burst",
+        "cheese": "regular",
+        "toppings": [
+          "paneer",
+          "capsicum",
+          "onion"
+        ]
+      }
+    },
+    "reviews": {
+      "title": "What people say after the first bite",
+      "lead": "On Google, the same things come up again and again: {praise}.",
+      "readAll": "Read all reviews on Google"
+    },
+    "menu": {
+      "sizeNote": "Prices in rupees, as on our printed menu.",
+      "vegLabel": "Vegetarian",
+      "nonVegLabel": "Non-vegetarian",
+      "eitherLabel": "Veg or non-veg",
+      "vegOnly": "Veg only",
+      "showAll": "Show all",
+      "jumpLabel": "Menu sections",
+      "fromLabel": "From",
+      "sectionLink": "More about {section}"
+    },
+    "servicesPage": {
+      "hero": {
+        "eyebrow": "Menu and prices",
+        "title": "The full Hungru menu",
+        "lead": "172 dishes, from a ₹20 lemon tea to a cheese burst pizza, at the prices on our printed menu. We confirm the total when you order.",
+        "photo": "cheesePull"
+      },
+      "listTitle": "What would you like?",
+      "listLead": "Tap a section name for more, or order any dish straight from here."
+    },
+    "servicePage": {
+      "aboutTitle": "About this part of the menu",
+      "goodFor": "Order these for",
+      "menuTitle": "Dishes and prices",
+      "materialsTitle": "What goes in",
+      "materialsNote": "Allergies, or food you avoid? Tell us when you order and we will tell you what is in each dish.",
+      "galleryTitle": "{service} in pictures",
+      "relatedTitle": "More from the gallery",
+      "faqTitle": "{service}: your questions",
+      "otherTitle": "The rest of the menu",
+      "ctaTitle": "Order from the {service} menu"
+    },
+    "projectsPage": {
+      "hero": {
+        "eyebrow": "Gallery",
+        "title": "Pizzas, momos and more",
+        "lead": "Some of what comes out of our kitchen. Tap any photo to see it bigger.",
+        "photo": "tableSharing"
+      },
+      "countLabel": "photos",
+      "allFilter": "All",
+      "lightboxCta": "Order this on WhatsApp",
+      "ctaTitle": "Seen something you like?"
+    },
+    "builderPage": {
+      "hero": {
+        "eyebrow": "Build your own pizza",
+        "title": "Build a pizza, see the price",
+        "lead": "Choose a size, crust, cheese and toppings. The price updates as you go, at our menu add-on prices. Send it to us on WhatsApp when it looks right."
+      },
+      "sizeLegend": "1. Size",
+      "baseLegend": "2. Crust",
+      "cheeseLegend": "3. Cheese",
+      "toppingsLegend": "4. Toppings",
+      "toppingsHint": "Pick up to {max}. Toppings cost a little more on the 10 inch, as on our menu.",
+      "quantityLegend": "5. How many?",
+      "resultTitle": "Your order ticket",
+      "noToppings": "No extra toppings",
+      "disclaimer": "Website price from our menu. We confirm the final total on WhatsApp.",
+      "orderButton": "Send this pizza on WhatsApp",
+      "includedNote": "Any delivery charge is told to you before you confirm. You can also pick it up from the café.",
+      "ctaTitle": "Want something from the menu instead?"
+    },
+    "areaPage": {
+      "eyebrow": "Pizza delivery in {area}",
+      "workingTitle": "Ordering from {area}",
+      "nearLabel": "Near",
+      "offeredTitle": "Popular in {area}",
+      "offeredLead": "Everything on the menu travels well. These sections are a good place to start.",
+      "faqTitle": "Questions from {area}",
+      "alsoTitle": "We also deliver to",
+      "ctaTitle": "Order to {area} now",
+      "fallbackPhoto": "deliveryNight"
+    },
+    "aboutPage": {
+      "hero": {
+        "eyebrow": "About us",
+        "title": "A pizza café at Colony More, Barasat",
+        "lead": "Best Pizza, Best Value: over 100 pizzas, cheese burst on any of them, and a place to sit down with friends.",
+        "photo": "friendsCafe"
+      },
+      "storyTitle": "About Hungru Pizza",
+      "storyPhotos": [
+        "kidsFrog",
+        "kidsLion"
+      ],
+      "teamTitle": "The people behind the counter",
+      "teamLead": "The team that makes your pizza and answers your WhatsApp.",
+      "brandsTitle": "What goes on our pizzas",
+      "praiseTitle": "What customers praise"
+    },
+    "contactPage": {
+      "hero": {
+        "eyebrow": "Order and contact",
+        "title": "Order, call or drop by",
+        "lead": "We are at Colony More, Barasat, open every day from 12 noon to 10:30 pm. Send your order on WhatsApp and we will confirm the total and the time.",
+        "photo": "paddlePizza"
+      },
+      "reachTitle": "Ways to order",
+      "phoneTitle": "Phone",
+      "phoneHint": "Tap to call the café",
+      "whatsappTitle": "WhatsApp",
+      "whatsappHint": "Send your order and we reply with the total and the time.",
+      "addressTitle": "The café",
+      "directions": "Get directions",
+      "hoursTitle": "Hours",
+      "hoursNote": "Happy hours: Monday to Saturday, 12 noon to 4 pm.",
+      "orderOnlineTitle": "Order online",
+      "orderOnlineHint": "We are on Zomato and Swiggy too, for delivery to your door.",
+      "formEyebrow": "Order form",
+      "formTitle": "Write out your order",
+      "formLead": "Fill this in and press the button. WhatsApp opens with your order ready to send.",
+      "mapTitle": "Find us at Colony More",
+      "callFirst": "Call before you come"
+    },
+    "notFound": {
+      "eyebrow": "Error 404",
+      "title": "This page has gone cold",
+      "lead": "The link may be old or typed wrong. Try one of these pages, or just order on WhatsApp.",
+      "popularTitle": "Popular pages"
+    }
+  },
+  "stats": [
+    {
+      "value": "100+",
+      "label": "Pizzas on the menu, veg and chicken"
+    },
+    {
+      "value": "₹120",
+      "label": "Makes any 8 inch pizza cheese burst"
+    },
+    {
+      "value": "4 / 8",
+      "label": "Slices on an 8 inch / 10 inch pizza"
+    },
+    {
+      "value": "7 days",
+      "label": "Open 12 noon to 10:30 pm"
+    }
+  ],
+  "praise": [
+    "Ambience",
+    "Polite staff",
+    "Cold coffee",
+    "Cheesy pizzas",
+    "Value for money",
+    "Choco lava cake"
+  ],
+  "steps": [
+    {
+      "title": "Pick your pizza",
+      "text": "Over 100 on the menu, veg and chicken, in 8 or 10 inch. Or build your own from the add-on list."
+    },
+    {
+      "title": "Send it to us",
+      "text": "On WhatsApp, by phone or with the order form here. We reply with the total and the time."
+    },
+    {
+      "title": "We make it",
+      "text": "Your order is made when it comes in, cheese burst if you asked for it."
+    },
+    {
+      "title": "Eat in, pick up or delivery",
+      "text": "Sit down with us at Colony More, collect it on your way, or have it brought to your door."
+    }
+  ],
+  "services": [
+    {
+      "slug": "veg-pizzas",
+      "name": "Veg pizzas",
+      "shortName": "Veg pizzas",
+      "icon": "leaf",
+      "category": "veg",
+      "tagline": "44 of them, from ₹120",
+      "summary": "From a ₹120 Desi Paneer to the overloaded Cheese Burst Paneer Delux. Paneer six ways, sweetcorn, mushroom, olives and jalapeño, in 8 or 10 inch.",
+      "intro": [
+        "Most of our veg pizzas are built on paneer, and we make it six ways: plain, fried, spicy, tandoori, makhani and masala. Add capsicum, onion, sweetcorn, mushroom, olives, red paprika or jalapeño, and you get 44 pizzas, each a little different.",
+        "New to Hungru? The Cheesy Margherita is the simplest, the Tandoori Paneer is the one that tastes most of home, and the Cheese Burst Paneer Delux is the one to share. Every pizza here can also be made cheese burst."
+      ],
+      "heroPhoto": "loadedVegPizza",
+      "idealFor": [
+        "A cheap and filling lunch",
+        "Vegetarian families and friends",
+        "Sharing a 10 inch between two",
+        "Trying paneer a new way"
+      ],
+      "note": "8 inch pizzas have 4 slices, 10 inch have 8. Make any pizza cheese burst for ₹120 (8 inch) or ₹200 (10 inch). Add-on toppings from ₹40, see the pizza builder.",
+      "items": [
+        {
+          "name": "Cheese Burst Paneer Delux Pizza",
+          "description": "Overloaded mozzarella cheese, paneer, capsicum and black olives, on a cheese burst crust.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 350
+            },
+            {
+              "size": "10 inch",
+              "price": 450
+            }
+          ],
+          "diet": "veg",
+          "tag": "Cheese burst"
+        },
+        {
+          "name": "Cheesy Margherita Pizza",
+          "description": "Mozzarella cheese.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 139
+            },
+            {
+              "size": "10 inch",
+              "price": 220
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Veggi Pool Pizza",
+          "description": "Paneer, capsicum and green olives.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 155
+            },
+            {
+              "size": "10 inch",
+              "price": 265
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Tango Star Pizza",
+          "description": "Paneer, tomato, onion and capsicum.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 150
+            },
+            {
+              "size": "10 inch",
+              "price": 250
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Santa Corn Pizza",
+          "description": "Sweetcorn and mozzarella cheese.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 135
+            },
+            {
+              "size": "10 inch",
+              "price": 235
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Santa Pool Pizza",
+          "description": "Paneer makhani, spicy paneer and onion.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 210
+            },
+            {
+              "size": "10 inch",
+              "price": 310
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Star Umbrella Pizza",
+          "description": "Paneer, mushroom, sweetcorn and red paprika.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 165
+            },
+            {
+              "size": "10 inch",
+              "price": 265
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Veggi Treat Pizza",
+          "description": "Paneer makhani, tomato, onion, capsicum, sweetcorn, mushroom and black olives.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 270
+            },
+            {
+              "size": "10 inch",
+              "price": 370
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Veggi Galaxy Pizza",
+          "description": "Paneer makhani, sweetcorn and black olives.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 220
+            },
+            {
+              "size": "10 inch",
+              "price": 330
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Veggi Supreme Pizza",
+          "description": "Paneer makhani, mushroom, capsicum and onion.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 230
+            },
+            {
+              "size": "10 inch",
+              "price": 330
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Veggi Farm Pizza",
+          "description": "Mushroom, sweetcorn and red paprika.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 230
+            },
+            {
+              "size": "10 inch",
+              "price": 330
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Veggi Fantasy Pizza",
+          "description": "Spicy paneer, mushroom, capsicum and jalapeño.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 175
+            },
+            {
+              "size": "10 inch",
+              "price": 280
+            }
+          ],
+          "diet": "veg",
+          "tag": "Spicy"
+        },
+        {
+          "name": "Veggi Forest Pizza",
+          "description": "Fried paneer, mushroom, tomato, onion, capsicum and red paprika.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 220
+            },
+            {
+              "size": "10 inch",
+              "price": 330
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Veggi Delux Pizza",
+          "description": "Paneer, tomato, capsicum and jalapeño.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 230
+            },
+            {
+              "size": "10 inch",
+              "price": 330
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Veggi Red Hill Pizza",
+          "description": "Spicy paneer, green peas, red paprika and chilli.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 150
+            },
+            {
+              "size": "10 inch",
+              "price": 250
+            }
+          ],
+          "diet": "veg",
+          "tag": "Spicy"
+        },
+        {
+          "name": "Peppy Paneer Pizza",
+          "description": "Fried paneer, capsicum, red paprika and jalapeño.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 165
+            },
+            {
+              "size": "10 inch",
+              "price": 270
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Mexican Green Pizza",
+          "description": "Onion, peas, capsicum, tomato and jalapeño.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 160
+            },
+            {
+              "size": "10 inch",
+              "price": 260
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Tropicana Cindrella Pizza",
+          "description": "Fried paneer, onion, capsicum, tomato, green olives and black olives.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 260
+            },
+            {
+              "size": "10 inch",
+              "price": 360
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Tandoori Paneer Pizza",
+          "description": "Tandoori paneer, capsicum and red paprika.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 170
+            },
+            {
+              "size": "10 inch",
+              "price": 270
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Veggi Morris Pizza",
+          "description": "Tandoori paneer, onion, sweetcorn, tomato, red paprika and jalapeño.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 300
+            },
+            {
+              "size": "10 inch",
+              "price": 400
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Garden Rosso Pizza",
+          "description": "Capsicum, tomato and black olives.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 229
+            },
+            {
+              "size": "10 inch",
+              "price": 349
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Garden Gold Pizza",
+          "description": "Sweetcorn, capsicum and onion.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 229
+            },
+            {
+              "size": "10 inch",
+              "price": 349
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Olive Paneer Pizza",
+          "description": "Paneer, capsicum, green olives, tomato and black olives.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 229
+            },
+            {
+              "size": "10 inch",
+              "price": 349
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Fiery Red Jalapeño Pizza",
+          "description": "Red paprika and jalapeño.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 220
+            },
+            {
+              "size": "10 inch",
+              "price": 329
+            }
+          ],
+          "diet": "veg",
+          "tag": "Spicy"
+        },
+        {
+          "name": "Masaledar Paneer Pizza",
+          "description": "Paneer masala, tomato, onion, capsicum and chilli.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 249
+            },
+            {
+              "size": "10 inch",
+              "price": 349
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Golden Corn and Cream Cheese Delight Pizza",
+          "description": "Sweetcorn, black olives and mozzarella cheese.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 220
+            },
+            {
+              "size": "10 inch",
+              "price": 329
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Royal Makhani Feast Pizza",
+          "description": "Paneer makhani, black olives, spicy paneer and onion.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 229
+            },
+            {
+              "size": "10 inch",
+              "price": 339
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Mushroom Paneer Blaze Pizza",
+          "description": "Paneer, mushroom, sweetcorn and green olives.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 249
+            },
+            {
+              "size": "10 inch",
+              "price": 349
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Grand Veggie Makhani Delight Pizza",
+          "description": "Paneer makhani, tomato, onion, capsicum, sweetcorn, mushroom, black olives and green olives.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 299
+            },
+            {
+              "size": "10 inch",
+              "price": 399
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Golden Makhani Olive Delight Pizza",
+          "description": "Paneer makhani, sweetcorn, black olives and green olives.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 249
+            },
+            {
+              "size": "10 inch",
+              "price": 349
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Forest Gold Makhani Pizza",
+          "description": "Paneer makhani, mushroom, capsicum, onion and green olives.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 249
+            },
+            {
+              "size": "10 inch",
+              "price": 349
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Corn and Shroom Melt Pizza",
+          "description": "Mushroom, sweetcorn, red paprika and capsicum.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 229
+            },
+            {
+              "size": "10 inch",
+              "price": 339
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Volcano Veggie Pizza",
+          "description": "Spicy paneer, mushroom, capsicum, jalapeño and tomato.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 249
+            },
+            {
+              "size": "10 inch",
+              "price": 349
+            }
+          ],
+          "diet": "veg",
+          "tag": "Spicy"
+        },
+        {
+          "name": "Chef's Special Veggie Paneer Pizza",
+          "description": "Fried paneer, mushroom, tomato, onion, capsicum and red paprika.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 299
+            },
+            {
+              "size": "10 inch",
+              "price": 399
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Paneer Inferno Pizza",
+          "description": "Paneer, tomato, capsicum, jalapeño and sweetcorn.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 249
+            },
+            {
+              "size": "10 inch",
+              "price": 349
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Spicy Red Devil Paneer Pizza",
+          "description": "Spicy paneer, green peas, red paprika, chilli and jalapeño.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 249
+            },
+            {
+              "size": "10 inch",
+              "price": 349
+            }
+          ],
+          "diet": "veg",
+          "tag": "Spicy"
+        },
+        {
+          "name": "Volcano Corn Fiesta Pizza",
+          "description": "Tomato, onion, capsicum, sweetcorn, red paprika, jalapeño and green olives.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 299
+            },
+            {
+              "size": "10 inch",
+              "price": 399
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Fiery Paneer Zing Pizza",
+          "description": "Spicy paneer, onion, peas and capsicum.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 249
+            },
+            {
+              "size": "10 inch",
+              "price": 349
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Fiery Paneer Pizza",
+          "description": "Fried paneer, capsicum, black olives, chilli, red paprika and jalapeño.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 299
+            },
+            {
+              "size": "10 inch",
+              "price": 349
+            }
+          ],
+          "diet": "veg",
+          "tag": "Spicy"
+        },
+        {
+          "name": "Zesty Cheesy Heat Pizza",
+          "description": "Onion, peas, capsicum, tomato, jalapeño and red paprika.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 299
+            },
+            {
+              "size": "10 inch",
+              "price": 349
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Red Hot Tandoori Pizza",
+          "description": "Tandoori paneer, capsicum, red paprika and jalapeño.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 249
+            },
+            {
+              "size": "10 inch",
+              "price": 349
+            }
+          ],
+          "diet": "veg",
+          "tag": "Spicy"
+        },
+        {
+          "name": "Desi Paneer Pizza",
+          "description": "Paneer and tomato.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 120
+            },
+            {
+              "size": "10 inch",
+              "price": 230
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Veggi Paradise Pizza",
+          "description": "Tomato, onion, capsicum, sweetcorn, red paprika and jalapeño.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 299
+            },
+            {
+              "size": "10 inch",
+              "price": 370
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Paneer Makhani Pizza",
+          "description": "Paneer makhani, onion and red paprika.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 145
+            },
+            {
+              "size": "10 inch",
+              "price": 240
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        }
+      ],
+      "materials": [
+        {
+          "name": "Paneer, six ways",
+          "note": "Plain, fried, spicy, tandoori, makhani and masala."
+        },
+        {
+          "name": "Mozzarella",
+          "note": "On every pizza, and overloaded on the cheese burst ones."
+        },
+        {
+          "name": "Fresh vegetables",
+          "note": "Capsicum, onion, tomato, sweetcorn, mushroom and green peas."
+        },
+        {
+          "name": "Olives and heat",
+          "note": "Black and green olives, red paprika, jalapeño and chilli."
+        }
+      ],
+      "gallery": [
+        "paneerSliceLift",
+        "panPizzaCorn",
+        "paneerCloseUp"
+      ],
+      "faqs": [
+        {
+          "q": "Which veg pizza should I try first?",
+          "a": "The Tandoori Paneer Pizza (from ₹170) if you like Indian flavours, the Cheesy Margherita (from ₹139) if you like it simple, or the Cheese Burst Paneer Delux (from ₹350) if you are sharing."
+        },
+        {
+          "q": "How many slices are in each size?",
+          "a": "An 8 inch pizza is cut into 4 slices and a 10 inch into 8."
+        },
+        {
+          "q": "Can I make a veg pizza cheese burst?",
+          "a": "Yes, any pizza on the menu. It costs ₹120 more on an 8 inch and ₹200 more on a 10 inch."
+        }
+      ],
+      "seo": {
+        "title": "Veg Pizza in Barasat | 44 Paneer and Veg Pizzas",
+        "description": "44 veg pizzas at Hungru Pizza, Colony More, Barasat: tandoori paneer, paneer makhani, sweetcorn, mushroom and more, from ₹120. Cheese burst on any."
+      }
+    },
+    {
+      "slug": "chicken-pizzas",
+      "name": "Chicken pizzas",
+      "shortName": "Chicken pizzas",
+      "icon": "drumstick",
+      "category": "chicken",
+      "tagline": "52 of them, from ₹120",
+      "summary": "Chicken keema, BBQ, tandoori, peri peri, hariyali, makhani and sausage, across 52 pizzas. From the ₹120 Golden Chicken to the loaded Chicken Overloaded.",
+      "intro": [
+        "Our chicken pizzas use chicken cooked ten ways: keema, BBQ, tandoori, peri peri, hariyali, makhani, masala, black pepper, grilled and spicy, plus chicken sausage. Most pizzas mix two or three of them with vegetables and olives.",
+        "Our own pick is the Hungru Special Chicken Pizza, with peri peri and BBQ chicken. For Bengal's own flavour, try the Gondhoraj Chicken Pizza with gondhoraj lime. Every pizza can be made cheese burst."
+      ],
+      "heroPhoto": "chickenPeppers",
+      "idealFor": [
+        "Big appetites",
+        "Match nights and birthdays",
+        "Anyone who likes it spicy",
+        "Sharing a 10 inch between two"
+      ],
+      "note": "8 inch pizzas have 4 slices, 10 inch have 8. Make any pizza cheese burst for ₹120 (8 inch) or ₹200 (10 inch). Add-on toppings from ₹40, see the pizza builder.",
+      "items": [
+        {
+          "name": "Cheese Burst BBQ Chicken Delux Pizza",
+          "description": "Overloaded mozzarella cheese, BBQ chicken, onion and black olives, on a cheese burst crust.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 369
+            },
+            {
+              "size": "10 inch",
+              "price": 469
+            }
+          ],
+          "diet": "non-veg",
+          "tag": "Cheese burst"
+        },
+        {
+          "name": "Chicken Villa Pizza",
+          "description": "Chicken masala, capsicum, onion, red paprika and jalapeño.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 250
+            },
+            {
+              "size": "10 inch",
+              "price": 360
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Delux Pizza",
+          "description": "Chicken, peas, onion, tomato, sweetcorn and red paprika.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 260
+            },
+            {
+              "size": "10 inch",
+              "price": 370
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Tikka Pizza",
+          "description": "Chicken keema, sweetcorn, onion and capsicum.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 220
+            },
+            {
+              "size": "10 inch",
+              "price": 330
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Paradise Pizza",
+          "description": "Chicken keema, BBQ chicken, onion, black olives and red paprika.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 200
+            },
+            {
+              "size": "10 inch",
+              "price": 310
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Fusion Pizza",
+          "description": "Chicken sausage, chicken keema, onion and capsicum.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 230
+            },
+            {
+              "size": "10 inch",
+              "price": 340
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Pataya Pizza",
+          "description": "Spicy chicken, onion, capsicum, red paprika and jalapeño.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 225
+            },
+            {
+              "size": "10 inch",
+              "price": 335
+            }
+          ],
+          "diet": "non-veg",
+          "tag": "Spicy"
+        },
+        {
+          "name": "Chicken Classic Pizza",
+          "description": "Chicken masala, mushroom, tomato and onion.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 260
+            },
+            {
+              "size": "10 inch",
+              "price": 370
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Hunger Pizza",
+          "description": "Hariyali chicken, onion, capsicum, black olives and green olives.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 270
+            },
+            {
+              "size": "10 inch",
+              "price": 380
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Havlok Pizza",
+          "description": "BBQ chicken, tomato, red paprika and jalapeño.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 250
+            },
+            {
+              "size": "10 inch",
+              "price": 360
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Hunter Pizza",
+          "description": "Chicken masala, mushroom, red paprika, green olives and black olives.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 260
+            },
+            {
+              "size": "10 inch",
+              "price": 370
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Opera Pizza",
+          "description": "BBQ chicken, red paprika, onion, sweetcorn and black olives.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 210
+            },
+            {
+              "size": "10 inch",
+              "price": 320
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Fiesta Pizza",
+          "description": "Black pepper chicken, jalapeño, sweetcorn, black olives and green olives.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 260
+            },
+            {
+              "size": "10 inch",
+              "price": 370
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Chaplin Pizza",
+          "description": "Tandoori chicken, tomato, onion, capsicum, green olives and red paprika.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 260
+            },
+            {
+              "size": "10 inch",
+              "price": 370
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Tropican Pizza",
+          "description": "Tandoori chicken, onion, capsicum and sweetcorn.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 280
+            },
+            {
+              "size": "10 inch",
+              "price": 380
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Alfredo Pizza",
+          "description": "Chicken sausage, chicken masala, chicken keema, onion and red paprika.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 300
+            },
+            {
+              "size": "10 inch",
+              "price": 410
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Dominor Pizza",
+          "description": "BBQ chicken and paneer pieces, onion, capsicum, tomato and sweetcorn.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 290
+            },
+            {
+              "size": "10 inch",
+              "price": 400
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Farm Pizza",
+          "description": "Chicken with onion, tomato and capsicum.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 215
+            },
+            {
+              "size": "10 inch",
+              "price": 300
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Hotshot Pizza",
+          "description": "Spicy chicken, peri peri chicken and chilli.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 260
+            },
+            {
+              "size": "10 inch",
+              "price": 360
+            }
+          ],
+          "diet": "non-veg",
+          "tag": "Spicy"
+        },
+        {
+          "name": "Chicken Exotic BBQ Pizza",
+          "description": "BBQ chicken, tomato, onion, capsicum and black olives.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 269
+            },
+            {
+              "size": "10 inch",
+              "price": 320
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Fairyland Pizza",
+          "description": "Chicken, tomato, onion, capsicum, mushroom and sweetcorn.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 280
+            },
+            {
+              "size": "10 inch",
+              "price": 390
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Hungru Special Chicken Pizza",
+          "description": "Peri peri chicken, BBQ chicken, capsicum and onion.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 300
+            },
+            {
+              "size": "10 inch",
+              "price": 400
+            }
+          ],
+          "diet": "non-veg",
+          "tag": "House special"
+        },
+        {
+          "name": "Chicken Overloaded Pizza",
+          "description": "BBQ chicken, chicken masala, spicy chicken and peri peri chicken.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 350
+            },
+            {
+              "size": "10 inch",
+              "price": 450
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Golden Chicken Tandoori Supreme Pizza",
+          "description": "Tandoori chicken, sweetcorn and black olives.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 249
+            },
+            {
+              "size": "10 inch",
+              "price": 349
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Hariyali Fiesta Pizza",
+          "description": "Hariyali chicken, capsicum, onion and chilli.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 249
+            },
+            {
+              "size": "10 inch",
+              "price": 399
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Zesty Chicken Makhani Pizza",
+          "description": "Chicken makhani, onion, capsicum and jalapeño.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 269
+            },
+            {
+              "size": "10 inch",
+              "price": 369
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Garden Pizza",
+          "description": "Chicken, onion, tomato, sweetcorn and red paprika.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 269
+            },
+            {
+              "size": "10 inch",
+              "price": 369
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Keema Corn Delight Pizza",
+          "description": "Chicken keema, sweetcorn, onion and capsicum.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 249
+            },
+            {
+              "size": "10 inch",
+              "price": 349
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Inferno Keema Olivo Pizza",
+          "description": "Chicken keema, BBQ chicken, onion, black olives, red paprika and capsicum.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 299
+            },
+            {
+              "size": "10 inch",
+              "price": 399
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Keema Sausage Delight Pizza",
+          "description": "Chicken sausage, chicken keema, onion and capsicum.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 249
+            },
+            {
+              "size": "10 inch",
+              "price": 349
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Spicy Harvest Chicken Pizza",
+          "description": "Spicy chicken, onion, capsicum, red paprika and chilli.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 299
+            },
+            {
+              "size": "10 inch",
+              "price": 399
+            }
+          ],
+          "diet": "non-veg",
+          "tag": "Spicy"
+        },
+        {
+          "name": "Chicken Masala Shroom Feast Pizza",
+          "description": "Chicken masala, mushroom, onion and capsicum.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 249
+            },
+            {
+              "size": "10 inch",
+              "price": 349
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Hariyali Garden Pizza",
+          "description": "Hariyali chicken, onion, capsicum, black olives and green olives.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 299
+            },
+            {
+              "size": "10 inch",
+              "price": 399
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Spicy Tuscan Chicken Pizza",
+          "description": "BBQ chicken, tomato and red paprika.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 249
+            },
+            {
+              "size": "10 inch",
+              "price": 349
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Masala Olive Delight Pizza",
+          "description": "Chicken masala, mushroom, red paprika, green olives, black olives and sweetcorn.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 299
+            },
+            {
+              "size": "10 inch",
+              "price": 399
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Zesty Chicken BBQ Inferno Pizza",
+          "description": "BBQ chicken, red paprika, onion, sweetcorn, black olives and green olives.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 299
+            },
+            {
+              "size": "10 inch",
+              "price": 399
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Masala Medley Pizza",
+          "description": "Chicken masala, tomato, onion, capsicum, green olives and red paprika.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 349
+            },
+            {
+              "size": "10 inch",
+              "price": 449
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Tandoori Corn Harvest Pizza",
+          "description": "Tandoori chicken, onion, capsicum, sweetcorn and black olives.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 249
+            },
+            {
+              "size": "10 inch",
+              "price": 349
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Golden Chicken Pizza",
+          "description": "Chicken and tomato.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 120
+            },
+            {
+              "size": "10 inch",
+              "price": 220
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Forest Pizza",
+          "description": "Grilled chicken, capsicum and sweetcorn.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 180
+            },
+            {
+              "size": "10 inch",
+              "price": 280
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Mandate Pizza",
+          "description": "Spicy chicken, onion and chilli.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 185
+            },
+            {
+              "size": "10 inch",
+              "price": 280
+            }
+          ],
+          "diet": "non-veg",
+          "tag": "Spicy"
+        },
+        {
+          "name": "Spiced Sausage Delight Pizza",
+          "description": "Chicken sausage, chicken masala, chicken keema, onion and jalapeño.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 299
+            },
+            {
+              "size": "10 inch",
+              "price": 399
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Peppery Olive Garden Pizza",
+          "description": "Black pepper chicken, sweetcorn and black olives.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 249
+            },
+            {
+              "size": "10 inch",
+              "price": 349
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Emerald Pizza",
+          "description": "Chicken masala, onion, capsicum and green olives.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 249
+            },
+            {
+              "size": "10 inch",
+              "price": 349
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Griller's Garden Pizza",
+          "description": "Grilled chicken, capsicum and sweetcorn.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 229
+            },
+            {
+              "size": "10 inch",
+              "price": 329
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Roasted Chicken Pizza",
+          "description": "Chicken, onion, red paprika and sweetcorn.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 249
+            },
+            {
+              "size": "10 inch",
+              "price": 349
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Delight Pizza",
+          "description": "Chicken keema, peri peri chicken, onion, tomato and capsicum.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 299
+            },
+            {
+              "size": "10 inch",
+              "price": 399
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Chilli Flame Chicken Pizza",
+          "description": "Spicy chicken, onion, red paprika and chilli.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 249
+            },
+            {
+              "size": "10 inch",
+              "price": 349
+            }
+          ],
+          "diet": "non-veg",
+          "tag": "Spicy"
+        },
+        {
+          "name": "BBQ Delight Pizza",
+          "description": "BBQ chicken, tomato, onion, capsicum, black olives and sweetcorn.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 299
+            },
+            {
+              "size": "10 inch",
+              "price": 399
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Panrich Pizza",
+          "description": "Chicken and paneer.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 195
+            },
+            {
+              "size": "10 inch",
+              "price": 300
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Gondhoraj Chicken Pizza",
+          "description": "Chicken, capsicum, onion, gondhoraj lime and chilli.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 200
+            },
+            {
+              "size": "10 inch",
+              "price": 299
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Vegas Pizza",
+          "description": "Chicken makhani, onion and jalapeño.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 150
+            },
+            {
+              "size": "10 inch",
+              "price": 260
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        }
+      ],
+      "materials": [
+        {
+          "name": "Chicken, ten ways",
+          "note": "Keema, BBQ, tandoori, peri peri, hariyali, makhani, masala, black pepper, grilled and spicy."
+        },
+        {
+          "name": "Chicken sausage",
+          "note": "Sliced over the sausage and keema pizzas."
+        },
+        {
+          "name": "Gondhoraj lime",
+          "note": "Bengal's fragrant lime, in the Gondhoraj Chicken Pizza."
+        },
+        {
+          "name": "Mozzarella",
+          "note": "On every pizza, and overloaded on the cheese burst ones."
+        }
+      ],
+      "gallery": [
+        "greenChilli",
+        "sausagePizza",
+        "sliceLift"
+      ],
+      "faqs": [
+        {
+          "q": "Which chicken pizza is the house special?",
+          "a": "The Hungru Special Chicken Pizza: peri peri chicken, BBQ chicken, capsicum and onion. ₹300 for 8 inch, ₹400 for 10 inch."
+        },
+        {
+          "q": "Which ones are spicy?",
+          "a": "The ones tagged Spicy on the menu, such as the Chicken Hotshot, Chilli Flame and Spicy Harvest. Tell us when you order if you want it milder."
+        },
+        {
+          "q": "Do you use pork or beef?",
+          "a": "Our printed menu has chicken only on the non-veg pizzas: chicken keema, sausage, salami and pieces. Ask us if you want to check an item."
+        }
+      ],
+      "seo": {
+        "title": "Chicken Pizza in Barasat | 52 Chicken Pizzas",
+        "description": "52 chicken pizzas at Hungru Pizza, Barasat: BBQ, tandoori, peri peri, keema, hariyali and Gondhoraj chicken, from ₹120. Cheese burst on any pizza."
+      }
+    },
+    {
+      "slug": "kullad-and-kids-pizzas",
+      "name": "Kullad, Ginnie and kids' pizzas",
+      "shortName": "Kullad and kids",
+      "icon": "smile",
+      "category": "kids",
+      "tagline": "Pizza, but not as you know it",
+      "summary": "Pizza served in an earthen kullad, the boat-shaped Ginnie pizza, and 7 inch kids' pizzas with faces made from the toppings.",
+      "intro": [
+        "These are the pizzas people take photos of. The kullad pizzas are filled with cheese, paneer or chicken and vegetables and served in an earthen pot, like a kullad of tea. The Ginnie pizza is long and boat-shaped, topped with paneer or chicken and fresh vegetables.",
+        "The kids' pizza zone has three 7 inch pizzas with faces: a frog, a lion and a Halloween mummy wrapped in cheese. Bring the children and watch them decide which one to eat first."
+      ],
+      "heroPhoto": "cheesePull",
+      "idealFor": [
+        "Children's birthdays",
+        "Something new to try",
+        "A light snack for one",
+        "Photos for your story"
+      ],
+      "note": "Kids' pizzas are 7 inch. Kullad pizzas come in medium (M) and large (L).",
+      "items": [
+        {
+          "name": "Ginnie Pizza (Veg)",
+          "description": "Boat-shaped, hand-tossed pizza with paneer and fresh vegetables.",
+          "prices": [
+            {
+              "size": "",
+              "price": 149
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Ginnie Pizza (Chicken)",
+          "description": "Boat-shaped, hand-tossed pizza with chicken and fresh vegetables.",
+          "prices": [
+            {
+              "size": "",
+              "price": 169
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Paneer Kullad Pizza",
+          "description": "Pizza served in an earthen kullad, filled with cheese, paneer and vegetables.",
+          "prices": [
+            {
+              "size": "M",
+              "price": 150
+            },
+            {
+              "size": "L",
+              "price": 200
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Kullad Pizza",
+          "description": "Pizza served in an earthen kullad, filled with cheese and chicken.",
+          "prices": [
+            {
+              "size": "M",
+              "price": 150
+            },
+            {
+              "size": "L",
+              "price": 200
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Baby Frog Pizza",
+          "description": "A frog face made from paneer, tomato, sweetcorn, capsicum, onion and black olives.",
+          "prices": [
+            {
+              "size": "7 inch",
+              "price": 299
+            }
+          ],
+          "diet": "veg",
+          "tag": "Kids"
+        },
+        {
+          "name": "Cutie Lion Pizza",
+          "description": "A lion face made from chicken keema, chicken salami, chicken sausage, onion and olives.",
+          "prices": [
+            {
+              "size": "7 inch",
+              "price": 299
+            }
+          ],
+          "diet": "non-veg",
+          "tag": "Kids"
+        },
+        {
+          "name": "Mini Halloween Pizza",
+          "description": "A mummy wrapped in cheese, with chicken, tomato, onion and capsicum.",
+          "prices": [
+            {
+              "size": "7 inch",
+              "price": 199
+            }
+          ],
+          "diet": "non-veg",
+          "tag": "Kids"
+        }
+      ],
+      "materials": [
+        {
+          "name": "Kullad",
+          "note": "Earthen pots, the kind Bengal drinks its tea from."
+        },
+        {
+          "name": "Faces from toppings",
+          "note": "Olive eyes, sausage noses and onion whiskers."
+        },
+        {
+          "name": "Paneer or chicken",
+          "note": "Every one comes as veg or non-veg."
+        },
+        {
+          "name": "Mozzarella",
+          "note": "Melted over all of them."
+        }
+      ],
+      "gallery": [
+        "kidsLion",
+        "kidsFrog",
+        "kidsHalloween"
+      ],
+      "faqs": [
+        {
+          "q": "What is a kullad pizza?",
+          "a": "Pizza with cheese and paneer or chicken, served in an earthen kullad pot. Medium is ₹150 and large is ₹200."
+        },
+        {
+          "q": "What size are the kids' pizzas?",
+          "a": "7 inch, enough for one child. The Baby Frog and Cutie Lion are ₹299, the Mini Halloween is ₹199."
+        },
+        {
+          "q": "Is the Ginnie pizza veg or non-veg?",
+          "a": "Both: ₹149 with paneer and vegetables, ₹169 with chicken."
+        }
+      ],
+      "seo": {
+        "title": "Kullad Pizza and Kids' Pizza in Barasat",
+        "description": "Paneer and chicken kullad pizza from ₹150, the boat-shaped Ginnie pizza and 7 inch kids' pizzas with frog, lion and mummy faces. Hungru Pizza, Barasat."
+      }
+    },
+    {
+      "slug": "starters-and-sides",
+      "name": "Starters, garlic bread and fries",
+      "shortName": "Starters and sides",
+      "icon": "popcorn",
+      "category": "snacks",
+      "tagline": "To start, or to share",
+      "summary": "Cheesy samosas, paneer and chicken popcorn, crunchy wings, bhetki fish fry, wontons, six garlic breads and four kinds of fries.",
+      "intro": [
+        "Something to eat while the pizza is on its way. The cheesy samosas come in corn, paneer, chicken and peri peri chicken. The popcorn comes by the 10, 15 or 20 pieces, and the wings are half-length or full-length, crunchy or pan fried.",
+        "The garlic breads start at ₹80 for butter, garlic and cheese, and go up to chicken paprika. The fries come salted, peri peri, cheesy or lemon pepper, in three sizes."
+      ],
+      "heroPhoto": "chickenBasket",
+      "idealFor": [
+        "Starters before a pizza",
+        "An evening snack with friends",
+        "Match nights at home",
+        "Adding to a party order"
+      ],
+      "note": "Add a dip for ₹20: liquid cheese, hariyali chutney or special coriander chutney. An extra wing is ₹20 (half-length) or ₹35 (full-length).",
+      "items": [
+        {
+          "name": "Potato Spring",
+          "description": "2 pieces.",
+          "prices": [
+            {
+              "size": "",
+              "price": 66
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Paneer Stick",
+          "description": "6 pieces.",
+          "prices": [
+            {
+              "size": "",
+              "price": 139
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Cheesy Corn Samosa",
+          "description": "4 pieces.",
+          "prices": [
+            {
+              "size": "",
+              "price": 149
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Cheesy Paneer Samosa",
+          "description": "4 pieces.",
+          "prices": [
+            {
+              "size": "",
+              "price": 149
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Paneer Ball",
+          "description": "5 pieces.",
+          "prices": [
+            {
+              "size": "",
+              "price": 159
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Cheese Ball",
+          "description": "5 pieces.",
+          "prices": [
+            {
+              "size": "",
+              "price": 149
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Paneer Cheese Ball",
+          "description": "5 pieces.",
+          "prices": [
+            {
+              "size": "",
+              "price": 179
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Paneer Popcorn",
+          "description": "Bite-size fried paneer.",
+          "prices": [
+            {
+              "size": "10 pcs",
+              "price": 109
+            },
+            {
+              "size": "15 pcs",
+              "price": 139
+            },
+            {
+              "size": "20 pcs",
+              "price": 189
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Fish Fry (Bhetki)",
+          "description": "1 piece of bhetki, fried.",
+          "prices": [
+            {
+              "size": "",
+              "price": 149
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Cheesy Chicken Samosa",
+          "description": "4 pieces.",
+          "prices": [
+            {
+              "size": "",
+              "price": 149
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Cheesy Peri Peri Chicken Samosa",
+          "description": "4 pieces.",
+          "prices": [
+            {
+              "size": "",
+              "price": 159
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Cheese Ball",
+          "description": "5 pieces.",
+          "prices": [
+            {
+              "size": "",
+              "price": 149
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Strips",
+          "description": "6 pieces.",
+          "prices": [
+            {
+              "size": "",
+              "price": 129
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Crispy Chicken Fry",
+          "description": "Fried chicken pieces.",
+          "prices": [
+            {
+              "size": "4 pcs",
+              "price": 189
+            },
+            {
+              "size": "8 pcs",
+              "price": 349
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Panko Fry",
+          "description": "4 pieces in panko crumbs.",
+          "prices": [
+            {
+              "size": "",
+              "price": 199
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Crunchy Chicken Half-Length Wings",
+          "description": "Fried crisp.",
+          "prices": [
+            {
+              "size": "4 pcs",
+              "price": 149
+            },
+            {
+              "size": "8 pcs",
+              "price": 269
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Pan Fried Chicken Half-Length Wings",
+          "description": "Tossed in the pan.",
+          "prices": [
+            {
+              "size": "4 pcs",
+              "price": 169
+            },
+            {
+              "size": "8 pcs",
+              "price": 289
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Crunchy Chicken Full-Length Wings",
+          "description": "Fried crisp.",
+          "prices": [
+            {
+              "size": "4 pcs",
+              "price": 199
+            },
+            {
+              "size": "8 pcs",
+              "price": 399
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Pan Fried Chicken Full-Length Wings",
+          "description": "Tossed in the pan.",
+          "prices": [
+            {
+              "size": "4 pcs",
+              "price": 229
+            },
+            {
+              "size": "8 pcs",
+              "price": 449
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Popcorn",
+          "description": "Bite-size fried chicken.",
+          "prices": [
+            {
+              "size": "10 pcs",
+              "price": 119
+            },
+            {
+              "size": "15 pcs",
+              "price": 149
+            },
+            {
+              "size": "20 pcs",
+              "price": 179
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Wonton",
+          "description": "Asian-style dumplings filled with seasoned minced chicken. Boiled, fried or pan fried.",
+          "prices": [
+            {
+              "size": "Boiled",
+              "price": 100
+            },
+            {
+              "size": "Fried",
+              "price": 110
+            },
+            {
+              "size": "Pan fried",
+              "price": 120
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Butter Cheesy Garlic Bread",
+          "description": "Creamy butter, garlic and melted cheese on a warm, toasted loaf.",
+          "prices": [
+            {
+              "size": "",
+              "price": 80
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Corn and Olive Garlic Bread",
+          "description": "Sweet corn and olives on garlic bread.",
+          "prices": [
+            {
+              "size": "",
+              "price": 149
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Tandoori Paneer Garlic Bread",
+          "description": "Tandoori-spiced paneer on garlic bread.",
+          "prices": [
+            {
+              "size": "",
+              "price": 139
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Makhani Paneer Garlic Bread",
+          "description": "Buttery paneer makhani, made with tomato and spices, on garlic bread.",
+          "prices": [
+            {
+              "size": "",
+              "price": 149
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Paprika Garlic Bread",
+          "description": "Spiced chicken in paprika sauce on warm, crusty garlic bread.",
+          "prices": [
+            {
+              "size": "",
+              "price": 169
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Corn Garlic Bread",
+          "description": "Chicken and sweet corn on garlic bread.",
+          "prices": [
+            {
+              "size": "",
+              "price": 169
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Salted Fries",
+          "description": "",
+          "prices": [
+            {
+              "size": "Small",
+              "price": 99
+            },
+            {
+              "size": "Medium",
+              "price": 115
+            },
+            {
+              "size": "Large",
+              "price": 129
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Peri Peri Fries",
+          "description": "",
+          "prices": [
+            {
+              "size": "Small",
+              "price": 109
+            },
+            {
+              "size": "Medium",
+              "price": 119
+            },
+            {
+              "size": "Large",
+              "price": 149
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Cheesy Fries",
+          "description": "",
+          "prices": [
+            {
+              "size": "Small",
+              "price": 115
+            },
+            {
+              "size": "Medium",
+              "price": 125
+            },
+            {
+              "size": "Large",
+              "price": 159
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Lemon Pepper Fries",
+          "description": "",
+          "prices": [
+            {
+              "size": "Small",
+              "price": 119
+            },
+            {
+              "size": "Medium",
+              "price": 139
+            },
+            {
+              "size": "Large",
+              "price": 169
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        }
+      ],
+      "materials": [
+        {
+          "name": "Paneer and chicken",
+          "note": "Popcorn, balls, samosas, strips and sticks."
+        },
+        {
+          "name": "Bhetki",
+          "note": "Bengal's favourite fish, fried."
+        },
+        {
+          "name": "Three dips",
+          "note": "Liquid cheese, hariyali chutney and special coriander chutney, ₹20 each."
+        },
+        {
+          "name": "Garlic butter",
+          "note": "On all six garlic breads."
+        }
+      ],
+      "gallery": [
+        "wingsBasket",
+        "periPeriFries",
+        "cheesyGarlic"
+      ],
+      "faqs": [
+        {
+          "q": "Can I add extra wings?",
+          "a": "Yes: ₹20 for each extra half-length wing and ₹35 for each full-length wing. Both kinds come crunchy or pan fried, 4 or 8 to a plate."
+        },
+        {
+          "q": "Do the starters come with a dip?",
+          "a": "You can add one for ₹20: liquid cheese, hariyali chutney or special coriander chutney."
+        },
+        {
+          "q": "How big are the fries?",
+          "a": "Small, medium or large. Salted fries are ₹99, ₹115 and ₹129."
+        }
+      ],
+      "seo": {
+        "title": "Chicken Wings, Garlic Bread and Fries in Barasat",
+        "description": "Cheesy samosas, paneer and chicken popcorn, crunchy wings, bhetki fish fry, wontons, garlic bread from ₹80 and fries at Hungru Pizza, Barasat."
+      }
+    },
+    {
+      "slug": "momos-burgers-sandwiches",
+      "name": "Momos, burgers and sandwiches",
+      "shortName": "Momos and burgers",
+      "icon": "burger",
+      "category": "snacks",
+      "tagline": "When it is not a pizza day",
+      "summary": "Momos six to a plate, boiled, fried, pan fried, tandoori or hariyali. Veg and chicken burgers, and sandwiches plain or grilled.",
+      "intro": [
+        "Our momos come six to a plate. Veg, corn cheese and chicken momos come boiled or fried, and the chicken ones also pan fried, peri peri, schezwan, tandoori and hariyali.",
+        "The burgers are new on the menu, from a ₹99 veg burger to the cheesy crispy chicken. The sandwiches come regular or grilled, for ₹10 more."
+      ],
+      "heroPhoto": "steamedMomos",
+      "idealFor": [
+        "A quick bite after college or work",
+        "Momo lovers",
+        "Something lighter than a pizza",
+        "Kids who want a burger"
+      ],
+      "note": "Momos come 6 to a plate. Sandwiches come regular or grilled.",
+      "items": [
+        {
+          "name": "Veg Momo",
+          "description": "6 pieces.",
+          "prices": [
+            {
+              "size": "Boiled",
+              "price": 89
+            },
+            {
+              "size": "Fried",
+              "price": 109
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Corn Cheese Momo",
+          "description": "6 pieces.",
+          "prices": [
+            {
+              "size": "Boiled",
+              "price": 120
+            },
+            {
+              "size": "Fried",
+              "price": 140
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Momo",
+          "description": "6 pieces.",
+          "prices": [
+            {
+              "size": "Boiled",
+              "price": 99
+            },
+            {
+              "size": "Fried",
+              "price": 120
+            },
+            {
+              "size": "Pan fried",
+              "price": 140
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Pan Fried Peri Peri Momo",
+          "description": "6 pieces.",
+          "prices": [
+            {
+              "size": "",
+              "price": 145
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Pan Fried Schezwan Momo",
+          "description": "6 pieces.",
+          "prices": [
+            {
+              "size": "",
+              "price": 149
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Tandoori Momo",
+          "description": "6 pieces.",
+          "prices": [
+            {
+              "size": "",
+              "price": 199
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Hariyali Momo",
+          "description": "6 pieces.",
+          "prices": [
+            {
+              "size": "",
+              "price": 199
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Veg Burger",
+          "description": "",
+          "prices": [
+            {
+              "size": "",
+              "price": 99
+            }
+          ],
+          "diet": "veg",
+          "tag": "New"
+        },
+        {
+          "name": "Cheesy Veg Burger",
+          "description": "",
+          "prices": [
+            {
+              "size": "",
+              "price": 119
+            }
+          ],
+          "diet": "veg",
+          "tag": "New"
+        },
+        {
+          "name": "Chicken Burger",
+          "description": "",
+          "prices": [
+            {
+              "size": "",
+              "price": 129
+            }
+          ],
+          "diet": "non-veg",
+          "tag": "New"
+        },
+        {
+          "name": "Cheesy Chicken Burger",
+          "description": "",
+          "prices": [
+            {
+              "size": "",
+              "price": 149
+            }
+          ],
+          "diet": "non-veg",
+          "tag": "New"
+        },
+        {
+          "name": "Crispy Chicken Burger",
+          "description": "",
+          "prices": [
+            {
+              "size": "",
+              "price": 179
+            }
+          ],
+          "diet": "non-veg",
+          "tag": "New"
+        },
+        {
+          "name": "Cheesy Crispy Chicken Burger",
+          "description": "",
+          "prices": [
+            {
+              "size": "",
+              "price": 199
+            }
+          ],
+          "diet": "non-veg",
+          "tag": "New"
+        },
+        {
+          "name": "Veg Sandwich",
+          "description": "",
+          "prices": [
+            {
+              "size": "Regular",
+              "price": 89
+            },
+            {
+              "size": "Grill",
+              "price": 99
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Cheesy Veg Sandwich",
+          "description": "",
+          "prices": [
+            {
+              "size": "Regular",
+              "price": 109
+            },
+            {
+              "size": "Grill",
+              "price": 119
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Cheesy Paneer Sandwich",
+          "description": "",
+          "prices": [
+            {
+              "size": "Regular",
+              "price": 129
+            },
+            {
+              "size": "Grill",
+              "price": 139
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Chicken Sandwich",
+          "description": "",
+          "prices": [
+            {
+              "size": "Regular",
+              "price": 99
+            },
+            {
+              "size": "Grill",
+              "price": 109
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        },
+        {
+          "name": "Cheesy Chicken Sandwich",
+          "description": "",
+          "prices": [
+            {
+              "size": "Regular",
+              "price": 115
+            },
+            {
+              "size": "Grill",
+              "price": 125
+            }
+          ],
+          "diet": "non-veg",
+          "tag": ""
+        }
+      ],
+      "materials": [
+        {
+          "name": "Momos",
+          "note": "Veg, corn cheese or chicken, six to a plate."
+        },
+        {
+          "name": "Five ways with chicken momos",
+          "note": "Boiled, fried, pan fried, tandoori and hariyali."
+        },
+        {
+          "name": "Crispy chicken",
+          "note": "In the crispy chicken burgers."
+        },
+        {
+          "name": "Grilled or not",
+          "note": "Every sandwich comes either way."
+        }
+      ],
+      "gallery": [
+        "friedMomos",
+        "chickenBurgers",
+        "grilledSandwich"
+      ],
+      "faqs": [
+        {
+          "q": "How many momos are in a plate?",
+          "a": "Six. Veg momos start at ₹89 boiled and chicken momos at ₹99 boiled."
+        },
+        {
+          "q": "What is the difference between regular and grill sandwiches?",
+          "a": "The grill sandwich is toasted in a sandwich grill until crisp outside. It costs ₹10 more."
+        }
+      ],
+      "seo": {
+        "title": "Momos, Burgers and Sandwiches in Barasat",
+        "description": "Veg, corn cheese and chicken momos from ₹89, tandoori and hariyali momos, veg and chicken burgers from ₹99, and grilled sandwiches at Hungru Pizza."
+      }
+    },
+    {
+      "slug": "drinks-and-desserts",
+      "name": "Drinks and desserts",
+      "shortName": "Drinks and desserts",
+      "icon": "drink",
+      "category": "drinks",
+      "tagline": "Cold coffee, mocktails and choco lava",
+      "summary": "The cold coffee our Google reviews talk about, mojitos and mocktails, milkshakes, Gandhoraj lassi, hot tea and filter coffee, and a choco lava cake.",
+      "intro": [
+        "If you read our Google reviews you will see the cold coffee come up again and again: chilled, creamy and not too sweet. Next to it are virgin and pulse mojitos, Blue Lagoon, Pineapple Blossom, masala coke and three milkshakes.",
+        "The Gandhoraj lassi is a Bengal twist, flavoured with gondhoraj lime, and aam panna is on in the mango season. To finish, there is the choco lava cake, warm with a molten chocolate centre."
+      ],
+      "heroPhoto": "coldCoffee",
+      "idealFor": [
+        "A summer afternoon",
+        "Catching up with friends",
+        "Something sweet after a pizza",
+        "A cold coffee on the way home"
+      ],
+      "note": "",
+      "items": [
+        {
+          "name": "Cold Coffee",
+          "description": "",
+          "prices": [
+            {
+              "size": "",
+              "price": 140
+            }
+          ],
+          "diet": "veg",
+          "tag": "Customer favourite"
+        },
+        {
+          "name": "Cold Drink (Thums Up or Sprite)",
+          "description": "750 ml bottle.",
+          "prices": [
+            {
+              "size": "",
+              "price": 59
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Soda Lime",
+          "description": "",
+          "prices": [
+            {
+              "size": "",
+              "price": 69
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Masala Coke",
+          "description": "",
+          "prices": [
+            {
+              "size": "",
+              "price": 69
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Gandhoraj Lassi",
+          "description": "Lassi with gondhoraj lime.",
+          "prices": [
+            {
+              "size": "",
+              "price": 60
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Aam Panna",
+          "description": "Raw mango drink. Seasonal.",
+          "prices": [
+            {
+              "size": "",
+              "price": 99
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Virgin Mojito",
+          "description": "",
+          "prices": [
+            {
+              "size": "",
+              "price": 99
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Pulse Mojito",
+          "description": "",
+          "prices": [
+            {
+              "size": "",
+              "price": 89
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Pineapple Blossom",
+          "description": "",
+          "prices": [
+            {
+              "size": "",
+              "price": 90
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Blue Lagoon",
+          "description": "",
+          "prices": [
+            {
+              "size": "",
+              "price": 99
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Oreo Milkshake",
+          "description": "",
+          "prices": [
+            {
+              "size": "",
+              "price": 149
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Mango Milkshake",
+          "description": "",
+          "prices": [
+            {
+              "size": "",
+              "price": 149
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Strawberry Milkshake",
+          "description": "",
+          "prices": [
+            {
+              "size": "",
+              "price": 149
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Green Tea",
+          "description": "",
+          "prices": [
+            {
+              "size": "",
+              "price": 30
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Lemon Tea",
+          "description": "",
+          "prices": [
+            {
+              "size": "",
+              "price": 20
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Black Tea",
+          "description": "",
+          "prices": [
+            {
+              "size": "",
+              "price": 20
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Elaichi Tea",
+          "description": "Cardamom tea.",
+          "prices": [
+            {
+              "size": "",
+              "price": 30
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Filter Coffee",
+          "description": "",
+          "prices": [
+            {
+              "size": "M",
+              "price": 39
+            },
+            {
+              "size": "L",
+              "price": 49
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Mineral Water",
+          "description": "",
+          "prices": [
+            {
+              "size": "500 ml",
+              "price": 10
+            },
+            {
+              "size": "1 litre",
+              "price": 20
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        },
+        {
+          "name": "Choco Lava",
+          "description": "A molten chocolate centre inside a rich, baked chocolate cake.",
+          "prices": [
+            {
+              "size": "",
+              "price": 90
+            }
+          ],
+          "diet": "veg",
+          "tag": ""
+        }
+      ],
+      "materials": [
+        {
+          "name": "Cold coffee",
+          "note": "Chilled and creamy, the one in the reviews."
+        },
+        {
+          "name": "Gondhoraj lime",
+          "note": "In the Gandhoraj lassi."
+        },
+        {
+          "name": "Mint and lime",
+          "note": "In the mojitos."
+        },
+        {
+          "name": "Dark chocolate",
+          "note": "In the warm choco lava."
+        }
+      ],
+      "gallery": [
+        "virginMojito",
+        "oreoShake",
+        "chocoLava"
+      ],
+      "faqs": [
+        {
+          "q": "Is the aam panna always on?",
+          "a": "It is seasonal, made in the mango season. Ask us on WhatsApp whether it is on today."
+        },
+        {
+          "q": "Do you have hot drinks?",
+          "a": "Yes: lemon tea and black tea for ₹20, green tea and elaichi tea for ₹30, and filter coffee for ₹39 (M) or ₹49 (L)."
+        }
+      ],
+      "seo": {
+        "title": "Cold Coffee, Mojitos and Choco Lava in Barasat",
+        "description": "Cold coffee, virgin mojito, Blue Lagoon, Oreo and mango milkshakes, Gandhoraj lassi, tea, filter coffee and choco lava cake at Hungru Pizza, Barasat."
+      }
+    }
+  ],
+  "localities": [
+    {
+      "slug": "colony-more",
+      "name": "Colony More"
+    },
+    {
+      "slug": "champadali",
+      "name": "Champadali"
+    },
+    {
+      "slug": "nabapally",
+      "name": "Nabapally"
+    },
+    {
+      "slug": "kazipara",
+      "name": "Kazipara"
+    },
+    {
+      "slug": "banamalipur",
+      "name": "Banamalipur"
+    },
+    {
+      "slug": "dakbungalow",
+      "name": "Dakbungalow"
+    },
+    {
+      "slug": "hridaypur",
+      "name": "Hridaypur"
+    },
+    {
+      "slug": "rathtala",
+      "name": "Rathtala"
+    },
+    {
+      "slug": "madhyamgram",
+      "name": "Madhyamgram"
+    }
+  ],
+  "widerArea": "anywhere within about 5 km",
+  "areaPages": [
+    {
+      "slug": "champadali",
+      "name": "Champadali",
+      "photo": "friendsSharing",
+      "heading": "Pizza near Champadali More, Barasat",
+      "lead": "Champadali More is just down the road from our café at Colony More, so it is quick for us to reach you, and quick for you to drop in.",
+      "intro": [
+        "Champadali More, with Barasat's main bus terminal beside it, is one of the busiest crossings in town, and Colony More is a short ride away. If you are changing buses or heading home from the station, call ahead and your order can be ready to collect when you get here.",
+        "For delivery, send your order on WhatsApp with a landmark near you, such as the bus terminal or your lane's medicine shop. You can also order from us on Zomato or Swiggy."
+      ],
+      "localNotes": {
+        "title": "Ordering from Champadali",
+        "items": [
+          "A short ride from Colony More",
+          "Order ahead and collect on your way",
+          "Delivery on WhatsApp, Zomato or Swiggy",
+          "Open every day, 12 noon to 10:30 pm"
+        ]
+      },
+      "landmarks": [
+        "Champadali More",
+        "Barasat bus terminal",
+        "Jessore Road",
+        "Taki Road"
+      ],
+      "services": [
+        "veg-pizzas",
+        "momos-burgers-sandwiches",
+        "drinks-and-desserts"
+      ],
+      "faqs": [
+        {
+          "q": "Can I order ahead and pick up on my way?",
+          "a": "Yes. Send your order on WhatsApp or call +91 98330 48397 and tell us when you will come. We will have it ready."
+        },
+        {
+          "q": "Do you deliver to Champadali?",
+          "a": "Champadali is close to us. Send your address on WhatsApp and we will confirm the delivery time and any charge before you agree. You can also order on Zomato or Swiggy."
+        }
+      ],
+      "seo": {
+        "title": "Pizza near Champadali More, Barasat",
+        "description": "Hungru Pizza is a short ride from Champadali More: over 100 pizzas, momos and cold coffee. Order ahead and collect, or get it delivered."
+      }
+    },
+    {
+      "slug": "hridaypur",
+      "name": "Hridaypur",
+      "photo": "deliveryNight",
+      "heading": "Pizza delivery in Hridaypur",
+      "lead": "Hridaypur sits between Barasat and Madhyamgram on the Bangaon line, a short way from our café at Colony More.",
+      "intro": [
+        "Hridaypur is part of Barasat, split in two by the railway line, with the station between Madhyamgram and Barasat Junction. Whichever side you live on, send your order on WhatsApp with your nearest landmark and we will confirm the time.",
+        "Ordering for the family? A 10 inch pizza is cut into 8 slices. Two of them and a plate of momos feed four or five people, and you can mix veg and non-veg in one order."
+      ],
+      "localNotes": {
+        "title": "Delivery to Hridaypur",
+        "items": [
+          "East and west of the station",
+          "Mix veg and non-veg in one order",
+          "Delivery on WhatsApp, Zomato or Swiggy",
+          "Open every day, 12 noon to 10:30 pm"
+        ]
+      },
+      "landmarks": [
+        "Hridaypur railway station",
+        "Dakbungalow",
+        "Rathtala",
+        "Purbachal"
+      ],
+      "services": [
+        "chicken-pizzas",
+        "veg-pizzas",
+        "starters-and-sides"
+      ],
+      "faqs": [
+        {
+          "q": "Do you deliver to both sides of Hridaypur station?",
+          "a": "Send your address and a landmark on WhatsApp and we will tell you the delivery time and any charge before you confirm."
+        },
+        {
+          "q": "How much pizza should I order for a family of four?",
+          "a": "Two 10 inch pizzas (8 slices each) usually do it, or one 10 inch with momos or garlic bread on the side."
+        }
+      ],
+      "seo": {
+        "title": "Pizza Delivery in Hridaypur, Barasat",
+        "description": "Order pizza in Hridaypur from Hungru Pizza, Colony More: 44 veg and 52 chicken pizzas, momos, wings and fries. Order on WhatsApp, Zomato or Swiggy."
+      }
+    },
+    {
+      "slug": "madhyamgram",
+      "name": "Madhyamgram",
+      "photo": "slicePull",
+      "heading": "Pizza for Madhyamgram",
+      "lead": "Madhyamgram is the next town down Jessore Road. Order on WhatsApp, Zomato or Swiggy, or come to us at Colony More.",
+      "intro": [
+        "Madhyamgram is the farthest of the places we list, a little way down Jessore Road towards Kolkata. Send your address on WhatsApp first and we will tell you whether we can deliver and how long it will take. Zomato and Swiggy also deliver our menu.",
+        "Planning a birthday at home? The kids' pizzas, with a frog, a lion or a mummy on top, are 7 inch and a hit with children. Order them a day ahead for a party and tell us the time."
+      ],
+      "localNotes": {
+        "title": "Ordering from Madhyamgram",
+        "items": [
+          "Check delivery on WhatsApp first",
+          "Zomato and Swiggy deliver here too",
+          "Kids' pizzas for birthday parties",
+          "Open every day, 12 noon to 10:30 pm"
+        ]
+      },
+      "landmarks": [
+        "Madhyamgram Chowmatha",
+        "Madhyamgram railway station",
+        "Jessore Road",
+        "Sodepur Road"
+      ],
+      "services": [
+        "kullad-and-kids-pizzas",
+        "chicken-pizzas",
+        "drinks-and-desserts"
+      ],
+      "faqs": [
+        {
+          "q": "Do you deliver to Madhyamgram?",
+          "a": "Send your address on WhatsApp and we will tell you whether we can deliver and the charge, if any. You can also order on Zomato or Swiggy."
+        },
+        {
+          "q": "Can I order kids' pizzas for a birthday party?",
+          "a": "Yes. Tell us the number and the time a day ahead on WhatsApp. The Baby Frog and Cutie Lion are ₹299 each, the Mini Halloween ₹199."
+        }
+      ],
+      "seo": {
+        "title": "Pizza for Madhyamgram | Hungru Pizza, Barasat",
+        "description": "Pizza, momos and kids' pizzas for Madhyamgram from Hungru Pizza at Colony More, Barasat. Order on WhatsApp, Zomato or Swiggy, or drop in."
+      }
+    }
+  ],
+  "projectFilters": [
+    {
+      "id": "pizzas",
+      "label": "Pizzas",
+      "categories": [
+        "veg",
+        "chicken",
+        "kids"
+      ]
+    },
+    {
+      "id": "snacks",
+      "label": "Snacks and sides",
+      "categories": [
+        "snacks"
+      ]
+    },
+    {
+      "id": "drinks",
+      "label": "Drinks and desserts",
+      "categories": [
+        "drinks"
+      ]
+    },
+    {
+      "id": "cafe",
+      "label": "At the café",
+      "categories": [
+        "cafe"
+      ]
+    }
+  ],
+  "categoryLabels": {
+    "veg": "Veg pizza",
+    "chicken": "Chicken pizza",
+    "kids": "Kullad and kids' pizza",
+    "snacks": "Snacks and sides",
+    "drinks": "Drinks and desserts",
+    "cafe": "At the café"
+  },
+  "projects": [
+    {
+      "id": "cheese-pull",
+      "title": "Cheese pull",
+      "category": "veg",
+      "photo": "cheesePull",
+      "summary": "Make any pizza cheese burst: ₹120 more on 8 inch, ₹200 on 10 inch."
+    },
+    {
+      "id": "kids-lion",
+      "title": "Cutie Lion Pizza",
+      "category": "kids",
+      "photo": "kidsLion",
+      "summary": "Our 7 inch kids' pizza: chicken keema, salami and sausage, with olive eyes and onion whiskers. ₹299."
+    },
+    {
+      "id": "cold-coffee",
+      "title": "Cold coffee",
+      "category": "drinks",
+      "photo": "coldCoffee",
+      "summary": "The drink our Google reviews mention most. ₹140."
+    },
+    {
+      "id": "steamed-momos",
+      "title": "Steamed momos",
+      "category": "snacks",
+      "photo": "steamedMomos",
+      "summary": "Six to a plate: veg from ₹89, chicken from ₹99."
+    },
+    {
+      "id": "kids-frog",
+      "title": "Baby Frog Pizza",
+      "category": "kids",
+      "photo": "kidsFrog",
+      "summary": "Our 7 inch veg kids' pizza: paneer, tomato, sweetcorn, capsicum and onion, with olive eyes. ₹299."
+    },
+    {
+      "id": "chicken-wings",
+      "title": "Crunchy chicken wings",
+      "category": "snacks",
+      "photo": "wingsBasket",
+      "summary": "Half-length or full-length, crunchy or pan fried, 4 or 8 pieces. From ₹149."
+    },
+    {
+      "id": "choco-lava",
+      "title": "Choco lava",
+      "category": "drinks",
+      "photo": "chocoLava",
+      "summary": "A molten chocolate centre in a baked chocolate cake. ₹90."
+    },
+    {
+      "id": "spicy-chicken",
+      "title": "Spicy chicken pizza",
+      "category": "chicken",
+      "photo": "greenChilli",
+      "summary": "Like our Chilli Flame Chicken Pizza: spicy chicken, onion, red paprika and chilli. From ₹249."
+    },
+    {
+      "id": "kids-halloween",
+      "title": "Mini Halloween Pizza",
+      "category": "kids",
+      "photo": "kidsHalloween",
+      "summary": "A 7 inch mummy wrapped in cheese, with chicken, tomato, onion and capsicum. ₹199."
+    },
+    {
+      "id": "paneer-pizza",
+      "title": "Paneer and capsicum pizza",
+      "category": "veg",
+      "photo": "paneerPizzaTop",
+      "summary": "Like our Tandoori Paneer Pizza: tandoori paneer, capsicum and red paprika. From ₹170."
+    },
+    {
+      "id": "crispy-burger",
+      "title": "Crispy chicken burger",
+      "category": "snacks",
+      "photo": "chickenBurgers",
+      "summary": "New on the menu: Crispy Chicken Burger ₹179, with cheese ₹199."
+    },
+    {
+      "id": "virgin-mojito",
+      "title": "Virgin mojito",
+      "category": "drinks",
+      "photo": "virginMojito",
+      "summary": "Mint, lime and crushed ice. ₹99."
+    },
+    {
+      "id": "loaded-veg",
+      "title": "Loaded veg pizza",
+      "category": "veg",
+      "photo": "loadedVegPizza",
+      "summary": "Like our Veggi Paradise Pizza: tomato, onion, capsicum, sweetcorn, red paprika and jalapeño."
+    },
+    {
+      "id": "peri-peri-fries",
+      "title": "Peri peri fries",
+      "category": "snacks",
+      "photo": "periPeriFries",
+      "summary": "Small, medium or large, from ₹109."
+    },
+    {
+      "id": "chicken-capsicum",
+      "title": "Chicken and capsicum pizza",
+      "category": "chicken",
+      "photo": "chickenPeppers",
+      "summary": "Like our Chicken Farm Pizza: chicken with onion, tomato and capsicum. From ₹215."
+    },
+    {
+      "id": "garlic-bread",
+      "title": "Butter cheesy garlic bread",
+      "category": "snacks",
+      "photo": "cheesyGarlic",
+      "summary": "Butter, garlic and melted cheese on a toasted loaf. ₹80."
+    },
+    {
+      "id": "friends",
+      "title": "Pizza with friends",
+      "category": "cafe",
+      "photo": "friendsCafe",
+      "summary": "Our Google reviews keep coming back to the ambience and the friendly staff."
+    },
+    {
+      "id": "sausage-pizza",
+      "title": "Sausage pizza",
+      "category": "chicken",
+      "photo": "sausagePizza",
+      "summary": "Like our Spiced Sausage Delight Pizza: chicken sausage, chicken masala, keema, onion and jalapeño."
+    }
+  ],
+  "reviews": [
+    {
+      "name": "Anwesha D.",
+      "locality": "Google review",
+      "service": "Visiting for two years",
+      "rating": 5,
+      "text": "I've been visiting this place for the past two years, and the ambience, staff behavior, and food have always been impressive. The excellent food and warm hospitality keep me coming back again and again.",
+      "placeholder": false
+    },
+    {
+      "name": "Asit B.",
+      "locality": "Google review",
+      "service": "Cold coffee and pizza",
+      "rating": 5,
+      "text": "The first thing I tried was their cold coffee, and honestly, it was one of the best I've had. Perfectly chilled, creamy, and not overly sweet.",
+      "placeholder": false
+    },
+    {
+      "name": "Sneha B.",
+      "locality": "Google review",
+      "service": "Pizza",
+      "rating": 5,
+      "text": "The pizza was really delicious, and the staff's behaviour was absolutely top-notch. Everyone was friendly, polite, and welcoming, which made the whole experience even better.",
+      "placeholder": false
+    },
+    {
+      "name": "Paromita H.",
+      "locality": "Google review",
+      "service": "Orders regularly",
+      "rating": 5,
+      "text": "I regularly order from them and i love their prompt service and food quality. … All the staffs are very well behaved and the price offered is really good.",
+      "placeholder": false
+    }
+  ],
+  "homeFaqs": [
+    {
+      "q": "Where are you?",
+      "a": "At 2610/9, Krishnanagar Road, Colony More, Barasat, West Bengal 700126. We are open every day from 12 noon to 10:30 pm."
+    },
+    {
+      "q": "How do I order?",
+      "a": "Send your order on WhatsApp, use the order form on this website, or call +91 98330 48397. You can also order from us on Zomato and Swiggy."
+    },
+    {
+      "q": "What sizes are the pizzas?",
+      "a": "8 inch, cut into 4 slices, and 10 inch, cut into 8. The kids' pizzas are 7 inch, and the kullad pizzas come in medium and large."
+    },
+    {
+      "q": "What is cheese burst, and how much is it?",
+      "a": "A crust filled with melted cheese. You can have any pizza cheese burst: ₹120 more on an 8 inch, ₹200 more on a 10 inch."
+    },
+    {
+      "q": "Do you have veg pizzas?",
+      "a": "Yes, 44 of them, plus veg starters, momos, burgers and sandwiches. Every dish on the menu has a green (veg) or brown (non-veg) mark."
+    },
+    {
+      "q": "Can I add toppings?",
+      "a": "Yes. Extra cheese, paneer, mushroom, olives, jalapeño, chicken and more, from ₹40 on an 8 inch. See every price in the pizza builder."
+    },
+    {
+      "q": "Can I eat in?",
+      "a": "Yes, there is seating at the café. Our Google reviews often mention the ambience and the friendly staff. You can also book a table on Zomato."
+    },
+    {
+      "q": "Do you accept Magicpin vouchers?",
+      "a": "No, we do not accept Magicpin dining vouchers. Please check how you will pay before you order."
+    }
+  ],
+  "builder": {
+    "sizes": [
+      {
+        "id": "regular",
+        "label": "8 inch",
+        "note": "4 slices, on our Cheesy Margherita",
+        "price": 139,
+        "large": false
+      },
+      {
+        "id": "large",
+        "label": "10 inch",
+        "note": "8 slices, on our Cheesy Margherita",
+        "price": 220,
+        "large": true
+      }
+    ],
+    "bases": [
+      {
+        "id": "classic",
+        "label": "Classic crust",
+        "note": "Our regular base",
+        "price": 0,
+        "priceLarge": 0
+      },
+      {
+        "id": "cheese-burst",
+        "label": "Cheese burst",
+        "note": "A crust filled with melted cheese",
+        "price": 120,
+        "priceLarge": 200
+      }
+    ],
+    "cheeses": [
+      {
+        "id": "regular",
+        "label": "Mozzarella",
+        "note": "As on every pizza",
+        "price": 0,
+        "priceLarge": 0
+      },
+      {
+        "id": "extra",
+        "label": "Extra cheese",
+        "note": "More mozzarella on top",
+        "price": 50,
+        "priceLarge": 65
+      }
+    ],
+    "toppings": [
+      {
+        "id": "capsicum",
+        "label": "Capsicum",
+        "note": "",
+        "price": 40,
+        "priceLarge": 55,
+        "diet": "veg"
+      },
+      {
+        "id": "onion",
+        "label": "Onion",
+        "note": "",
+        "price": 40,
+        "priceLarge": 55,
+        "diet": "veg"
+      },
+      {
+        "id": "tomato",
+        "label": "Tomato",
+        "note": "",
+        "price": 40,
+        "priceLarge": 55,
+        "diet": "veg"
+      },
+      {
+        "id": "sweetcorn",
+        "label": "Sweetcorn",
+        "note": "",
+        "price": 40,
+        "priceLarge": 55,
+        "diet": "veg"
+      },
+      {
+        "id": "mushroom",
+        "label": "Mushroom",
+        "note": "",
+        "price": 40,
+        "priceLarge": 55,
+        "diet": "veg"
+      },
+      {
+        "id": "black-olives",
+        "label": "Black olives",
+        "note": "",
+        "price": 40,
+        "priceLarge": 55,
+        "diet": "veg"
+      },
+      {
+        "id": "green-olives",
+        "label": "Green olives",
+        "note": "",
+        "price": 40,
+        "priceLarge": 55,
+        "diet": "veg"
+      },
+      {
+        "id": "jalapeno",
+        "label": "Jalapeño",
+        "note": "",
+        "price": 40,
+        "priceLarge": 60,
+        "diet": "veg"
+      },
+      {
+        "id": "red-paprika",
+        "label": "Red paprika",
+        "note": "",
+        "price": 40,
+        "priceLarge": 60,
+        "diet": "veg"
+      },
+      {
+        "id": "paneer",
+        "label": "Paneer",
+        "note": "",
+        "price": 50,
+        "priceLarge": 65,
+        "diet": "veg"
+      },
+      {
+        "id": "garlic",
+        "label": "Garlic flavour",
+        "note": "",
+        "price": 20,
+        "priceLarge": 40,
+        "diet": "veg"
+      },
+      {
+        "id": "chicken",
+        "label": "Chicken",
+        "note": "",
+        "price": 50,
+        "priceLarge": 65,
+        "diet": "non-veg"
+      },
+      {
+        "id": "black-pepper-chicken",
+        "label": "Black pepper chicken",
+        "note": "",
+        "price": 50,
+        "priceLarge": 65,
+        "diet": "non-veg"
+      },
+      {
+        "id": "spicy-chicken",
+        "label": "Spicy chicken",
+        "note": "",
+        "price": 50,
+        "priceLarge": 65,
+        "diet": "non-veg"
+      },
+      {
+        "id": "peri-peri-chicken",
+        "label": "Peri peri chicken",
+        "note": "",
+        "price": 55,
+        "priceLarge": 70,
+        "diet": "non-veg"
+      },
+      {
+        "id": "chicken-makhani",
+        "label": "Chicken makhani",
+        "note": "",
+        "price": 55,
+        "priceLarge": 70,
+        "diet": "non-veg"
+      },
+      {
+        "id": "bbq-chicken",
+        "label": "BBQ chicken",
+        "note": "",
+        "price": 55,
+        "priceLarge": 70,
+        "diet": "non-veg"
+      }
+    ],
+    "maxToppings": 6,
+    "maxQuantity": 10
+  },
+  "whenOptions": [
+    "As soon as possible",
+    "Lunch, 12 noon to 3 pm",
+    "Evening, 5 to 8 pm",
+    "Dinner, 8 to 10:30 pm",
+    "Another day (say when below)"
+  ],
+  "story": [
+    "Hungru Pizza is a pizza café at Colony More, on Krishnanagar Road in Barasat. Our promise is on the logo: Best Pizza, Best Value.",
+    "The menu has over 100 pizzas, from a ₹120 Desi Paneer to the loaded cheese burst pizzas, plus pizza served in an earthen kullad, pizzas with faces for the kids, momos, burgers, sandwiches and a long list of cold drinks.",
+    "Come in and sit down, pick up on your way home, or order on WhatsApp, Zomato or Swiggy. Whichever you choose, we are open every day from 12 noon to 10:30 pm."
+  ],
+  "team": [],
+  "brands": [
+    {
+      "name": "Mozzarella",
+      "type": "On every pizza, overloaded on the cheese burst ones"
+    },
+    {
+      "name": "Paneer, six ways",
+      "type": "Plain, fried, spicy, tandoori, makhani and masala"
+    },
+    {
+      "name": "Chicken, ten ways",
+      "type": "Keema, BBQ, tandoori, peri peri, hariyali, makhani and more"
+    },
+    {
+      "name": "Fresh vegetables",
+      "type": "Capsicum, onion, tomato, sweetcorn, mushroom and peas"
+    },
+    {
+      "name": "Gondhoraj lime",
+      "type": "Bengal's fragrant lime, in a pizza and a lassi"
+    },
+    {
+      "name": "Kullad",
+      "type": "Earthen pots for the kullad pizzas"
+    }
+  ],
+  "warranty": {
+    "headline": "On every order",
+    "points": [
+      "Every dish is marked veg or non-veg, so you always know what you are getting.",
+      "Any pizza can be made cheese burst: ₹120 on 8 inch, ₹200 on 10 inch.",
+      "8 inch = 4 slices, 10 inch = 8 slices, so you can plan for everyone.",
+      "We confirm the total before your order is made, so there are no surprises."
+    ]
+  },
+  "legal": {
+    "contact": {
+      "entity": "Hungru Pizza",
+      "officer": "Name to be confirmed",
+      "email": "hello@hungrupizza.example",
+      "placeholder": true
+    },
+    "eyebrow": "Legal",
+    "updatedLabel": "Last updated",
+    "demoNote": "Sample text for this demo website, written for Indian law (DPDP Act 2023, IT Act 2000, Consumer Protection Act 2019, Food Safety and Standards Act 2006). Fill in the real business details and have a lawyer check it before the site goes live.",
+    "contentsTitle": "On this page",
+    "otherTitle": "Other policies",
+    "contactTitle": "Questions or complaints?",
+    "contactLead": "Contact our Grievance Officer about your personal details, an order or this website. We acknowledge every complaint within 48 hours and resolve it within 30 days.",
+    "officerLabel": "Grievance Officer",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone and WhatsApp",
+    "addressLabel": "By post",
+    "pages": [
+      {
+        "slug": "privacy-policy",
+        "title": "Privacy policy",
+        "navLabel": "Privacy",
+        "lead": "How {business} collects, uses and protects your personal details when you visit this website, order from us, call us or message us on WhatsApp, and the rights Indian law gives you over them.",
+        "updated": "2026-10-10",
+        "seo": {
+          "title": "Privacy Policy",
+          "description": "How Hungru Pizza collects, uses and protects your personal details, and your rights under India’s Digital Personal Data Protection Act, 2023."
+        },
+        "sections": [
+          {
+            "heading": "Who we are",
+            "body": "{entity} (“we”, “us”) is a pizza café at {address}. We run this website, {website}.\n\nUnder India’s Digital Personal Data Protection Act, 2023 (the **DPDP Act**) we are the **Data Fiduciary** for the personal details you share with us. That means we decide why and how they are used, and we are responsible for keeping them safe.\n\nThis policy also follows the Information Technology Act, 2000 and the Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011."
+          },
+          {
+            "heading": "The short version",
+            "body": "- We collect only what we need to make and deliver your order.\n- This website has no sign-up, no adverts and no tracking or analytics cookies.\n- The order form and the pizza builder do not send your details to our server. They only fill in a WhatsApp message on your phone, and nothing reaches us until you press send.\n- We never sell your details or share them for marketing.\n- You can ask us to show, correct or delete your details at any time."
+          },
+          {
+            "heading": "What we collect and why",
+            "body": "**When you order by WhatsApp, phone or the order form**\n- Your name, phone number, delivery address or area, your order and any notes, such as allergies or “ring the bell twice”.\n- Why: to confirm your order, make it, hand it over or deliver it, and contact you if something changes.\n\n**When you pay**\n- UPI and card payments show us your name, the payment reference and the amount. Cash needs nothing.\n- Why: to match your payment to your order and keep the records that tax law asks for.\n\n**When you visit this website**\n- Like every website, our hosting provider automatically records technical details: your IP address, browser and device type, the page you asked for and the time.\n- Why: to deliver the pages, keep the site secure and fix faults. We do not use these details to identify you or to build a profile.\n\nWe do not ask for sensitive details such as passwords, card numbers, health records or Aadhaar numbers. If you tell us about a food allergy, we use it only to make your order safely."
+          },
+          {
+            "heading": "Why we are allowed to use your details",
+            "body": "We use your details only:\n- **With your consent.** When you send us an order or a message, you agree to us using your details for that order. You can withdraw your consent at any time (see “Your rights” below).\n- **For the legitimate uses allowed by section 7 of the DPDP Act**, for example when you give us your address yourself so we can deliver, or when a law requires us to keep records, such as the GST rules.\n\nWe send offers on WhatsApp only if you ask us to, and you can stop them with one message."
+          },
+          {
+            "heading": "Who we share them with",
+            "body": "We never sell or rent your personal details. We share them only when needed, and only as much as needed:\n- **Our own team:** the kitchen staff who make your order and the rider who delivers it.\n- **Service providers who help us run the shop:** WhatsApp (Meta Platforms) for messages, our phone company for calls, your UPI app and bank for payments, our hosting provider for this website (currently Vercel Inc.) and our accountant for tax returns.\n- **Google:** the map on our Contact page is provided by Google Maps. See our [cookie policy](/cookie-policy/).\n- **Zomato and Swiggy**, only if you order through them: those apps collect your details under their own privacy policies and pass us what we need to make and send your order.\n- **Government authorities, courts or the police**, when the law requires it, for example a food safety officer under the Food Safety and Standards Act, 2006."
+          },
+          {
+            "heading": "Details stored outside India",
+            "body": "Some of our service providers, such as WhatsApp and our website host, may store data on servers outside India. Section 16 of the DPDP Act allows this, except to countries that the Government of India has restricted. We will follow any such restriction."
+          },
+          {
+            "heading": "How long we keep your details",
+            "body": "- **Order messages and delivery addresses:** up to one year after your last order, then deleted, so we can repeat “the usual” when you ask.\n- **Bills and payment records:** as long as tax and accounting laws require, usually 8 years.\n- **Website technical logs:** kept by our hosting provider for a limited time, under its own policy.\n\nWhen we no longer need your details and no law asks us to keep them, we delete them."
+          },
+          {
+            "heading": "Your rights",
+            "body": "Under the DPDP Act you have the right to:\n- **Know** what personal details we hold about you, what we do with them and who we have shared them with.\n- **Correct, complete or update** details that are wrong or out of date, such as an old address.\n- **Have your details deleted** when they are no longer needed, unless a law asks us to keep them.\n- **Withdraw your consent** at any time. Send us a WhatsApp message or an email saying so.\n- **Have your complaint heard** by our Grievance Officer, and then by the Data Protection Board of India if you are not satisfied.\n- **Nominate someone** to use these rights for you if you die or become unable to.\n\nTo use any of these rights, contact our Grievance Officer (details at the end of this page). We may ask you to confirm who you are before we act. We reply within 30 days at the most."
+          },
+          {
+            "heading": "Your duties",
+            "body": "The DPDP Act also asks you to give us correct details, not to pretend to be someone else, and not to make false or frivolous complaints."
+          },
+          {
+            "heading": "Children",
+            "body": "Children are welcome to enjoy our pizza, but orders should be placed by an adult. We do not knowingly collect details from anyone under 18. If a child has contacted us, a parent or guardian can ask us to delete the details."
+          },
+          {
+            "heading": "How we protect your details",
+            "body": "We follow reasonable security practices, as section 43A of the Information Technology Act, 2000 requires:\n- This website is served only over a secure (HTTPS) connection.\n- Only the people who need your details for your order can see them.\n- The shop phone and our accounts are protected with screen locks and passwords.\n- We never see or keep your card or UPI PIN.\n\nIf a data breach ever affects your details, we will tell you and the Data Protection Board of India as the law requires."
+          },
+          {
+            "heading": "Cookies",
+            "body": "This website does not use cookies to track you or show adverts. Read our [cookie policy](/cookie-policy/) and [cache policy](/cache-policy/) for the details."
+          },
+          {
+            "heading": "This policy in your language",
+            "body": "You can ask us for this policy in Bengali, Hindi or any other language listed in the Eighth Schedule to the Constitution of India. Call or WhatsApp us on {phone}."
+          },
+          {
+            "heading": "Changes to this policy",
+            "body": "If we change this policy, we will change the date at the top of this page. If a change affects how we use details you have already given us, we will tell you on WhatsApp before it applies."
+          },
+          {
+            "heading": "Grievance Officer",
+            "body": "For any question, request or complaint about your personal details, contact our Grievance Officer, **{officer}**, at [{email}](mailto:{email}), or call or WhatsApp {phone} ({hours}). By post: {entity}, {address}.\n\nWe acknowledge complaints within 48 hours and resolve them within 30 days. If you are not satisfied with our answer, you can complain to the Data Protection Board of India under the DPDP Act."
+          }
+        ]
+      },
+      {
+        "slug": "terms-and-conditions",
+        "title": "Terms and conditions",
+        "navLabel": "Terms",
+        "lead": "The rules for using this website, and the terms on which {business} takes, makes and delivers your order.",
+        "updated": "2026-10-10",
+        "seo": {
+          "title": "Terms and Conditions",
+          "description": "Terms for using this website and for ordering from Hungru Pizza: orders on WhatsApp, prices, delivery, payment, allergens and complaints."
+        },
+        "sections": [
+          {
+            "heading": "About these terms",
+            "body": "These terms apply to everyone who uses {website} and to every order we accept. “We”, “us” and “our” mean {entity}, {address}. “You” means the person using this website or placing an order.\n\nBy using this website or placing an order, you agree to these terms. They are an electronic record under the Information Technology Act, 2000 and need no signature."
+          },
+          {
+            "heading": "Using this website",
+            "body": "You may use this website to see our menu and to order from us. Please do not:\n- break or try to break into the site, or upload anything harmful;\n- copy our menu, text or photos for your own business;\n- use it to send us fake or prank orders.\n\nWe try to keep the site correct and working, but we cannot promise it will always be available or free of mistakes."
+          },
+          {
+            "heading": "How an order is made",
+            "body": "- The order form and the pizza builder only write out a WhatsApp message for you. Sending it is a request, not a confirmed order.\n- Your order is **confirmed** when we reply with the total and the expected time, and you agree.\n- The price shown by the pizza builder is a website price. The total in our confirmation message is the one you pay.\n- We may decline an order, for example if you are outside our delivery area or an item has sold out. We will tell you straight away.\n- Orders placed through Zomato, Swiggy or another app are also covered by that app’s own terms, prices and refund rules."
+          },
+          {
+            "heading": "Prices and payment",
+            "body": "- Menu prices are in Indian rupees. Any tax or charge that is not already in a price is shown in our confirmation before you agree.\n- Delivery charges, if any, are shown in our confirmation before you agree.\n- Pay at the café, or when the order arrives. For large orders booked ahead we may ask for part of the price in advance.\n- We do not accept Magicpin dining vouchers.\n- We will never ask you to pay through a link sent from an unknown number. If in doubt, call us on {phone} before paying."
+          },
+          {
+            "heading": "Delivery and pickup",
+            "body": "- We deliver near the café, within about 5 km. The time in our confirmation is our best estimate; traffic and rain can slow us down, and we will message you if we are running late.\n- Please make sure someone is there to receive the order and that your phone is on. If our rider cannot reach you after waiting and calling, the order may be treated as delivered.\n- For pickup, your order is ready at the time we agreed. Pizzas taste best within 15 minutes."
+          },
+          {
+            "heading": "Food, allergens and dietary needs",
+            "body": "- Our kitchen uses common allergens, including wheat (gluten), milk, egg and fish. We cannot promise any item is completely free of them.\n- **Tell us about any allergy when you order.** We will tell you what is in each item and whether we can make it safely.\n- Veg and non-veg items are marked with the standard green and brown symbols. Both are made in the same kitchen.\n- Eat delivered food soon after it arrives, and keep leftovers in the fridge.\n\nWe hold a food business licence or registration under the Food Safety and Standards Act, 2006. The number is shown on our bills and at the café."
+          },
+          {
+            "heading": "Photos and content",
+            "body": "The text, logo and design of this website belong to {entity}. Some photos are licensed sample photos used to show the kind of food we make; your order may look a little different."
+          },
+          {
+            "heading": "Cancellations and refunds",
+            "body": "See our [refund and cancellation policy](/refund-policy/)."
+          },
+          {
+            "heading": "Limits of our liability",
+            "body": "We are responsible for loss or harm we cause through our negligence or by breaking these terms. We are not responsible for losses nobody could have foreseen. Our total liability for an order is limited to the price of that order, except for death or personal injury caused by our negligence, or anything else the law does not allow us to limit.\n\nNothing in these terms takes away your rights as a consumer under the Consumer Protection Act, 2019."
+          },
+          {
+            "heading": "Privacy",
+            "body": "How we use your personal details is explained in our [privacy policy](/privacy-policy/)."
+          },
+          {
+            "heading": "Complaints and disputes",
+            "body": "If something is wrong with your order or this website, please tell us first: call or WhatsApp {phone}, or email [{email}](mailto:{email}). Most problems are sorted out the same day.\n\nIf we cannot agree, you can contact the National Consumer Helpline on **1915** or at [consumerhelpline.gov.in](https://consumerhelpline.gov.in), or file a complaint with the Consumer Commission at [e-jagriti.gov.in](https://e-jagriti.gov.in).\n\nThese terms are governed by the laws of India. Subject to your rights as a consumer, the courts at Barasat, North 24 Parganas, West Bengal have jurisdiction."
+          },
+          {
+            "heading": "Changes to these terms",
+            "body": "We may update these terms from time to time. The version on this page on the day you place your order applies to that order."
+          },
+          {
+            "heading": "Grievance Officer",
+            "body": "{officer}, {entity}\n{address}\nEmail: [{email}](mailto:{email})\nPhone and WhatsApp: {phone} ({hours})\n\nWe acknowledge complaints within 48 hours and resolve them within one month."
+          }
+        ]
+      },
+      {
+        "slug": "cookie-policy",
+        "title": "Cookie policy",
+        "navLabel": "Cookies",
+        "lead": "Which cookies and browser storage this website uses (very few), what other companies may set, and how you can control them.",
+        "updated": "2026-10-10",
+        "seo": {
+          "title": "Cookie Policy",
+          "description": "This website uses no tracking or advertising cookies. See which cookies Google Maps may set, and how to control cookies in your browser."
+        },
+        "sections": [
+          {
+            "heading": "What cookies are",
+            "body": "Cookies are small text files that a website saves in your browser. Browsers can also keep small amounts of data in “local storage”. Both can be used to remember useful things, such as keeping you signed in, or to follow you around the internet for adverts."
+          },
+          {
+            "heading": "The short answer",
+            "body": "This website does **not** use cookies or local storage to track you, count visits or show adverts. We do not use Google Analytics, the Facebook (Meta) Pixel or any similar tool.\n\nThat is why there is no cookie banner: we do not set any cookies on visitors’ devices that need consent."
+          },
+          {
+            "heading": "Cookies we use",
+            "body": "**For visitors: none.**\n\n**For the shop owner only:** our team edits this website through a private editing page. Signing in there sets one cookie, and the editor saves unfinished changes in that browser’s local storage. Visitors never get either of them.\n- **hungru_admin** (cookie): keeps the owner signed in to the editor. Strictly necessary. Only our server can read it, and it is deleted after 7 days or on signing out.\n- **hungru-admin-draft** (local storage): keeps edits that are not yet published, so they are not lost if the tab closes. Deleted when the changes are published or thrown away."
+          },
+          {
+            "heading": "Cookies set by other companies",
+            "body": "Some pages show content from other companies, which may set their own cookies under their own policies:\n- **Google Maps:** the map on our [Contact page](/contact/). When it loads, Google may set cookies, for example to remember settings and prevent fraud. See [Google’s privacy policy](https://policies.google.com/privacy).\n- **Unsplash:** some sample photos load from Unsplash’s image servers, which receive your IP address in order to send the picture. See [Unsplash’s privacy policy](https://unsplash.com/privacy).\n- **WhatsApp and Google reviews:** these open only when you tap a WhatsApp or review link, and then that company’s own policy applies.\n\nWe do not control these cookies and receive no information from them."
+          },
+          {
+            "heading": "How to control cookies",
+            "body": "You can block or delete cookies in your browser’s settings:\n- **Chrome or Edge:** Settings, then Privacy and security (in Edge: Privacy, search and services).\n- **Safari on iPhone:** the Settings app, then Safari.\n- **Firefox:** Settings, then Privacy & Security.\n\nBlocking cookies does not stop this website from working. The only difference is that the Google map may not load; the Get directions button still works."
+          },
+          {
+            "heading": "If this changes",
+            "body": "If we ever want to add cookies that are not strictly necessary, such as visitor statistics, we will update this policy first and ask for your consent before setting them, as the Digital Personal Data Protection Act, 2023 requires."
+          },
+          {
+            "heading": "Questions",
+            "body": "Ask our Grievance Officer at [{email}](mailto:{email}) or on {phone}. How we handle personal details is explained in our [privacy policy](/privacy-policy/)."
+          }
+        ]
+      },
+      {
+        "slug": "cache-policy",
+        "title": "Cache policy",
+        "navLabel": "Cache",
+        "lead": "How your browser and our hosting network keep copies of this website so it loads faster, what is never stored, and how to clear your cache.",
+        "updated": "2026-10-10",
+        "seo": {
+          "title": "Cache Policy",
+          "description": "How your browser and our hosting network cache this website to make it faster, what is never cached, and how to clear your browser cache."
+        },
+        "sections": [
+          {
+            "heading": "What caching is",
+            "body": "To open pages faster and use less mobile data, your browser keeps copies of files it has already downloaded, such as pictures, fonts and the code that runs the page. This store is called the **cache**. Our hosting provider does the same on servers around the world, so pages reach you from a server near you."
+          },
+          {
+            "heading": "What is cached, and for how long",
+            "body": "- **Web pages:** your browser checks with our server for a newer version every time you open a page, so you always see today’s menu and prices.\n- **Code, styles and fonts:** kept for up to one year. Their file names change whenever we update the site, so your browser never uses an old version by mistake.\n- **Photos:** may be kept for up to one year. A new or changed photo is saved under a new file name, so you see it straight away.\n- **Sample photos from Unsplash:** cached according to Unsplash’s own settings.\n- **Our hosting network:** keeps copies of our pages and files, and replaces them every time we publish an update.\n- **Never cached:** the private editing page our team uses, and the file it checks to see whether an update is live."
+          },
+          {
+            "heading": "No personal details in the cache",
+            "body": "Every visitor gets the same pages. Nothing you type into the order form or the pizza builder is saved by this website, sent to our server or kept in a cache. Your browser may offer to remember what you type in forms; that is a setting in your browser, not part of this website.\n\nThis website does not install a service worker and does not work offline."
+          },
+          {
+            "heading": "How to clear your cache",
+            "body": "If a page ever looks out of date or broken, reload it first. If that does not help, clear your browser’s cache:\n- **Chrome (phone or computer):** Settings, Privacy and security, Delete browsing data, then tick Cached images and files.\n- **Safari on iPhone:** the Settings app, Safari, then Clear History and Website Data.\n- **Firefox:** Settings, Privacy & Security, Cookies and Site Data, then Clear Data.\n- **Edge:** Settings, Privacy, search and services, then Clear browsing data.\n\nClearing the cache is safe. The site simply downloads fresh copies the next time you visit."
+          },
+          {
+            "heading": "Questions",
+            "body": "Is something not loading as it should? Call or WhatsApp us on {phone}, or email [{email}](mailto:{email}). See also our [cookie policy](/cookie-policy/)."
+          }
+        ]
+      },
+      {
+        "slug": "refund-policy",
+        "title": "Refund and cancellation policy",
+        "navLabel": "Refunds",
+        "lead": "When you can cancel or change an order, what we do if something goes wrong with your food, and how refunds are paid.",
+        "updated": "2026-10-10",
+        "seo": {
+          "title": "Refund and Cancellation Policy",
+          "description": "Cancelling or changing an order with Hungru Pizza: when you can cancel, remakes and refunds for wrong or cold food, and how refunds are paid."
+        },
+        "sections": [
+          {
+            "heading": "Cancelling an order",
+            "body": "Tell us on WhatsApp or call {phone}. What happens depends on how far your order has got:\n- **Before we start making it:** cancel for free. If you paid in advance, you get all of it back.\n- **After we have started making it:** we cannot cancel it, because the food cannot be sold to anyone else. You can still collect it or have it delivered.\n- **Large orders booked ahead:** free to cancel up to 2 hours before the agreed time. After that we may keep up to half of any advance to cover food already prepared, and refund the rest.\n- **Orders through Zomato or Swiggy:** cancellations and refunds are handled by the app, under its own policy. Contact the app’s support first; we will help where we can."
+          },
+          {
+            "heading": "Changing an order",
+            "body": "You can change an order until we start making it. If the new order costs more or less, we tell you the new total before we start."
+          },
+          {
+            "heading": "If something is wrong",
+            "body": "If your order arrives wrong, incomplete, cold, damaged or not fit to eat, send us a photo on WhatsApp within 30 minutes of delivery. We will:\n- **remake and redeliver** the item as quickly as we can, or\n- **refund** the price of that item, if you prefer.\n\nYou do not need to send the food back. We will never ask you to pay twice for a remake."
+          },
+          {
+            "heading": "Late deliveries",
+            "body": "If your order reaches you much later than the time we confirmed, for a reason within our control, tell us and we will make it right, for example by refunding the delivery charge. You may also cancel before it is out for delivery and get a full refund."
+          },
+          {
+            "heading": "If we cancel",
+            "body": "If we have to cancel your order, for example because an item has run out or the oven is down, we tell you straight away and refund everything you have paid, without deductions."
+          },
+          {
+            "heading": "How and when refunds are paid",
+            "body": "- Refunds go back to the UPI ID or bank account you paid from. Cash payments are refunded by UPI or in cash at the café.\n- We pay within 3 working days of agreeing the refund. Your bank may take a little longer to show it.\n- We do not charge any fee for a refund."
+          },
+          {
+            "heading": "If you are not satisfied",
+            "body": "Talk to us first. Our Grievance Officer, {officer}, will reply within 48 hours and aims to settle the matter within 30 days: email [{email}](mailto:{email}) or call {phone}.\n\nYou can also contact the National Consumer Helpline on **1915** or at [consumerhelpline.gov.in](https://consumerhelpline.gov.in). Nothing in this policy limits your rights under the Consumer Protection Act, 2019."
+          }
+        ]
+      },
+      {
+        "slug": "disclaimer",
+        "title": "Disclaimer",
+        "navLabel": "Disclaimer",
+        "lead": "Please keep these points in mind when you use the information on this website.",
+        "updated": "2026-10-10",
+        "seo": {
+          "title": "Disclaimer",
+          "description": "Prices may change, some photos are samples and allergen details are general. The limits of the information on the Hungru Pizza website."
+        },
+        "sections": [
+          {
+            "heading": "Prices",
+            "body": "Prices on this website, including the pizza builder, are our current menu prices but may change, and some items may sell out. The total in our WhatsApp confirmation is the one you pay."
+          },
+          {
+            "heading": "Photos",
+            "body": "Some photos on this website are licensed sample photos that show the kind of food we make; they are not all photos of our own food. Every pizza is made by hand, so yours may look a little different. The photos of our kids’ pizzas are our own."
+          },
+          {
+            "heading": "Allergens and diet",
+            "body": "Ingredient and allergen details on this website are a general guide. Recipes and suppliers can change. If you have an allergy or a strict dietary need, tell us when you order and we will confirm what is in each item. Veg and non-veg dishes are made in the same kitchen."
+          },
+          {
+            "heading": "Delivery times",
+            "body": "Delivery times on this website are typical times, not promises. The time in our confirmation message is our best estimate on the day."
+          },
+          {
+            "heading": "Reviews and ratings",
+            "body": "Ratings and reviews come from our Google Business Profile, and the numbers shown here may be a little behind the live count. Reviews are the opinions of the people who wrote them."
+          },
+          {
+            "heading": "Links to other websites",
+            "body": "We link to WhatsApp, Google Maps, Google reviews, Zomato, Swiggy and Facebook for your convenience. We are not responsible for the content or privacy practices of other websites."
+          },
+          {
+            "heading": "Mistakes",
+            "body": "We work to keep this website correct and up to date, but it may contain mistakes or out-of-date information. If you spot one, please tell us on {phone}. See also our [terms and conditions](/terms-and-conditions/)."
+          }
+        ]
+      }
+    ]
+  }
+}
