@@ -176,7 +176,7 @@ export interface Brand {
 export interface BusinessLogo {
   /** Photo key of the uploaded logo. "" = the built-in slice mark with the business name. */
   image: string;
-  /** Optional light version for the dark footer. "" = the main logo on a white panel there. */
+  /** Optional light version for dark backgrounds: the footer, and the header in dark mode. "" = the main logo (on a white panel in the footer). */
   imageDark: string;
   /** Optional square icon for the browser tab and phone home screens. "" = made from the logo (or the built-in icon). */
   icon: string;

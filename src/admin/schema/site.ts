@@ -42,8 +42,8 @@ export const business: Section = {
         {
           kind: "logo",
           key: "imageDark",
-          label: "Light version for the dark footer (optional)",
-          hint: "Only if your logo has a white or light version. Without one, the footer shows your logo on a white panel, so a dark logo never disappears.",
+          label: "Light version for dark backgrounds (optional)",
+          hint: "Only if your logo has a white or light version. It is used in the dark footer and, in dark mode, in the header. Without one, the footer shows your logo on a white panel, so a dark logo never disappears.",
           variant: "dark",
         },
         {
