@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import { newestFirst, readMinutes } from "@/lib/blog";
 import { formatDate, formatINR, formatNumber } from "@/lib/format";
 
 describe("formatINR", () => {
@@ -25,5 +26,18 @@ describe("formatDate", () => {
   it("writes dates the Indian way and leaves anything else alone", () => {
     expect(formatDate("2026-10-10")).toBe("10 October 2026");
     expect(formatDate("soon")).toBe("soon");
+  });
+});
+
+describe("blog helpers", () => {
+  const post = (date: string, words: number) => ({ slug: date, title: "T", excerpt: "", category: "", date, author: "", photo: "", sections: [{ heading: "", body: "word ".repeat(words) }], seo: { title: "", description: "" }, placeholder: false });
+
+  it("lists the newest post first", () => {
+    expect(newestFirst([post("2026-09-12", 1), post("2026-10-08", 1), post("2026-09-26", 1)]).map((p) => p.date)).toEqual(["2026-10-08", "2026-09-26", "2026-09-12"]);
+  });
+
+  it("reads at about 200 words a minute, at least 1", () => {
+    expect(readMinutes(post("2026-10-08", 10))).toBe(1);
+    expect(readMinutes(post("2026-10-08", 600))).toBe(3);
   });
 });

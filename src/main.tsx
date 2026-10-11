@@ -4,7 +4,11 @@ import { BrowserRouter } from "react-router";
 import "./index.css";
 import { App } from "./App";
 import { isPreviewWindow } from "./lib/preview-flag";
+import { syncThemeColor } from "./lib/theme";
 import { lazyPages } from "./pages/lazy";
+
+// The browser bar colour follows the light or dark mode that index.html picked.
+syncThemeColor();
 
 // "/index.html" is the same page as "/".
 if (window.location.pathname.endsWith("/index.html")) {

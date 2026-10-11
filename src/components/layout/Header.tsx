@@ -4,23 +4,15 @@ import { NavLink } from "react-router";
 import { Logo } from "@/components/common/Logo";
 import { Stars } from "@/components/common/RatingBadge";
 import { WhatsAppButton } from "@/components/common/ContactButtons";
+import { ThemeToggle } from "@/components/common/ThemeToggle";
 import { Button } from "@/components/ui/button";
 import { business, copy } from "@/data/site";
 import { useScrollScene } from "@/lib/motion";
-import { paths, telHref } from "@/lib/paths";
+import { telHref } from "@/lib/paths";
 import { cn } from "@/lib/utils";
+import { mainNav } from "./nav";
 
 const MobileMenu = lazy(() => import("./MobileMenu"));
-
-function mainNav() {
-  return [
-    { label: copy.nav.services, to: paths.services },
-    { label: copy.nav.builder, to: paths.builder },
-    { label: copy.nav.projects, to: paths.projects },
-    { label: copy.nav.about, to: paths.about },
-    { label: copy.nav.contact, to: paths.contact },
-  ];
-}
 
 export function Header() {
   const nav = mainNav();
@@ -98,12 +90,14 @@ export function Header() {
           </nav>
 
           <div className="flex items-center gap-2">
+            <ThemeToggle />
             <Button asChild variant="outline" size="icon-sm">
               <a href={telHref(business.phone.tel)} aria-label={`Call ${business.phone.display}`}>
                 <Phone />
               </a>
             </Button>
-            <WhatsAppButton className="hidden md:inline-flex" size="sm" />
+            {/* Hidden from 1024 to 1279px, where the seven links need the room (the floating WhatsApp button is there) */}
+            <WhatsAppButton className="hidden md:inline-flex lg:hidden xl:inline-flex" size="sm" />
 
             <Button
               variant="outline"

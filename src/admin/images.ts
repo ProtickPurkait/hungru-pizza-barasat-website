@@ -147,6 +147,9 @@ export function photoUsage(content: SiteContent): Record<string, string[]> {
   add(c.home.hero.video.tall.poster, "Home page video (phones)");
   add(c.servicesPage.hero.photo, "Menu page");
   add(c.projectsPage.hero.photo, "Gallery page");
+  add(c.blogPage.hero.photo, "Blog page");
+  for (const p of content.blog) add(p.photo, `Blog: ${p.title}`);
+  add(c.careersPage.hero.photo, "Careers page");
   add(c.aboutPage.hero.photo, "About page");
   c.aboutPage.storyPhotos.forEach((k) => add(k, "About page"));
   add(c.contactPage.hero.photo, "Contact page");

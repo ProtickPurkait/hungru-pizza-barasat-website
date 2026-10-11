@@ -78,6 +78,14 @@
       "title": "Contact and Directions | Colony More, Barasat",
       "description": "Call or WhatsApp +91 98330 48397, or visit 2610/9, Krishnanagar Road, Colony More, Barasat 700126. Open every day, 12 noon to 10:30 pm."
     },
+    "blog": {
+      "title": "Blog | Pizza Sizes, Cheese Burst and Kids' Pizzas",
+      "description": "Guides from the Hungru Pizza kitchen in Barasat: which pizza size to order, what cheese burst is, our kids' pizzas and more."
+    },
+    "careers": {
+      "title": "Careers | Jobs at a Pizza Café in Barasat",
+      "description": "Work at Hungru Pizza, Colony More, Barasat: pizza makers, counter staff and delivery riders. Send us your details on WhatsApp."
+    },
     "notFound": {
       "title": "Page Not Found",
       "description": "This page does not exist. See the Hungru Pizza menu, build your own pizza or order on WhatsApp."
@@ -287,8 +295,13 @@
       "services": "Menu",
       "projects": "Gallery",
       "builder": "Build a pizza",
+      "blog": "Blog",
+      "careers": "Careers",
       "about": "About",
       "contact": "Contact"
+    },
+    "theme": {
+      "label": "Dark mode"
     },
     "buttons": {
       "call": "Call to order",
@@ -319,7 +332,9 @@
       "orderStart": "Hi {business}, I'd like to place an *order*.",
       "orderEnd": "Please confirm the total and the time.",
       "builderStart": "Hi {business}, I built a pizza on your website:",
-      "builderEnd": "Please confirm the total and the time."
+      "builderEnd": "Please confirm the total and the time.",
+      "applyStart": "Hi {business}, I'd like to apply for a job.",
+      "applyEnd": "When can I come and talk to you?"
     },
     "ctaBand": {
       "eyebrow": "Order now",
@@ -435,8 +450,22 @@
       "vegLabel": "Vegetarian",
       "nonVegLabel": "Non-vegetarian",
       "eitherLabel": "Veg or non-veg",
-      "vegOnly": "Veg only",
-      "showAll": "Show all",
+      "vegSwitch": "Veg",
+      "nonVegSwitch": "Non-veg",
+      "dietLabel": "Show veg or non-veg dishes",
+      "searchLabel": "Search the menu",
+      "searchPlaceholder": "Search: paneer, momos, cold coffee",
+      "clearSearch": "Clear the search",
+      "sortLabel": "Sort by",
+      "sortMenu": "Menu order",
+      "sortPriceLow": "Price: low to high",
+      "sortPriceHigh": "Price: high to low",
+      "sortName": "Name: A to Z",
+      "allLabel": "All",
+      "results": "{shown} of {total} dishes",
+      "dishCount": "{count} dishes",
+      "noResults": "No dishes match. Try another word, or switch Veg or Non-veg back on.",
+      "clearFilters": "Clear filters",
       "jumpLabel": "Menu sections",
       "fromLabel": "From",
       "sectionLink": "More about {section}"
@@ -449,7 +478,7 @@
         "photo": "cheesePull"
       },
       "listTitle": "What would you like?",
-      "listLead": "Tap a section name for more, or order any dish straight from here."
+      "listLead": "Search for a dish, pick a section, sort by price or show only veg. Order any dish straight from here."
     },
     "servicePage": {
       "aboutTitle": "About this part of the menu",
@@ -545,6 +574,92 @@
       "formLead": "Fill this in and press the button. WhatsApp opens with your order ready to send.",
       "mapTitle": "Find us at Colony More",
       "callFirst": "Call before you come"
+    },
+    "blogPage": {
+      "hero": {
+        "eyebrow": "Blog",
+        "title": "From the Hungru kitchen",
+        "lead": "Pizza sizes, cheese burst, kids' pizzas and the rest of our menu, explained.",
+        "photo": "friendsCafe"
+      },
+      "listTitle": "Latest posts",
+      "readMore": "Read the post",
+      "readTime": "{minutes} min read",
+      "byLabel": "By",
+      "moreTitle": "More from the blog",
+      "orderTitle": "Hungry now?",
+      "orderText": "Order anything from this post on WhatsApp, or see the whole menu with prices.",
+      "menuLink": "See the menu",
+      "ctaTitle": "Hungry after all that reading?"
+    },
+    "careersPage": {
+      "hero": {
+        "eyebrow": "Careers",
+        "title": "Work at Hungru Pizza",
+        "lead": "We are a busy pizza café at Colony More, Barasat. If you like food and people, come and work with us.",
+        "photo": "loadedVegPizza"
+      },
+      "jobsButton": "See the open jobs",
+      "applyWhatsApp": "Apply on WhatsApp",
+      "perksTitle": "Why work with us",
+      "perks": [
+        {
+          "title": "Learn on the job",
+          "text": "New to pizza? We teach you everything, from the dough to the cheese burst."
+        },
+        {
+          "title": "Meals on shift",
+          "text": "Eat with the team on every shift."
+        },
+        {
+          "title": "Close to home",
+          "text": "Work at Colony More, Barasat, instead of travelling into Kolkata."
+        },
+        {
+          "title": "A friendly team",
+          "text": "Customers on Google mention our polite staff. We want to keep it that way."
+        }
+      ],
+      "perksPlaceholder": true,
+      "openingsTitle": "Open jobs",
+      "openingsLead": "Pick a job and send us your details on WhatsApp. We call you back to arrange a chat at the café.",
+      "typeLabel": "Type",
+      "hoursLabel": "Hours",
+      "payLabel": "Pay",
+      "dutiesTitle": "What you will do",
+      "needsTitle": "What we are looking for",
+      "applyButton": "Apply for this job",
+      "noOpenings": "No jobs are open right now, but you can still send us your details below.",
+      "formEyebrow": "Apply",
+      "formTitle": "Send us your details",
+      "formLead": "Fill this in and press the button. WhatsApp opens with your application written out, ready to send.",
+      "form": {
+        "name": "Your name",
+        "phone": "Phone number",
+        "role": "Job",
+        "rolePlaceholder": "Choose a job",
+        "anyRole": "Any job",
+        "experience": "Experience",
+        "experiencePlaceholder": "Choose one",
+        "experienceOptions": [
+          "No experience yet",
+          "Less than 1 year",
+          "1 to 3 years",
+          "More than 3 years"
+        ],
+        "area": "Where do you live?",
+        "areaPlaceholder": "e.g. Champadali, Barasat",
+        "message": "Anything else?",
+        "messagePlaceholder": "e.g. I can work evenings and weekends.",
+        "submit": "Send on WhatsApp",
+        "submitNote": "WhatsApp opens with your details. Nothing is sent until you press send.",
+        "privacyNote": "We use your details only to consider you for a job. See our [privacy policy](/privacy-policy/).",
+        "successTitle": "Almost done",
+        "successText": "Your application is written out in WhatsApp. Just press **send** and we will call you back.",
+        "reopen": "Open WhatsApp again",
+        "edit": "Change my details"
+      },
+      "ctaTitle": "Hungry while you are here?"
     },
     "notFound": {
       "eyebrow": "Error 404",
@@ -4225,7 +4340,7 @@
         "title": "Privacy policy",
         "navLabel": "Privacy",
         "lead": "How {business} collects, uses and protects your personal details when you visit this website, order from us, call us or message us on WhatsApp, and the rights Indian law gives you over them.",
-        "updated": "2026-10-10",
+        "updated": "2026-10-11",
         "seo": {
           "title": "Privacy Policy",
           "description": "How Hungru Pizza collects, uses and protects your personal details, and your rights under India’s Digital Personal Data Protection Act, 2023."
@@ -4241,7 +4356,7 @@
           },
           {
             "heading": "What we collect and why",
-            "body": "**When you order by WhatsApp, phone or the order form**\n- Your name, phone number, delivery address or area, your order and any notes, such as allergies or “ring the bell twice”.\n- Why: to confirm your order, make it, hand it over or deliver it, and contact you if something changes.\n\n**When you pay**\n- UPI and card payments show us your name, the payment reference and the amount. Cash needs nothing.\n- Why: to match your payment to your order and keep the records that tax law asks for.\n\n**When you visit this website**\n- Like every website, our hosting provider automatically records technical details: your IP address, browser and device type, the page you asked for and the time.\n- Why: to deliver the pages, keep the site secure and fix faults. We do not use these details to identify you or to build a profile.\n\nWe do not ask for sensitive details such as passwords, card numbers, health records or Aadhaar numbers. If you tell us about a food allergy, we use it only to make your order safely."
+            "body": "**When you order by WhatsApp, phone or the order form**\n- Your name, phone number, delivery address or area, your order and any notes, such as allergies or “ring the bell twice”.\n- Why: to confirm your order, make it, hand it over or deliver it, and contact you if something changes.\n\n**When you pay**\n- UPI and card payments show us your name, the payment reference and the amount. Cash needs nothing.\n- Why: to match your payment to your order and keep the records that tax law asks for.\n\n**When you apply for a job**\n- Your name, phone number, the job you want, your experience, where you live and anything else you choose to tell us.\n- Why: to consider you for the job, call you back and arrange a chat. Nothing else.\n\n**When you visit this website**\n- Like every website, our hosting provider automatically records technical details: your IP address, browser and device type, the page you asked for and the time.\n- Why: to deliver the pages, keep the site secure and fix faults. We do not use these details to identify you or to build a profile.\n\nWe do not ask for sensitive details such as passwords, card numbers, health records or Aadhaar numbers. If you tell us about a food allergy, we use it only to make your order safely."
           },
           {
             "heading": "Why we are allowed to use your details",
@@ -4257,7 +4372,7 @@
           },
           {
             "heading": "How long we keep your details",
-            "body": "- **Order messages and delivery addresses:** up to one year after your last order, then deleted, so we can repeat “the usual” when you ask.\n- **Bills and payment records:** as long as tax and accounting laws require, usually 8 years.\n- **Website technical logs:** kept by our hosting provider for a limited time, under its own policy.\n\nWhen we no longer need your details and no law asks us to keep them, we delete them."
+            "body": "- **Order messages and delivery addresses:** up to one year after your last order, then deleted, so we can repeat “the usual” when you ask.\n- **Bills and payment records:** as long as tax and accounting laws require, usually 8 years.\n- **Job applications:** up to 6 months, then deleted, unless you ask us to keep yours for a later job.\n- **Website technical logs:** kept by our hosting provider for a limited time, under its own policy.\n\nWhen we no longer need your details and no law asks us to keep them, we delete them."
           },
           {
             "heading": "Your rights",
@@ -4363,7 +4478,7 @@
         "title": "Cookie policy",
         "navLabel": "Cookies",
         "lead": "Which cookies and browser storage this website uses (very few), what other companies may set, and how you can control them.",
-        "updated": "2026-10-10",
+        "updated": "2026-10-11",
         "seo": {
           "title": "Cookie Policy",
           "description": "This website uses no tracking or advertising cookies. See which cookies Google Maps may set, and how to control cookies in your browser."
@@ -4379,7 +4494,7 @@
           },
           {
             "heading": "Cookies we use",
-            "body": "**For visitors: none.**\n\n**For the shop owner only:** our team edits this website through a private editing page. Signing in there sets one cookie, and the editor saves unfinished changes in that browser’s local storage. Visitors never get either of them.\n- **hungru_admin** (cookie): keeps the owner signed in to the editor. Strictly necessary. Only our server can read it, and it is deleted after 7 days or on signing out.\n- **hungru-admin-draft** (local storage): keeps edits that are not yet published, so they are not lost if the tab closes. Deleted when the changes are published or thrown away."
+            "body": "**For visitors: no cookies, and one setting in local storage, only if you use it.**\n- **hungru-theme** (local storage): remembers whether you chose the light or the dark look with the switch at the top of the page. It holds just the word light or dark, never leaves your browser, and stays until you clear it. Without it, the site follows your device's own setting.\n\n**For the shop owner only:** our team edits this website through a private editing page. Signing in there sets one cookie, and the editor saves unfinished changes in that browser’s local storage. Visitors never get either of them.\n- **hungru_admin** (cookie): keeps the owner signed in to the editor. Strictly necessary. Only our server can read it, and it is deleted after 7 days or on signing out.\n- **hungru-admin-draft** (local storage): keeps edits that are not yet published, so they are not lost if the tab closes. Deleted when the changes are published or thrown away."
           },
           {
             "heading": "Cookies set by other companies",
@@ -4515,5 +4630,166 @@
         ]
       }
     ]
-  }
+  },
+  "blog": [
+    {
+      "slug": "8-inch-or-10-inch-pizza",
+      "title": "8 inch or 10 inch? How to pick your pizza size",
+      "excerpt": "An 8 inch pizza has 4 slices and a 10 inch has 8. How many to order for one, two or a group, and what each size costs.",
+      "category": "Guide",
+      "date": "2026-10-08",
+      "author": "Hungru Pizza",
+      "photo": "friendsSharing",
+      "sections": [
+        {
+          "heading": "",
+          "body": "Every pizza on our menu comes in two sizes: **8 inch** and **10 inch**. The 10 inch is cut into 8 slices instead of 4, and it is more than one and a half times as much pizza."
+        },
+        {
+          "heading": "Which size for how many people?",
+          "body": "- **One hungry person:** an 8 inch (4 slices), with fries or garlic bread on the side.\n- **Two people:** one 10 inch (8 slices), or two 8 inch pizzas if you want two flavours.\n- **Four friends:** two 10 inch pizzas and a plate of momos.\n\nKids' pizzas are a 7 inch size of their own, and kullad pizzas come in medium and large. See [kullad and kids' pizzas](/menu/kullad-and-kids-pizzas/)."
+        },
+        {
+          "heading": "What the sizes cost",
+          "body": "Our veg and chicken pizzas start at ₹120 for 8 inch and ₹220 for 10 inch. The Cheesy Margherita, for example, is ₹139 or ₹220. Every price is on the [menu](/menu/).\n\nExtras cost a little more on the 10 inch, because there is more pizza to cover. Extra cheese is ₹50 on an 8 inch and ₹65 on a 10 inch, and most toppings are ₹40 or ₹55."
+        },
+        {
+          "heading": "Still not sure?",
+          "body": "In the [pizza builder](/build-your-pizza/) you choose the size, crust, cheese and toppings and watch the price add up. When it looks right, send it to us on WhatsApp."
+        }
+      ],
+      "seo": {
+        "title": "8 inch or 10 inch Pizza? Slices, Sizes and Prices",
+        "description": "An 8 inch pizza has 4 slices, a 10 inch has 8. Which size to order for one, two or four people at Hungru Pizza, Barasat, and what each costs."
+      },
+      "placeholder": true
+    },
+    {
+      "slug": "what-is-cheese-burst-pizza",
+      "title": "What is a cheese burst pizza?",
+      "excerpt": "A crust with melted cheese inside, so the edge pulls with every bite. You can have it on any pizza on our menu, for ₹120 on an 8 inch or ₹200 on a 10 inch.",
+      "category": "Menu",
+      "date": "2026-09-26",
+      "author": "Hungru Pizza",
+      "photo": "cheesePull",
+      "sections": [
+        {
+          "heading": "",
+          "body": "A cheese burst pizza has a layer of melted cheese inside the base. Bite into the crust and the cheese runs out, which is where the name comes from."
+        },
+        {
+          "heading": "Can I have it on any pizza?",
+          "body": "Yes. Any pizza on our menu can be made cheese burst: **₹120** extra on an 8 inch and **₹200** extra on a 10 inch. Say \"cheese burst\" when you order, or choose it in the [pizza builder](/build-your-pizza/)."
+        },
+        {
+          "heading": "Which pizzas suit it best?",
+          "body": "- Simple pizzas such as the **Cheesy Margherita**, where the cheese is the star.\n- Paneer pizzas, for even more creaminess.\n- Spicy chicken pizzas, where the cheese softens the heat.\n\nThat is a matter of taste, of course. Ask us on WhatsApp what people are ordering today."
+        },
+        {
+          "heading": "Cheese burst or extra cheese?",
+          "body": "They are two different things. **Extra cheese** is more mozzarella on top: ₹50 on an 8 inch, ₹65 on a 10 inch. **Cheese burst** puts the cheese inside the crust. You can have both."
+        }
+      ],
+      "seo": {
+        "title": "What is Cheese Burst Pizza? Price and How to Order",
+        "description": "Cheese burst is a pizza crust filled with melted cheese. At Hungru Pizza, Barasat, any pizza can be cheese burst: ₹120 on 8 inch, ₹200 on 10 inch."
+      },
+      "placeholder": true
+    },
+    {
+      "slug": "kids-pizzas-frog-lion-halloween",
+      "title": "Kids' pizzas: a frog, a lion and a mummy",
+      "excerpt": "Our 7 inch kids' pizzas are made to look like faces: the Baby Frog, the Cutie Lion and the Mini Halloween. What is on each one, and what they cost.",
+      "category": "Kids",
+      "date": "2026-09-12",
+      "author": "Hungru Pizza",
+      "photo": "tableSharing",
+      "sections": [
+        {
+          "heading": "",
+          "body": "Dinner is easier when the pizza looks back at you. Our kids' pizzas are 7 inch, a good size for one child, and each one is made into a face."
+        },
+        {
+          "heading": "Baby Frog Pizza, ₹299",
+          "body": "A frog face made from paneer, tomato, sweetcorn, capsicum, onion and black olives. This one is vegetarian."
+        },
+        {
+          "heading": "Cutie Lion Pizza, ₹299",
+          "body": "A lion face made from chicken keema, chicken salami, chicken sausage, onion and olives, with olive eyes and onion whiskers."
+        },
+        {
+          "heading": "Mini Halloween Pizza, ₹199",
+          "body": "A mummy wrapped in strips of melted cheese, with chicken, tomato, onion and capsicum."
+        },
+        {
+          "heading": "How to order",
+          "body": "The kids' pizzas are on our [kullad and kids' menu](/menu/kullad-and-kids-pizzas/). Order them on WhatsApp like anything else, or come and eat them at the café in Colony More."
+        }
+      ],
+      "seo": {
+        "title": "Kids' Pizzas in Barasat: Frog, Lion and Halloween",
+        "description": "Hungru Pizza's 7 inch kids' pizzas look like faces: the Baby Frog (veg), the Cutie Lion and the Mini Halloween. What is on them and what they cost."
+      },
+      "placeholder": true
+    }
+  ],
+  "jobs": [
+    {
+      "id": "pizza-maker",
+      "title": "Pizza maker",
+      "type": "Full time",
+      "hours": "Shifts between 12 noon and 10:30 pm",
+      "pay": "Discussed at the interview",
+      "summary": "Make our pizzas, from stretching the dough to the cheese burst, in the kitchen at Colony More.",
+      "duties": [
+        "Get the dough, sauces and toppings ready before we open",
+        "Make pizzas from the menu and from pizza builder orders",
+        "Keep the kitchen clean and follow food safety rules"
+      ],
+      "needs": [
+        "Kitchen experience helps, but we will teach you our pizzas",
+        "Can work quickly through the evening rush",
+        "Lives in or near Barasat"
+      ],
+      "placeholder": true
+    },
+    {
+      "id": "counter-staff",
+      "title": "Counter and service staff",
+      "type": "Full time",
+      "hours": "Shifts between 12 noon and 10:30 pm",
+      "pay": "Discussed at the interview",
+      "summary": "Take orders at the counter and on WhatsApp, serve the people who eat in, and keep the café tidy.",
+      "duties": [
+        "Take orders at the counter, on the phone and on WhatsApp",
+        "Serve food and drinks at the tables",
+        "Take cash and UPI payments"
+      ],
+      "needs": [
+        "Polite and patient with customers",
+        "Speaks Bengali and Hindi; some English helps",
+        "Comfortable taking orders on a phone"
+      ],
+      "placeholder": true
+    },
+    {
+      "id": "delivery-rider",
+      "title": "Delivery rider",
+      "type": "Part time or full time",
+      "hours": "Evenings, from 5 pm",
+      "pay": "Discussed at the interview",
+      "summary": "Take orders to customers in Barasat and the areas nearby, hot and on time.",
+      "duties": [
+        "Deliver orders around Colony More and nearby areas",
+        "Collect payment where needed",
+        "Keep the food bags clean and closed"
+      ],
+      "needs": [
+        "Your own two-wheeler and a valid driving licence",
+        "Knows the roads around Barasat",
+        "A phone with internet"
+      ],
+      "placeholder": true
+    }
+  ]
 }

@@ -74,7 +74,7 @@ export function ProjectsGallery({ projects = allProjects, filterIds, limit, head
                 }}
                 className={cn(
                   "inline-flex min-h-11 shrink-0 items-center rounded-full border-[1.5px] px-5 text-[0.95rem] font-semibold transition-colors duration-200",
-                  pressed ? "border-ink bg-ink text-white" : "border-ash-300 bg-transparent text-ash-700 hover:border-ink hover:text-ink",
+                  pressed ? "border-ink bg-ink text-sheet" : "border-ash-300 bg-transparent text-ash-700 hover:border-ink hover:text-ink",
                 )}
               >
                 {f.label}

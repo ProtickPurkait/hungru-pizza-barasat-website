@@ -193,7 +193,7 @@ export default function Builder() {
                   max={builder.maxQuantity}
                   value={quantity}
                   onChange={(e) => setQuantity(clampQuantity(Number(e.target.value), builder))}
-                  className="figure h-12 w-20 rounded-md border-[1.5px] border-input bg-white text-center text-[1.8rem] text-ink"
+                  className="figure h-12 w-20 rounded-md border-[1.5px] border-input bg-white dark:bg-ash-50 text-center text-[1.8rem] text-ink"
                 />
                 <Button
                   type="button"

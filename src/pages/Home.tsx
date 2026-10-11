@@ -11,7 +11,7 @@ import { Hero } from "@/components/sections/Hero";
 import { HowWeWork } from "@/components/sections/HowWeWork";
 import { ProjectsGallery } from "@/components/sections/ProjectsGallery";
 import { Reviews } from "@/components/sections/Reviews";
-import { ServicesGrid } from "@/components/sections/ServicesGrid";
+import { MenuTeaser } from "@/components/sections/MenuTeaser";
 import { TrustStrip } from "@/components/sections/TrustStrip";
 import { copy, homeFaqs, pageSeo } from "@/data/site";
 import { paths } from "@/lib/paths";
@@ -48,8 +48,8 @@ export default function Home() {
             lead={home.services.lead}
           />
         </HeaderRow>
-        <div className="mt-12 md:mt-16">
-          <ServicesGrid layout="bento" />
+        <div className="mt-10 md:mt-14">
+          <MenuTeaser />
         </div>
       </section>
 

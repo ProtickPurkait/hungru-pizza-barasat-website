@@ -1,6 +1,6 @@
 // JSON-LD builders. Placeholder reviews are deliberately never added to structured data.
 import { business, localities, pageSeo, photos, services, widerArea } from "@/data/site";
-import type { Faq, MenuItem, Service } from "@/data/types";
+import type { BlogPost, Faq, MenuItem, Service } from "@/data/types";
 import { paths } from "./paths";
 import { canonicalUrl, siteOrigin } from "./seo";
 import { fill } from "./text";
@@ -124,5 +124,40 @@ export function menuSchema() {
     url: canonicalUrl(paths.services),
     inLanguage: "en-IN",
     hasMenuSection: services.map(menuSection),
+  };
+}
+
+function postAuthor(post: BlogPost) {
+  return post.author && post.author !== business.name ? { "@type": "Person", name: post.author } : { "@type": "Organization", name: business.name, url: `${siteOrigin()}/` };
+}
+
+/** One blog post, on its own page. */
+export function blogPostingSchema(post: BlogPost) {
+  const url = canonicalUrl(paths.post(post.slug));
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.seo.description || post.excerpt,
+    url,
+    mainEntityOfPage: url,
+    datePublished: post.date,
+    image: ogImageUrl(post.photo, siteOrigin()),
+    author: postAuthor(post),
+    publisher: { "@id": businessId() },
+    inLanguage: "en-IN",
+  };
+}
+
+/** The list of posts, on /blog/. */
+export function blogSchema(posts: BlogPost[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    name: `${business.name} blog`,
+    url: canonicalUrl(paths.blog),
+    publisher: { "@id": businessId() },
+    inLanguage: "en-IN",
+    blogPost: posts.map((p) => ({ "@type": "BlogPosting", headline: p.title, url: canonicalUrl(paths.post(p.slug)), datePublished: p.date })),
   };
 }

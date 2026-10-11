@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { business } from "@/data/site";
-import { builderMessage, orderMessage, waUrl } from "@/lib/whatsapp";
+import { applicationMessage, builderMessage, orderMessage, waUrl } from "@/lib/whatsapp";
 
 const form = {
   name: "Rahul Das",
@@ -60,5 +60,15 @@ describe("builderMessage", () => {
     expect(msg).toContain("*Toppings:* No extra toppings");
     expect(msg).toContain("*Website price:* ₹540");
     expect(msg).not.toContain("×");
+  });
+});
+
+describe("applicationMessage", () => {
+  it("writes out the job and the applicant's details", () => {
+    const text = applicationMessage({ name: "Priya Saha", phone: "98300 12345", role: "Delivery rider", experience: "No experience yet", area: "Hridaypur", message: "" });
+    expect(text).toContain("apply for a job");
+    expect(text).toContain("*Job:* Delivery rider");
+    expect(text).toContain("*Lives in:* Hridaypur");
+    expect(text).not.toContain("*Note:*");
   });
 });

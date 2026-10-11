@@ -12,11 +12,13 @@
 import raw from "./content.json";
 import type {
   AreaPage,
+  BlogPost,
   Brand,
   BuilderConfig,
   Business,
   Copy,
   Faq,
+  JobOpening,
   Legal,
   Locality,
   PageSeoMap,
@@ -60,6 +62,8 @@ export let team: TeamMember[] = current.team;
 export let brands: Brand[] = current.brands;
 export let warranty: SiteContent["warranty"] = current.warranty;
 export let legal: Legal = current.legal;
+export let blog: BlogPost[] = current.blog;
+export let jobs: JobOpening[] = current.jobs;
 
 export function getContent(): SiteContent {
   return current;
@@ -91,6 +95,8 @@ export function applyContent(next: SiteContent): void {
   brands = next.brands;
   warranty = next.warranty;
   legal = next.legal;
+  blog = next.blog;
+  jobs = next.jobs;
 }
 
 // Dev only: when the admin panel saves content.json, reload the site pages. Accepting the update

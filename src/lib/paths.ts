@@ -8,6 +8,9 @@ export const paths = {
   projects: "/gallery/",
   builder: "/build-your-pizza/",
   area: (slug: string) => `/delivery/${slug}/`,
+  blog: "/blog/",
+  post: (slug: string) => `/blog/${slug}/`,
+  careers: "/careers/",
   about: "/about/",
   contact: "/contact/",
   /** Policy pages sit at the top level: /privacy-policy/, /terms-and-conditions/ … */

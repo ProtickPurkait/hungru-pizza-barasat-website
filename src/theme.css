@@ -1,8 +1,7 @@
-/* The site has one (light) theme, with a dark "ground" only for the closing
-   order band and the footer. shadcn's `dark:` styles only apply inside a
-   .dark wrapper, which is never used, so a phone in dark mode still gets the
-   right colours. */
-@custom-variant dark (&:where(.dark, .dark *));
+/* Light and dark mode: <html data-theme="light|dark">, set before the first paint by the
+   script in index.html and changed by the switch in the header (src/lib/theme.ts).
+   `dark:` styles follow it. The colours themselves are swapped further down. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 /* Large screens with a real mouse (hover previews) */
 @custom-variant pointer-lg (@media (hover: hover) and (pointer: fine) and (min-width: 64rem));
 
@@ -136,6 +135,42 @@
   --cut: 18px;
 }
 
+/* ------------------------------------------------------------------
+   Dark mode. Every colour utility reads these variables, so redefining
+   them re-colours the whole site. The greys run the other way (50 is now
+   the darkest, 950 the lightest), so grey text stays readable and grey
+   lines stay faint. Maroon text becomes a lighter red that reads on the
+   dark page (6.8:1); buttons keep a deep red with white text (4.9:1).
+   The maroon grounds (hero, order band, footer) stay as they are.
+------------------------------------------------------------------- */
+:root[data-theme="dark"],
+[data-theme="dark"] .ground-light {
+  --color-ash-50: #1a1817;
+  --color-ash-100: #242220;
+  --color-ash-200: #34312e;
+  --color-ash-300: #4c4945;
+  --color-ash-400: #716e68;
+  --color-ash-500: #908d86;
+  --color-ash-600: #afaca5;
+  --color-ash-700: #cac7c0;
+  --color-ash-800: #dfddd7;
+  --color-ash-900: #edebe6;
+  --color-ash-950: #f6f5f1;
+  --color-ground: #121110;
+  --color-ground-2: #1a1817;
+  --color-sheet: #221f1d;
+  --color-ink: #f4f2ee;
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-maroon-50: #3b1517;
+  --color-maroon-100: #4e1b1e;
+  --color-maroon-500: #d0353d;
+  --color-maroon-600: #f0767a;
+  --color-maroon-700: #a3212a;
+  --destructive: #ff7a6e;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -205,6 +240,9 @@
     background: var(--color-maroon-600);
     color: #fff;
   }
+  [data-theme="dark"] ::selection {
+    background: var(--color-maroon-500);
+  }
   /* One stroke weight for every icon */
   svg.lucide {
     stroke-width: 1.75;
@@ -246,7 +284,26 @@
     color: #fff;
   }
 
-  /* A light panel placed on the dark ground (the order form) gets the light tokens back. */
+  /* The maroon grounds and the white order ticket keep their light-mode greys and ink in dark
+     mode (light grey text on maroon, dark text on paper). In light mode this changes nothing. */
+  .ground-dark,
+  .ticket {
+    --color-ash-50: #f6f6f4;
+    --color-ash-100: #ececea;
+    --color-ash-200: #dededa;
+    --color-ash-300: #c2c1bb;
+    --color-ash-400: #9a9992;
+    --color-ash-500: #74736c;
+    --color-ash-600: #5b5a54;
+    --color-ash-700: #43423d;
+    --color-ash-800: #2d2c29;
+    --color-ash-900: #1e1d1b;
+    --color-ash-950: #141312;
+    --color-ink: #161514;
+  }
+
+  /* A panel placed on the dark ground (the order form) gets the page's own tokens back:
+     light in light mode, dark in dark mode (the colours above, by its data-theme selector). */
   .ground-light {
     --focus: var(--color-ink);
     --muted-foreground: var(--color-ash-600);
@@ -282,6 +339,12 @@
     background-position:
       0 0,
       11px 7px;
+  }
+
+  [data-theme="dark"] .flour-dust {
+    background-image:
+      radial-gradient(circle, rgb(255 255 255 / 0.06) 0 1px, transparent 1.5px),
+      radial-gradient(circle, rgb(255 255 255 / 0.04) 0 1.2px, transparent 1.7px);
   }
 
   /* Kitchen order ticket: thermal paper with torn, zig-zag top and bottom edges. */
@@ -336,6 +399,9 @@
     border-color: var(--color-ink);
     background: #fff;
     box-shadow: inset 4px 0 0 var(--color-maroon-600);
+  }
+  [data-theme="dark"] .radio-card:has(input:checked) {
+    background: var(--color-ash-100);
   }
   .radio-card:has(input:disabled) {
     cursor: not-allowed;

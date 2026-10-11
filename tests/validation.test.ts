@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { normalizeIndianMobile, validateOrder } from "@/lib/validation";
+import { normalizeIndianMobile, validateApplication, validateOrder } from "@/lib/validation";
 
 describe("normalizeIndianMobile", () => {
   it.each([
@@ -43,5 +43,18 @@ describe("validateOrder", () => {
     expect(errors.phone).toMatch(/10-digit/);
     expect(errors.order).toBeDefined();
     expect(errors.message).toBeDefined();
+  });
+});
+
+describe("validateApplication", () => {
+  const ok = { name: "Priya Saha", phone: "98300 12345", role: "Pizza maker", experience: "1 to 3 years", area: "Champadali", message: "" };
+
+  it("accepts a complete application", () => {
+    expect(validateApplication(ok)).toEqual({});
+  });
+
+  it("asks for each missing field", () => {
+    const errors = validateApplication({ name: "", phone: "123", role: "", experience: "", area: " ", message: "x".repeat(501) });
+    expect(Object.keys(errors).sort()).toEqual(["area", "experience", "message", "name", "phone", "role"]);
   });
 });

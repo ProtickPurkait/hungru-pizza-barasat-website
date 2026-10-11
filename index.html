@@ -4,6 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="theme-color" content="#f4f4f1" />
+    <script>
+      // Light or dark mode, before anything paints: the visitor's choice from the switch
+      // (src/lib/theme.ts), or else their device setting. No flash of the wrong colours.
+      (function () {
+        var theme = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        try {
+          var saved = localStorage.getItem("hungru-theme");
+          if (saved === "light" || saved === "dark") theme = saved;
+        } catch (e) {}
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
     <meta name="format-detection" content="telephone=no" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://images.unsplash.com" crossorigin />

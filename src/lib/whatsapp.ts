@@ -51,6 +51,40 @@ export function orderMessage(form: OrderForm): string {
   ].join("\n");
 }
 
+/** A job application from the Careers page. */
+export interface Application {
+  name: string;
+  phone: string;
+  /** The job's title, or the "any job" label. */
+  role: string;
+  experience: string;
+  /** Where they live. */
+  area: string;
+  message: string;
+}
+
+export function applicationText(): string {
+  return message(copy.whatsapp.applyStart);
+}
+
+export function applicationMessage(form: Application): string {
+  return [
+    message(copy.whatsapp.applyStart),
+    "",
+    lines([
+      ["Job", form.role],
+      ["Name", form.name],
+      ["Phone", form.phone],
+      ["Experience", form.experience],
+      ["Lives in", form.area],
+      ["Note", form.message],
+    ]),
+    "",
+    message(copy.whatsapp.applyEnd),
+    "(Sent from the website)",
+  ].join("\n");
+}
+
 export interface BuiltPizza {
   size: string;
   /** The crust, e.g. "Cheese burst". */

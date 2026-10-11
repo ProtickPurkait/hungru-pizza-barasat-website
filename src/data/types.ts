@@ -3,6 +3,10 @@
 // Two names are kept from the template the site was built on:
 //   "services" are the menu sections (veg pizzas, chicken pizzas …), each with its own page at /menu/<slug>/.
 //   "projects" are the gallery photos at /gallery/.
+// The blog, the job openings, the menu finder labels and the home video are in types-pages.ts.
+import type { BlogPageCopy, BlogPost, CareersPageCopy, HeroVideo, JobOpening, MenuCopy } from "./types-pages";
+
+export type * from "./types-pages";
 
 export interface Photo {
   /** An Unsplash photo id ("1665033628673-7de125eb6b12") or a local path ("/images/uploads/hungru-logo.webp"). */
@@ -214,6 +218,8 @@ export interface PageSeoMap {
   builder: PageSeo;
   about: PageSeo;
   contact: PageSeo;
+  blog: PageSeo;
+  careers: PageSeo;
   notFound: PageSeo;
   /** Photo key for link previews on WhatsApp, Facebook etc. */
   shareImage: string;
@@ -234,33 +240,14 @@ export interface HeroCopy {
   photo?: string;
 }
 
-/** One shape of the home page's background video. */
-export interface VideoFiles {
-  /** The video file, an MP4 that every browser plays ("/video/hungru-hero-wide.mp4"). */
-  mp4: string;
-  /** Photo key: the video's first frame. Shown while the video loads, and instead of it when motion is switched off. */
-  poster: string;
-}
-
-/** The looping video behind the home page heading. */
-export interface HeroVideo {
-  /** For screens 1024px and wider: about 2:1, the food on the right and dark space on the left for the text. */
-  wide: VideoFiles;
-  /** For phones and tablets: tall, dark space at the top for the text and the food below. */
-  tall: VideoFiles;
-  /** Small line beside the pause button, e.g. "Food video created with Grok". Empty hides it. */
-  credit: string;
-  /** Labels of the pause button, for screen readers. */
-  pause: string;
-  play: string;
-}
-
 /**
  * Every heading, paragraph and button label that is not part of a menu section, area or photo.
  * Text in {curly braces} is filled in automatically, e.g. {area} becomes "Ballygunge".
  */
 export interface Copy {
-  nav: { home: string; services: string; projects: string; builder: string; about: string; contact: string };
+  nav: { home: string; services: string; projects: string; builder: string; blog: string; careers: string; about: string; contact: string };
+  /** The light / dark switch in the header (its name for screen readers). */
+  theme: { label: string };
   buttons: { call: string; callShort: string; whatsapp: string; whatsappShort: string; whatsappChat: string; seeDetails: string };
   header: { location: string };
   footer: {
@@ -284,6 +271,9 @@ export interface Copy {
     orderEnd: string;
     builderStart: string;
     builderEnd: string;
+    /** Job applications from /careers/. */
+    applyStart: string;
+    applyEnd: string;
   };
   ctaBand: { eyebrow: string; title: string; lead: string; points: string[]; talkPrompt: string };
   form: {
@@ -329,18 +319,7 @@ export interface Copy {
     example: { size: string; base: string; cheese: string; toppings: string[] };
   };
   reviews: { title: string; lead: string; readAll: string };
-  menu: {
-    /** Shown above a section's dishes when they come in sizes, e.g. "8 inch = 4 slices". */
-    sizeNote: string;
-    vegLabel: string;
-    nonVegLabel: string;
-    eitherLabel: string;
-    vegOnly: string;
-    showAll: string;
-    jumpLabel: string;
-    fromLabel: string;
-    sectionLink: string;
-  };
+  menu: MenuCopy;
   servicesPage: { hero: HeroCopy & { photo: string }; listTitle: string; listLead: string };
   servicePage: {
     aboutTitle: string;
@@ -410,6 +389,8 @@ export interface Copy {
     mapTitle: string;
     callFirst: string;
   };
+  blogPage: BlogPageCopy;
+  careersPage: CareersPageCopy;
   notFound: { eyebrow: string; title: string; lead: string; popularTitle: string };
 }
 
@@ -491,4 +472,8 @@ export interface SiteContent {
   brands: Brand[];
   warranty: { headline: string; points: string[] };
   legal: Legal;
+  /** Posts at /blog/, newest first. */
+  blog: BlogPost[];
+  /** Jobs on /careers/. */
+  jobs: JobOpening[];
 }

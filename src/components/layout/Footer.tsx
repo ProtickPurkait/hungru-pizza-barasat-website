@@ -7,6 +7,7 @@ import { areaPages, business, copy, legal, localities, services, widerArea } fro
 import { paths, telHref } from "@/lib/paths";
 import { fill } from "@/lib/text";
 import { waUrl } from "@/lib/whatsapp";
+import { mainNav } from "./nav";
 
 const linkClass = "inline-flex min-h-11 items-center text-ash-300 transition-colors hover:text-white";
 
@@ -62,13 +63,7 @@ export function Footer() {
             Also {localities.filter((l) => !areaPages.some((a) => a.slug === l.slug)).map((l) => l.name).join(", ")} and {widerArea}.
           </p>
           <ul className="mt-5 flex flex-wrap gap-x-5">
-            {[
-              { label: copy.nav.services, to: paths.services },
-              { label: copy.nav.builder, to: paths.builder },
-              { label: copy.nav.projects, to: paths.projects },
-              { label: copy.nav.about, to: paths.about },
-              { label: copy.nav.contact, to: paths.contact },
-            ].map((l) => (
+            {mainNav().map((l) => (
               <li key={l.to}>
                 <Link to={l.to} className={linkClass}>
                   {l.label}

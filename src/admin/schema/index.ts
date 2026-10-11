@@ -2,6 +2,7 @@ import type { SiteContent } from "@/data/types";
 import { aboutContent, areas, builder, faqs, projects, reviews, services, trust } from "./content";
 import { aboutPage, areaPage, builderPage, contactPage, home, notFound, projectsPage, servicesPages } from "./pages";
 import { legalPages } from "./legal";
+import { blogPage, blogPosts, careersPage, jobOpenings } from "./posts";
 import { business, history, orderChoices, photos, seo, sitewide } from "./site";
 import type { Field, Section } from "./types";
 
@@ -18,11 +19,15 @@ export const sections: Section[] = [
   trust,
   aboutContent,
   builder,
+  blogPosts,
+  jobOpenings,
   home,
   servicesPages,
   projectsPage,
   builderPage,
   areaPage,
+  blogPage,
+  careersPage,
   aboutPage,
   contactPage,
   notFound,

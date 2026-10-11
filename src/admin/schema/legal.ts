@@ -7,7 +7,7 @@ import type { Section } from "./types";
 /** Placeholders every policy text can use. LegalPage.tsx fills them in. */
 const TOKENS = ["business", "entity", "officer", "email", "address", "phone", "whatsapp", "hours", "website"];
 
-const formatHint =
+export const formatHint =
   'Leave an empty line between paragraphs. Start a line with "- " for a bullet point. **Two stars** make words bold. [Words](/contact/) makes a link: a page address ending in /, or https://…, mailto:… or tel:….';
 
 const today = () => new Date().toISOString().slice(0, 10);

@@ -3,12 +3,12 @@ import { SectionHeading } from "@/components/common/SectionHeading";
 import { JsonLd, Seo } from "@/components/common/Seo";
 import { BuilderTeaser } from "@/components/sections/BuilderTeaser";
 import { CtaBand } from "@/components/sections/CtaBand";
-import { MenuBoard } from "@/components/sections/MenuBoard";
+import { MenuFinder } from "@/components/sections/MenuFinder";
 import { copy, pageSeo } from "@/data/site";
 import { paths } from "@/lib/paths";
 import { breadcrumbSchema, menuSchema } from "@/lib/schema";
 
-/** /menu/: every section and dish with prices. */
+/** /menu/: every section and dish with prices, with search, section tabs, sorting and Veg / Non-veg switches. */
 export default function ServicesIndex() {
   const text = copy.servicesPage;
   const crumbs = [
@@ -23,7 +23,7 @@ export default function ServicesIndex() {
       <section aria-labelledby="list-title" className="wrap pt-16 pb-8 md:pt-24">
         <SectionHeading id="list-title" title={text.listTitle} lead={text.listLead} />
         <div className="mt-10">
-          <MenuBoard />
+          <MenuFinder />
         </div>
       </section>
       <div className="defer-render">

@@ -13,11 +13,13 @@ interface PageHeroProps {
   breadcrumbs?: Crumb[];
   photo?: string;
   whatsappText?: string;
+  /** Buttons in place of the usual WhatsApp and Call buttons (the Careers page has its own). */
+  actions?: ReactNode;
   children?: ReactNode;
 }
 
 /** Light editorial hero used on every inner page. Holds the page's only H1. */
-export function PageHero({ eyebrow, title, lead, breadcrumbs, photo, whatsappText, children }: PageHeroProps) {
+export function PageHero({ eyebrow, title, lead, breadcrumbs, photo, whatsappText, actions, children }: PageHeroProps) {
   return (
     <section className="relative overflow-hidden">
       {breadcrumbs && (
@@ -40,8 +42,12 @@ export function PageHero({ eyebrow, title, lead, breadcrumbs, photo, whatsappTex
           <h1 className="mt-4 text-[2.7rem] text-ink sm:text-6xl lg:text-[4.75rem]">{title}</h1>
           <p className="mt-6 max-w-[56ch] text-lg leading-relaxed text-ash-600 sm:text-xl">{lead}</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <WhatsAppButton size="lg" text={whatsappText} />
-            <CallButton size="lg" />
+            {actions ?? (
+              <>
+                <WhatsAppButton size="lg" text={whatsappText} />
+                <CallButton size="lg" />
+              </>
+            )}
           </div>
           <RatingBadge className="mt-5" />
           {children}

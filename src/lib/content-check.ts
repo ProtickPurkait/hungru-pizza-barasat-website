@@ -20,7 +20,8 @@ export const DIETS = ["veg", "non-veg", "either"] as const;
 
 const SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 /** Top-level addresses a policy page cannot take. */
-const RESERVED_SLUGS = ["menu", "gallery", "build-your-pizza", "delivery", "about", "contact", "admin", "api", "assets", "images"];
+const RESERVED_SLUGS = ["menu", "gallery", "build-your-pizza", "delivery", "blog", "careers", "about", "contact", "admin", "api", "assets", "images", "video"];
+const isDate = (v: string) => /^\d{4}-\d{2}-\d{2}$/.test(v) && !Number.isNaN(Date.parse(v));
 
 export function checkContent(c: SiteContent): Problem[] {
   const problems: Problem[] = [];
@@ -84,13 +85,15 @@ export function checkContent(c: SiteContent): Problem[] {
   }
   photoRef("pages-services", cp.servicesPage.hero.photo, "Menu page photo");
   photoRef("pages-projects", cp.projectsPage.hero.photo, "Gallery page photo");
+  photoRef("pages-blog", cp.blogPage.hero.photo, "Blog page photo");
+  photoRef("pages-careers", cp.careersPage.hero.photo, "Careers page photo");
   photoRef("pages-about", cp.aboutPage.hero.photo, "About page photo");
   cp.aboutPage.storyPhotos.forEach((k, i) => photoRef("pages-about", k, `Story photo ${i + 1}`));
   photoRef("pages-contact", cp.contactPage.hero.photo, "Contact page photo");
   photoRef("pages-area", cp.areaPage.fallbackPhoto, "Area page fallback photo");
 
   // SEO
-  for (const key of ["home", "services", "projects", "builder", "about", "contact", "notFound"] as const) {
+  for (const key of ["home", "services", "projects", "builder", "blog", "careers", "about", "contact", "notFound"] as const) {
     const s = c.pageSeo[key];
     if (blank(s.title)) error("seo", `The ${key} page needs a title.`);
     if (blank(s.description)) error("seo", `The ${key} page needs a description.`);
@@ -180,7 +183,7 @@ export function checkContent(c: SiteContent): Problem[] {
     if (blank(p.title)) error("legal", `Policy page ${i + 1} has no title.`);
     if (!SLUG.test(p.slug)) error("legal", `${name}: the page address "${p.slug}" may only use lower-case letters, numbers and dashes.`);
     else if (RESERVED_SLUGS.includes(p.slug)) error("legal", `${name}: the address "/${p.slug}/" is already used by another part of the site.`);
-    if (!/^\d{4}-\d{2}-\d{2}$/.test(p.updated) || Number.isNaN(Date.parse(p.updated))) error("legal", `${name}: "Last updated" should be a date like 2026-10-10.`);
+    if (!isDate(p.updated)) error("legal", `${name}: "Last updated" should be a date like 2026-10-10.`);
     if (p.sections.length === 0) error("legal", `${name} has no text.`);
     p.sections.forEach((s, j) => (blank(s.heading) || blank(s.body)) && error("legal", `${name}, part ${j + 1}: needs a heading and some text.`));
     if (blank(p.seo.title) || blank(p.seo.description)) error("legal", `${name}: fill in the title and description for Google.`);
@@ -201,6 +204,32 @@ export function checkContent(c: SiteContent): Problem[] {
     checkLinks("legal", name, p.lead);
     p.sections.forEach((s, j) => checkLinks("legal", `${name}, part ${j + 1}`, s.body));
   });
+
+  // Blog posts
+  for (const d of dupes(c.blog.map((p) => p.slug))) error("blog", `Two posts use the address "${d}".`);
+  c.blog.forEach((p, i) => {
+    const name = p.title || `Post ${i + 1}`;
+    if (blank(p.title)) error("blog", `Post ${i + 1} has no title.`);
+    if (!SLUG.test(p.slug)) error("blog", `${name}: the page address "${p.slug}" may only use lower-case letters, numbers and dashes.`);
+    if (!isDate(p.date)) error("blog", `${name}: the date should look like 2026-10-11.`);
+    if (blank(p.excerpt)) error("blog", `${name}: add a short summary.`);
+    photoRef("blog", p.photo, name);
+    if (p.sections.length === 0) error("blog", `${name} has no text.`);
+    p.sections.forEach((s, j) => {
+      if (blank(s.body)) error("blog", `${name}, part ${j + 1}: add some text, or remove the part.`);
+      checkLinks("blog", `${name}, part ${j + 1}`, s.body);
+    });
+    if (blank(p.seo.title) || blank(p.seo.description)) warn("blog", `${name}: fill in the title and description for Google. Until then the post's title and summary are used.`);
+  });
+
+  // Jobs and the application form
+  for (const d of dupes(c.jobs.map((j) => j.id))) error("jobs", `Two jobs use the code "${d}".`);
+  c.jobs.forEach((j, i) => {
+    if (blank(j.title)) error("jobs", `Job ${i + 1} has no title.`);
+    else if (blank(j.summary)) warn("jobs", `${j.title}: add a sentence about the job.`);
+  });
+  if (c.copy.careersPage.form.experienceOptions.length === 0) error("pages-careers", "Add at least one experience choice to the application form.");
+  checkLinks("pages-careers", "Application form privacy line", c.copy.careersPage.form.privacyNote);
 
   // Reviews, steps, stats
   c.reviews.forEach((r, i) => {

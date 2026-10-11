@@ -9,6 +9,9 @@ export interface Pages {
   Projects: ComponentType;
   Builder: ComponentType;
   AreaPage: ComponentType;
+  BlogIndex: ComponentType;
+  BlogPost: ComponentType;
+  Careers: ComponentType;
   About: ComponentType;
   Contact: ComponentType;
   LegalPage: ComponentType;
@@ -26,6 +29,9 @@ export function App({ pages: P }: { pages: Pages }) {
         <Route path="/gallery" element={<P.Projects />} />
         <Route path="/build-your-pizza" element={<P.Builder />} />
         <Route path="/delivery/:slug" element={<P.AreaPage />} />
+        <Route path="/blog" element={<P.BlogIndex />} />
+        <Route path="/blog/:slug" element={<P.BlogPost />} />
+        <Route path="/careers" element={<P.Careers />} />
         <Route path="/about" element={<P.About />} />
         <Route path="/contact" element={<P.Contact />} />
         {/* Policy pages (/privacy-policy/ …). Unknown single-segment paths show "page not found" from there. */}

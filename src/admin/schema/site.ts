@@ -124,10 +124,21 @@ export const sitewide: Section = {
   path: "copy",
   preview: "/",
   fields: [
-    group("Navigation", [text("home", "Home"), text("services", "Menu"), text("projects", "Gallery"), text("builder", "Build a pizza"), text("about", "About"), text("contact", "Contact")], {
-      key: "nav",
-      columns: 2,
-    }),
+    group(
+      "Navigation",
+      [
+        text("home", "Home"),
+        text("services", "Menu"),
+        text("projects", "Gallery"),
+        text("builder", "Build a pizza"),
+        text("blog", "Blog"),
+        text("careers", "Careers"),
+        text("about", "About"),
+        text("contact", "Contact"),
+      ],
+      { key: "nav", columns: 2 },
+    ),
+    text("theme.label", "Light / dark switch (for screen readers)", { hint: "The name of the sun and moon switch in the header, read out by screen readers." }),
     text("header.location", "Location in the top bar"),
     group(
       "Buttons",
@@ -208,6 +219,8 @@ export const sitewide: Section = {
         para("orderEnd", "Order form: last line", { rows: 2 }),
         para("builderStart", "Pizza builder: first line", { rows: 2, tokens: ["business"] }),
         para("builderEnd", "Pizza builder: last line", { rows: 2 }),
+        para("applyStart", "Job application: first line", { rows: 2, tokens: ["business"], hint: "The applicant's details are added below it." }),
+        para("applyEnd", "Job application: last line", { rows: 2 }),
       ],
       { key: "whatsapp", collapsed: true, hint: "The text that is already typed in when a customer opens WhatsApp from the site." },
     ),
@@ -238,6 +251,8 @@ export const seo: Section = {
     group("Full menu page", [text("title", "Page title", { max: 60 }), para("description", "Description", { max: 160, rows: 3 })], { key: "services" }),
     group("Gallery page", [text("title", "Page title", { max: 60 }), para("description", "Description", { max: 160, rows: 3 })], { key: "projects" }),
     group("Pizza builder page", [text("title", "Page title", { max: 60 }), para("description", "Description", { max: 160, rows: 3 })], { key: "builder" }),
+    group("Blog page", [text("title", "Page title", { max: 60 }), para("description", "Description", { max: 160, rows: 3 })], { key: "blog", hint: "Each post has its own title and description (Blog)." }),
+    group("Careers page", [text("title", "Page title", { max: 60 }), para("description", "Description", { max: 160, rows: 3 })], { key: "careers" }),
     group("About page", [text("title", "Page title", { max: 60 }), para("description", "Description", { max: 160, rows: 3 })], { key: "about" }),
     group("Contact page", [text("title", "Page title", { max: 60 }), para("description", "Description", { max: 160, rows: 3 })], { key: "contact" }),
     group("Page not found", [text("title", "Page title", { max: 60 }), para("description", "Description", { max: 160, rows: 3 })], { key: "notFound", collapsed: true }),

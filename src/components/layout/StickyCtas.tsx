@@ -11,7 +11,7 @@ export function MobileCtaBar() {
       <div className="grid grid-cols-2 gap-px bg-maroon-950">
         <a
           href={telHref(business.phone.tel)}
-          className="flex h-16 items-center justify-center gap-2.5 bg-maroon-500 text-[1.05rem] font-semibold text-white active:bg-maroon-600"
+          className="flex h-16 items-center justify-center gap-2.5 bg-maroon-500 text-[1.05rem] font-semibold text-white active:bg-maroon-700"
         >
           <Phone className="size-5" aria-hidden="true" />
           {copy.buttons.call}

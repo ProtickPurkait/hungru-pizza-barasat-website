@@ -10,11 +10,11 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-maroon-600",
+        default: "bg-primary text-primary-foreground hover:bg-maroon-700",
         whatsapp: "bg-whatsapp text-ink hover:bg-whatsapp-600",
-        dark: "bg-ink text-white hover:bg-ash-800",
+        dark: "bg-ink text-sheet hover:bg-ash-800",
         destructive: "bg-destructive text-white hover:bg-destructive/90",
-        outline: "border-[1.5px] border-ink bg-transparent text-ink hover:bg-ink hover:text-white",
+        outline: "border-[1.5px] border-ink bg-transparent text-ink hover:bg-ink hover:text-sheet",
         "outline-light": "border-[1.5px] border-white/60 bg-transparent text-white hover:border-white hover:bg-white hover:text-ink",
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/85",
         ghost: "hover:bg-accent hover:text-accent-foreground",
