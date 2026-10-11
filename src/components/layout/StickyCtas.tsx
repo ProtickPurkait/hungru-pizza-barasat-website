@@ -1,13 +1,35 @@
+import { useEffect, useState } from "react";
 import { Phone } from "lucide-react";
+import { useLocation } from "react-router";
 import { WhatsAppIcon } from "@/components/common/icons";
 import { business, copy } from "@/data/site";
-import { telHref } from "@/lib/paths";
+import { ctaBarCovered, onCtaBarCovered } from "@/lib/cta-bar";
+import { paths, telHref } from "@/lib/paths";
+import { cn } from "@/lib/utils";
 import { defaultWhatsAppText, waUrl } from "@/lib/whatsapp";
 
-/** Fixed Call | WhatsApp bar on phones. Layout adds matching bottom padding. */
+/**
+ * Fixed Call | WhatsApp bar on phones. Layout adds matching bottom padding.
+ * It keeps out of sight while the home page hero, which has the same two buttons, is on
+ * screen (see lib/cta-bar), so the buttons never show twice.
+ */
 export function MobileCtaBar() {
+  const { pathname } = useLocation();
+  // Hidden from the start on the home page, so the prerendered page never flashes the bar over the hero.
+  const [hidden, setHidden] = useState(pathname === paths.home);
+
+  useEffect(() => {
+    setHidden(pathname === paths.home || ctaBarCovered());
+    return onCtaBarCovered(() => setHidden(ctaBarCovered()));
+  }, [pathname]);
+
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 bg-maroon-950 pb-[env(safe-area-inset-bottom)] shadow-[0_-8px_24px_rgb(22_21_20/0.22)] md:hidden">
+    <div
+      className={cn(
+        "fixed inset-x-0 bottom-0 z-40 bg-maroon-950 pb-[env(safe-area-inset-bottom)] shadow-[0_-8px_24px_rgb(22_21_20/0.22)] transition-[translate,visibility] duration-300 ease-out md:hidden",
+        hidden && "invisible translate-y-full",
+      )}
+    >
       <div className="grid grid-cols-2 gap-px bg-maroon-950">
         <a
           href={telHref(business.phone.tel)}

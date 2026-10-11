@@ -146,9 +146,9 @@ export interface HeroVideo {
   wide: VideoFiles;
   /** For phones and tablets: tall, dark space at the top for the text and the food below. */
   tall: VideoFiles;
-  /** Small line beside the pause button, e.g. "Food video created with Grok". Empty hides it. */
+  /** Small line in the corner of the video, e.g. "Food video created with Grok". Empty hides it. */
   credit: string;
-  /** Labels of the pause button, for screen readers. */
+  /** Labels of the pause button, which only shows when reached with the keyboard. */
   pause: string;
   play: string;
 }

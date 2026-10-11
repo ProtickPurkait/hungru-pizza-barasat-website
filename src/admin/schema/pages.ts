@@ -38,9 +38,11 @@ export const home: Section = {
                 { key: shape, columns: 2 },
               ),
             ),
-            text("credit", "Credit line", { hint: 'Shown small beside the pause button. Videos made with Grok must say so, e.g. "Food video created with Grok".' }),
-            text("pause", "Pause button (for screen readers)"),
-            text("play", "Play button (for screen readers)"),
+            text("credit", "Credit line", {
+              hint: 'Optional. Shown small in the corner of the video. Grok asks for "Created with Grok" wherever its videos are published. Leave empty to hide it.',
+            }),
+            text("pause", "Pause button (for keyboard and screen reader users)"),
+            text("play", "Play button (for keyboard and screen reader users)"),
           ],
           {
             key: "video",
