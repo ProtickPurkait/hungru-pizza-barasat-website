@@ -1,9 +1,9 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { Check, MapPin } from "lucide-react";
 import { CallButton, WhatsAppButton } from "@/components/common/ContactButtons";
 import { CrustDivider } from "@/components/common/Motifs";
 import { copy } from "@/data/site";
-import { setCtaBarCovered } from "@/lib/cta-bar";
+import { useCoversCtaBar } from "@/lib/cta-bar";
 import { HeroVideo, HeroVideoControls, useHeroVideo } from "./HeroVideo";
 
 /**
@@ -16,20 +16,12 @@ import { HeroVideo, HeroVideoControls, useHeroVideo } from "./HeroVideo";
 export function Hero() {
   const hero = copy.home.hero;
   const player = useHeroVideo();
-  const section = useRef<HTMLElement>(null);
-
+  const buttons = useRef<HTMLDivElement>(null);
   // The phone call and WhatsApp bar keeps out of sight while these buttons are on screen.
-  useEffect(() => {
-    const watch = new IntersectionObserver(([entry]) => setCtaBarCovered(!!entry?.isIntersecting));
-    if (section.current) watch.observe(section.current);
-    return () => {
-      watch.disconnect();
-      setCtaBarCovered(false);
-    };
-  }, []);
+  useCoversCtaBar(buttons);
 
   return (
-    <section ref={section} className="ground-dark relative isolate overflow-hidden">
+    <section className="ground-dark relative isolate overflow-hidden">
       <HeroVideo video={hero.video} player={player} />
       {/* Screen height less the header and the crust edge below */}
       <div className="wrap relative z-10 flex min-h-[calc(100svh-5.5rem)] flex-col pt-8 pb-8 sm:pt-12 sm:pb-10 md:min-h-[calc(100svh-7rem)] lg:min-h-[min(44rem,calc(100svh-7rem))] lg:justify-center lg:py-24">
@@ -52,7 +44,7 @@ export function Hero() {
         />
 
         <div className="max-w-[40rem] xl:max-w-[46rem]">
-          <div className="flex flex-col gap-3 sm:flex-row lg:mt-8">
+          <div ref={buttons} className="flex flex-col gap-3 sm:flex-row lg:mt-8">
             <WhatsAppButton size="lg" />
             <CallButton size="lg" variant="outline-light" />
           </div>

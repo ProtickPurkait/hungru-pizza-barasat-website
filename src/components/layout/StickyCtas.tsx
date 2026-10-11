@@ -1,27 +1,26 @@
 import { useEffect, useState } from "react";
 import { Phone } from "lucide-react";
-import { useLocation } from "react-router";
 import { WhatsAppIcon } from "@/components/common/icons";
 import { business, copy } from "@/data/site";
-import { ctaBarCovered, onCtaBarCovered } from "@/lib/cta-bar";
-import { paths, telHref } from "@/lib/paths";
+import { ctaBarHidden, onCtaBarChange } from "@/lib/cta-bar";
+import { telHref } from "@/lib/paths";
 import { cn } from "@/lib/utils";
 import { defaultWhatsAppText, waUrl } from "@/lib/whatsapp";
 
 /**
  * Fixed Call | WhatsApp bar on phones. Layout adds matching bottom padding.
- * It keeps out of sight while the home page hero, which has the same two buttons, is on
- * screen (see lib/cta-bar), so the buttons never show twice.
+ * It keeps out of sight while the page's own call and WhatsApp buttons are on screen
+ * (see lib/cta-bar), so the same buttons never show twice, and slides in once they scroll away.
  */
 export function MobileCtaBar() {
-  const { pathname } = useLocation();
-  // Hidden from the start on the home page, so the prerendered page never flashes the bar over the hero.
-  const [hidden, setHidden] = useState(pathname === paths.home);
+  // Hidden until the page has loaded and said whether its own buttons are on screen,
+  // so the bar never flashes up over them.
+  const [hidden, setHidden] = useState(true);
 
   useEffect(() => {
-    setHidden(pathname === paths.home || ctaBarCovered());
-    return onCtaBarCovered(() => setHidden(ctaBarCovered()));
-  }, [pathname]);
+    setHidden(ctaBarHidden());
+    return onCtaBarChange(() => setHidden(ctaBarHidden()));
+  }, []);
 
   return (
     <div

@@ -1,7 +1,9 @@
+import { useRef } from "react";
 import { Check, Clock, Phone } from "lucide-react";
 import { CrustDivider, type MotifColor } from "@/components/common/Motifs";
 import { CallButton, WhatsAppButton } from "@/components/common/ContactButtons";
 import { business, copy } from "@/data/site";
+import { useCoversCtaBar } from "@/lib/cta-bar";
 import { telHref } from "@/lib/paths";
 import { OrderForm } from "./OrderForm";
 
@@ -19,6 +21,10 @@ interface CtaBandProps {
  */
 export function CtaBand({ title, lead, defaultLocality, from = "ground" }: CtaBandProps) {
   const text = copy.ctaBand;
+  const buttons = useRef<HTMLDivElement>(null);
+  // The phone call and WhatsApp bar keeps out of sight while these buttons are on screen.
+  useCoversCtaBar(buttons);
+
   return (
     <section aria-labelledby="cta-title" id="order" className="scroll-mt-20">
       <CrustDivider from={from} to="dark" />
@@ -56,7 +62,7 @@ export function CtaBand({ title, lead, defaultLocality, from = "ground" }: CtaBa
                 <Clock className="size-4" aria-hidden="true" />
                 {business.hours.display}
               </p>
-              <div className="mt-6 flex flex-col gap-3 sm:flex-row lg:hidden">
+              <div ref={buttons} className="mt-6 flex flex-col gap-3 sm:flex-row lg:hidden">
                 <WhatsAppButton />
                 <CallButton />
               </div>

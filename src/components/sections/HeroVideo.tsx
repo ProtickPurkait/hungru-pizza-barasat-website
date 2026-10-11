@@ -56,9 +56,9 @@ export function useHeroVideo() {
     const v = ref.current;
     if (!v) return;
     v.muted = true; // Browsers only start a video on their own when it is muted.
-    const watch = new IntersectionObserver(([entry]) => {
-      // A refused start (a phone in low-power mode) leaves the still picture, with the play button.
-      if (entry?.isIntersecting && !paused) v.play().catch(() => {});
+    const watch = new IntersectionObserver((entries) => {
+      // A refused start (a phone in low-power mode) leaves the still picture. After a fast scroll, the last change counts.
+      if (entries.at(-1)?.isIntersecting && !paused) v.play().catch(() => {});
       else v.pause();
     });
     watch.observe(v);

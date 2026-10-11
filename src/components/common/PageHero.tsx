@@ -1,9 +1,10 @@
-import type { ReactNode } from "react";
+import { useRef, type ReactNode } from "react";
 import { Breadcrumbs, type Crumb } from "./Breadcrumbs";
 import { CallButton, WhatsAppButton } from "./ContactButtons";
 import { CrustLine } from "./Motifs";
 import { RatingBadge } from "./RatingBadge";
 import { SitePhoto } from "./SitePhoto";
+import { useCoversCtaBar } from "@/lib/cta-bar";
 import { cn } from "@/lib/utils";
 
 interface PageHeroProps {
@@ -20,6 +21,10 @@ interface PageHeroProps {
 
 /** Light editorial hero used on every inner page. Holds the page's only H1. */
 export function PageHero({ eyebrow, title, lead, breadcrumbs, photo, whatsappText, actions, children }: PageHeroProps) {
+  const buttons = useRef<HTMLDivElement>(null);
+  // The phone call and WhatsApp bar keeps out of sight while these buttons are on screen.
+  useCoversCtaBar(buttons);
+
   return (
     <section className="relative overflow-hidden">
       {breadcrumbs && (
@@ -41,7 +46,7 @@ export function PageHero({ eyebrow, title, lead, breadcrumbs, photo, whatsappTex
           </p>
           <h1 className="mt-4 text-[2.7rem] text-ink sm:text-6xl lg:text-[4.75rem]">{title}</h1>
           <p className="mt-6 max-w-[56ch] text-lg leading-relaxed text-ash-600 sm:text-xl">{lead}</p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <div ref={buttons} className="mt-8 flex flex-col gap-3 sm:flex-row">
             {actions ?? (
               <>
                 <WhatsAppButton size="lg" text={whatsappText} />
