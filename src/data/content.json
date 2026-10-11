@@ -31,9 +31,9 @@
     "siteUrl": "https://www.hungrupizza.example",
     "demoMode": true,
     "logo": {
-      "image": "hungruLogo",
-      "imageDark": "hungruLogo",
-      "icon": "hungruIcon",
+      "image": "ungruPizzaBarasatLogo",
+      "imageDark": "ungruPizzaBarasatLogo3",
+      "icon": "greenAbstractHRibbonLogo",
       "name": "hide"
     },
     "orderOnline": [
@@ -255,6 +255,30 @@
       "alt": "Hungru's Mini Halloween Pizza: a mummy wrapped in strips of melted cheese",
       "width": 270,
       "height": 363
+    },
+    "ungruPizzaBarasatLogo": {
+      "src": "/images/uploads/ungru-pizza-barasat-logo-379f65.webp",
+      "alt": "Hungru Pizza logo",
+      "width": 572,
+      "height": 320
+    },
+    "ungruPizzaBarasatLogo2": {
+      "src": "/images/uploads/ungru-pizza-barasat-logo-36c893.webp",
+      "alt": "Hungru Pizza logo",
+      "width": 572,
+      "height": 320
+    },
+    "ungruPizzaBarasatLogo3": {
+      "src": "/images/uploads/ungru-pizza-barasat-logo-f73040.webp",
+      "alt": "Hungru Pizza logo",
+      "width": 600,
+      "height": 320
+    },
+    "greenAbstractHRibbonLogo": {
+      "src": "/images/uploads/green-abstract-h-ribbon-logo-b524b5.webp",
+      "alt": "Hungru Pizza logo",
+      "width": 377,
+      "height": 320
     }
   },
   "copy": {
