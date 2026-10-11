@@ -226,11 +226,17 @@
       "width": 512,
       "height": 512
     },
-    "heroPizza": {
-      "src": "/images/uploads/hungru-hero-pizza.webp",
-      "alt": "A chicken and onion pizza with BBQ sauce on a round plate, seen from above",
-      "width": 880,
-      "height": 880
+    "heroVideoWide": {
+      "src": "/images/uploads/hungru-hero-wide.webp",
+      "alt": "A slice of paneer pizza lifted from the pie, pulling long strands of melted cheese",
+      "width": 1264,
+      "height": 648
+    },
+    "heroVideoTall": {
+      "src": "/images/uploads/hungru-hero-tall.webp",
+      "alt": "A slice of paneer pizza lifted high above the pie, pulling long strands of melted cheese",
+      "width": 720,
+      "height": 1224
     },
     "kidsFrog": {
       "src": "/images/uploads/hungru-kids-frog-pizza.webp",
@@ -337,7 +343,19 @@
           "Cheese burst on any pizza",
           "Rated 4.7 on Google"
         ],
-        "photo": "heroPizza"
+        "video": {
+          "wide": {
+            "mp4": "/video/hungru-hero-wide.mp4",
+            "poster": "heroVideoWide"
+          },
+          "tall": {
+            "mp4": "/video/hungru-hero-tall.mp4",
+            "poster": "heroVideoTall"
+          },
+          "credit": "Food video created with Grok",
+          "pause": "Pause the video",
+          "play": "Play the video"
+        }
       },
       "services": {
         "title": "The menu, in six parts",

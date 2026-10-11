@@ -89,8 +89,6 @@
 
   --animate-marquee: marquee 48s linear infinite;
   --animate-draw: draw 1.6s cubic-bezier(0.65, 0, 0.35, 1) 0.2s both;
-  /* The pizza in the home hero: one slow turn every 24 seconds, like a pizza on a turntable */
-  --animate-pizza-spin: pizza-spin 24s linear infinite;
 
   @keyframes marquee {
     from {
@@ -106,11 +104,6 @@
     }
     to {
       stroke-dashoffset: 0;
-    }
-  }
-  @keyframes pizza-spin {
-    to {
-      transform: rotate(360deg);
     }
   }
 }
@@ -362,28 +355,12 @@
     transform: none;
   }
 
-  /* Hero toppings (HeroToppings.tsx): each one swings slowly between two poses, at its own pace.
-     The resting pose (no motion) keeps its own turn, so they never all line up. */
-  .topping-float {
-    transform: rotate(var(--r0, 0deg));
-    animation: topping-float var(--dur, 10s) ease-in-out var(--delay, 0s) infinite alternate;
-  }
-
   /* Header slides away while scrolling down (set by Header.tsx), back on scroll up or focus. */
   .site-header {
     transition: transform 0.35s var(--ease-out-expo);
   }
   .site-header.is-tucked:not(:focus-within) {
     transform: translateY(-100%);
-  }
-}
-
-@keyframes topping-float {
-  from {
-    transform: translate3d(0, 0, 0) rotate(var(--r0, 0deg));
-  }
-  to {
-    transform: translate3d(var(--dx, 0px), var(--dy, -14px), 0) rotate(var(--r1, 12deg));
   }
 }
 
@@ -407,9 +384,7 @@
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-  .animate-marquee,
-  .animate-pizza-spin,
-  .topping-float {
+  .animate-marquee {
     animation: none !important;
   }
 }

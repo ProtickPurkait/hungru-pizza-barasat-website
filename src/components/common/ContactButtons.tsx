@@ -14,15 +14,18 @@ export function CallButton({
   label = copy.buttons.call,
   showNumber = false,
   numberClassName,
+  variant = "default",
 }: {
   className?: string;
   size?: Size;
   label?: string;
   showNumber?: boolean;
   numberClassName?: string;
+  /** "outline-light" on photos and video, where a filled maroon button would sink into the picture. */
+  variant?: "default" | "outline-light";
 }) {
   return (
-    <Button asChild size={size} className={cn("group", className)}>
+    <Button asChild variant={variant} size={size} className={cn("group", className)}>
       <a href={telHref(business.phone.tel)}>
         <Phone aria-hidden="true" className="transition-transform duration-300 group-hover:-rotate-12" />
         <span>

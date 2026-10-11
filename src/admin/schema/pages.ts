@@ -21,14 +21,31 @@ export const home: Section = {
       [
         text("eyebrow", "Small line above the heading"),
         text("title", "Heading, first part", { required: true }),
-        text("titleAccent", "Heading, words in maroon", { hint: "Shown in the accent colour on the line under the first part." }),
+        text("titleAccent", "Heading, words in yellow", { hint: "Shown in the accent colour on the line under the first part." }),
         text("titleLine2", "Heading, extra line (grey)", { hint: "Optional. Leave empty for a two-line heading." }),
         para("lead", "Introduction", { rows: 3 }),
-        strings("promises", "Promises beside the pizza", { itemLabel: "promise", max: 4 }),
-        photo(
-          "photo",
-          "Spinning pizza",
-          "Shown as a slowly turning circle. Use a pizza photographed from directly above, filling a square photo, or cut out as a circle (PNG or WebP with a see-through background).",
+        strings("promises", "Promises under the buttons", { itemLabel: "promise", max: 4 }),
+        group(
+          "Background video",
+          [
+            ...(["wide", "tall"] as const).map((shape) =>
+              group(
+                shape === "wide" ? "For computers (wide)" : "For phones and tablets (tall)",
+                [
+                  text("mp4", "Video file (MP4)", { required: true }),
+                  photo("poster", "Still picture", "The video's first frame. Shown while the video loads, and instead of it for visitors who switch motion off or save data."),
+                ],
+                { key: shape, columns: 2 },
+              ),
+            ),
+            text("credit", "Credit line", { hint: 'Shown small beside the pause button. Videos made with Grok must say so, e.g. "Food video created with Grok".' }),
+            text("pause", "Pause button (for screen readers)"),
+            text("play", "Play button (for screen readers)"),
+          ],
+          {
+            key: "video",
+            hint: "The video files live in the website's public/video folder. Wide: about 1264 × 648, food on the right. Tall: about 720 × 1224, food in the lower half. Keep each under 3 MB.",
+          },
         ),
       ],
       { key: "home.hero" },

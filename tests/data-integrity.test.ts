@@ -32,7 +32,7 @@ describe("content checker", () => {
 
   it("catches a photo without alt text", () => {
     const c = fresh();
-    c.photos[c.copy.home.hero.photo]!.alt = " ";
+    c.photos[c.copy.home.hero.video.wide.poster]!.alt = " ";
     expect(hasErrors(checkContent(c))).toBe(true);
   });
 

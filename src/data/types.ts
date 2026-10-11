@@ -234,6 +234,27 @@ export interface HeroCopy {
   photo?: string;
 }
 
+/** One shape of the home page's background video. */
+export interface VideoFiles {
+  /** The video file, an MP4 that every browser plays ("/video/hungru-hero-wide.mp4"). */
+  mp4: string;
+  /** Photo key: the video's first frame. Shown while the video loads, and instead of it when motion is switched off. */
+  poster: string;
+}
+
+/** The looping video behind the home page heading. */
+export interface HeroVideo {
+  /** For screens 1024px and wider: about 2:1, the food on the right and dark space on the left for the text. */
+  wide: VideoFiles;
+  /** For phones and tablets: tall, dark space at the top for the text and the food below. */
+  tall: VideoFiles;
+  /** Small line beside the pause button, e.g. "Food video created with Grok". Empty hides it. */
+  credit: string;
+  /** Labels of the pause button, for screen readers. */
+  pause: string;
+  play: string;
+}
+
 /**
  * Every heading, paragraph and button label that is not part of a menu section, area or photo.
  * Text in {curly braces} is filled in automatically, e.g. {area} becomes "Ballygunge".
@@ -290,7 +311,7 @@ export interface Copy {
     edit: string;
   };
   home: {
-    hero: HeroCopy & { titleAccent: string; titleLine2: string; promises: string[]; photo: string };
+    hero: HeroCopy & { titleAccent: string; titleLine2: string; promises: string[]; video: HeroVideo };
     services: { title: string; lead: string; link: string };
     projects: { title: string; lead: string; link: string; filters: string[]; count: number };
     areas: { title: string; lead: string };

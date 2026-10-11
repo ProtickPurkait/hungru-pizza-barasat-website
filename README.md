@@ -26,7 +26,7 @@ npm run preview    # serve dist/ locally at http://localhost:4173 (the admin pan
 
 | URL | Page |
 | --- | --- |
-| `/` | Home: hero, trust strip, menu sections, how ordering works, gallery, pizza builder teaser, Google reviews, nearby areas, FAQ, order form |
+| `/` | Home: hero with a looping food video, trust strip, menu sections, how ordering works, gallery, pizza builder teaser, Google reviews, nearby areas, FAQ, order form |
 | `/menu/` | The full menu (172 dishes) with prices, section links and a veg-only switch |
 | `/menu/<slug>/` | One page per menu section (veg pizzas, chicken pizzas, kullad and kids' pizzas, starters and sides, momos and burgers, drinks and desserts), all from one template |
 | `/build-your-pizza/` | Pizza builder: 8 or 10 inch, crust (cheese burst), cheese, toppings and quantity at the menu's add-on prices, priced as you go on a kitchen order ticket |
@@ -46,6 +46,7 @@ Two names in the code come from the template the site was built on: **"services"
 - **Logo:** cut from the printed menu (`public/images/uploads/hungru-logo.webp`), and a square "H" icon made from it for the browser tab and phone home screens (`hungru-icon.png`). Ask the client for the original logo file to get a sharper version.
 - **Type:** one self-hosted variable font, Bricolage Grotesque, cut down to the characters the site uses (84 KB) and preloaded. Its optical-size axis makes the headings chunky and the body text open; its width axis gives the narrower display cuts.
 - **Drawn details** (`src/components/common/Motifs.tsx`): the bubbly edge of a pizza crust (under every hero and where the page turns dark) and a strand of melted cheese, the "cheese pull" of a cheese burst pizza, that stretches across the four "how ordering works" steps and drips onto each one. Prices are printed on a kitchen order ticket with torn edges.
+- **Hero video** (`src/components/sections/HeroVideo.tsx`): a 13-second loop behind the home page heading. A cheese pull, a chicken burger, peri peri fries and a cola pour, crossfaded so the end runs back into the start. The clips were made with Grok, cut and joined with ffmpeg, and trimmed at the bottom where Grok stamps its mark. Two versions in `public/video/`: wide for computers (1264 × 648, 1.7 MB, food on the right) and tall for phones and tablets (720 × 1224, 2.2 MB, food below the text). Each has a still of its first frame in `public/images/uploads/`. The still shows straight away, and the video loads once the page has finished, then fades in over it. The video pauses while scrolled out of view and has a pause button. Visitors who switch motion off or save data only see the still. The small credit line "Food video created with Grok" stays on, because Grok's terms ask for it wherever its output is published.
 - **Shapes:** buttons and chips are pills, form fields are 10px round, photos and panels are rounded.
 
 ## Admin panel (`/admin/`)
@@ -55,6 +56,7 @@ A site editor built for this site. Everything visitors see can be changed there:
 - **Live preview.** The real site, beside the form, updates as you type. Desktop and phone views. Opening a menu section or delivery area shows its own page.
 - **Menu.** Content → Menu. Each section has its dishes, each with one price or one per size (8 inch / 10 inch, 4 pcs / 8 pcs, Small / Medium / Large, Regular / Grill …), the veg / non-veg / either mark and an optional tag such as Spicy. A short note above the dishes (slices per size, dips) is set per section.
 - **Pizza builder.** Content → Pizza builder. Sizes, crusts, cheese and toppings, each extra with its 8 inch and 10 inch price (as in the menu's add-on table), plus the most toppings and pizzas allowed.
+- **Home video.** Home page → Top of the page → Background video. The video files, their still pictures, the credit line and the pause button's labels. New video files go in `public/video/` (the admin uploads photos, not videos).
 - **Photos.** Upload from a phone or computer. Photos are resized (max 1920 px, WebP) and stripped of camera data before upload. "Replace" swaps a photo everywhere it is used.
 - **Logo.** Business details → Logo. Any shape works. With no logo, the built-in slice mark and the name are shown.
 - **Browser tab icon.** The build makes the favicon and the iPhone home-screen icon from the square icon (Business details → Logo → Browser tab icon), or else from the logo (`scripts/prerender.mjs`, with `sharp`).
@@ -119,9 +121,10 @@ change them in the admin panel:
 7. **Pizza builder.** It starts from the Cheesy Margherita (₹139 / ₹220) and adds the menu's add-on prices, up to 6 toppings. Confirm the kitchen makes custom pizzas this way (Pizza builder).
 8. **Story and promise.** Written from the menu and reviews (Team & story). Add the year the café opened, the owner's story and the team, if they want them; the team section stays hidden until someone is added.
 9. **Photos.** Apart from the logo and the kids' pizzas, all photos are Unsplash samples, chosen to look like Hungru's food (paneer pizzas, momos, cold coffee). Ask for real photos of the café, the pizzas and the team and use **Replace** in the Photo library. The original logo file would also be sharper than the one cut from the menu.
-10. **Policies.** Written for Indian law (DPDP Act 2023 and DPDP Rules 2025, IT Act 2000 and the 2011 SPDI Rules, Consumer Protection Act 2019, Food Safety and Standards Act 2006). Fill in the legal name, the Grievance Officer's name, a real email and the FSSAI licence, check the refund rules against how the café works, and have a lawyer review them.
-11. **Footer credit.** "Demo by Fenlark" (Navigation, footer & buttons → Footer).
-12. **Turn off sample tags.** Business details → Website → "Show Sample tags" off, once everything above is confirmed.
+10. **Home video.** The food in it was made with AI (Grok), not filmed at Hungru. Show the owner and check they are happy with it. Keep the credit line "Food video created with Grok", because Grok's terms ask for it. Short clips of Hungru's own pizzas would be even better, and could replace these files later (Home page → Background video).
+11. **Policies.** Written for Indian law (DPDP Act 2023 and DPDP Rules 2025, IT Act 2000 and the 2011 SPDI Rules, Consumer Protection Act 2019, Food Safety and Standards Act 2006). Fill in the legal name, the Grievance Officer's name, a real email and the FSSAI licence, check the refund rules against how the café works, and have a lawyer review them.
+12. **Footer credit.** "Demo by Fenlark" (Navigation, footer & buttons → Footer).
+13. **Turn off sample tags.** Business details → Website → "Show Sample tags" off, once everything above is confirmed.
 
 ## Editing content without the admin panel
 

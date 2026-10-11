@@ -143,7 +143,8 @@ export function photoUsage(content: SiteContent): Record<string, string[]> {
   const usage: Record<string, string[]> = {};
   const add = (key: string, where: string) => (usage[key] ??= []).push(where);
   const c = content.copy;
-  add(c.home.hero.photo, "Home page");
+  add(c.home.hero.video.wide.poster, "Home page video (computers)");
+  add(c.home.hero.video.tall.poster, "Home page video (phones)");
   add(c.servicesPage.hero.photo, "Menu page");
   add(c.projectsPage.hero.photo, "Gallery page");
   add(c.aboutPage.hero.photo, "About page");

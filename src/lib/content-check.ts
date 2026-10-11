@@ -77,7 +77,11 @@ export function checkContent(c: SiteContent): Problem[] {
   }
   photoRef("seo", c.pageSeo.shareImage, "Link preview image");
   const cp = c.copy;
-  photoRef("home", cp.home.hero.photo, "Home hero photo");
+  for (const [shape, v] of [["wide", cp.home.hero.video.wide], ["tall", cp.home.hero.video.tall]] as const) {
+    const label = shape === "wide" ? "Home video for computers" : "Home video for phones";
+    photoRef("home", v.poster, `${label}, still picture`);
+    if (!/^\/\S+\.mp4$/.test(v.mp4)) error("home", `${label}: the MP4 file should be a path like /video/hero.mp4`);
+  }
   photoRef("pages-services", cp.servicesPage.hero.photo, "Menu page photo");
   photoRef("pages-projects", cp.projectsPage.hero.photo, "Gallery page photo");
   photoRef("pages-about", cp.aboutPage.hero.photo, "About page photo");
