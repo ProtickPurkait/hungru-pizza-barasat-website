@@ -12,6 +12,7 @@ import { HowWeWork } from "@/components/sections/HowWeWork";
 import { ProjectsGallery } from "@/components/sections/ProjectsGallery";
 import { Reviews } from "@/components/sections/Reviews";
 import { MenuTeaser } from "@/components/sections/MenuTeaser";
+import { OffersBand } from "@/components/sections/OffersBand";
 import { TrustStrip } from "@/components/sections/TrustStrip";
 import { copy, homeFaqs, pageSeo } from "@/data/site";
 import { paths } from "@/lib/paths";
@@ -40,6 +41,10 @@ export default function Home() {
       <TrustStrip />
 
       {/* Sections below the fold use .defer-render, so phones lay them out (and load their photos) only when needed. */}
+      <div className="defer-render">
+        <OffersBand />
+      </div>
+
       <section aria-labelledby="services-title" className="defer-render wrap py-20 md:py-28">
         <HeaderRow link={{ to: paths.services, label: home.services.link }}>
           <SectionHeading

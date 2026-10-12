@@ -12,12 +12,14 @@ import { lowestPrice } from "./MenuList";
 /**
  * The menu on the home page, in brief: a small tile for each section (dishes and lowest
  * price) that opens the menu finder on that section. The dishes themselves live on /menu/.
+ * The combo offers have their own band above it.
  */
 export function MenuTeaser() {
   const text = copy.menu;
+  const sections = services.filter((s) => !s.offer);
   return (
     <ul className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 xl:grid-cols-6">
-      {services.map((s, i) => (
+      {sections.map((s, i) => (
         <Reveal as="li" key={s.slug} delay={(i % 3) * 70}>
           <Link
             to={`${paths.services}${filtersToSearch({ ...NO_FILTERS, section: s.slug })}`}
@@ -33,7 +35,10 @@ export function MenuTeaser() {
                 <span className="label text-ash-600">{text.fromLabel}</span>
                 <span className="figure text-[1.4rem] text-maroon-600">{formatINR(lowestPrice(s.items))}</span>
               </span>
-              <ArrowRight className="mb-1 size-4 shrink-0 text-ash-600 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:text-ink" aria-hidden="true" />
+              <ArrowRight
+                className="mb-1 size-4 shrink-0 text-ash-600 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:text-ink"
+                aria-hidden="true"
+              />
             </span>
           </Link>
         </Reveal>

@@ -6,6 +6,7 @@ export interface Pages {
   Home: ComponentType;
   ServicesIndex: ComponentType;
   ServicePage: ComponentType;
+  Offers: ComponentType;
   Projects: ComponentType;
   Builder: ComponentType;
   Cart: ComponentType;
@@ -27,6 +28,7 @@ export function App({ pages: P }: { pages: Pages }) {
         <Route path="/" element={<P.Home />} />
         <Route path="/menu" element={<P.ServicesIndex />} />
         <Route path="/menu/:slug" element={<P.ServicePage />} />
+        <Route path="/offers" element={<P.Offers />} />
         <Route path="/gallery" element={<P.Projects />} />
         <Route path="/build-your-pizza" element={<P.Builder />} />
         <Route path="/delivery/:slug" element={<P.AreaPage />} />

@@ -45,7 +45,7 @@ export default function Contact() {
 
       <section aria-labelledby="reach-title" className="wrap py-16 md:py-24">
         <div className="grid gap-14 lg:grid-cols-12 lg:gap-10">
-          <div className="lg:col-span-5">
+          <div className="min-w-0 lg:col-span-5">
             <SectionHeading id="reach-title" size="md" title={text.reachTitle} />
             <div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
               <ContactCard icon={<Phone className="size-5" aria-hidden="true" />} title={text.phoneTitle}>
@@ -98,7 +98,7 @@ export default function Contact() {
               )}
             </div>
           </div>
-          <div className="lg:col-span-7">
+          <div className="min-w-0 lg:col-span-7">
             <SectionHeading
               id="order-form"
               size="md"

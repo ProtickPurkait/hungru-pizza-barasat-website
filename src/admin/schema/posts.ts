@@ -1,5 +1,6 @@
-// The blog and the job openings (blog, jobs in content.json), and the text of their pages (copy.blogPage, copy.careersPage).
-import { Briefcase, BriefcaseBusiness, Newspaper, NotebookPen } from "lucide-react";
+// The blog and the job openings (blog, jobs in content.json), the text of their pages (copy.blogPage, copy.careersPage),
+// and the Offers page (copy.offersPage; its combos are menu sections marked as offers).
+import { BadgePercent, Briefcase, BriefcaseBusiness, Newspaper, NotebookPen } from "lucide-react";
 import type { SiteContent } from "@/data/types";
 import { group, hero, para, photo, seoFields, slugify, strings, text, toggle } from "./helpers";
 import { formatHint } from "./legal";
@@ -199,5 +200,44 @@ export const careersPage: Section = {
       { key: "form", columns: 2, collapsed: true },
     ),
     text("ctaTitle", "Order band heading"),
+  ],
+};
+
+const offerOptions = (c: SiteContent) => c.services.filter((s) => s.offer).map((s) => ({ value: s.slug, label: s.name || s.slug }));
+
+export const offersPage: Section = {
+  id: "pages-offers",
+  group: "Pages",
+  title: "Offers page",
+  icon: BadgePercent,
+  description:
+    "The combo offers at /offers/, the offers band on the home page and the link in the thin bar above the header. The combos themselves, with their prices, are menu sections marked “Combo offers” (Content → Menu).",
+  path: "copy.offersPage",
+  preview: "/offers/",
+  fields: [
+    hero("hero"),
+    text("note", "Note above the combos", { hint: "e.g. about GST. Leave empty for none." }),
+    group(
+      "Around the combos",
+      [
+        text("sectionLink", "Link to each kind of combo's own page", { tokens: ["section"] }),
+        text("jumpLabel", "Row of links at the top (for screen readers)"),
+        text("ctaTitle", "Heading of the order band at the foot"),
+        text("barLink", "Link in the top bar", { hint: "On tablets and computers, above the header, on every page." }),
+      ],
+      { columns: 2 },
+    ),
+    group(
+      "Band on the home page",
+      [
+        text("eyebrow", "Small line above the heading"),
+        text("title", "Heading"),
+        text("titleAccent", "Heading, words in yellow"),
+        para("lead", "Text", { rows: 2 }),
+        text("button", "Button to the Offers page"),
+        { kind: "select", key: "section", label: "Combos shown in the band", options: offerOptions },
+      ],
+      { key: "band", columns: 2 },
+    ),
   ],
 };

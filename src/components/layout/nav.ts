@@ -5,6 +5,7 @@ import { paths } from "@/lib/paths";
 export function mainNav(): { label: string; to: string }[] {
   return [
     { label: copy.nav.services, to: paths.services },
+    { label: copy.nav.offers, to: paths.offers },
     { label: copy.nav.builder, to: paths.builder },
     { label: copy.nav.projects, to: paths.projects },
     { label: copy.nav.blog, to: paths.blog },

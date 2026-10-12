@@ -6,6 +6,7 @@ export const lazyPages: Pages = {
   Home: lazy(() => import("./Home")),
   ServicesIndex: lazy(() => import("./ServicesIndex")),
   ServicePage: lazy(() => import("./ServicePage")),
+  Offers: lazy(() => import("./Offers")),
   Projects: lazy(() => import("./Projects")),
   Builder: lazy(() => import("./Builder")),
   Cart: lazy(() => import("./Cart")),

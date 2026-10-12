@@ -1,4 +1,4 @@
-import { CakeSlice, CupSoda, Drumstick, Hamburger, Leaf, Pizza, Popcorn, Smile, type LucideProps } from "lucide-react";
+import { BadgePercent, CakeSlice, CupSoda, Drumstick, Hamburger, Leaf, Pizza, Popcorn, Smile, type LucideProps } from "lucide-react";
 import type { IconKey } from "@/data/types";
 
 const icons: Record<IconKey, React.ComponentType<LucideProps>> = {
@@ -10,6 +10,7 @@ const icons: Record<IconKey, React.ComponentType<LucideProps>> = {
   burger: Hamburger,
   drink: CupSoda,
   dessert: CakeSlice,
+  deal: BadgePercent,
 };
 
 export function ServiceIcon({ icon, ...props }: { icon: IconKey } & LucideProps) {

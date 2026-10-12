@@ -1,9 +1,10 @@
 import { useRef, useState, useSyncExternalStore } from "react";
-import { Minus, Plus, ShoppingBag, SlidersHorizontal, Trash2 } from "lucide-react";
+import { Minus, Pizza, Plus, ShoppingBag, SlidersHorizontal, Trash2 } from "lucide-react";
 import { Link } from "react-router";
 import { Breadcrumbs } from "@/components/common/Breadcrumbs";
 import { DietMark } from "@/components/common/DietMark";
 import { Seo } from "@/components/common/Seo";
+import { SitePhoto } from "@/components/common/SitePhoto";
 import { itemsText } from "@/components/layout/CartLinks";
 import { CartExtras } from "@/components/sections/CartExtras";
 import { OrderForm } from "@/components/sections/OrderForm";
@@ -33,11 +34,23 @@ function CartRow({ line }: { line: PricedLine }) {
   const [extrasOpen, setExtrasOpen] = useState(false);
   return (
     <li className="flex gap-3.5 py-5">
-      <DietMark diet={line.diet} className="mt-1.5 self-start" />
+      {/* The dish's photo; a pizza from the builder (or a dish without one) gets a plain tile */}
+      <span className="size-16 shrink-0 overflow-hidden rounded-xl sm:size-[4.5rem]">
+        {line.photo ? (
+          <SitePhoto photo={line.photo} ratio={1} maxWidth={360} sizes="72px" alt="" className="size-full" />
+        ) : (
+          <span aria-hidden="true" className="grid size-full place-items-center bg-ash-100 text-ash-400">
+            <Pizza className="size-6" />
+          </span>
+        )}
+      </span>
       <div className="min-w-0 flex-1">
         <div className="flex items-start justify-between gap-4">
           <div className="min-w-0">
-            <h3 className="text-[1.3rem] leading-tight">{line.name}</h3>
+            <h3 className="flex items-start gap-x-2 text-[1.3rem] leading-tight">
+              <DietMark diet={line.diet} className="mt-[0.2em]" />
+              {line.name}
+            </h3>
             {line.detail && <p className="mt-1 text-sm leading-snug text-ash-600">{line.detail}</p>}
             {choices && (
               <button

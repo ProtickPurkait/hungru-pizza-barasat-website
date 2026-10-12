@@ -23,9 +23,10 @@ export interface SearchEntry {
   /** Small text beside the title ("44 dishes", "Guide", "Full time"). */
   meta?: string;
   icon?: SearchIcon;
-  /** Dishes: the food mark and every price. */
+  /** Dishes: the food mark, every price and the photo. */
   diet?: Diet;
   prices?: number[];
+  photo?: string;
   /** More text to match besides the title, with how much each counts. */
   fields: { text: string; weight: number }[];
 }
@@ -176,6 +177,10 @@ const RELATED: Record<string, string[]> = {
   own: ["build"],
   create: ["build"],
   make: ["build"],
+  offer: ["combo", "deal"],
+  deal: ["offer"],
+  discount: ["offer"],
+  saving: ["offer"],
   best: ["favourite", "special"],
   popular: ["favourite"],
   famous: ["favourite", "special"],

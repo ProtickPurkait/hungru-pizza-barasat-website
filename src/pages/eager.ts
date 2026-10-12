@@ -11,8 +11,25 @@ import Contact from "./Contact";
 import Home from "./Home";
 import LegalPage from "./LegalPage";
 import NotFound from "./NotFound";
+import Offers from "./Offers";
 import Projects from "./Projects";
 import ServicePage from "./ServicePage";
 import ServicesIndex from "./ServicesIndex";
 
-export const eagerPages: Pages = { Home, ServicesIndex, ServicePage, Projects, Builder, Cart, AreaPage, BlogIndex, BlogPost, Careers, About, Contact, LegalPage, NotFound };
+export const eagerPages: Pages = {
+  Home,
+  ServicesIndex,
+  ServicePage,
+  Offers,
+  Projects,
+  Builder,
+  Cart,
+  AreaPage,
+  BlogIndex,
+  BlogPost,
+  Careers,
+  About,
+  Contact,
+  LegalPage,
+  NotFound,
+};

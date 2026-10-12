@@ -15,7 +15,7 @@ export interface Problem {
   message: string;
 }
 
-export const ICONS = ["pizza", "leaf", "drumstick", "smile", "popcorn", "burger", "drink", "dessert"] as const;
+export const ICONS = ["pizza", "leaf", "drumstick", "smile", "popcorn", "burger", "drink", "dessert", "deal"] as const;
 export const CATEGORIES = ["veg", "chicken", "kids", "snacks", "drinks", "cafe"] as const;
 export const DIETS = ["veg", "non-veg", "either"] as const;
 
@@ -23,6 +23,7 @@ const SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 /** Top-level addresses a policy page cannot take. */
 const RESERVED_SLUGS = [
   "menu",
+  "offers",
   "gallery",
   "build-your-pizza",
   "delivery",
@@ -119,7 +120,7 @@ export function checkContent(c: SiteContent): Problem[] {
   photoRef("pages-area", cp.areaPage.fallbackPhoto, "Area page fallback photo");
 
   // SEO
-  for (const key of ["home", "services", "projects", "builder", "blog", "careers", "cart", "about", "contact", "notFound"] as const) {
+  for (const key of ["home", "services", "offers", "projects", "builder", "blog", "careers", "cart", "about", "contact", "notFound"] as const) {
     const s = c.pageSeo[key];
     if (blank(s.title)) error("seo", `The ${key} page needs a title.`);
     if (blank(s.description)) error("seo", `The ${key} page needs a description.`);
@@ -154,6 +155,7 @@ export function checkContent(c: SiteContent): Problem[] {
         error("services", `${name}, ${dish}: with more than one price, name each size (e.g. 8 inch, 10 inch).`);
       for (const d of dupes(prices.map((p) => p.size.trim()))) warn("services", `${name}, ${dish}: the size "${d}" is listed twice.`);
       if (!(DIETS as readonly string[]).includes(it.diet)) error("services", `${name}, ${dish}: choose veg, non-veg or either.`);
+      if (it.photo && !photoKeys.has(it.photo)) error("services", `${name}, ${dish}: the photo "${it.photo}" is not in the photo library.`);
     });
     for (const d of dupes(s.items.map((it) => it.name.trim()))) warn("services", `${name}: "${d}" is on the menu twice.`);
     // Add-ons picked in the cart (dips …).
@@ -166,6 +168,9 @@ export function checkContent(c: SiteContent): Problem[] {
     for (const d of dupes((s.addOns ?? []).map((a) => a.id))) error("services", `${name}: two add-ons use the code "${d}".`);
     if (blank(s.seo.title) || blank(s.seo.description)) error("services", `${name}: add a page title and description for Google.`);
   });
+  const band = c.copy.offersPage.band.section;
+  if (c.services.some((s) => s.offer) && !c.services.some((s) => s.offer && s.slug === band))
+    warn("pages-offers", "Home page offers band: choose one of the combo offer sections to show (Content → Menu → Combo offers).");
 
   // Areas
   const localitySlugs = c.localities.map((l) => l.slug);

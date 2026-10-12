@@ -1,6 +1,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { ArrowRight, Search, X } from "lucide-react";
 import { Link, useLocation } from "react-router";
+import { DemoTag } from "@/components/common/DemoTag";
 import { DietMark } from "@/components/common/DietMark";
 import { ServiceIcon } from "@/components/common/ServiceIcon";
 import { Button } from "@/components/ui/button";
@@ -48,6 +49,7 @@ export function MenuFinder() {
   const text = copy.menu;
   const [f, setF] = useState<MenuFilters>(NO_FILTERS);
   const results = useRef<HTMLDivElement>(null);
+  const tabs = useRef<HTMLDivElement>(null);
   const wrote = useRef(false);
 
   // Filters from the address: read after the first render (which matches the prerendered page), before the browser paints,
@@ -67,6 +69,16 @@ export function MenuFinder() {
     const { pathname, hash } = window.location;
     window.history.replaceState(window.history.state, "", `${pathname}${filtersToSearch(f)}${hash}`);
   }, [f]);
+
+  // On phones the section tabs scroll sideways: bring the chosen one into view.
+  useEffect(() => {
+    const row = tabs.current;
+    const tab = row?.querySelector<HTMLElement>('[aria-pressed="true"]');
+    if (!row || !tab) return;
+    const r = row.getBoundingClientRect();
+    const t = tab.getBoundingClientRect();
+    if (t.left < r.left || t.right > r.right) row.scrollLeft += t.left - r.left - 16;
+  }, [f.section]);
 
   const update = (patch: Partial<MenuFilters>) => setF((cur) => ({ ...cur, ...patch }));
   const pickSection = (slug: string) => {
@@ -143,8 +155,9 @@ export function MenuFinder() {
       </div>
 
       {/* One section at a time. Stays in reach while scrolling through the dishes. */}
-      <div className="sticky top-0 z-30 -mx-4 mt-6 border-y border-ash-200 bg-ground/95 px-4 backdrop-blur-md supports-[backdrop-filter]:bg-ground/85 sm:mx-0 sm:rounded-full sm:border sm:px-2">
-        <div role="group" aria-label={text.jumpLabel} className="no-scrollbar flex gap-0.5 overflow-x-auto py-2 xl:justify-between">
+      {/* On computers the tabs wrap onto a second line rather than hide off to the side */}
+      <div className="sticky top-0 z-30 -mx-4 mt-6 border-y border-ash-200 bg-ground/95 px-4 backdrop-blur-md supports-[backdrop-filter]:bg-ground/85 sm:mx-0 sm:rounded-full sm:border sm:px-2 lg:rounded-[1.6rem]">
+        <div ref={tabs} role="group" aria-label={text.jumpLabel} className="no-scrollbar flex gap-0.5 overflow-x-auto py-2 lg:flex-wrap lg:overflow-visible">
           <button type="button" aria-pressed={!f.section} onClick={() => pickSection("")} className={tab(!f.section)}>
             {text.allLabel}
             {count(Object.values(counts).reduce((a, b) => a + b, 0), !f.section)}
@@ -178,6 +191,7 @@ export function MenuFinder() {
         <span className="inline-flex items-center gap-1.5">
           <DietMark diet="non-veg" /> {text.nonVegLabel}
         </span>
+        <DemoTag>Sample photos</DemoTag>
       </div>
 
       {groups.length === 0 ? (

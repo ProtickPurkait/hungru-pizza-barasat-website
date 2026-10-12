@@ -81,6 +81,7 @@ const iconNames: Record<(typeof ICONS)[number], string> = {
   burger: "Burger",
   drink: "Cold drink",
   dessert: "Cake slice",
+  deal: "Offer badge (combos)",
 };
 export const iconOptions: Option[] = ICONS.map((k) => ({ value: k, label: iconNames[k] }));
 

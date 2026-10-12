@@ -1,6 +1,7 @@
 // Photo URL helpers with no dependency on the site content (the admin panel uses them too).
 
-export const WIDTHS = [360, 540, 720, 960, 1280, 1600];
+// 180 is for the small dish photos on the menu.
+export const WIDTHS = [180, 360, 540, 720, 960, 1280, 1600];
 
 /** A file path ("/images/x.jpg") or full URL, as opposed to an Unsplash photo id. */
 export function isLocal(src: string): boolean {

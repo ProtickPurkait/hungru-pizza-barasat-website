@@ -146,6 +146,7 @@ export function photoUsage(content: SiteContent): Record<string, string[]> {
   add(c.home.hero.video.wide.poster, "Home page video (computers)");
   add(c.home.hero.video.tall.poster, "Home page video (phones)");
   add(c.servicesPage.hero.photo, "Menu page");
+  add(c.offersPage.hero.photo, "Offers page");
   add(c.projectsPage.hero.photo, "Gallery page");
   add(c.blogPage.hero.photo, "Blog page");
   for (const p of content.blog) add(p.photo, `Blog: ${p.title}`);
@@ -162,6 +163,7 @@ export function photoUsage(content: SiteContent): Record<string, string[]> {
   for (const s of content.services) {
     add(s.heroPhoto, s.shortName || s.name);
     s.gallery.forEach((k) => add(k, s.shortName || s.name));
+    for (const it of s.items) if (it.photo) add(it.photo, `${s.shortName || s.name}: ${it.name}`);
   }
   for (const p of content.projects) add(p.photo, `Gallery: ${p.title}`);
   for (const k of Object.keys(usage)) usage[k] = [...new Set(usage[k])];

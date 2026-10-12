@@ -6,6 +6,8 @@ export const paths = {
   service: (slug: string) => `/menu/${slug}/`,
   /** A dish on its menu section's page, which scrolls to it: /menu/veg-pizzas/#tandoori-paneer-pizza. */
   dish: (section: string, name: string) => `/menu/${section}/#${anchorFor(name)}`,
+  /** The combo offers: every menu section marked as an offer, on one page. */
+  offers: "/offers/",
   /** The photo gallery ("projects"). */
   projects: "/gallery/",
   builder: "/build-your-pizza/",

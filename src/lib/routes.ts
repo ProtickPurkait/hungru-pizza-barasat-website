@@ -8,6 +8,7 @@ export function routesFor(c: SiteContent): string[] {
     paths.home,
     paths.services,
     ...c.services.map((s) => paths.service(s.slug)),
+    paths.offers,
     paths.projects,
     paths.builder,
     ...c.areaPages.map((a) => paths.area(a.slug)),

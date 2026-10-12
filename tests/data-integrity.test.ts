@@ -16,6 +16,11 @@ describe("current content", () => {
     expect(checkContent(getContent())).toEqual([]);
   });
 
+  it("gives every dish a photo from the library", () => {
+    const c = getContent();
+    for (const s of c.services) for (const it of s.items) expect(c.photos[it.photo], `${s.slug}: ${it.name}`).toBeDefined();
+  });
+
   it("all routes end with a slash and are unique", () => {
     const routes = routesFor(getContent());
     expect(new Set(routes).size).toBe(routes.length);
@@ -28,6 +33,15 @@ describe("content checker", () => {
     const c = fresh();
     c.services[0].heroPhoto = "missingPhoto";
     expect(messages(c).join("\n")).toContain('"missingPhoto" is not in the photo library');
+  });
+
+  it("catches a dish photo that is not in the library, and allows a dish without one", () => {
+    const c = fresh();
+    c.services[0].items[0]!.photo = "goneDishPhoto";
+    c.services[0].items[1]!.photo = "";
+    const found = messages(c);
+    expect(found.join("\n")).toContain('the photo "goneDishPhoto" is not in the photo library');
+    expect(found).toHaveLength(1);
   });
 
   it("catches a photo without alt text", () => {

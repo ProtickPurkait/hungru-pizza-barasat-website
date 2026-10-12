@@ -8,6 +8,7 @@ const dish = (name: string, diet: MenuItem["diet"], prices: [string, number][]):
   prices: prices.map(([size, price]) => ({ size, price })),
   diet,
   tag: "",
+  photo: "",
 });
 const services = [
   {
@@ -31,6 +32,17 @@ const services = [
     ],
   },
   { slug: "drinks", items: [dish("Cold Coffee", "veg", [["", 140]])], addOns: [] },
+  {
+    slug: "veg-combos",
+    offer: true,
+    items: [
+      dish("Veg Couple Combo", "veg", [
+        ["8 inch", 399],
+        ["10 inch", 589],
+      ]),
+    ],
+    addOns: [],
+  },
 ] as unknown as Service[];
 const builder: BuilderConfig = {
   sizes: [
@@ -76,6 +88,10 @@ describe("cart extras", () => {
     const starter = extraChoices(fries, services, builder)!;
     expect([starter.size, starter.toppings.length, starter.addOns.map((a) => a.id)]).toEqual([null, 0, ["cheese-dip", "chutney"]]);
     expect(extraChoices({ kind: "dish", section: "drinks", name: "Cold Coffee", size: "", qty: 1 }, services, builder)).toBeNull();
+  });
+
+  it("offers no pizza extras on a combo offer, even in 8 or 10 inch", () => {
+    expect(extraChoices({ kind: "dish", section: "veg-combos", name: "Veg Couple Combo", size: "8 inch", qty: 1 }, services, builder)).toBeNull();
   });
 
   it("prices extras at the pizza's size and lists them", () => {

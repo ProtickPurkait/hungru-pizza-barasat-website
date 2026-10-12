@@ -20,6 +20,7 @@ import { useNavigate } from "react-router";
 import { WhatsAppButton } from "@/components/common/ContactButtons";
 import { DietMark } from "@/components/common/DietMark";
 import { ServiceIcon } from "@/components/common/ServiceIcon";
+import { SitePhoto } from "@/components/common/SitePhoto";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogClose, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
@@ -53,7 +54,8 @@ const optionId = (i: number) => `site-search-option-${i}`;
 
 /** The food mark for a dish, otherwise the icon of its kind (a menu section's own icon). */
 function ResultIcon({ hit }: { hit: SearchHit }) {
-  const { diet, icon } = hit.entry;
+  const { diet, icon, photo } = hit.entry;
+  if (photo) return <SitePhoto photo={photo} ratio={1} maxWidth={180} sizes="40px" alt="" className="size-full" />;
   if (diet) return <DietMark diet={diet} />;
   const Icon = icon ? ICONS[icon] : undefined;
   if (Icon) return <Icon className="size-[1.15rem]" aria-hidden="true" />;
@@ -181,13 +183,14 @@ export default function SiteSearch({ open, onOpenChange }: { open: boolean; onOp
           on ? "bg-sheet shadow-[inset_0_0_0_1.5px_var(--color-ash-300)]" : "hover:bg-sheet/60",
         )}
       >
-        <span className="grid size-10 shrink-0 place-items-center rounded-full bg-ground-2 text-maroon-600 dark:text-cheese-400">
+        <span className="grid size-10 shrink-0 place-items-center overflow-hidden rounded-full bg-ground-2 text-maroon-600 dark:text-cheese-400">
           {o.hit ? <ResultIcon hit={o.hit} /> : <Search className="size-[1.15rem]" aria-hidden="true" />}
         </span>
         <span className="min-w-0 flex-1">
           {e ? (
             <>
               <span className="block leading-snug font-semibold text-ink">
+                {e.diet && e.photo && <DietMark diet={e.diet} className="mr-1.5 align-[-0.15em]" />}
                 {markParts(e.title, o.hit!.marks).map((p, k) =>
                   p.mark ? (
                     <mark key={k} className="rounded-[0.25em] bg-cheese-300/80 px-0.5 text-ink dark:bg-cheese-400/25">

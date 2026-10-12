@@ -1,5 +1,5 @@
 import { lazy, Suspense, useEffect, useRef, useState } from "react";
-import { Clock, House, MapPin, Menu, Phone, Search } from "lucide-react";
+import { BadgePercent, Clock, House, MapPin, Menu, Phone, Search } from "lucide-react";
 import { Link, NavLink, useLocation } from "react-router";
 import { Logo } from "@/components/common/Logo";
 import { Stars } from "@/components/common/RatingBadge";
@@ -80,6 +80,11 @@ export function Header() {
             <MapPin className="size-3.5 text-maroon-600" aria-hidden="true" />
             {copy.header.location}
           </p>
+          {/* The combo offers: here on tablets and computers, where the menu bar below has no room left */}
+          <Link to={paths.offers} className="flex min-h-9 items-center gap-1.5 font-semibold text-maroon-600 hover:text-ink">
+            <BadgePercent className="size-4" aria-hidden="true" />
+            {copy.offersPage.barLink}
+          </Link>
           <a
             href={business.googleReviewsUrl}
             target="_blank"
@@ -103,7 +108,7 @@ export function Header() {
 
           <nav aria-label="Main" className="hidden lg:block">
             <ul className="flex items-center gap-0.5 xl:gap-1">
-              {[...(onHome ? [] : [{ label: copy.nav.home, to: paths.home }]), ...nav].map((item) => (
+              {[...(onHome ? [] : [{ label: copy.nav.home, to: paths.home }]), ...nav.filter((i) => i.to !== paths.offers)].map((item) => (
                 <li key={item.to}>
                   <NavLink to={item.to} end={item.to === paths.home} className={({ isActive }) => navLink(isActive)}>
                     {item.label}

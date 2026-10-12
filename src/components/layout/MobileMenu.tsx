@@ -22,6 +22,8 @@ export default function MobileMenu({
 }) {
   const close = () => onOpenChange(false);
   const onHome = useLocation().pathname === paths.home;
+  // The combo offers are one link, Offers, in the list above.
+  const sections = services.filter((s) => !s.offer);
   return (
     <Sheet open={open} onOpenChange={onOpenChange}>
       <SheetContent
@@ -55,7 +57,7 @@ export default function MobileMenu({
           </ul>
           <p className="label mt-8 text-ash-600">{copy.nav.services}</p>
           <ul className="mt-2">
-            {services.map((s) => (
+            {sections.map((s) => (
               <li key={s.slug}>
                 <Link to={paths.service(s.slug)} onClick={close} className="flex min-h-11 items-center text-ash-700 hover:text-ink">
                   {s.name}

@@ -3,8 +3,22 @@
 // Two names are kept from the template the site was built on:
 //   "services" are the menu sections (veg pizzas, chicken pizzas …), each with its own page at /menu/<slug>/.
 //   "projects" are the gallery photos at /gallery/.
-// The blog, the job openings, the menu finder labels, the cart and search labels and the home video are in types-pages.ts.
-import type { BlogPageCopy, BlogPost, CareersPageCopy, CartCopy, DeliveryCopy, HeroVideo, JobOpening, MenuAddOn, MenuCopy, SearchCopy } from "./types-pages";
+// The blog, the job openings, the policies, the menu finder labels, the cart, search and offers labels and the home video
+// are in types-pages.ts.
+import type {
+  BlogPageCopy,
+  BlogPost,
+  CareersPageCopy,
+  CartCopy,
+  DeliveryCopy,
+  HeroVideo,
+  JobOpening,
+  Legal,
+  MenuAddOn,
+  MenuCopy,
+  OffersCopy,
+  SearchCopy,
+} from "./types-pages";
 
 export type * from "./types-pages";
 
@@ -28,7 +42,7 @@ export interface PageSeo {
   description: string;
 }
 
-export type IconKey = "pizza" | "leaf" | "drumstick" | "smile" | "popcorn" | "burger" | "drink" | "dessert";
+export type IconKey = "pizza" | "leaf" | "drumstick" | "smile" | "popcorn" | "burger" | "drink" | "dessert" | "deal";
 
 /** What a gallery photo shows. Menu sections point at one, so their pages can show matching photos. */
 export type ProjectCategory = "veg" | "chicken" | "kids" | "snacks" | "drinks" | "cafe";
@@ -52,6 +66,8 @@ export interface MenuItem {
   diet: Diet;
   /** Optional short tag, e.g. "Bestseller", "Spicy", "New". "" for none. */
   tag: string;
+  /** Photo key of the dish, shown beside it on the menu and in the cart. "" for none. */
+  photo: string;
 }
 
 export interface Material {
@@ -76,6 +92,8 @@ export interface Service {
   items: MenuItem[];
   /** Extras for any dish in this section, picked in the cart (dips …). Pizzas use the builder's prices instead. */
   addOns: MenuAddOn[];
+  /** Combo offers: on the Offers page and the home page offers band, not the home menu tiles; no pizza extras in the cart. */
+  offer: boolean;
   /** "What goes in": the ingredients this section is built on. */
   materials: Material[];
   gallery: string[];
@@ -231,6 +249,7 @@ export interface PageSeoMap {
   careers: PageSeo;
   /** Kept out of Google; used for the browser tab and link previews. */
   cart: PageSeo;
+  offers: PageSeo;
   notFound: PageSeo;
   /** Photo key for link previews on WhatsApp, Facebook etc. */
   shareImage: string;
@@ -256,7 +275,7 @@ export interface HeroCopy {
  * Text in {curly braces} is filled in automatically, e.g. {area} becomes "Ballygunge".
  */
 export interface Copy {
-  nav: { home: string; services: string; projects: string; builder: string; blog: string; careers: string; about: string; contact: string };
+  nav: { home: string; services: string; offers: string; projects: string; builder: string; blog: string; careers: string; about: string; contact: string };
   /** The light / dark switch in the header (its name for screen readers). */
   theme: { label: string };
   buttons: { call: string; callShort: string; whatsapp: string; whatsappShort: string; whatsappChat: string; seeDetails: string };
@@ -405,59 +424,8 @@ export interface Copy {
   cart: CartCopy;
   delivery: DeliveryCopy;
   search: SearchCopy;
+  offersPage: OffersCopy;
   notFound: { eyebrow: string; title: string; lead: string; popularTitle: string };
-}
-
-/** One numbered part of a policy, e.g. "Your rights". */
-export interface LegalSection {
-  heading: string;
-  /**
-   * Paragraphs separated by an empty line. Lines starting with "- " are bullet points.
-   * **Two stars** make words bold and [words](/privacy-policy/) makes a link.
-   */
-  body: string;
-}
-
-/** A policy page at /<slug>/, e.g. /privacy-policy/. */
-export interface LegalPage {
-  slug: string;
-  title: string;
-  /** Short name for the footer, e.g. "Privacy". */
-  navLabel: string;
-  lead: string;
-  /** Date of the last change, YYYY-MM-DD. */
-  updated: string;
-  sections: LegalSection[];
-  seo: PageSeo;
-}
-
-/**
- * Privacy policy, terms, cookie policy and the other legal pages.
- * Their text can use {business}, {entity}, {address}, {phone}, {whatsapp}, {email}, {officer}, {hours} and {website}.
- */
-export interface Legal {
-  /** Who runs the site, as named in the policies, and who handles complaints. */
-  contact: {
-    /** Legal name, e.g. "Hungru Pizza (proprietor: A. Das)". */
-    entity: string;
-    /** Grievance Officer's name (IT Rules, 2011 and DPDP Act, 2023). */
-    officer: string;
-    email: string;
-    placeholder?: boolean;
-  };
-  eyebrow: string;
-  updatedLabel: string;
-  /** Shown at the top of every policy while sample tags are on. */
-  demoNote: string;
-  contentsTitle: string;
-  otherTitle: string;
-  contactTitle: string;
-  contactLead: string;
-  officerLabel: string;
-  emailLabel: string;
-  phoneLabel: string;
-  addressLabel: string;
-  pages: LegalPage[];
 }
 
 /** Everything in src/data/content.json. The admin panel edits this file. */

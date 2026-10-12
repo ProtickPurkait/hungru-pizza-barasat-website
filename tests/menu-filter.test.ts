@@ -8,6 +8,7 @@ const dish = (name: string, diet: MenuItem["diet"], ...prices: number[]): MenuIt
   prices: prices.map((price, i) => ({ size: prices.length > 1 ? `${8 + i * 2} inch` : "", price })),
   diet,
   tag: "",
+  photo: "",
 });
 const section = (slug: string, name: string, items: MenuItem[]) => ({ slug, name, items }) as Service;
 

@@ -37,6 +37,8 @@ export interface PricedLine {
   /** The size and any extras, or a built pizza's choices. "" for a one-price dish. */
   detail: string;
   diet: Diet;
+  /** The dish's photo key; "" for a pizza from the builder. */
+  photo: string;
   each: number;
   qty: number;
   total: number;
@@ -115,8 +117,9 @@ export function replaceLine(lines: CartLine[], key: string, next: CartLine): Car
 /**
  * What can be added to a line. A menu pizza in a builder size (8 or 10 inch) gets the crusts,
  * cheeses and toppings at that size's add-on prices: veg toppings only on a veg pizza, and no
- * cheese burst on a pizza that already is one. Any dish gets its section's add-ons. A built
- * pizza can change all its choices. Null when there is nothing to add.
+ * cheese burst on a pizza that already is one. A combo offer in 8 or 10 inch does not (it is a
+ * set deal). Any dish gets its section's add-ons. A built pizza can change all its choices.
+ * Null when there is nothing to add.
  */
 export function extraChoices(line: CartLine, services: Service[], builder: BuilderConfig): ExtraChoices | null {
   if (line.kind === "pizza") {
@@ -127,7 +130,7 @@ export function extraChoices(line: CartLine, services: Service[], builder: Build
   const item = section?.items.find((i) => i.name === line.name);
   const price = item?.prices.find((p) => p.size === line.size);
   if (!section || !item || !price) return null;
-  const size = price.size ? (builder.sizes.find((s) => same(s.label, price.size)) ?? null) : null;
+  const size = price.size && !section.offer ? (builder.sizes.find((s) => same(s.label, price.size)) ?? null) : null;
   const bases = size ? builder.bases.filter((b, i) => i === 0 || !item.name.toLowerCase().includes(b.label.toLowerCase())) : [];
   const choices: ExtraChoices = {
     size,
@@ -212,7 +215,18 @@ function priceLine(line: CartLine, services: Service[], builder: BuilderConfig, 
       parts.push(addOns.length ? `+ ${addOns.map((a) => a.label).join(", ")}` : "");
     }
     const detail = parts.filter(Boolean).join(" · ");
-    return { key, line, name: item.name, detail, diet: item.diet, each, qty: line.qty, total: each * line.qty, hasExtras: detail !== price.size };
+    return {
+      key,
+      line,
+      name: item.name,
+      detail,
+      diet: item.diet,
+      photo: item.photo ?? "",
+      each,
+      qty: line.qty,
+      total: each * line.qty,
+      hasExtras: detail !== price.size,
+    };
   }
   const size = builder.sizes.find((s) => s.id === line.size);
   const base = builder.bases.find((b) => b.id === line.base);
@@ -228,6 +242,7 @@ function priceLine(line: CartLine, services: Service[], builder: BuilderConfig, 
     name: words.builtName,
     detail: [size.label, base.label, cheese.label, toppingNames.length ? toppingNames.join(", ") : words.noToppings].join(" · "),
     diet,
+    photo: "",
     each,
     qty: line.qty,
     total: each * line.qty,

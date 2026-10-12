@@ -11,6 +11,7 @@ const { key: KEY, about: ABOUT, body: BODY } = WEIGHT;
 const PAGE_WORDS = {
   home: "home main start front page",
   services: "menu card full menu price list prices rates dishes food",
+  offers: "offers offer deals deal combo combos discount discounts save savings value",
   builder: "build your own make create custom choose toppings crust size",
   projects: "gallery photos pictures pics images",
   blog: "blog articles guides tips news read",
@@ -99,6 +100,7 @@ export function searchEntries(c: SiteContent): SearchEntry[] {
   out.push(
     page("home", p.nav.home, paths.home, "home", join(p.home.hero.title, p.home.hero.titleAccent, p.home.hero.lead)),
     page("services", p.nav.services, paths.services, "pizza", join(p.servicesPage.hero.title, p.servicesPage.hero.lead), join(c.services.map((x) => x.name))),
+    page("offers", p.nav.offers, paths.offers, "deal", join(p.offersPage.hero.title, p.offersPage.hero.lead)),
     page("builder", p.nav.builder, paths.builder, "pizza", join(p.builderPage.hero.title, p.builderPage.hero.lead, builderOptions)),
     page(
       "projects",
@@ -190,6 +192,7 @@ export function searchEntries(c: SiteContent): SearchEntry[] {
         meta: sec.shortName,
         diet: it.diet,
         prices: it.prices.map((x) => x.price),
+        photo: it.photo,
         fields: [
           {
             text: join(

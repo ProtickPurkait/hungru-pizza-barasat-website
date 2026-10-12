@@ -52,7 +52,10 @@ export default function ServicePage() {
 
       {/* The dishes first (two columns on large screens: some sections have 50), then the story and "order these for" */}
       <section aria-labelledby="menu-title" className="wrap py-20 md:py-28">
-        <SectionHeading id="menu-title" size="md" title={text.menuTitle} />
+        <div className="flex flex-wrap items-end justify-between gap-4">
+          <SectionHeading id="menu-title" size="md" title={text.menuTitle} />
+          <DemoTag>Sample photos</DemoTag>
+        </div>
         {service.note && <p className="mt-4 max-w-[70ch] text-sm leading-relaxed text-ash-600">{service.note}</p>}
         <MenuList section={service.slug} items={service.items} columns={2} anchors className="mt-10" />
 
@@ -88,20 +91,22 @@ export default function ServicePage() {
         </div>
       </section>
 
-      {/* What goes in */}
-      <section aria-labelledby="materials-title" className="border-y border-ash-200 bg-ground-2">
-        <div className="wrap py-20 md:py-24">
-          <SectionHeading id="materials-title" size="md" title={text.materialsTitle} lead={text.materialsNote} />
-          <dl className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {service.materials.map((m, i) => (
-              <Reveal key={i} delay={i * 60} className="flex flex-col rounded-[var(--cut)] bg-sheet p-6">
-                <dt className="font-display text-[1.5rem] leading-none font-[740] text-ink [font-stretch:84%]">{m.name}</dt>
-                <dd className="mt-2.5 text-[0.95rem] leading-relaxed text-ash-600">{m.note}</dd>
-              </Reveal>
-            ))}
-          </dl>
-        </div>
-      </section>
+      {/* What goes in (the combo offers leave it empty) */}
+      {service.materials.length > 0 && (
+        <section aria-labelledby="materials-title" className="border-y border-ash-200 bg-ground-2">
+          <div className="wrap py-20 md:py-24">
+            <SectionHeading id="materials-title" size="md" title={text.materialsTitle} lead={text.materialsNote} />
+            <dl className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {service.materials.map((m, i) => (
+                <Reveal key={i} delay={i * 60} className="flex flex-col rounded-[var(--cut)] bg-sheet p-6">
+                  <dt className="font-display text-[1.5rem] leading-none font-[740] text-ink [font-stretch:84%]">{m.name}</dt>
+                  <dd className="mt-2.5 text-[0.95rem] leading-relaxed text-ash-600">{m.note}</dd>
+                </Reveal>
+              ))}
+            </dl>
+          </div>
+        </section>
+      )}
 
       {/* Gallery: one large photo and two small ones */}
       <section aria-labelledby="gallery-title" className="wrap py-20 md:py-28">
@@ -130,9 +135,11 @@ export default function ServicePage() {
         )}
       </section>
 
-      <div className="border-t border-ash-200">
-        <FaqSection faqs={service.faqs} title={fill(text.faqTitle, { service: service.shortName })} />
-      </div>
+      {service.faqs.length > 0 && (
+        <div className="border-t border-ash-200">
+          <FaqSection faqs={service.faqs} title={fill(text.faqTitle, { service: service.shortName })} />
+        </div>
+      )}
 
       <section aria-labelledby="other-title" className="border-t border-ash-200 bg-ground-2">
         <div className="wrap py-20 md:py-24">

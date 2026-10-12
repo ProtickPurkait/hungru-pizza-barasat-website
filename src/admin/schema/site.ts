@@ -162,6 +162,7 @@ export const sitewide: Section = {
       [
         text("home", "Home"),
         text("services", "Menu"),
+        text("offers", "Offers"),
         text("projects", "Gallery"),
         text("builder", "Build a pizza"),
         text("blog", "Blog"),
@@ -307,6 +308,7 @@ export const seo: Section = {
   fields: [
     group("Home page", [text("title", "Page title", { max: 60 }), para("description", "Description", { max: 160, rows: 3 })], { key: "home" }),
     group("Full menu page", [text("title", "Page title", { max: 60 }), para("description", "Description", { max: 160, rows: 3 })], { key: "services" }),
+    group("Offers page", [text("title", "Page title", { max: 60 }), para("description", "Description", { max: 160, rows: 3 })], { key: "offers" }),
     group("Gallery page", [text("title", "Page title", { max: 60 }), para("description", "Description", { max: 160, rows: 3 })], { key: "projects" }),
     group("Pizza builder page", [text("title", "Page title", { max: 60 }), para("description", "Description", { max: 160, rows: 3 })], { key: "builder" }),
     group("Blog page", [text("title", "Page title", { max: 60 }), para("description", "Description", { max: 160, rows: 3 })], {

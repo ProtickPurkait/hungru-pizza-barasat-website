@@ -15,6 +15,8 @@ const linkClass = "inline-flex min-h-11 items-center text-ash-300 transition-col
 export function Footer() {
   const year = new Date().getFullYear();
   const text = copy.footer;
+  // The combo offers are one link, Offers, in the page links below.
+  const sections = services.filter((s) => !s.offer);
   return (
     <footer className="ground-dark border-t border-white/10">
       <div className="wrap grid gap-12 pt-14 pb-10 sm:grid-cols-2 lg:grid-cols-12 lg:gap-8 lg:pt-20">
@@ -38,7 +40,7 @@ export function Footer() {
         <nav aria-label="Menu sections" className="lg:col-span-3">
           <h2 className="label text-ash-400">{text.servicesTitle}</h2>
           <ul className="mt-4">
-            {services.map((s) => (
+            {sections.map((s) => (
               <li key={s.slug}>
                 <Link to={paths.service(s.slug)} className={linkClass}>
                   {s.shortName}

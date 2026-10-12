@@ -95,6 +95,10 @@
       "title": "Your Cart",
       "description": "Your Hungru Pizza order: check it, then send it to us on WhatsApp with your name and area."
     },
+    "offers": {
+      "title": "Combo Offers | Save 15 to 20% on Pizza Combos",
+      "description": "Hungru Pizza combo meals in Barasat: ₹129 snack combos, veg and chicken pizza combos for one, two or a family, and starter platters. Save 15 to 20%."
+    },
     "notFound": {
       "title": "Page Not Found",
       "description": "This page does not exist. See the Hungru Pizza menu, build your own pizza or order on WhatsApp."
@@ -231,6 +235,138 @@
       "src": "1617347454431-f49d7ff5c3b1",
       "alt": "A delivery rider on a red scooter in city traffic at night"
     },
+    "samosa": {
+      "src": "1601050690597-df0568f70950",
+      "alt": "Three golden fried samosas on a wooden tray with a green chilli"
+    },
+    "cheeseBalls": {
+      "src": "1772795598475-ac6071eb789b",
+      "alt": "Golden fried cheese balls on a board with small bowls of dip"
+    },
+    "friedBalls": {
+      "src": "1788600448499-0cc867441746",
+      "alt": "Golden fried balls in a paper tray, held in a hand"
+    },
+    "springRolls": {
+      "src": "1787273670681-b1886c2807a3",
+      "alt": "Golden fried rolls piled close together"
+    },
+    "wontons": {
+      "src": "1781332147547-1f0edb2a78a4",
+      "alt": "Crispy fried wontons with herbs on a dark tray"
+    },
+    "friedChicken": {
+      "src": "1730900737724-5b752e1ed3dd",
+      "alt": "Crispy fried chicken pieces with lemon on a dark plate"
+    },
+    "chickenStrips": {
+      "src": "1619019187211-adf2f6119afd",
+      "alt": "Crispy chicken strips on paper with three dips"
+    },
+    "friedPlatter": {
+      "src": "1623653387945-2fd25214f8fc",
+      "alt": "Fried chicken pieces and strips on a wooden board with dips"
+    },
+    "lassi": {
+      "src": "1517448931760-9bf4414148c5",
+      "alt": "A glass of thick white lassi on a dark wooden table"
+    },
+    "aamPanna": {
+      "src": "1546173159-315724a31696",
+      "alt": "A glass of mango drink with ice, beside cut mango"
+    },
+    "mangoShake": {
+      "src": "1623065422902-30a2d299bbe4",
+      "alt": "A mango milkshake with a straw, beside mangoes"
+    },
+    "strawberryShake": {
+      "src": "1579954115545-a95591f28bfc",
+      "alt": "A strawberry milkshake topped with fresh strawberries"
+    },
+    "colaGlass": {
+      "src": "1629654613528-5d0a2e4166de",
+      "alt": "Two glasses of cola with ice"
+    },
+    "limeSoda": {
+      "src": "1621330716555-5cad596c4562",
+      "alt": "A glass of fizzy lime soda with ice and lemon"
+    },
+    "lemonTea": {
+      "src": "1556679343-c7306c1976bc",
+      "alt": "A glass of iced lemon tea with lime slices"
+    },
+    "greenTea": {
+      "src": "1627435601361-ec25f5b1d0e5",
+      "alt": "A glass mug of green tea with fresh mint"
+    },
+    "filterCoffee": {
+      "src": "1758387941825-a6ecaec9c14d",
+      "alt": "Frothy filter coffee in a steel tumbler and bowl"
+    },
+    "waterBottle": {
+      "src": "1523362628745-0c100150b504",
+      "alt": "A bottle of mineral water"
+    },
+    "margheritaPizza": {
+      "src": "1513104890138-7c749659a591",
+      "alt": "A cheese pizza with cherry tomatoes, cut into slices on a board"
+    },
+    "pineappleDrink": {
+      "src": "1681251282201-d3b78a867e47",
+      "alt": "A pineapple drink in a cut-glass tumbler, garnished with pineapple"
+    },
+    "vegBurger": {
+      "src": "1660715683691-d1614d1dd361",
+      "alt": "A veg burger with a crisp patty, topped with potato wedges"
+    },
+    "capsicumPizza": {
+      "src": "1625401514458-6c8a5e7d55da",
+      "alt": "A veg pizza with capsicum, olives and onion"
+    },
+    "greenPepperPizza": {
+      "src": "1609159085964-e47ec0804449",
+      "alt": "A veg pizza with capsicum, tomato and olives, one slice lifted"
+    },
+    "tomatoBasilPizza": {
+      "src": "1590947132387-155cc02f3212",
+      "alt": "Slices of pizza with tomato and herbs on a dark board"
+    },
+    "chickenOnionPizza": {
+      "src": "1565299624946-b28f40a0ae38",
+      "alt": "A pizza with chicken, onion and capsicum, cut on a dark board"
+    },
+    "sausageOnionPizza": {
+      "src": "1655673654158-9f7285b7d1ea",
+      "alt": "A pizza with sausage slices and onion rings on a wooden board"
+    },
+    "boardPizza": {
+      "src": "1652952561151-97e82f26c336",
+      "alt": "A cheese and vegetable pizza on a round wooden board"
+    },
+    "jalapenoPizza": {
+      "src": "1629740001727-f9ad15f720c4",
+      "alt": "A veg pizza with capsicum, sweetcorn and jalapeño on a patterned plate"
+    },
+    "chunkyChickenPizza": {
+      "src": "1751026044604-1f1bd9c68a38",
+      "alt": "A pizza with chunks of chicken, cut into slices"
+    },
+    "cornPanPizza": {
+      "src": "1739643815373-72444e14c54b",
+      "alt": "A pan pizza loaded with sweetcorn, capsicum and onion"
+    },
+    "chickenSandwichFries": {
+      "src": "1760533536289-9e4106eaf62e",
+      "alt": "A crispy chicken burger with red cabbage slaw and fries"
+    },
+    "sandwichFries": {
+      "src": "1655195672061-90c23e3e8026",
+      "alt": "A toasted sandwich with fries"
+    },
+    "cheeseSandwich": {
+      "src": "1528736235302-52922df5c122",
+      "alt": "Grilled cheese sandwiches cut into triangles"
+    },
     "hungruLogo": {
       "src": "/images/uploads/hungru-logo.webp",
       "alt": "Hungru Pizza logo: Best Pizza, Best Value",
@@ -302,6 +438,7 @@
     "nav": {
       "home": "Home",
       "services": "Menu",
+      "offers": "Offers",
       "projects": "Gallery",
       "builder": "Build a pizza",
       "blog": "Blog",
@@ -477,13 +614,15 @@
       "clearFilters": "Clear filters",
       "jumpLabel": "Menu sections",
       "fromLabel": "From",
-      "sectionLink": "More about {section}"
+      "sectionLink": "More about {section}",
+      "photoOpen": "Bigger photo of {item}",
+      "photoClose": "Close the photo"
     },
     "servicesPage": {
       "hero": {
         "eyebrow": "Menu and prices",
         "title": "The full Hungru menu",
-        "lead": "172 dishes, from a ₹20 lemon tea to a cheese burst pizza, at the prices on our printed menu. We confirm the total when you order.",
+        "lead": "172 dishes, from a ₹20 lemon tea to a cheese burst pizza, and 33 combo offers, at the prices on our printed menus. We confirm the total when you order.",
         "photo": "cheesePull"
       },
       "listTitle": "What would you like?",
@@ -777,6 +916,27 @@
       "deliveryText": "Within {km} km of the café: {areas}.",
       "keysHint": "↑ ↓ to move, Enter to open, Esc to close. Press / on any page to search."
     },
+    "offersPage": {
+      "hero": {
+        "eyebrow": "Combo offers",
+        "title": "Save 15 to 20% with our combo meals",
+        "lead": "Pizzas, starters and drinks put together for less than they cost one by one. Veg and non-veg, for one, two or the whole family. Tap a price to add a combo to your cart.",
+        "photo": "chickenBurgers"
+      },
+      "note": "Prices are before 5% GST, as on our printed combo menu.",
+      "jumpLabel": "Kinds of combo",
+      "sectionLink": "More about {section}",
+      "ctaTitle": "Pick a combo, send it on WhatsApp",
+      "band": {
+        "eyebrow": "Combo offers",
+        "title": "Delicious deals,",
+        "titleAccent": "save 15 to 20%",
+        "lead": "Pizzas, starters and drinks together, for less than ordering them one by one. Snack combos start at ₹129.",
+        "button": "See all combo offers",
+        "section": "combos-129"
+      },
+      "barLink": "Combo offers: save 15 to 20%"
+    },
     "notFound": {
       "eyebrow": "Error 404",
       "title": "This page has gone cold",
@@ -864,7 +1024,8 @@
             }
           ],
           "diet": "veg",
-          "tag": "Cheese burst"
+          "tag": "Cheese burst",
+          "photo": "cheesePull"
         },
         {
           "name": "Cheesy Margherita Pizza",
@@ -880,7 +1041,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "margheritaPizza"
         },
         {
           "name": "Veggi Pool Pizza",
@@ -896,7 +1058,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "loadedVegPizza"
         },
         {
           "name": "Tango Star Pizza",
@@ -912,7 +1075,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "capsicumPizza"
         },
         {
           "name": "Santa Corn Pizza",
@@ -928,7 +1092,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "panPizzaCorn"
         },
         {
           "name": "Santa Pool Pizza",
@@ -944,7 +1109,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "greenPepperPizza"
         },
         {
           "name": "Star Umbrella Pizza",
@@ -960,7 +1126,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "tomatoBasilPizza"
         },
         {
           "name": "Veggi Treat Pizza",
@@ -976,7 +1143,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "boardPizza"
         },
         {
           "name": "Veggi Galaxy Pizza",
@@ -992,7 +1160,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "paddlePizza"
         },
         {
           "name": "Veggi Supreme Pizza",
@@ -1008,7 +1177,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "jalapenoPizza"
         },
         {
           "name": "Veggi Farm Pizza",
@@ -1024,7 +1194,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "sliceLift"
         },
         {
           "name": "Veggi Fantasy Pizza",
@@ -1040,7 +1211,8 @@
             }
           ],
           "diet": "veg",
-          "tag": "Spicy"
+          "tag": "Spicy",
+          "photo": "loadedVegPizza"
         },
         {
           "name": "Veggi Forest Pizza",
@@ -1056,7 +1228,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "capsicumPizza"
         },
         {
           "name": "Veggi Delux Pizza",
@@ -1072,7 +1245,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "greenPepperPizza"
         },
         {
           "name": "Veggi Red Hill Pizza",
@@ -1088,7 +1262,8 @@
             }
           ],
           "diet": "veg",
-          "tag": "Spicy"
+          "tag": "Spicy",
+          "photo": "tomatoBasilPizza"
         },
         {
           "name": "Peppy Paneer Pizza",
@@ -1104,7 +1279,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "paneerPizzaTop"
         },
         {
           "name": "Mexican Green Pizza",
@@ -1120,7 +1296,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "boardPizza"
         },
         {
           "name": "Tropicana Cindrella Pizza",
@@ -1136,7 +1313,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "paddlePizza"
         },
         {
           "name": "Tandoori Paneer Pizza",
@@ -1152,7 +1330,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "paneerSliceLift"
         },
         {
           "name": "Veggi Morris Pizza",
@@ -1168,7 +1347,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "jalapenoPizza"
         },
         {
           "name": "Garden Rosso Pizza",
@@ -1184,7 +1364,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "sliceLift"
         },
         {
           "name": "Garden Gold Pizza",
@@ -1200,7 +1381,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "loadedVegPizza"
         },
         {
           "name": "Olive Paneer Pizza",
@@ -1216,7 +1398,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "paneerCloseUp"
         },
         {
           "name": "Fiery Red Jalapeño Pizza",
@@ -1232,7 +1415,8 @@
             }
           ],
           "diet": "veg",
-          "tag": "Spicy"
+          "tag": "Spicy",
+          "photo": "jalapenoPizza"
         },
         {
           "name": "Masaledar Paneer Pizza",
@@ -1248,7 +1432,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "paneerPizzaTop"
         },
         {
           "name": "Golden Corn and Cream Cheese Delight Pizza",
@@ -1264,7 +1449,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "cornPanPizza"
         },
         {
           "name": "Royal Makhani Feast Pizza",
@@ -1280,7 +1466,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "capsicumPizza"
         },
         {
           "name": "Mushroom Paneer Blaze Pizza",
@@ -1296,7 +1483,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "paneerSliceLift"
         },
         {
           "name": "Grand Veggie Makhani Delight Pizza",
@@ -1312,7 +1500,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "greenPepperPizza"
         },
         {
           "name": "Golden Makhani Olive Delight Pizza",
@@ -1328,7 +1517,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "tomatoBasilPizza"
         },
         {
           "name": "Forest Gold Makhani Pizza",
@@ -1344,7 +1534,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "boardPizza"
         },
         {
           "name": "Corn and Shroom Melt Pizza",
@@ -1360,7 +1551,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "panPizzaCorn"
         },
         {
           "name": "Volcano Veggie Pizza",
@@ -1376,7 +1568,8 @@
             }
           ],
           "diet": "veg",
-          "tag": "Spicy"
+          "tag": "Spicy",
+          "photo": "paddlePizza"
         },
         {
           "name": "Chef's Special Veggie Paneer Pizza",
@@ -1392,7 +1585,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "paneerCloseUp"
         },
         {
           "name": "Paneer Inferno Pizza",
@@ -1408,7 +1602,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "paneerPizzaTop"
         },
         {
           "name": "Spicy Red Devil Paneer Pizza",
@@ -1424,7 +1619,8 @@
             }
           ],
           "diet": "veg",
-          "tag": "Spicy"
+          "tag": "Spicy",
+          "photo": "paneerSliceLift"
         },
         {
           "name": "Volcano Corn Fiesta Pizza",
@@ -1440,7 +1636,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "cornPanPizza"
         },
         {
           "name": "Fiery Paneer Zing Pizza",
@@ -1456,7 +1653,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "paneerCloseUp"
         },
         {
           "name": "Fiery Paneer Pizza",
@@ -1472,7 +1670,8 @@
             }
           ],
           "diet": "veg",
-          "tag": "Spicy"
+          "tag": "Spicy",
+          "photo": "paneerPizzaTop"
         },
         {
           "name": "Zesty Cheesy Heat Pizza",
@@ -1488,7 +1687,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "jalapenoPizza"
         },
         {
           "name": "Red Hot Tandoori Pizza",
@@ -1504,7 +1704,8 @@
             }
           ],
           "diet": "veg",
-          "tag": "Spicy"
+          "tag": "Spicy",
+          "photo": "sliceLift"
         },
         {
           "name": "Desi Paneer Pizza",
@@ -1520,7 +1721,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "paneerSliceLift"
         },
         {
           "name": "Veggi Paradise Pizza",
@@ -1536,7 +1738,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "loadedVegPizza"
         },
         {
           "name": "Paneer Makhani Pizza",
@@ -1552,7 +1755,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "paneerCloseUp"
         }
       ],
       "materials": [
@@ -1596,7 +1800,8 @@
         "title": "Veg Pizza in Barasat | 44 Paneer and Veg Pizzas",
         "description": "44 veg pizzas at Hungru Pizza, Colony More, Barasat: tandoori paneer, paneer makhani, sweetcorn, mushroom and more, from ₹120. Cheese burst on any."
       },
-      "addOns": []
+      "addOns": [],
+      "offer": false
     },
     {
       "slug": "chicken-pizzas",
@@ -1633,7 +1838,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": "Cheese burst"
+          "tag": "Cheese burst",
+          "photo": "cheesePull"
         },
         {
           "name": "Chicken Villa Pizza",
@@ -1649,7 +1855,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "chickenPeppers"
         },
         {
           "name": "Chicken Delux Pizza",
@@ -1665,7 +1872,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "chickenOnionPizza"
         },
         {
           "name": "Chicken Tikka Pizza",
@@ -1681,7 +1889,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "chunkyChickenPizza"
         },
         {
           "name": "Chicken Paradise Pizza",
@@ -1697,7 +1906,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "sausagePizza"
         },
         {
           "name": "Chicken Fusion Pizza",
@@ -1713,7 +1923,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "greenChilli"
         },
         {
           "name": "Chicken Pataya Pizza",
@@ -1729,7 +1940,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": "Spicy"
+          "tag": "Spicy",
+          "photo": "sausageOnionPizza"
         },
         {
           "name": "Chicken Classic Pizza",
@@ -1745,7 +1957,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "slicePull"
         },
         {
           "name": "Chicken Hunger Pizza",
@@ -1761,7 +1974,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "chickenPeppers"
         },
         {
           "name": "Chicken Havlok Pizza",
@@ -1777,7 +1991,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "chickenOnionPizza"
         },
         {
           "name": "Chicken Hunter Pizza",
@@ -1793,7 +2008,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "chunkyChickenPizza"
         },
         {
           "name": "Chicken Opera Pizza",
@@ -1809,7 +2025,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "sausagePizza"
         },
         {
           "name": "Chicken Fiesta Pizza",
@@ -1825,7 +2042,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "greenChilli"
         },
         {
           "name": "Chicken Chaplin Pizza",
@@ -1841,7 +2059,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "sausageOnionPizza"
         },
         {
           "name": "Chicken Tropican Pizza",
@@ -1857,7 +2076,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "slicePull"
         },
         {
           "name": "Chicken Alfredo Pizza",
@@ -1873,7 +2093,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "chickenPeppers"
         },
         {
           "name": "Chicken Dominor Pizza",
@@ -1889,7 +2110,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "chickenOnionPizza"
         },
         {
           "name": "Chicken Farm Pizza",
@@ -1905,7 +2127,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "chunkyChickenPizza"
         },
         {
           "name": "Chicken Hotshot Pizza",
@@ -1921,7 +2144,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": "Spicy"
+          "tag": "Spicy",
+          "photo": "greenChilli"
         },
         {
           "name": "Chicken Exotic BBQ Pizza",
@@ -1937,7 +2161,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "chunkyChickenPizza"
         },
         {
           "name": "Chicken Fairyland Pizza",
@@ -1953,7 +2178,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "sausagePizza"
         },
         {
           "name": "Hungru Special Chicken Pizza",
@@ -1969,7 +2195,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": "House special"
+          "tag": "House special",
+          "photo": "greenChilli"
         },
         {
           "name": "Chicken Overloaded Pizza",
@@ -1985,7 +2212,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "sausageOnionPizza"
         },
         {
           "name": "Golden Chicken Tandoori Supreme Pizza",
@@ -2001,7 +2229,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "slicePull"
         },
         {
           "name": "Chicken Hariyali Fiesta Pizza",
@@ -2017,7 +2246,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "chickenPeppers"
         },
         {
           "name": "Zesty Chicken Makhani Pizza",
@@ -2033,7 +2263,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "chickenOnionPizza"
         },
         {
           "name": "Chicken Garden Pizza",
@@ -2049,7 +2280,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "chunkyChickenPizza"
         },
         {
           "name": "Keema Corn Delight Pizza",
@@ -2065,7 +2297,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "sausagePizza"
         },
         {
           "name": "Inferno Keema Olivo Pizza",
@@ -2081,7 +2314,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "sausageOnionPizza"
         },
         {
           "name": "Keema Sausage Delight Pizza",
@@ -2097,7 +2331,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "sausagePizza"
         },
         {
           "name": "Spicy Harvest Chicken Pizza",
@@ -2113,7 +2348,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": "Spicy"
+          "tag": "Spicy",
+          "photo": "chunkyChickenPizza"
         },
         {
           "name": "Chicken Masala Shroom Feast Pizza",
@@ -2129,7 +2365,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "sausagePizza"
         },
         {
           "name": "Chicken Hariyali Garden Pizza",
@@ -2145,7 +2382,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "greenChilli"
         },
         {
           "name": "Spicy Tuscan Chicken Pizza",
@@ -2161,7 +2399,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "greenChilli"
         },
         {
           "name": "Chicken Masala Olive Delight Pizza",
@@ -2177,7 +2416,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "sausageOnionPizza"
         },
         {
           "name": "Zesty Chicken BBQ Inferno Pizza",
@@ -2193,7 +2433,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "chunkyChickenPizza"
         },
         {
           "name": "Chicken Masala Medley Pizza",
@@ -2209,7 +2450,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "slicePull"
         },
         {
           "name": "Chicken Tandoori Corn Harvest Pizza",
@@ -2225,7 +2467,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "chickenPeppers"
         },
         {
           "name": "Golden Chicken Pizza",
@@ -2241,7 +2484,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "chickenOnionPizza"
         },
         {
           "name": "Chicken Forest Pizza",
@@ -2257,7 +2501,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "chunkyChickenPizza"
         },
         {
           "name": "Chicken Mandate Pizza",
@@ -2273,7 +2518,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": "Spicy"
+          "tag": "Spicy",
+          "photo": "sausagePizza"
         },
         {
           "name": "Spiced Sausage Delight Pizza",
@@ -2289,7 +2535,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "sausageOnionPizza"
         },
         {
           "name": "Chicken Peppery Olive Garden Pizza",
@@ -2305,7 +2552,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "greenChilli"
         },
         {
           "name": "Chicken Emerald Pizza",
@@ -2321,7 +2569,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "sausageOnionPizza"
         },
         {
           "name": "Chicken Griller's Garden Pizza",
@@ -2337,7 +2586,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "slicePull"
         },
         {
           "name": "Roasted Chicken Pizza",
@@ -2353,7 +2603,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "chickenPeppers"
         },
         {
           "name": "Chicken Delight Pizza",
@@ -2369,7 +2620,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "chickenOnionPizza"
         },
         {
           "name": "Chilli Flame Chicken Pizza",
@@ -2385,7 +2637,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": "Spicy"
+          "tag": "Spicy",
+          "photo": "greenChilli"
         },
         {
           "name": "BBQ Delight Pizza",
@@ -2401,7 +2654,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "chunkyChickenPizza"
         },
         {
           "name": "Chicken Panrich Pizza",
@@ -2417,7 +2671,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "chunkyChickenPizza"
         },
         {
           "name": "Gondhoraj Chicken Pizza",
@@ -2433,7 +2688,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "sausagePizza"
         },
         {
           "name": "Chicken Vegas Pizza",
@@ -2449,7 +2705,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "greenChilli"
         }
       ],
       "materials": [
@@ -2493,7 +2750,8 @@
         "title": "Chicken Pizza in Barasat | 52 Chicken Pizzas",
         "description": "52 chicken pizzas at Hungru Pizza, Barasat: BBQ, tandoori, peri peri, keema, hariyali and Gondhoraj chicken, from ₹120. Cheese burst on any pizza."
       },
-      "addOns": []
+      "addOns": [],
+      "offer": false
     },
     {
       "slug": "kullad-and-kids-pizzas",
@@ -2526,7 +2784,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "capsicumPizza"
         },
         {
           "name": "Ginnie Pizza (Chicken)",
@@ -2538,7 +2797,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "sausageOnionPizza"
         },
         {
           "name": "Paneer Kullad Pizza",
@@ -2554,7 +2814,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "paneerCloseUp"
         },
         {
           "name": "Chicken Kullad Pizza",
@@ -2570,7 +2831,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "greenChilli"
         },
         {
           "name": "Baby Frog Pizza",
@@ -2582,7 +2844,8 @@
             }
           ],
           "diet": "veg",
-          "tag": "Kids"
+          "tag": "Kids",
+          "photo": "kidsFrog"
         },
         {
           "name": "Cutie Lion Pizza",
@@ -2594,7 +2857,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": "Kids"
+          "tag": "Kids",
+          "photo": "kidsLion"
         },
         {
           "name": "Mini Halloween Pizza",
@@ -2606,7 +2870,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": "Kids"
+          "tag": "Kids",
+          "photo": "kidsHalloween"
         }
       ],
       "materials": [
@@ -2650,7 +2915,8 @@
         "title": "Kullad Pizza and Kids' Pizza in Barasat",
         "description": "Paneer and chicken kullad pizza from ₹150, the boat-shaped Ginnie pizza and 7 inch kids' pizzas with frog, lion and mummy faces. Hungru Pizza, Barasat."
       },
-      "addOns": []
+      "addOns": [],
+      "offer": false
     },
     {
       "slug": "starters-and-sides",
@@ -2683,7 +2949,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "springRolls"
         },
         {
           "name": "Paneer Stick",
@@ -2695,7 +2962,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "springRolls"
         },
         {
           "name": "Cheesy Corn Samosa",
@@ -2707,7 +2975,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "samosa"
         },
         {
           "name": "Cheesy Paneer Samosa",
@@ -2719,7 +2988,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "samosa"
         },
         {
           "name": "Paneer Ball",
@@ -2731,7 +3001,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "cheeseBalls"
         },
         {
           "name": "Cheese Ball",
@@ -2743,7 +3014,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "cheeseBalls"
         },
         {
           "name": "Paneer Cheese Ball",
@@ -2755,7 +3027,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "cheeseBalls"
         },
         {
           "name": "Paneer Popcorn",
@@ -2775,7 +3048,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "friedBalls"
         },
         {
           "name": "Fish Fry (Bhetki)",
@@ -2787,7 +3061,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "fishFry"
         },
         {
           "name": "Cheesy Chicken Samosa",
@@ -2799,7 +3074,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "samosa"
         },
         {
           "name": "Cheesy Peri Peri Chicken Samosa",
@@ -2811,7 +3087,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "samosa"
         },
         {
           "name": "Chicken Cheese Ball",
@@ -2823,7 +3100,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "friedBalls"
         },
         {
           "name": "Chicken Strips",
@@ -2835,7 +3113,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "chickenStrips"
         },
         {
           "name": "Crispy Chicken Fry",
@@ -2851,7 +3130,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "friedChicken"
         },
         {
           "name": "Chicken Panko Fry",
@@ -2863,7 +3143,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "friedPlatter"
         },
         {
           "name": "Crunchy Chicken Half-Length Wings",
@@ -2879,7 +3160,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "wingsBasket"
         },
         {
           "name": "Pan Fried Chicken Half-Length Wings",
@@ -2895,7 +3177,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "wingsBasket"
         },
         {
           "name": "Crunchy Chicken Full-Length Wings",
@@ -2911,7 +3194,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "wingsBasket"
         },
         {
           "name": "Pan Fried Chicken Full-Length Wings",
@@ -2927,7 +3211,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "wingsBasket"
         },
         {
           "name": "Chicken Popcorn",
@@ -2947,7 +3232,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "chickenBasket"
         },
         {
           "name": "Chicken Wonton",
@@ -2967,7 +3253,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "wontons"
         },
         {
           "name": "Butter Cheesy Garlic Bread",
@@ -2979,7 +3266,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "cheesyGarlic"
         },
         {
           "name": "Corn and Olive Garlic Bread",
@@ -2991,7 +3279,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "cheesyGarlic"
         },
         {
           "name": "Tandoori Paneer Garlic Bread",
@@ -3003,7 +3292,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "cheesyGarlic"
         },
         {
           "name": "Makhani Paneer Garlic Bread",
@@ -3015,7 +3305,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "cheesyGarlic"
         },
         {
           "name": "Chicken Paprika Garlic Bread",
@@ -3027,7 +3318,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "cheesyGarlic"
         },
         {
           "name": "Chicken Corn Garlic Bread",
@@ -3039,7 +3331,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "cheesyGarlic"
         },
         {
           "name": "Salted Fries",
@@ -3059,7 +3352,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "friesBasket"
         },
         {
           "name": "Peri Peri Fries",
@@ -3079,7 +3373,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "periPeriFries"
         },
         {
           "name": "Cheesy Fries",
@@ -3099,7 +3394,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "periPeriFries"
         },
         {
           "name": "Lemon Pepper Fries",
@@ -3119,7 +3415,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "friesBasket"
         }
       ],
       "materials": [
@@ -3179,7 +3476,8 @@
           "label": "Special coriander chutney",
           "price": 20
         }
-      ]
+      ],
+      "offer": false
     },
     {
       "slug": "momos-burgers-sandwiches",
@@ -3216,7 +3514,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "steamedMomos"
         },
         {
           "name": "Corn Cheese Momo",
@@ -3232,7 +3531,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "steamedMomos"
         },
         {
           "name": "Chicken Momo",
@@ -3252,7 +3552,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "steamedMomos"
         },
         {
           "name": "Chicken Pan Fried Peri Peri Momo",
@@ -3264,7 +3565,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "friedMomos"
         },
         {
           "name": "Chicken Pan Fried Schezwan Momo",
@@ -3276,7 +3578,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "friedMomos"
         },
         {
           "name": "Chicken Tandoori Momo",
@@ -3288,7 +3591,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "friedMomos"
         },
         {
           "name": "Chicken Hariyali Momo",
@@ -3300,7 +3604,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "friedMomos"
         },
         {
           "name": "Veg Burger",
@@ -3312,7 +3617,8 @@
             }
           ],
           "diet": "veg",
-          "tag": "New"
+          "tag": "New",
+          "photo": "vegBurger"
         },
         {
           "name": "Cheesy Veg Burger",
@@ -3324,7 +3630,8 @@
             }
           ],
           "diet": "veg",
-          "tag": "New"
+          "tag": "New",
+          "photo": "vegBurger"
         },
         {
           "name": "Chicken Burger",
@@ -3336,7 +3643,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": "New"
+          "tag": "New",
+          "photo": "chickenBurgers"
         },
         {
           "name": "Cheesy Chicken Burger",
@@ -3348,7 +3656,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": "New"
+          "tag": "New",
+          "photo": "chickenBurgers"
         },
         {
           "name": "Crispy Chicken Burger",
@@ -3360,7 +3669,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": "New"
+          "tag": "New",
+          "photo": "chickenSandwichFries"
         },
         {
           "name": "Cheesy Crispy Chicken Burger",
@@ -3372,7 +3682,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": "New"
+          "tag": "New",
+          "photo": "chickenSandwichFries"
         },
         {
           "name": "Veg Sandwich",
@@ -3388,7 +3699,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "cheeseSandwich"
         },
         {
           "name": "Cheesy Veg Sandwich",
@@ -3404,7 +3716,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "cheeseSandwich"
         },
         {
           "name": "Cheesy Paneer Sandwich",
@@ -3420,7 +3733,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "cheeseSandwich"
         },
         {
           "name": "Chicken Sandwich",
@@ -3436,7 +3750,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "sandwichFries"
         },
         {
           "name": "Cheesy Chicken Sandwich",
@@ -3452,7 +3767,8 @@
             }
           ],
           "diet": "non-veg",
-          "tag": ""
+          "tag": "",
+          "photo": "sandwichFries"
         }
       ],
       "materials": [
@@ -3492,7 +3808,8 @@
         "title": "Momos, Burgers and Sandwiches in Barasat",
         "description": "Veg, corn cheese and chicken momos from ₹89, tandoori and hariyali momos, veg and chicken burgers from ₹99, and grilled sandwiches at Hungru Pizza."
       },
-      "addOns": []
+      "addOns": [],
+      "offer": false
     },
     {
       "slug": "drinks-and-desserts",
@@ -3525,7 +3842,8 @@
             }
           ],
           "diet": "veg",
-          "tag": "Customer favourite"
+          "tag": "Customer favourite",
+          "photo": "coldCoffee"
         },
         {
           "name": "Cold Drink (Thums Up or Sprite)",
@@ -3537,7 +3855,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "colaGlass"
         },
         {
           "name": "Soda Lime",
@@ -3549,7 +3868,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "limeSoda"
         },
         {
           "name": "Masala Coke",
@@ -3561,7 +3881,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "colaGlass"
         },
         {
           "name": "Gandhoraj Lassi",
@@ -3573,7 +3894,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "lassi"
         },
         {
           "name": "Aam Panna",
@@ -3585,7 +3907,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "aamPanna"
         },
         {
           "name": "Virgin Mojito",
@@ -3597,7 +3920,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "virginMojito"
         },
         {
           "name": "Pulse Mojito",
@@ -3609,7 +3933,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "virginMojito"
         },
         {
           "name": "Pineapple Blossom",
@@ -3621,7 +3946,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "pineappleDrink"
         },
         {
           "name": "Blue Lagoon",
@@ -3633,7 +3959,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "blueLagoon"
         },
         {
           "name": "Oreo Milkshake",
@@ -3645,7 +3972,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "oreoShake"
         },
         {
           "name": "Mango Milkshake",
@@ -3657,7 +3985,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "mangoShake"
         },
         {
           "name": "Strawberry Milkshake",
@@ -3669,7 +3998,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "strawberryShake"
         },
         {
           "name": "Green Tea",
@@ -3681,7 +4011,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "greenTea"
         },
         {
           "name": "Lemon Tea",
@@ -3693,7 +4024,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "lemonTea"
         },
         {
           "name": "Black Tea",
@@ -3705,7 +4037,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "clayCups"
         },
         {
           "name": "Elaichi Tea",
@@ -3717,7 +4050,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "clayCups"
         },
         {
           "name": "Filter Coffee",
@@ -3733,7 +4067,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "filterCoffee"
         },
         {
           "name": "Mineral Water",
@@ -3749,7 +4084,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "waterBottle"
         },
         {
           "name": "Choco Lava",
@@ -3761,7 +4097,8 @@
             }
           ],
           "diet": "veg",
-          "tag": ""
+          "tag": "",
+          "photo": "chocoLava"
         }
       ],
       "materials": [
@@ -3801,7 +4138,625 @@
         "title": "Cold Coffee, Mojitos and Choco Lava in Barasat",
         "description": "Cold coffee, virgin mojito, Blue Lagoon, Oreo and mango milkshakes, Gandhoraj lassi, tea, filter coffee and choco lava cake at Hungru Pizza, Barasat."
       },
-      "addOns": []
+      "addOns": [],
+      "offer": false
+    },
+    {
+      "slug": "combos-129",
+      "name": "₹129 combos",
+      "shortName": "₹129 combos",
+      "icon": "deal",
+      "category": "snacks",
+      "tagline": "Two snacks and a Masala Coke for ₹129",
+      "summary": "Four snack combos at ₹129 each, two veg and two chicken, every one with a Masala Coke.",
+      "intro": [
+        "Our smallest deal: two kinds of starter and a Masala Coke, all for ₹129.",
+        "Two are veg (potato springs with corn samosas, or cheese balls with paneer popcorn) and two are chicken (wings with chicken cheese balls, or crispy chicken fry with chicken popcorn)."
+      ],
+      "heroPhoto": "friesBasket",
+      "idealFor": [
+        "A quick snack on your own",
+        "Something to share before the pizza",
+        "Adding to a pizza order",
+        "An evening snack after college or work"
+      ],
+      "note": "Prices are before 5% GST, as on our printed combo menu.",
+      "items": [
+        {
+          "name": "Potato Spring and Corn Samosa Combo",
+          "description": "2 potato springs, 2 cheesy corn samosas and 1 Masala Coke.",
+          "prices": [
+            {
+              "size": "",
+              "price": 129
+            }
+          ],
+          "diet": "veg",
+          "tag": "",
+          "photo": "springRolls"
+        },
+        {
+          "name": "Cheese Ball and Paneer Popcorn Combo",
+          "description": "2 cheese balls, 5 pieces of paneer popcorn and 1 Masala Coke.",
+          "prices": [
+            {
+              "size": "",
+              "price": 129
+            }
+          ],
+          "diet": "veg",
+          "tag": "",
+          "photo": "cheeseBalls"
+        },
+        {
+          "name": "Chicken Wings and Cheese Ball Combo",
+          "description": "2 crunchy half-length chicken wings, 2 chicken cheese balls and 1 Masala Coke.",
+          "prices": [
+            {
+              "size": "",
+              "price": 129
+            }
+          ],
+          "diet": "non-veg",
+          "tag": "",
+          "photo": "wingsBasket"
+        },
+        {
+          "name": "Chicken Fry and Popcorn Combo",
+          "description": "2 pieces of crispy chicken fry, 5 pieces of chicken popcorn and 1 Masala Coke.",
+          "prices": [
+            {
+              "size": "",
+              "price": 129
+            }
+          ],
+          "diet": "non-veg",
+          "tag": "",
+          "photo": "friedChicken"
+        }
+      ],
+      "materials": [],
+      "gallery": [
+        "wingsBasket",
+        "periPeriFries",
+        "chickenBasket"
+      ],
+      "faqs": [],
+      "seo": {
+        "title": "₹129 Snack Combos with Masala Coke",
+        "description": "Snack combos at Hungru Pizza, Barasat for ₹129: two starters and a Masala Coke. Two veg, two chicken. Order on WhatsApp or add to your cart."
+      },
+      "addOns": [],
+      "offer": true
+    },
+    {
+      "slug": "veg-combos",
+      "name": "Veg combo meals",
+      "shortName": "Veg combos",
+      "icon": "deal",
+      "category": "veg",
+      "tagline": "Veg pizzas, snacks and drinks, together for less",
+      "summary": "Veg combos for one, two or the whole family: snack packs, burger and sandwich treats, pizza combos in 8 or 10 inch, a Choco Lava deal and a four-drink pack.",
+      "intro": [
+        "Each combo puts a meal together for less than ordering it dish by dish: our printed combo menu says 15 to 20% less.",
+        "The pizza combos come in 8 or 10 inch, and the 10 inch comes with more drinks. The burger and sandwich treat packs are for one or for two."
+      ],
+      "heroPhoto": "panPizzaCorn",
+      "idealFor": [
+        "Dinner for two",
+        "A family meal at home",
+        "Kids' treats",
+        "A group of friends"
+      ],
+      "note": "Prices are before 5% GST, as on our printed combo menu.",
+      "items": [
+        {
+          "name": "Veg Snacks Combo",
+          "description": "Tandoori paneer garlic bread, 5 cheese balls and 1 Pulse Mojito.",
+          "prices": [
+            {
+              "size": "",
+              "price": 269
+            }
+          ],
+          "diet": "veg",
+          "tag": "",
+          "photo": "cheesyGarlic"
+        },
+        {
+          "name": "Veg Momo Lover Pack",
+          "description": "6 veg boiled momos, 6 corn cheese fried momos and 2 Masala Cokes.",
+          "prices": [
+            {
+              "size": "",
+              "price": 225
+            }
+          ],
+          "diet": "veg",
+          "tag": "",
+          "photo": "steamedMomos"
+        },
+        {
+          "name": "Veg Burger Treat Pack",
+          "description": "Veg burger, French fries and Masala Coke. For 1: 1 burger, medium fries and 1 Coke. For 2: 2 burgers, large fries and 2 Cokes.",
+          "prices": [
+            {
+              "size": "For 1",
+              "price": 185
+            },
+            {
+              "size": "For 2",
+              "price": 299
+            }
+          ],
+          "diet": "veg",
+          "tag": "",
+          "photo": "vegBurger"
+        },
+        {
+          "name": "Veg Sandwich Treat Pack",
+          "description": "Cheesy veg sandwich, French fries and Masala Coke. For 1: 1 sandwich, medium fries and 1 Coke. For 2: 2 sandwiches, large fries and 2 Cokes.",
+          "prices": [
+            {
+              "size": "For 1",
+              "price": 199
+            },
+            {
+              "size": "For 2",
+              "price": 349
+            }
+          ],
+          "diet": "veg",
+          "tag": "",
+          "photo": "cheeseSandwich"
+        },
+        {
+          "name": "Veg Fried Combo",
+          "description": "Large salted French fries, 10 pieces of paneer popcorn, 6 paneer sticks and 2 Masala Cokes.",
+          "prices": [
+            {
+              "size": "",
+              "price": 339
+            }
+          ],
+          "diet": "veg",
+          "tag": "",
+          "photo": "periPeriFries"
+        },
+        {
+          "name": "Veg Kids Lover Pack",
+          "description": "Medium salted French fries, 2 cheesy corn samosas and a Pineapple Blossom.",
+          "prices": [
+            {
+              "size": "",
+              "price": 179
+            }
+          ],
+          "diet": "veg",
+          "tag": "Kids",
+          "photo": "friesBasket"
+        },
+        {
+          "name": "Veg Bachelor Combo",
+          "description": "Santa Pool Pizza, 4 cheesy paneer samosas and Masala Coke: 1 with the 8 inch, 2 with the 10 inch.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 339
+            },
+            {
+              "size": "10 inch",
+              "price": 449
+            }
+          ],
+          "diet": "veg",
+          "tag": "",
+          "photo": "capsicumPizza"
+        },
+        {
+          "name": "Veg Couple Combo",
+          "description": "Mexican Green Pizza, Veggi Galaxy Pizza and 2 Masala Cokes.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 399
+            },
+            {
+              "size": "10 inch",
+              "price": 589
+            }
+          ],
+          "diet": "veg",
+          "tag": "",
+          "photo": "greenPepperPizza"
+        },
+        {
+          "name": "Veg Chatpata Pizza Combo",
+          "description": "Veggi Red Hill Pizza, Peppy Paneer Pizza and Masala Coke: 2 with the 8 inch, 4 with the 10 inch.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 359
+            },
+            {
+              "size": "10 inch",
+              "price": 599
+            }
+          ],
+          "diet": "veg",
+          "tag": "Spicy",
+          "photo": "jalapenoPizza"
+        },
+        {
+          "name": "Veg Family Combo",
+          "description": "Veggi Supreme Pizza, Paneer Makhani Pizza, Veggi Delux Pizza and Virgin Mojito: 2 with the 8 inch, 4 with the 10 inch.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 599
+            },
+            {
+              "size": "10 inch",
+              "price": 949
+            }
+          ],
+          "diet": "veg",
+          "tag": "",
+          "photo": "loadedVegPizza"
+        },
+        {
+          "name": "Paneer Lover Pack",
+          "description": "Tandoori Paneer Pizza, Veggi Forest Pizza, Butter Cheesy Garlic Bread and Masala Coke: 2 with the 8 inch, 4 with the 10 inch.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 489
+            },
+            {
+              "size": "10 inch",
+              "price": 749
+            }
+          ],
+          "diet": "veg",
+          "tag": "",
+          "photo": "paneerPizzaTop"
+        },
+        {
+          "name": "Veg Chef's Recommendation Combo",
+          "description": "Veggi Morris Pizza, Tropicana Cindrella Pizza and Pulse Mojito: 2 with the 8 inch, 4 with the 10 inch.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 569
+            },
+            {
+              "size": "10 inch",
+              "price": 849
+            }
+          ],
+          "diet": "veg",
+          "tag": "",
+          "photo": "paddlePizza"
+        },
+        {
+          "name": "Choco Lava Treat",
+          "description": "Buy 3 Choco Lavas and get 1 more free: 4 for ₹270.",
+          "prices": [
+            {
+              "size": "",
+              "price": 270
+            }
+          ],
+          "diet": "veg",
+          "tag": "Buy 3, get 1 free",
+          "photo": "chocoLava"
+        },
+        {
+          "name": "Rainbow Beverage Pack",
+          "description": "Soda Lime, Masala Coke, Virgin Mojito and Pulse Mojito, one of each.",
+          "prices": [
+            {
+              "size": "",
+              "price": 199
+            }
+          ],
+          "diet": "veg",
+          "tag": "",
+          "photo": "virginMojito"
+        }
+      ],
+      "materials": [],
+      "gallery": [
+        "grilledSandwich",
+        "steamedMomos",
+        "chocoLava"
+      ],
+      "faqs": [],
+      "seo": {
+        "title": "Veg Combo Meals | Pizza, Momo and Burger Combos",
+        "description": "Veg combos at Hungru Pizza, Barasat: pizza combos in 8 or 10 inch for two or a family, momo, burger and sandwich packs, from ₹179. Save 15 to 20%."
+      },
+      "addOns": [],
+      "offer": true
+    },
+    {
+      "slug": "non-veg-combos",
+      "name": "Chicken and fish combo meals",
+      "shortName": "Non-veg combos",
+      "icon": "deal",
+      "category": "chicken",
+      "tagline": "Chicken pizzas, snacks and drinks, together for less",
+      "summary": "Non-veg combos for one, two or the whole family: snack packs, burger and sandwich treats, chicken and fish pizza combos in 8 or 10 inch, and the chicken starter value pack.",
+      "intro": [
+        "Each combo puts a meal together for less than ordering it dish by dish: our printed combo menu says 15 to 20% less.",
+        "The pizza combos come in 8 or 10 inch, and the 10 inch comes with more drinks. The East West combo has one veg and one chicken pizza. The chicken starter value pack comes in three sizes, up to a party platter."
+      ],
+      "heroPhoto": "friendsSharing",
+      "idealFor": [
+        "Dinner for two",
+        "A family meal at home",
+        "Match night with friends",
+        "A party platter of starters"
+      ],
+      "note": "Prices are before 5% GST, as on our printed combo menu.",
+      "items": [
+        {
+          "name": "Chicken Snacks Combo",
+          "description": "Chicken corn garlic bread, 4 cheesy chicken samosas and 1 Pulse Mojito.",
+          "prices": [
+            {
+              "size": "",
+              "price": 279
+            }
+          ],
+          "diet": "non-veg",
+          "tag": "",
+          "photo": "samosa"
+        },
+        {
+          "name": "Chicken Momo Lover Pack",
+          "description": "6 chicken tandoori momos, 6 pan-fried chicken Schezwan momos and 2 Masala Cokes.",
+          "prices": [
+            {
+              "size": "",
+              "price": 348
+            }
+          ],
+          "diet": "non-veg",
+          "tag": "",
+          "photo": "friedMomos"
+        },
+        {
+          "name": "Chicken Burger Treat Pack",
+          "description": "Chicken burger, French fries and Masala Coke. For 1: 1 burger, medium fries and 1 Coke. For 2: 2 burgers, large fries and 2 Cokes.",
+          "prices": [
+            {
+              "size": "For 1",
+              "price": 199
+            },
+            {
+              "size": "For 2",
+              "price": 349
+            }
+          ],
+          "diet": "non-veg",
+          "tag": "",
+          "photo": "chickenBurgers"
+        },
+        {
+          "name": "Chicken Sandwich Treat Pack",
+          "description": "Cheesy chicken sandwich, French fries and Masala Coke. For 1: 1 sandwich, medium fries and 1 Coke. For 2: 2 sandwiches, large fries and 2 Cokes.",
+          "prices": [
+            {
+              "size": "For 1",
+              "price": 199
+            },
+            {
+              "size": "For 2",
+              "price": 349
+            }
+          ],
+          "diet": "non-veg",
+          "tag": "",
+          "photo": "sandwichFries"
+        },
+        {
+          "name": "Chicken Fried Combo",
+          "description": "Large salted French fries, 4 crunchy half-length chicken wings, 5 chicken cheese balls and 2 Masala Cokes.",
+          "prices": [
+            {
+              "size": "",
+              "price": 359
+            }
+          ],
+          "diet": "non-veg",
+          "tag": "",
+          "photo": "friedPlatter"
+        },
+        {
+          "name": "Chicken Kids Love Pack",
+          "description": "5 pieces of chicken popcorn, medium salted French fries and a Blue Lagoon.",
+          "prices": [
+            {
+              "size": "",
+              "price": 189
+            }
+          ],
+          "diet": "non-veg",
+          "tag": "Kids",
+          "photo": "chickenBasket"
+        },
+        {
+          "name": "Chicken Bachelor Combo",
+          "description": "Chicken Farm Pizza, 4 crunchy half-length chicken wings and Soda Lime: 1 with the 8 inch, 2 with the 10 inch.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 299
+            },
+            {
+              "size": "10 inch",
+              "price": 425
+            }
+          ],
+          "diet": "non-veg",
+          "tag": "",
+          "photo": "chickenOnionPizza"
+        },
+        {
+          "name": "Chicken Couple Combo",
+          "description": "Chicken Forest Pizza, Chicken Vegas Pizza and 2 Virgin Mojitos.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 379
+            },
+            {
+              "size": "10 inch",
+              "price": 555
+            }
+          ],
+          "diet": "non-veg",
+          "tag": "",
+          "photo": "sausagePizza"
+        },
+        {
+          "name": "Chicken Chatpata Pizza Combo",
+          "description": "Chicken Pataya Pizza, Chicken Hotshot Pizza and Masala Coke: 2 with the 8 inch, 4 with the 10 inch.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 499
+            },
+            {
+              "size": "10 inch",
+              "price": 749
+            }
+          ],
+          "diet": "non-veg",
+          "tag": "Spicy",
+          "photo": "greenChilli"
+        },
+        {
+          "name": "Chicken Family Combo",
+          "description": "Chicken Chaplin Pizza, Chicken Hunger Pizza, Chicken Exotic BBQ Pizza and Masala Coke: 2 with the 8 inch, 4 with the 10 inch.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 699
+            },
+            {
+              "size": "10 inch",
+              "price": 999
+            }
+          ],
+          "diet": "non-veg",
+          "tag": "",
+          "photo": "chickenPeppers"
+        },
+        {
+          "name": "Bangali'r Priyo Combo",
+          "description": "Gondhoraj Chicken Pizza, with fish fry and Aam Panna: 1 fish fry and 1 Aam Panna with the 8 inch, 2 of each with the 10 inch.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 349
+            },
+            {
+              "size": "10 inch",
+              "price": 599
+            }
+          ],
+          "diet": "non-veg",
+          "tag": "",
+          "photo": "sausageOnionPizza"
+        },
+        {
+          "name": "Chicken Chef's Recommendation Combo",
+          "description": "Hungru Special Chicken Pizza, Chicken Overloaded Pizza and Virgin Mojito: 2 with the 8 inch, 4 with the 10 inch.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 649
+            },
+            {
+              "size": "10 inch",
+              "price": 899
+            }
+          ],
+          "diet": "non-veg",
+          "tag": "",
+          "photo": "chunkyChickenPizza"
+        },
+        {
+          "name": "Fish Delicacy Combo",
+          "description": "Prawn Delight Pizza, fish and chips (2 pieces with the 8 inch, 4 with the 10 inch) and 2 Soda Limes.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 549
+            },
+            {
+              "size": "10 inch",
+              "price": 739
+            }
+          ],
+          "diet": "non-veg",
+          "tag": "",
+          "photo": "fishFry"
+        },
+        {
+          "name": "East West Combo",
+          "description": "One veg and one chicken pizza: Veggi Delux Pizza and Chicken Tikka Pizza, with Virgin Mojito: 2 with the 8 inch, 4 with the 10 inch.",
+          "prices": [
+            {
+              "size": "8 inch",
+              "price": 479
+            },
+            {
+              "size": "10 inch",
+              "price": 749
+            }
+          ],
+          "diet": "non-veg",
+          "tag": "",
+          "photo": "tomatoBasilPizza"
+        },
+        {
+          "name": "Chicken Starter Value Pack",
+          "description": "Crunchy half-length chicken wings, crispy chicken legs, chicken panko fry and chicken popcorn. Regular: 2 wings, 1 leg, 2 panko fry, 4 popcorn. Medium: 4, 2, 4 and 10. Large: 10, 4, 10 and 15.",
+          "prices": [
+            {
+              "size": "Regular",
+              "price": 179
+            },
+            {
+              "size": "Medium",
+              "price": 399
+            },
+            {
+              "size": "Large",
+              "price": 759
+            }
+          ],
+          "diet": "non-veg",
+          "tag": "Value pack",
+          "photo": "friedPlatter"
+        }
+      ],
+      "materials": [],
+      "gallery": [
+        "chickenPeppers",
+        "fishFry",
+        "chickenBurgers"
+      ],
+      "faqs": [],
+      "seo": {
+        "title": "Chicken Combo Meals | Pizza, Momo and Burger Combos",
+        "description": "Chicken and fish combos at Hungru Pizza, Barasat: pizza combos in 8 or 10 inch for two or a family, momo and burger packs, starter platters. Save 15 to 20%."
+      },
+      "addOns": [],
+      "offer": true
     }
   ],
   "localities": [

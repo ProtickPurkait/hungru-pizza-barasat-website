@@ -30,7 +30,7 @@ export function CtaBand({ title, lead, defaultLocality, from = "ground" }: CtaBa
       <CrustDivider from={from} to="dark" />
       <div className="ground-dark dot-texture">
         <div className="wrap grid gap-12 py-16 md:py-24 lg:grid-cols-12 lg:gap-10">
-          <div className="lg:col-span-5">
+          <div className="min-w-0 lg:col-span-5">
             <p className="label flex items-center gap-3 text-cheese-300">
               <span className="h-px w-8 bg-current" aria-hidden="true" />
               {text.eyebrow}
@@ -53,7 +53,7 @@ export function CtaBand({ title, lead, defaultLocality, from = "ground" }: CtaBa
               <p className="text-ash-300">{text.talkPrompt}</p>
               <a
                 href={telHref(business.phone.tel)}
-                className="figure group mt-2 inline-flex min-h-11 items-center gap-3 text-[2.9rem] text-white transition-colors hover:text-cheese-300 sm:text-[3.4rem]"
+                className="figure group mt-2 inline-flex min-h-11 items-center gap-3 text-[2.4rem] text-white transition-colors hover:text-cheese-300 min-[360px]:text-[2.9rem] sm:text-[3.4rem]"
               >
                 <Phone className="size-7 text-cheese-400 transition-transform duration-300 group-hover:-rotate-12" aria-hidden="true" />
                 {business.phone.display}
@@ -68,7 +68,7 @@ export function CtaBand({ title, lead, defaultLocality, from = "ground" }: CtaBa
               </div>
             </div>
           </div>
-          <div className="lg:col-span-7 lg:pl-6">
+          <div className="min-w-0 lg:col-span-7 lg:pl-6">
             <OrderForm defaultLocality={defaultLocality} />
           </div>
         </div>

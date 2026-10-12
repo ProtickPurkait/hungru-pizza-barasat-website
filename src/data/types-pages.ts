@@ -1,6 +1,7 @@
-// Shapes of the blog, the job openings, the menu finder, the cart, the search and the home video in src/data/content.json.
+// Shapes of the blog, the job openings, the policies, the menu finder, the cart, the search, the offers and the home video
+// in src/data/content.json.
 // Kept apart from types.ts so each file stays short; types.ts re-exports everything here.
-import type { HeroCopy, LegalSection, PageSeo } from "./types";
+import type { HeroCopy, PageSeo } from "./types";
 
 /** A blog post at /blog/<slug>/. */
 export interface BlogPost {
@@ -69,6 +70,9 @@ export interface MenuCopy {
   jumpLabel: string;
   fromLabel: string;
   sectionLink: string;
+  /** A dish's photo is a button that shows it bigger. For screen readers; {item} = the dish. */
+  photoOpen: string;
+  photoClose: string;
 }
 
 export interface BlogPageCopy {
@@ -287,4 +291,72 @@ export interface SearchCopy {
   deliveryText: string;
   /** Keyboard help at the foot of the panel, on computers. */
   keysHint: string;
+}
+
+/** The Offers page (/offers/), the offers band on the home page and the link in the top bar. The combos are menu sections marked as offers. */
+export interface OffersCopy {
+  hero: HeroCopy & { photo: string };
+  /** Above the combos, e.g. about GST. "" for none. */
+  note: string;
+  /** For screen readers: the row of links to each kind of combo. */
+  jumpLabel: string;
+  /** Link from each kind of combo to its own menu page. {section} = its short name. */
+  sectionLink: string;
+  ctaTitle: string;
+  /** The band on the home page, with the combos of one offer section and a button to the Offers page. */
+  band: { eyebrow: string; title: string; titleAccent: string; lead: string; button: string; section: string };
+  /** Link in the thin bar above the header, on tablets and computers. */
+  barLink: string;
+}
+
+/** One numbered part of a policy, e.g. "Your rights". */
+export interface LegalSection {
+  heading: string;
+  /**
+   * Paragraphs separated by an empty line. Lines starting with "- " are bullet points.
+   * **Two stars** make words bold and [words](/privacy-policy/) makes a link.
+   */
+  body: string;
+}
+
+/** A policy page at /<slug>/, e.g. /privacy-policy/. */
+export interface LegalPage {
+  slug: string;
+  title: string;
+  /** Short name for the footer, e.g. "Privacy". */
+  navLabel: string;
+  lead: string;
+  /** Date of the last change, YYYY-MM-DD. */
+  updated: string;
+  sections: LegalSection[];
+  seo: PageSeo;
+}
+
+/**
+ * Privacy policy, terms, cookie policy and the other legal pages.
+ * Their text can use {business}, {entity}, {address}, {phone}, {whatsapp}, {email}, {officer}, {hours} and {website}.
+ */
+export interface Legal {
+  /** Who runs the site, as named in the policies, and who handles complaints. */
+  contact: {
+    /** Legal name, e.g. "Hungru Pizza (proprietor: A. Das)". */
+    entity: string;
+    /** Grievance Officer's name (IT Rules, 2011 and DPDP Act, 2023). */
+    officer: string;
+    email: string;
+    placeholder?: boolean;
+  };
+  eyebrow: string;
+  updatedLabel: string;
+  /** Shown at the top of every policy while sample tags are on. */
+  demoNote: string;
+  contentsTitle: string;
+  otherTitle: string;
+  contactTitle: string;
+  contactLead: string;
+  officerLabel: string;
+  emailLabel: string;
+  phoneLabel: string;
+  addressLabel: string;
+  pages: LegalPage[];
 }

@@ -55,6 +55,9 @@ describe("site search", () => {
     expect(ids("job").slice(0, 3)).toContain("page-careers");
     expect(ids("refund")).toContain("policy-refund-policy");
     expect(ids("photos")[0]).toBe("page-projects");
+    expect(ids("offers")[0]).toBe("page-offers");
+    expect(ids("any discount").slice(0, 3)).toContain("page-offers");
+    expect(dishes("couple combo").map((h) => h.entry.title)).toEqual(expect.arrayContaining(["Veg Couple Combo", "Chicken Couple Combo"]));
     expect(ids("make my own pizza").slice(0, 3)).toContain("page-builder");
     expect(ids("cheese burst")).toContain("post-what-is-cheese-burst-pizza");
     expect(dishes("cheese burst")[0]?.entry.title).toMatch(/^Cheese Burst/);

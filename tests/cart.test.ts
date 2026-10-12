@@ -8,6 +8,7 @@ const dish = (name: string, diet: MenuItem["diet"], prices: [string, number][]):
   prices: prices.map(([size, price]) => ({ size, price })),
   diet,
   tag: "",
+  photo: "",
 });
 const services = [
   {
