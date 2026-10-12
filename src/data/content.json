@@ -409,6 +409,12 @@
       "width": 270,
       "height": 363
     },
+    "kulladPizza": {
+      "src": "/images/uploads/hungru-kullad-pizza.webp",
+      "alt": "A kullad pizza baked in a clay cup, with melted cheese, black olives and chilli flakes",
+      "width": 736,
+      "height": 920
+    },
     "ungruPizzaBarasatLogo": {
       "src": "/images/uploads/ungru-pizza-barasat-logo-379f65.webp",
       "alt": "Hungru Pizza logo",
@@ -1801,7 +1807,8 @@
         "description": "44 veg pizzas at Hungru Pizza, Colony More, Barasat: tandoori paneer, paneer makhani, sweetcorn, mushroom and more, from ₹120. Cheese burst on any."
       },
       "addOns": [],
-      "offer": false
+      "offer": false,
+      "tilePhoto": "loadedVegPizza"
     },
     {
       "slug": "chicken-pizzas",
@@ -2751,7 +2758,8 @@
         "description": "52 chicken pizzas at Hungru Pizza, Barasat: BBQ, tandoori, peri peri, keema, hariyali and Gondhoraj chicken, from ₹120. Cheese burst on any pizza."
       },
       "addOns": [],
-      "offer": false
+      "offer": false,
+      "tilePhoto": "chickenOnionPizza"
     },
     {
       "slug": "kullad-and-kids-pizzas",
@@ -2815,7 +2823,7 @@
           ],
           "diet": "veg",
           "tag": "",
-          "photo": "paneerCloseUp"
+          "photo": "kulladPizza"
         },
         {
           "name": "Chicken Kullad Pizza",
@@ -2832,7 +2840,7 @@
           ],
           "diet": "non-veg",
           "tag": "",
-          "photo": "greenChilli"
+          "photo": "kulladPizza"
         },
         {
           "name": "Baby Frog Pizza",
@@ -2916,7 +2924,8 @@
         "description": "Paneer and chicken kullad pizza from ₹150, the boat-shaped Ginnie pizza and 7 inch kids' pizzas with frog, lion and mummy faces. Hungru Pizza, Barasat."
       },
       "addOns": [],
-      "offer": false
+      "offer": false,
+      "tilePhoto": "kulladPizza"
     },
     {
       "slug": "starters-and-sides",
@@ -3477,7 +3486,8 @@
           "price": 20
         }
       ],
-      "offer": false
+      "offer": false,
+      "tilePhoto": "chickenBasket"
     },
     {
       "slug": "momos-burgers-sandwiches",
@@ -3809,7 +3819,8 @@
         "description": "Veg, corn cheese and chicken momos from ₹89, tandoori and hariyali momos, veg and chicken burgers from ₹99, and grilled sandwiches at Hungru Pizza."
       },
       "addOns": [],
-      "offer": false
+      "offer": false,
+      "tilePhoto": "steamedMomos"
     },
     {
       "slug": "drinks-and-desserts",
@@ -4139,7 +4150,8 @@
         "description": "Cold coffee, virgin mojito, Blue Lagoon, Oreo and mango milkshakes, Gandhoraj lassi, tea, filter coffee and choco lava cake at Hungru Pizza, Barasat."
       },
       "addOns": [],
-      "offer": false
+      "offer": false,
+      "tilePhoto": "oreoShake"
     },
     {
       "slug": "combos-129",
@@ -4227,7 +4239,8 @@
         "description": "Snack combos at Hungru Pizza, Barasat for ₹129: two starters and a Masala Coke. Two veg, two chicken. Order on WhatsApp or add to your cart."
       },
       "addOns": [],
-      "offer": true
+      "offer": true,
+      "tilePhoto": ""
     },
     {
       "slug": "veg-combos",
@@ -4477,7 +4490,8 @@
         "description": "Veg combos at Hungru Pizza, Barasat: pizza combos in 8 or 10 inch for two or a family, momo, burger and sandwich packs, from ₹179. Save 15 to 20%."
       },
       "addOns": [],
-      "offer": true
+      "offer": true,
+      "tilePhoto": ""
     },
     {
       "slug": "non-veg-combos",
@@ -4756,7 +4770,8 @@
         "description": "Chicken and fish combos at Hungru Pizza, Barasat: pizza combos in 8 or 10 inch for two or a family, momo and burger packs, starter platters. Save 15 to 20%."
       },
       "addOns": [],
-      "offer": true
+      "offer": true,
+      "tilePhoto": ""
     }
   ],
   "localities": [

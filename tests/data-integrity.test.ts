@@ -44,6 +44,16 @@ describe("content checker", () => {
     expect(found).toHaveLength(1);
   });
 
+  it("gives every menu section's home page tile a photo, and checks it is in the library", () => {
+    for (const s of getContent().services.filter((x) => !x.offer)) expect(getContent().photos[s.tilePhoto], s.slug).toBeDefined();
+    const c = fresh();
+    c.services[0].tilePhoto = "goneTilePhoto";
+    c.services[1].tilePhoto = "";
+    const found = messages(c);
+    expect(found.join("\n")).toContain('home page tile photo: the photo "goneTilePhoto" is not in the photo library');
+    expect(found).toHaveLength(1);
+  });
+
   it("catches a photo without alt text", () => {
     const c = fresh();
     c.photos[c.copy.home.hero.video.wide.poster]!.alt = " ";

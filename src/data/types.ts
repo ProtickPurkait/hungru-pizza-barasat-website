@@ -86,6 +86,8 @@ export interface Service {
   summary: string;
   intro: string[];
   heroPhoto: string;
+  /** Photo on the section's tile on the home page. "" uses the main photo. */
+  tilePhoto: string;
   idealFor: string[];
   /** Short line above the dishes, e.g. slices per size or the price of a dip. "" for none. */
   note: string;

@@ -162,6 +162,7 @@ export function photoUsage(content: SiteContent): Record<string, string[]> {
   if (content.business.logo?.icon) add(content.business.logo.icon, "Browser tab icon");
   for (const s of content.services) {
     add(s.heroPhoto, s.shortName || s.name);
+    if (s.tilePhoto) add(s.tilePhoto, `${s.shortName || s.name}: home page tile`);
     s.gallery.forEach((k) => add(k, s.shortName || s.name));
     for (const it of s.items) if (it.photo) add(it.photo, `${s.shortName || s.name}: ${it.name}`);
   }

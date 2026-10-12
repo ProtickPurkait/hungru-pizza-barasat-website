@@ -139,6 +139,7 @@ export function checkContent(c: SiteContent): Problem[] {
     if (!(ICONS as readonly string[]).includes(s.icon)) error("services", `${name}: unknown icon "${s.icon}".`);
     if (!(CATEGORIES as readonly string[]).includes(s.category)) error("services", `${name}: unknown photo type "${s.category}".`);
     photoRef("services", s.heroPhoto, `${name} main photo`);
+    if (!blank(s.tilePhoto ?? "")) photoRef("services", s.tilePhoto, `${name} home page tile photo`);
     s.gallery.forEach((k, j) => photoRef("services", k, `${name} gallery photo ${j + 1}`));
     if (s.gallery.length !== 3) warn("services", `${name}: the gallery is laid out for 3 photos (it has ${s.gallery.length}).`);
     if (s.items.length === 0) error("services", `${name}: add at least one dish.`);

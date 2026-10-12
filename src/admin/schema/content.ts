@@ -91,6 +91,7 @@ export const services: Section = {
         summary: "",
         intro: [""],
         heroPhoto: firstPhoto(c),
+        tilePhoto: "",
         idealFor: [""],
         note: "",
         items: [{ name: "New dish", description: "", prices: [{ size: "", price: 99 }], diet: "veg", tag: "", photo: "" }],
@@ -119,6 +120,13 @@ export const services: Section = {
         text("tagline", "Small line above the heading"),
         para("summary", "Summary", { rows: 3, hint: "Shown on the menu cards and under the page heading." }),
         photo("heroPhoto", "Main photo"),
+        {
+          kind: "photo",
+          key: "tilePhoto",
+          label: "Photo on the home page tile (optional)",
+          optional: true,
+          hint: "The small picture on this section's tile in \"The menu\" on the home page. Pick one dish that says the section at a glance. With no photo, the tile uses the main photo. Combo offer sections have no tile.",
+        },
         text("note", "Note above the dishes (optional)", { hint: "e.g. 8 inch = 4 slices, 10 inch = 8 slices. Add a dip for ₹20." }),
         {
           kind: "list",
