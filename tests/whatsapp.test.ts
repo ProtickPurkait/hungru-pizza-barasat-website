@@ -41,6 +41,11 @@ describe("orderMessage", () => {
   it("leaves out an empty optional note", () => {
     expect(orderMessage({ ...form, message: "  " })).not.toContain("*Note:*");
   });
+
+  it("starts an order of several lines (a cart) on the line below its label", () => {
+    const cart = "2 × Tandoori Paneer (8 inch) = ₹420\nItems total: ₹420";
+    expect(orderMessage({ ...form, order: cart })).toContain(`*Order:*\n${cart}\n*Note:*`);
+  });
 });
 
 describe("builderMessage", () => {

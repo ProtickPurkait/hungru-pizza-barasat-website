@@ -1,6 +1,6 @@
 import type { SiteContent } from "@/data/types";
 import { aboutContent, areas, builder, faqs, projects, reviews, services, trust } from "./content";
-import { aboutPage, areaPage, builderPage, contactPage, home, notFound, projectsPage, servicesPages } from "./pages";
+import { aboutPage, areaPage, builderPage, cartPage, contactPage, home, notFound, projectsPage, searchPanel, servicesPages } from "./pages";
 import { legalPages } from "./legal";
 import { blogPage, blogPosts, careersPage, jobOpenings } from "./posts";
 import { business, history, orderChoices, photos, seo, sitewide } from "./site";
@@ -25,6 +25,8 @@ export const sections: Section[] = [
   servicesPages,
   projectsPage,
   builderPage,
+  cartPage,
+  searchPanel,
   areaPage,
   blogPage,
   careersPage,

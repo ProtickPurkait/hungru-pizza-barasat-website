@@ -3,8 +3,8 @@
 // Two names are kept from the template the site was built on:
 //   "services" are the menu sections (veg pizzas, chicken pizzas …), each with its own page at /menu/<slug>/.
 //   "projects" are the gallery photos at /gallery/.
-// The blog, the job openings, the menu finder labels and the home video are in types-pages.ts.
-import type { BlogPageCopy, BlogPost, CareersPageCopy, HeroVideo, JobOpening, MenuCopy } from "./types-pages";
+// The blog, the job openings, the menu finder labels, the cart and search labels and the home video are in types-pages.ts.
+import type { BlogPageCopy, BlogPost, CareersPageCopy, CartCopy, DeliveryCopy, HeroVideo, JobOpening, MenuAddOn, MenuCopy, SearchCopy } from "./types-pages";
 
 export type * from "./types-pages";
 
@@ -74,6 +74,8 @@ export interface Service {
   /** Short line above the dishes, e.g. slices per size or the price of a dip. "" for none. */
   note: string;
   items: MenuItem[];
+  /** Extras for any dish in this section, picked in the cart (dips …). Pizzas use the builder's prices instead. */
+  addOns: MenuAddOn[];
   /** "What goes in": the ingredients this section is built on. */
   materials: Material[];
   gallery: string[];
@@ -84,6 +86,9 @@ export interface Service {
 export interface Locality {
   slug: string;
   name: string;
+  /** Map position of the area's middle, for the delivery radius. */
+  lat: number;
+  lng: number;
 }
 
 /** A delivery area page at /delivery/<slug>/. */
@@ -204,6 +209,10 @@ export interface Business {
   orderOnline: ExternalLink[];
   /** Social pages (Facebook, Instagram …). Shown in the footer and sent to Google. */
   social: ExternalLink[];
+  /** The café's map position: the middle of the delivery circle, and sent to Google. */
+  geo: { lat: number; lng: number };
+  /** Delivery only within this many km of the café, in a straight line. */
+  deliveryKm: number;
 }
 
 export interface ExternalLink {
@@ -220,6 +229,8 @@ export interface PageSeoMap {
   contact: PageSeo;
   blog: PageSeo;
   careers: PageSeo;
+  /** Kept out of Google; used for the browser tab and link previews. */
+  cart: PageSeo;
   notFound: PageSeo;
   /** Photo key for link previews on WhatsApp, Facebook etc. */
   shareImage: string;
@@ -391,6 +402,9 @@ export interface Copy {
   };
   blogPage: BlogPageCopy;
   careersPage: CareersPageCopy;
+  cart: CartCopy;
+  delivery: DeliveryCopy;
+  search: SearchCopy;
   notFound: { eyebrow: string; title: string; lead: string; popularTitle: string };
 }
 

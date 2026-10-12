@@ -26,7 +26,10 @@ export const business: Section = {
   preview: "/contact/",
   fields: [
     group("Name", [
-      text("name", "Business name", { required: true, hint: "Exactly as customers should see it. With no logo, the first two words are shown large and the rest small." }),
+      text("name", "Business name", {
+        required: true,
+        hint: "Exactly as customers should see it. With no logo, the first two words are shown large and the rest small.",
+      }),
       text("category", "What you do", { hint: "One line, e.g. Pizza café. Also used for Google." }),
       text("tagline", "Short tagline"),
     ]),
@@ -70,8 +73,16 @@ export const business: Section = {
       "Phone and WhatsApp",
       [
         text("phone.display", "Phone number as shown", { placeholder: "098300 12345" }),
-        text("phone.tel", "Phone number for calls", { mono: true, placeholder: "+919830012345", hint: "With + and country code, no spaces. Used by the Call buttons." }),
-        text("whatsapp", "WhatsApp number", { mono: true, placeholder: "919830012345", hint: "Country code and number, digits only (no + or spaces). Every WhatsApp button opens a chat with this number." }),
+        text("phone.tel", "Phone number for calls", {
+          mono: true,
+          placeholder: "+919830012345",
+          hint: "With + and country code, no spaces. Used by the Call buttons.",
+        }),
+        text("whatsapp", "WhatsApp number", {
+          mono: true,
+          placeholder: "919830012345",
+          hint: "Country code and number, digits only (no + or spaces). Every WhatsApp button opens a chat with this number.",
+        }),
       ],
       { columns: 1 },
     ),
@@ -87,6 +98,24 @@ export const business: Section = {
       { key: "address", columns: 2 },
     ),
     text("mapsQuery", "Address for Google Maps", { hint: "What the map and the Get directions button search for." }),
+    group(
+      "Map position and delivery",
+      [
+        num("lat", "Latitude", {
+          step: 0.00001,
+          hint: "In Google Maps, press and hold on the café (right-click on a computer): the first of the two numbers that appear, e.g. 22.72316.",
+        }),
+        num("lng", "Longitude", { step: 0.00001, hint: "The second number, e.g. 88.47847." }),
+      ],
+      { key: "geo", columns: 2, hint: "The middle of the delivery circle. Also sent to Google, so the café shows in the right spot." },
+    ),
+    num("deliveryKm", "Delivery radius", {
+      min: 1,
+      max: 30,
+      step: 0.5,
+      suffix: "km",
+      hint: "Delivery only within this distance of the café, in a straight line. Areas outside it drop out of the order form's list; for other places, customers check their distance with their phone's location.",
+    }),
     group(
       "Opening hours",
       [
@@ -109,7 +138,11 @@ export const business: Section = {
     linkList("orderOnline", "Order online", "Food delivery apps you are on, e.g. Zomato and Swiggy. Shown on the Contact page and in the footer."),
     linkList("social", "Social pages", "e.g. Facebook, Instagram. Shown in the footer and sent to Google."),
     group("Website", [
-      text("siteUrl", "Website address", { mono: true, placeholder: "https://www.example.com", hint: "The real domain. Used for Google, the sitemap and link previews." }),
+      text("siteUrl", "Website address", {
+        mono: true,
+        placeholder: "https://www.example.com",
+        hint: "The real domain. Used for Google, the sitemap and link previews.",
+      }),
       toggle("demoMode", 'Show "Sample" tags', "Small tags on sample photos, delivery details, team and story. Turn off once real details are in."),
     ]),
   ],
@@ -193,6 +226,26 @@ export const sitewide: Section = {
       ],
       { key: "form", columns: 2, collapsed: true },
     ),
+    group(
+      "Delivery radius in the order form",
+      [
+        text("note", "Line under Deliver to", { tokens: ["km"] }),
+        text("otherArea", "Choice for places not in the list", { tokens: ["km"] }),
+        para("checkPrompt", "When that is chosen", { rows: 2, tokens: ["km"] }),
+        text("checkButton", "Check button"),
+        text("checking", "While checking"),
+        para("inRange", "Close enough", { rows: 2, tokens: ["distance"] }),
+        para("outOfRange", "Too far", { rows: 2, tokens: ["distance", "km"] }),
+        text("pickupButton", "Too far: pickup button"),
+        para("failed", "Location not found", { rows: 2 }),
+        para("blocked", "Location not allowed", { rows: 2 }),
+        text("needCheck", "Error: not checked yet"),
+        text("tooFar", "Error: too far", { tokens: ["km"] }),
+        text("otherInMessage", "In the WhatsApp message", { tokens: ["distance"] }),
+        text("locationLabel", "Map link label in the WhatsApp message"),
+      ],
+      { key: "delivery", columns: 2, collapsed: true, hint: "The radius itself is under Business details → Delivery radius." },
+    ),
 
     group(
       "Footer",
@@ -215,7 +268,11 @@ export const sitewide: Section = {
         para("service", "From a menu section page", { rows: 2, tokens: ["business", "service"], hint: "{service} becomes the section's short name." }),
         para("area", "From a delivery area page", { rows: 2, tokens: ["business", "area"] }),
         para("project", "From a dish or a gallery photo", { rows: 2, tokens: ["business", "project"], hint: "{project} becomes the dish or photo name." }),
-        para("orderStart", "Order form: first line", { rows: 2, tokens: ["business"], hint: "The customer's order is added below it. *One star* on each side makes text bold in WhatsApp." }),
+        para("orderStart", "Order form: first line", {
+          rows: 2,
+          tokens: ["business"],
+          hint: "The customer's order is added below it. *One star* on each side makes text bold in WhatsApp.",
+        }),
         para("orderEnd", "Order form: last line", { rows: 2 }),
         para("builderStart", "Pizza builder: first line", { rows: 2, tokens: ["business"] }),
         para("builderEnd", "Pizza builder: last line", { rows: 2 }),
@@ -243,7 +300,8 @@ export const seo: Section = {
   group: "Media & Google",
   title: "Google & link previews",
   icon: Globe,
-  description: "How the main pages appear in Google, and the picture shown when someone shares a link on WhatsApp or Facebook. Menu section and delivery area pages have their own settings.",
+  description:
+    "How the main pages appear in Google, and the picture shown when someone shares a link on WhatsApp or Facebook. Menu section and delivery area pages have their own settings.",
   path: "pageSeo",
   preview: "/",
   fields: [
@@ -251,11 +309,22 @@ export const seo: Section = {
     group("Full menu page", [text("title", "Page title", { max: 60 }), para("description", "Description", { max: 160, rows: 3 })], { key: "services" }),
     group("Gallery page", [text("title", "Page title", { max: 60 }), para("description", "Description", { max: 160, rows: 3 })], { key: "projects" }),
     group("Pizza builder page", [text("title", "Page title", { max: 60 }), para("description", "Description", { max: 160, rows: 3 })], { key: "builder" }),
-    group("Blog page", [text("title", "Page title", { max: 60 }), para("description", "Description", { max: 160, rows: 3 })], { key: "blog", hint: "Each post has its own title and description (Blog)." }),
+    group("Blog page", [text("title", "Page title", { max: 60 }), para("description", "Description", { max: 160, rows: 3 })], {
+      key: "blog",
+      hint: "Each post has its own title and description (Blog).",
+    }),
     group("Careers page", [text("title", "Page title", { max: 60 }), para("description", "Description", { max: 160, rows: 3 })], { key: "careers" }),
+    group("Cart page", [text("title", "Page title", { max: 60 }), para("description", "Description", { max: 160, rows: 3 })], {
+      key: "cart",
+      collapsed: true,
+      hint: "Kept out of Google. Shown in the browser tab and when the link is shared.",
+    }),
     group("About page", [text("title", "Page title", { max: 60 }), para("description", "Description", { max: 160, rows: 3 })], { key: "about" }),
     group("Contact page", [text("title", "Page title", { max: 60 }), para("description", "Description", { max: 160, rows: 3 })], { key: "contact" }),
-    group("Page not found", [text("title", "Page title", { max: 60 }), para("description", "Description", { max: 160, rows: 3 })], { key: "notFound", collapsed: true }),
+    group("Page not found", [text("title", "Page title", { max: 60 }), para("description", "Description", { max: 160, rows: 3 })], {
+      key: "notFound",
+      collapsed: true,
+    }),
     photo("shareImage", "Link preview picture", "Shown when a link to the site is shared, unless the page has its own photo."),
     para("businessDescription", "Business description for Google", { rows: 3, tokens: ["category"] }),
   ],

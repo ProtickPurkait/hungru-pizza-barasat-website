@@ -2,7 +2,23 @@
 import { BadgeCheck, HelpCircle, Images, MapPinned, MessageSquareQuote, Pizza, Users, UtensilsCrossed } from "lucide-react";
 import type { SiteContent } from "@/data/types";
 import { formatINR } from "@/lib/format";
-import { categoryKeys, categoryOptions, dietOptions, faqList, group, iconOptions, num, para, photo, seoFields, serviceOptions, slugify, strings, text, toggle } from "./helpers";
+import {
+  categoryKeys,
+  categoryOptions,
+  dietOptions,
+  faqList,
+  group,
+  iconOptions,
+  num,
+  para,
+  photo,
+  seoFields,
+  serviceOptions,
+  slugify,
+  strings,
+  text,
+  toggle,
+} from "./helpers";
 import type { Field, Section } from "./types";
 
 const firstPhoto = (c: SiteContent) => Object.keys(c.photos)[0] ?? "";
@@ -13,7 +29,9 @@ const slugHint = "Part of the page address. Lower-case letters, numbers and dash
 const pricesText = (prices: { size: string; price: number }[] = []) => prices.map((p) => `${p.size ? `${p.size} ` : ""}${formatINR(p.price)}`).join(" / ");
 
 const dishFields: Field[] = [
-  group("", [text("name", "Dish", { required: true }), text("tag", "Tag (optional)", { hint: 'e.g. Bestseller, Spicy, New. Leave empty for none.' })], { columns: 2 }),
+  group("", [text("name", "Dish", { required: true }), text("tag", "Tag (optional)", { hint: "e.g. Bestseller, Spicy, New. Leave empty for none." })], {
+    columns: 2,
+  }),
   para("description", "What is in it", { rows: 2 }),
   { kind: "select", key: "diet", label: "Food mark", options: dietOptions },
   {
@@ -26,7 +44,11 @@ const dishFields: Field[] = [
     max: 4,
     itemTitle: (p) => `${p.size || "One size"} · ${formatINR(p.price)}`,
     newItem: () => ({ size: "", price: 99 }),
-    fields: [group("", [text("size", "Size", { hint: "e.g. 8 inch, 10 inch, 4 pcs, Small, Grill" }), num("price", "Price", { min: 1, step: 1, suffix: "₹" })], { columns: 2 })],
+    fields: [
+      group("", [text("size", "Size", { hint: "e.g. 8 inch, 10 inch, 4 pcs, Small, Grill" }), num("price", "Price", { min: 1, step: 1, suffix: "₹" })], {
+        columns: 2,
+      }),
+    ],
   },
 ];
 
@@ -35,7 +57,8 @@ export const services: Section = {
   group: "Content",
   title: "Menu",
   icon: UtensilsCrossed,
-  description: "The menu sections and their dishes and prices. Each section has its own page. Add, remove or reorder them here; the home page, full menu and footer follow.",
+  description:
+    "The menu sections and their dishes and prices. Each section has its own page. Add, remove or reorder them here; the home page, full menu and footer follow.",
   path: "services",
   preview: "/menu/",
   fields: [
@@ -49,7 +72,10 @@ export const services: Section = {
       itemPhoto: (s) => s.heroPhoto,
       preview: (s) => `/menu/${s.slug}/`,
       newItem: (c) => ({
-        slug: slugify("new-section", c.services.map((s) => s.slug)),
+        slug: slugify(
+          "new-section",
+          c.services.map((s) => s.slug),
+        ),
         name: "New menu section",
         shortName: "New section",
         icon: "pizza",
@@ -92,6 +118,27 @@ export const services: Section = {
           newItem: () => ({ name: "", description: "", prices: [{ size: "", price: 99 }], diet: "veg", tag: "" }),
           fields: dishFields,
         },
+        {
+          kind: "list",
+          key: "addOns",
+          label: "Add-ons in the cart (optional)",
+          hint: "Extras any dish in this section can have, picked in the cart with Add extras (e.g. a dip for ₹20). Pizzas in 8 and 10 inch already get the pizza builder's crust, cheese and toppings there.",
+          itemLabel: "add-on",
+          itemTitle: (a) => a.label || "New add-on",
+          itemSubtitle: (a) => formatINR(a.price),
+          newItem: (c) => ({
+            id: slugify(
+              "new-add-on",
+              c.services.flatMap((s) => (s.addOns ?? []).map((a) => a.id)),
+            ),
+            label: "",
+            price: 20,
+          }),
+          fields: [
+            group("", [text("label", "Name", { required: true }), num("price", "Price", { min: 1, suffix: "₹" })], { columns: 2 }),
+            text("id", "Code", { mono: true, hint: "Lower-case, with dashes. Keeps the add-on in carts when you rename it." }),
+          ],
+        },
         strings("intro", "About this section", { multiline: true, itemLabel: "paragraph" }),
         strings("idealFor", "Order these for", { itemLabel: "point" }),
         {
@@ -108,7 +155,13 @@ export const services: Section = {
         group(
           "Links to other parts of the site",
           [
-            { kind: "select", key: "category", label: "Gallery photo type", options: categoryOptions, hint: 'Which gallery photos show as "more from the gallery".' },
+            {
+              kind: "select",
+              key: "category",
+              label: "Gallery photo type",
+              options: categoryOptions,
+              hint: 'Which gallery photos show as "more from the gallery".',
+            },
             { kind: "select", key: "icon", label: "Icon", options: iconOptions },
           ],
           { columns: 2 },
@@ -137,7 +190,10 @@ export const projects: Section = {
       itemPhoto: (p) => p.photo,
       itemSubtitle: (p, c) => c.categoryLabels[p.category as keyof SiteContent["categoryLabels"]] ?? p.category,
       newItem: (c) => ({
-        id: slugify("new-photo", c.projects.map((p) => p.id)),
+        id: slugify(
+          "new-photo",
+          c.projects.map((p) => p.id),
+        ),
         title: "",
         category: "veg",
         photo: firstPhoto(c),
@@ -164,8 +220,19 @@ export const projects: Section = {
       hint: "The buttons above the gallery. Each one shows one or more photo types.",
       itemLabel: "filter",
       itemTitle: (f) => f.label || "New filter",
-      newItem: (c) => ({ id: slugify("filter", c.projectFilters.map((f) => f.id)), label: "", categories: [] }),
-      fields: [text("label", "Button text"), { kind: "checks", key: "categories", label: "Shows these types", options: categoryOptions }, text("id", "Code", { mono: true })],
+      newItem: (c) => ({
+        id: slugify(
+          "filter",
+          c.projectFilters.map((f) => f.id),
+        ),
+        label: "",
+        categories: [],
+      }),
+      fields: [
+        text("label", "Button text"),
+        { kind: "checks", key: "categories", label: "Shows these types", options: categoryOptions },
+        text("id", "Code", { mono: true }),
+      ],
     },
     { kind: "record", key: "categoryLabels", label: "Names of the photo types", keys: categoryKeys },
   ],
@@ -192,7 +259,12 @@ export const reviews: Section = {
         para("text", "Review", { rows: 4, required: true }),
         group(
           "Customer",
-          [text("name", "Name", { hint: 'First name and initial is enough, e.g. "Sneha B."' }), text("locality", "Area"), text("service", "What they ordered"), num("rating", "Stars", { min: 1, max: 5, step: 1 })],
+          [
+            text("name", "Name", { hint: 'First name and initial is enough, e.g. "Sneha B."' }),
+            text("locality", "Area"),
+            text("service", "What they ordered"),
+            num("rating", "Stars", { min: 1, max: 5, step: 1 }),
+          ],
           { columns: 2 },
         ),
         toggle("placeholder", "Sample review", 'Shows a "Sample review" tag while sample tags are on.'),
@@ -218,10 +290,26 @@ export const areas: Section = {
       itemLabel: "locality",
       itemTitle: (l) => l.name || "New locality",
       itemSubtitle: (l) => l.slug,
-      newItem: (c) => ({ slug: slugify("new-area", c.localities.map((l) => l.slug)), name: "" }),
-      fields: [text("name", "Name", { required: true }), text("slug", "Code", { mono: true, hint: "Lower-case, with dashes. An area page with the same code is linked from the home page." })],
+      // A new area starts on the café's spot: move it to the area's real position.
+      newItem: (c) => ({
+        slug: slugify(
+          "new-area",
+          c.localities.map((l) => l.slug),
+        ),
+        name: "",
+        lat: c.business.geo.lat,
+        lng: c.business.geo.lng,
+      }),
+      fields: [
+        text("name", "Name", { required: true }),
+        text("slug", "Code", { mono: true, hint: "Lower-case, with dashes. An area page with the same code is linked from the home page." }),
+        num("lat", "Latitude", { step: 0.00001, hint: "The middle of the area. In Google Maps, press and hold there: the first number." }),
+        num("lng", "Longitude", { step: 0.00001, hint: "The second number. Areas outside the delivery radius are left out of the order form." }),
+      ],
     },
-    text("widerArea", "Everywhere else", { hint: 'Shown as "+ anywhere within 5 km" and "Other (anywhere within 5 km)" in the order form.' }),
+    text("widerArea", "Everywhere else", {
+      hint: 'Shown as "+ anywhere within 5 km" after the areas on the home page and in the footer. Keep the distance the same as the delivery radius (Business details).',
+    }),
     {
       kind: "list",
       key: "areaPages",
@@ -233,7 +321,10 @@ export const areas: Section = {
       itemPhoto: (a) => a.photo,
       preview: (a) => `/delivery/${a.slug}/`,
       newItem: (c) => ({
-        slug: slugify("new-area", c.areaPages.map((a) => a.slug)),
+        slug: slugify(
+          "new-area",
+          c.areaPages.map((a) => a.slug),
+        ),
         name: "",
         photo: c.copy.areaPage.fallbackPhoto,
         heading: "",
@@ -251,7 +342,11 @@ export const areas: Section = {
         text("heading", "Main heading", { required: true }),
         para("lead", "Introduction", { rows: 2 }),
         strings("intro", "About delivering here", { multiline: true, itemLabel: "paragraph" }),
-        group("Delivery details box", [text("title", "Box heading"), strings("items", "Points", { itemLabel: "point", hint: "Times, delivery charge, how to pay." })], { key: "localNotes" }),
+        group(
+          "Delivery details box",
+          [text("title", "Box heading"), strings("items", "Points", { itemLabel: "point", hint: "Times, delivery charge, how to pay." })],
+          { key: "localNotes" },
+        ),
         strings("landmarks", "Landmarks and roads", { itemLabel: "landmark" }),
         { kind: "checks", key: "services", label: "Menu sections to show", options: serviceOptions },
         faqList("faqs", "Questions and answers"),
@@ -291,7 +386,10 @@ export const trust: Section = {
       fixed: true,
       itemTitle: (s) => `${s.value} ${s.label}`,
       newItem: () => ({ value: "", label: "" }),
-      fields: [group("", [text("value", "Figure", { hint: "Short: 4.7★, 100+, ₹120" }), text("label", "Label")], { columns: 2 }), toggle("placeholder", "Sample figure", 'Shows a "Sample" tag while sample tags are on.')],
+      fields: [
+        group("", [text("value", "Figure", { hint: "Short: 4.7★, 100+, ₹120" }), text("label", "Label")], { columns: 2 }),
+        toggle("placeholder", "Sample figure", 'Shows a "Sample" tag while sample tags are on.'),
+      ],
     },
     {
       kind: "list",
@@ -378,7 +476,16 @@ export const builder: Section = {
       itemLabel: "size",
       itemTitle: (o) => o.label || "New size",
       itemSubtitle: (o) => `${formatINR(o.price)}${o.large ? " · large prices for extras" : ""}`,
-      newItem: (c) => ({ id: slugify("size", c.builder.sizes.map((o) => o.id)), label: "", note: "", price: 199, large: false }),
+      newItem: (c) => ({
+        id: slugify(
+          "size",
+          c.builder.sizes.map((o) => o.id),
+        ),
+        label: "",
+        note: "",
+        price: 199,
+        large: false,
+      }),
       fields: [
         group("", [text("label", "Name"), text("note", "Note")], { columns: 2 }),
         num("price", "Price", { min: 1, step: 1, suffix: "₹" }),
@@ -393,7 +500,16 @@ export const builder: Section = {
       itemLabel: "crust",
       itemTitle: (o) => o.label || "New crust",
       itemSubtitle: extraText,
-      newItem: (c) => ({ id: slugify("crust", c.builder.bases.map((o) => o.id)), label: "", note: "", price: 0, priceLarge: 0 }),
+      newItem: (c) => ({
+        id: slugify(
+          "crust",
+          c.builder.bases.map((o) => o.id),
+        ),
+        label: "",
+        note: "",
+        price: 0,
+        priceLarge: 0,
+      }),
       fields: choiceFields(),
     },
     {
@@ -403,7 +519,16 @@ export const builder: Section = {
       itemLabel: "cheese",
       itemTitle: (o) => o.label || "New cheese",
       itemSubtitle: extraText,
-      newItem: (c) => ({ id: slugify("cheese", c.builder.cheeses.map((o) => o.id)), label: "", note: "", price: 0, priceLarge: 0 }),
+      newItem: (c) => ({
+        id: slugify(
+          "cheese",
+          c.builder.cheeses.map((o) => o.id),
+        ),
+        label: "",
+        note: "",
+        price: 0,
+        priceLarge: 0,
+      }),
       fields: choiceFields(),
     },
     {
@@ -414,7 +539,17 @@ export const builder: Section = {
       itemLabel: "topping",
       itemTitle: (o) => o.label || "New topping",
       itemSubtitle: (o) => `${o.diet === "veg" ? "Veg" : "Non-veg"} · ${extraText(o)}`,
-      newItem: (c) => ({ id: slugify("topping", c.builder.toppings.map((o) => o.id)), label: "", note: "", price: 40, priceLarge: 55, diet: "veg" }),
+      newItem: (c) => ({
+        id: slugify(
+          "topping",
+          c.builder.toppings.map((o) => o.id),
+        ),
+        label: "",
+        note: "",
+        price: 40,
+        priceLarge: 55,
+        diet: "veg",
+      }),
       fields: choiceFields([
         {
           kind: "select",
@@ -427,6 +562,13 @@ export const builder: Section = {
         },
       ]),
     },
-    group("Limits", [num("maxToppings", "Most toppings on one pizza", { min: 1, max: 15, step: 1 }), num("maxQuantity", "Most pizzas in one order", { min: 1, max: 50, step: 1 })], { columns: 2 }),
+    group(
+      "Limits",
+      [
+        num("maxToppings", "Most toppings on one pizza", { min: 1, max: 15, step: 1 }),
+        num("maxQuantity", "Most pizzas in one order", { min: 1, max: 50, step: 1 }),
+      ],
+      { columns: 2 },
+    ),
   ],
 };

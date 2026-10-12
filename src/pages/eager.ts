@@ -5,6 +5,7 @@ import AreaPage from "./AreaPage";
 import BlogIndex from "./BlogIndex";
 import BlogPost from "./BlogPost";
 import Builder from "./Builder";
+import Cart from "./Cart";
 import Careers from "./Careers";
 import Contact from "./Contact";
 import Home from "./Home";
@@ -14,4 +15,4 @@ import Projects from "./Projects";
 import ServicePage from "./ServicePage";
 import ServicesIndex from "./ServicesIndex";
 
-export const eagerPages: Pages = { Home, ServicesIndex, ServicePage, Projects, Builder, AreaPage, BlogIndex, BlogPost, Careers, About, Contact, LegalPage, NotFound };
+export const eagerPages: Pages = { Home, ServicesIndex, ServicePage, Projects, Builder, Cart, AreaPage, BlogIndex, BlogPost, Careers, About, Contact, LegalPage, NotFound };

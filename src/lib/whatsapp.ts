@@ -16,10 +16,14 @@ export function defaultWhatsAppText(): string {
   return message(copy.whatsapp.general);
 }
 
+/** "*Name:* Asha". A value of several lines (a cart, a long typed order) starts on the line below its label. */
 function lines(rows: [string, string | undefined][]): string {
   return rows
     .filter(([, v]) => v !== undefined && v.trim() !== "")
-    .map(([k, v]) => `*${k}:* ${v!.trim()}`)
+    .map(([k, v]) => {
+      const value = v!.trim();
+      return value.includes("\n") ? `*${k}:*\n${value}` : `*${k}:* ${value}`;
+    })
     .join("\n");
 }
 
@@ -28,6 +32,8 @@ export interface OrderForm {
   phone: string;
   /** Delivery area, or the pickup label. */
   locality: string;
+  /** A map link to the customer, when they checked their distance instead of picking an area. */
+  location?: string;
   when: string;
   order: string;
   message: string;
@@ -41,6 +47,7 @@ export function orderMessage(form: OrderForm): string {
       ["Name", form.name],
       ["Phone", form.phone],
       ["Deliver to", form.locality],
+      [copy.delivery.locationLabel, form.location],
       ["When", form.when],
       ["Order", form.order],
       ["Note", form.message],

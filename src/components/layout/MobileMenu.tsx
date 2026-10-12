@@ -1,12 +1,16 @@
 import { ArrowRight } from "lucide-react";
-import { Link, NavLink } from "react-router";
+import { Link, NavLink, useLocation } from "react-router";
 import { CallButton, WhatsAppButton } from "@/components/common/ContactButtons";
+import { ThemeToggle } from "@/components/common/ThemeToggle";
 import { Sheet, SheetContent, SheetDescription, SheetTitle } from "@/components/ui/sheet";
 import { business, copy, services } from "@/data/site";
 import { paths } from "@/lib/paths";
 import { cn } from "@/lib/utils";
 
-/** Slide-in menu for phones. Loaded only when first opened, to keep the first page load light. */
+/**
+ * Slide-in menu for phones and tablets. Loaded only when first opened, to keep the first page load light.
+ * Home is listed on every page but the home page. On phones the light / dark switch is here too.
+ */
 export default function MobileMenu({
   open,
   onOpenChange,
@@ -17,6 +21,7 @@ export default function MobileMenu({
   nav: { label: string; to: string }[];
 }) {
   const close = () => onOpenChange(false);
+  const onHome = useLocation().pathname === paths.home;
   return (
     <Sheet open={open} onOpenChange={onOpenChange}>
       <SheetContent
@@ -29,7 +34,7 @@ export default function MobileMenu({
         </div>
         <nav aria-label="Mobile" className="px-5 pt-4 pb-6">
           <ul>
-            {[{ label: copy.nav.home, to: paths.home }, ...nav].map((item) => (
+            {[...(onHome ? [] : [{ label: copy.nav.home, to: paths.home }]), ...nav].map((item) => (
               <li key={item.to} className="border-b border-ash-200">
                 <NavLink
                   to={item.to}
@@ -59,9 +64,17 @@ export default function MobileMenu({
             ))}
           </ul>
         </nav>
-        <div className="mt-auto grid gap-3 border-t border-ash-200 bg-sheet p-5">
-          <WhatsAppButton />
-          <CallButton showNumber label={copy.buttons.callShort} />
+        <div className="mt-auto">
+          <div className="flex items-center justify-between gap-4 border-t border-ash-200 px-5 py-3 sm:hidden">
+            <span aria-hidden="true" className="font-semibold text-ink">
+              {copy.theme.label}
+            </span>
+            <ThemeToggle />
+          </div>
+          <div className="grid gap-3 border-t border-ash-200 bg-sheet p-5">
+            <WhatsAppButton />
+            <CallButton showNumber label={copy.buttons.callShort} />
+          </div>
         </div>
       </SheetContent>
     </Sheet>

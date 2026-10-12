@@ -8,6 +8,7 @@ export const lazyPages: Pages = {
   ServicePage: lazy(() => import("./ServicePage")),
   Projects: lazy(() => import("./Projects")),
   Builder: lazy(() => import("./Builder")),
+  Cart: lazy(() => import("./Cart")),
   AreaPage: lazy(() => import("./AreaPage")),
   BlogIndex: lazy(() => import("./BlogIndex")),
   BlogPost: lazy(() => import("./BlogPost")),

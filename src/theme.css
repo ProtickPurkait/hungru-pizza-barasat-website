@@ -408,6 +408,22 @@
     opacity: 0.55;
   }
 
+  /* A dish, question or job just opened from the site search: lit up in cheese yellow for a moment, then fading (Layout.tsx). */
+  .found-target {
+    border-radius: 0.9rem;
+    transition:
+      background-color 1.2s ease,
+      box-shadow 1.2s ease;
+  }
+  .found-target.is-found {
+    background-color: color-mix(in oklab, var(--color-cheese-300) 45%, transparent);
+    box-shadow: 0 0 0 0.6rem color-mix(in oklab, var(--color-cheese-300) 45%, transparent);
+  }
+  [data-theme="dark"] .found-target.is-found {
+    background-color: color-mix(in oklab, var(--color-cheese-400) 18%, transparent);
+    box-shadow: 0 0 0 0.6rem color-mix(in oklab, var(--color-cheese-400) 18%, transparent);
+  }
+
   /* Scroll reveal. Only hidden once the app is running (main.tsx adds html.js). */
   html.js .reveal {
     opacity: 0;

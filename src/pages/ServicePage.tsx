@@ -54,7 +54,7 @@ export default function ServicePage() {
       <section aria-labelledby="menu-title" className="wrap py-20 md:py-28">
         <SectionHeading id="menu-title" size="md" title={text.menuTitle} />
         {service.note && <p className="mt-4 max-w-[70ch] text-sm leading-relaxed text-ash-600">{service.note}</p>}
-        <MenuList items={service.items} columns={2} className="mt-10" />
+        <MenuList section={service.slug} items={service.items} columns={2} anchors className="mt-10" />
 
         <div className="mt-20 grid gap-12 border-t border-ash-300 pt-16 lg:grid-cols-12 lg:gap-12">
           <div className="lg:col-span-7">

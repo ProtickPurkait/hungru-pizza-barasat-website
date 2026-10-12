@@ -1,6 +1,6 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { ArrowRight, Search, X } from "lucide-react";
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 import { DietMark } from "@/components/common/DietMark";
 import { ServiceIcon } from "@/components/common/ServiceIcon";
 import { Button } from "@/components/ui/button";
@@ -50,10 +50,13 @@ export function MenuFinder() {
   const results = useRef<HTMLDivElement>(null);
   const wrote = useRef(false);
 
-  // Filters from the address: read after the first render (which matches the prerendered page), before the browser paints.
+  // Filters from the address: read after the first render (which matches the prerendered page), before the browser paints,
+  // and again when a link inside the site opens the menu with others (the site search's "See all").
+  const { key } = useLocation();
   useLayoutEffect(() => {
-    if (window.location.search) setF(filtersFromSearch(window.location.search, services.map((s) => s.slug)));
-  }, []);
+    const slugs = services.map((s) => s.slug);
+    setF(window.location.search ? filtersFromSearch(window.location.search, slugs) : NO_FILTERS);
+  }, [key]);
 
   // Keep the address in step, without adding a history entry for every keystroke.
   useEffect(() => {
@@ -159,7 +162,7 @@ export function MenuFinder() {
         </div>
       </div>
 
-      <div ref={results} className="mt-6 flex scroll-mt-24 flex-wrap items-center gap-x-5 gap-y-2 text-sm text-ash-600">
+      <div ref={results} id="menu-results" className="mt-6 flex scroll-mt-24 flex-wrap items-center gap-x-5 gap-y-2 text-sm text-ash-600">
         <p aria-live="polite" className="font-semibold text-ink">
           {fill(text.results, { shown, total })}
         </p>
@@ -203,7 +206,7 @@ export function MenuFinder() {
               </div>
               {s.note && !searching && <p className="mt-5 max-w-[70ch] text-sm leading-relaxed text-ash-600">{s.note}</p>}
               {/* Two columns on large screens: the pizza sections have around 50 dishes each */}
-              <MenuList items={items} columns={2} className="mt-10" />
+              <MenuList section={s.slug} items={items} columns={2} className="mt-10" />
             </section>
           ))}
         </div>

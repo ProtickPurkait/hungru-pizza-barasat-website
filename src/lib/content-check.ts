@@ -3,6 +3,7 @@
 // Used by the admin panel (before publishing), the build (scripts/prerender.mjs) and the tests.
 // Pure: it never imports the content itself.
 import type { SiteContent } from "@/data/types";
+import { distanceKm, formatKm, isLatLng, withinRadius } from "./distance";
 import { routesFor } from "./routes";
 import { isSafeHref, linkTargets } from "./text";
 
@@ -20,7 +21,22 @@ export const DIETS = ["veg", "non-veg", "either"] as const;
 
 const SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 /** Top-level addresses a policy page cannot take. */
-const RESERVED_SLUGS = ["menu", "gallery", "build-your-pizza", "delivery", "blog", "careers", "about", "contact", "admin", "api", "assets", "images", "video"];
+const RESERVED_SLUGS = [
+  "menu",
+  "gallery",
+  "build-your-pizza",
+  "delivery",
+  "blog",
+  "careers",
+  "about",
+  "contact",
+  "admin",
+  "api",
+  "assets",
+  "images",
+  "video",
+  "cart",
+];
 const isDate = (v: string) => /^\d{4}-\d{2}-\d{2}$/.test(v) && !Number.isNaN(Date.parse(v));
 
 export function checkContent(c: SiteContent): Problem[] {
@@ -40,26 +56,33 @@ export function checkContent(c: SiteContent): Problem[] {
   const b = c.business;
   if (blank(b.name)) error("business", "The business name is empty.");
   if (!/^\+\d{8,15}$/.test(b.phone.tel)) error("business", `Phone number for calls should look like +919163148329 (got "${b.phone.tel}").`);
-  if (!/^\d{8,15}$/.test(b.whatsapp)) error("business", `WhatsApp number should be digits only with the country code, like 919163148329 (got "${b.whatsapp}").`);
+  if (!/^\d{8,15}$/.test(b.whatsapp))
+    error("business", `WhatsApp number should be digits only with the country code, like 919163148329 (got "${b.whatsapp}").`);
   if (!/^https:\/\/[^/\s]+\/?$/.test(b.siteUrl)) error("business", `Website address should look like https://www.example.com (got "${b.siteUrl}").`);
   if (!(b.rating.value >= 0 && b.rating.value <= 5)) error("business", "Google rating must be between 0 and 5.");
   if (!(b.rating.count >= 0)) error("business", "Number of Google reviews cannot be negative.");
-  if (!/^\d{2}:\d{2}$/.test(b.hours.opens) || !/^\d{2}:\d{2}$/.test(b.hours.closes)) error("business", "Opening and closing times should look like 10:00 and 20:00.");
+  if (!/^\d{2}:\d{2}$/.test(b.hours.opens) || !/^\d{2}:\d{2}$/.test(b.hours.closes))
+    error("business", "Opening and closing times should look like 10:00 and 20:00.");
   if (!/^https?:\/\//.test(b.googleReviewsUrl)) error("business", "The Google reviews link should start with https://");
   const logo = b.logo;
   if (!logo) error("business", "The logo settings are missing.");
   else {
     if (!blank(logo.image)) photoRef("business", logo.image, "Logo");
     if (!blank(logo.imageDark)) photoRef("business", logo.imageDark, "Logo for dark backgrounds");
-    if (!blank(logo.imageDark) && blank(logo.image)) warn("business", "The logo for dark backgrounds is only used together with a main logo. Add the main logo too.");
+    if (!blank(logo.imageDark) && blank(logo.image))
+      warn("business", "The logo for dark backgrounds is only used together with a main logo. Add the main logo too.");
     if (!["auto", "show", "hide"].includes(logo.name)) error("business", "Logo: choose whether to show the business name next to it.");
     if (!blank(logo.icon)) photoRef("business", logo.icon, "Browser tab icon");
     // The browser-tab icon is made at build time from the icon, or else the logo (scripts/prerender.mjs).
     const iconKey = blank(logo.icon) ? logo.image : logo.icon;
     const icon = blank(iconKey) ? undefined : c.photos?.[iconKey];
-    if (icon && !icon.src.startsWith("/")) warn("business", "The browser tab icon can only be made from a picture you uploaded, not a sample photo. The built-in icon is used until then.");
+    if (icon && !icon.src.startsWith("/"))
+      warn("business", "The browser tab icon can only be made from a picture you uploaded, not a sample photo. The built-in icon is used until then.");
     else if (icon?.width && icon.height && icon.width / icon.height >= 2)
-      warn("business", `${blank(logo.icon) ? "The logo" : "The browser tab icon"} is wide, so it is tiny in a browser tab. For a clear icon, upload a square one (just the symbol or the initials) under Logo → Browser tab icon.`);
+      warn(
+        "business",
+        `${blank(logo.icon) ? "The logo" : "The browser tab icon"} is wide, so it is tiny in a browser tab. For a clear icon, upload a square one (just the symbol or the initials) under Logo → Browser tab icon.`,
+      );
   }
   for (const [list, what] of [
     [b.orderOnline ?? [], "Order online"],
@@ -78,7 +101,10 @@ export function checkContent(c: SiteContent): Problem[] {
   }
   photoRef("seo", c.pageSeo.shareImage, "Link preview image");
   const cp = c.copy;
-  for (const [shape, v] of [["wide", cp.home.hero.video.wide], ["tall", cp.home.hero.video.tall]] as const) {
+  for (const [shape, v] of [
+    ["wide", cp.home.hero.video.wide],
+    ["tall", cp.home.hero.video.tall],
+  ] as const) {
     const label = shape === "wide" ? "Home video for computers" : "Home video for phones";
     photoRef("home", v.poster, `${label}, still picture`);
     if (!/^\/\S+\.mp4$/.test(v.mp4)) error("home", `${label}: the MP4 file should be a path like /video/hero.mp4`);
@@ -93,7 +119,7 @@ export function checkContent(c: SiteContent): Problem[] {
   photoRef("pages-area", cp.areaPage.fallbackPhoto, "Area page fallback photo");
 
   // SEO
-  for (const key of ["home", "services", "projects", "builder", "blog", "careers", "about", "contact", "notFound"] as const) {
+  for (const key of ["home", "services", "projects", "builder", "blog", "careers", "cart", "about", "contact", "notFound"] as const) {
     const s = c.pageSeo[key];
     if (blank(s.title)) error("seo", `The ${key} page needs a title.`);
     if (blank(s.description)) error("seo", `The ${key} page needs a description.`);
@@ -121,13 +147,23 @@ export function checkContent(c: SiteContent): Problem[] {
       const prices = it.prices ?? [];
       if (prices.length === 0) error("services", `${name}, ${dish}: add a price.`);
       prices.forEach((p) => {
-        if (!(Number.isInteger(p.price) && p.price > 0)) error("services", `${name}, ${dish}${p.size ? ` (${p.size})` : ""}: the price must be a whole number of rupees above 0.`);
+        if (!(Number.isInteger(p.price) && p.price > 0))
+          error("services", `${name}, ${dish}${p.size ? ` (${p.size})` : ""}: the price must be a whole number of rupees above 0.`);
       });
-      if (prices.length > 1 && prices.some((p) => blank(p.size))) error("services", `${name}, ${dish}: with more than one price, name each size (e.g. 8 inch, 10 inch).`);
+      if (prices.length > 1 && prices.some((p) => blank(p.size)))
+        error("services", `${name}, ${dish}: with more than one price, name each size (e.g. 8 inch, 10 inch).`);
       for (const d of dupes(prices.map((p) => p.size.trim()))) warn("services", `${name}, ${dish}: the size "${d}" is listed twice.`);
       if (!(DIETS as readonly string[]).includes(it.diet)) error("services", `${name}, ${dish}: choose veg, non-veg or either.`);
     });
     for (const d of dupes(s.items.map((it) => it.name.trim()))) warn("services", `${name}: "${d}" is on the menu twice.`);
+    // Add-ons picked in the cart (dips …).
+    (s.addOns ?? []).forEach((a, j) => {
+      const addOn = a.label || `Add-on ${j + 1}`;
+      if (blank(a.label)) error("services", `${name}: add-on ${j + 1} has no name.`);
+      if (!SLUG.test(a.id)) error("services", `${name}, ${addOn}: the code "${a.id}" may only use lower-case letters, numbers and dashes.`);
+      if (!Number.isInteger(a.price) || a.price <= 0) error("services", `${name}, ${addOn}: the price must be a whole number of rupees above 0.`);
+    });
+    for (const d of dupes((s.addOns ?? []).map((a) => a.id))) error("services", `${name}: two add-ons use the code "${d}".`);
     if (blank(s.seo.title) || blank(s.seo.description)) error("services", `${name}: add a page title and description for Google.`);
   });
 
@@ -138,6 +174,21 @@ export function checkContent(c: SiteContent): Problem[] {
     if (!SLUG.test(l.slug)) error("areas", `Locality "${l.name}": the code "${l.slug}" may only use lower-case letters, numbers and dashes.`);
     if (blank(l.name)) error("areas", `Locality "${l.slug}" has no name.`);
   });
+  // The delivery radius: measured from the café's map position; areas outside it are left out of the order form.
+  const shop = c.business.geo;
+  const km = c.business.deliveryKm;
+  if (!isLatLng(shop)) error("business", "Add the café's map position (Map position and delivery): the delivery radius is measured from it.");
+  if (!(km >= 1 && km <= 30)) error("business", "The delivery radius must be between 1 and 30 km.");
+  c.localities.forEach((l) => {
+    if (!isLatLng(l)) error("areas", `${l.name || l.slug}: add its map position, so the order form knows whether it is inside the delivery radius.`);
+    else if (isLatLng(shop) && !withinRadius(shop, l, km))
+      warn(
+        "areas",
+        `${l.name} is about ${formatKm(distanceKm(shop, l))} km from the café, outside the ${km} km delivery radius, so the order form does not offer it for delivery.`,
+      );
+  });
+  const said = c.widerArea.match(/(\d+(?:\.\d+)?)\s*km/i);
+  if (said && Number(said[1]) !== km) warn("areas", `"Everywhere else" says ${said[1]} km, but the delivery radius is ${km} km.`);
   const areaSlugs = c.areaPages.map((a) => a.slug);
   for (const d of dupes(areaSlugs)) error("areas", `Two area pages use the address "${d}".`);
   c.areaPages.forEach((a, i) => {
@@ -171,11 +222,13 @@ export function checkContent(c: SiteContent): Problem[] {
   for (const d of dupes(allSeo.map((s) => s.title.trim()))) warn("seo", `Two pages share the title "${d}". Give each page its own.`);
   for (const d of dupes(allSeo.map((s) => s.description.trim()))) warn("seo", `Two pages share the description "${d.slice(0, 60)}…".`);
   const intros = c.areaPages.map((a) => a.intro.join(" ").replaceAll(a.name, "AREA"));
-  for (const d of dupes(intros)) warn("areas", `Two area pages have the same text with only the name changed ("${d.slice(0, 50)}…"). Google ranks copied pages lower.`);
+  for (const d of dupes(intros))
+    warn("areas", `Two area pages have the same text with only the name changed ("${d.slice(0, 50)}…"). Google ranks copied pages lower.`);
 
   // Policy pages (privacy, terms, cookies …)
   const lg = c.legal;
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(lg.contact.email)) error("legal", `The email for privacy questions and complaints looks wrong ("${lg.contact.email}").`);
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(lg.contact.email))
+    error("legal", `The email for privacy questions and complaints looks wrong ("${lg.contact.email}").`);
   if (blank(lg.contact.officer)) error("legal", "Name the Grievance Officer. Indian law asks for a named person who answers privacy questions and complaints.");
   for (const d of dupes(lg.pages.map((p) => p.slug))) error("legal", `Two policy pages use the address "${d}".`);
   lg.pages.forEach((p, i) => {
@@ -194,7 +247,8 @@ export function checkContent(c: SiteContent): Problem[] {
   const checkLinks = (section: string, where: string, value: string) => {
     for (const href of linkTargets(value)) {
       if (!isSafeHref(href)) error(section, `${where}: the link "${href}" should start with /, https://, mailto: or tel:`);
-      else if (href.startsWith("/") && !routes.has(href.split(/[#?]/)[0]!)) error(section, `${where}: the link "${href}" goes to a page that does not exist. Page addresses end with a slash, like /contact/.`);
+      else if (href.startsWith("/") && !routes.has(href.split(/[#?]/)[0]!))
+        error(section, `${where}: the link "${href}" goes to a page that does not exist. Page addresses end with a slash, like /contact/.`);
     }
   };
   checkLinks("sitewide", "Order form privacy line", c.copy.form.privacyNote);
@@ -219,7 +273,8 @@ export function checkContent(c: SiteContent): Problem[] {
       if (blank(s.body)) error("blog", `${name}, part ${j + 1}: add some text, or remove the part.`);
       checkLinks("blog", `${name}, part ${j + 1}`, s.body);
     });
-    if (blank(p.seo.title) || blank(p.seo.description)) warn("blog", `${name}: fill in the title and description for Google. Until then the post's title and summary are used.`);
+    if (blank(p.seo.title) || blank(p.seo.description))
+      warn("blog", `${name}: fill in the title and description for Google. Until then the post's title and summary are used.`);
   });
 
   // Jobs and the application form
@@ -236,7 +291,7 @@ export function checkContent(c: SiteContent): Problem[] {
     if (!(r.rating >= 1 && r.rating <= 5)) error("reviews", `Review ${i + 1}: stars must be 1 to 5.`);
     if (blank(r.text) || blank(r.name)) error("reviews", `Review ${i + 1} needs a name and text.`);
   });
-  if (c.steps.length !== 4) error("trust", "The \"how it works\" section is drawn for exactly 4 steps.");
+  if (c.steps.length !== 4) error("trust", 'The "how it works" section is drawn for exactly 4 steps.');
   if (c.stats.length !== 4) error("trust", "The trust strip has room for exactly 4 figures.");
 
   // Pizza builder
@@ -247,11 +302,13 @@ export function checkContent(c: SiteContent): Problem[] {
     if (!(Number.isInteger(o.price) && o.price >= 0)) error("builder", `${o.label || o.id}: the price must be a whole number of rupees, 0 or more.`);
   }
   for (const o of [...pb.bases, ...pb.cheeses, ...pb.toppings]) {
-    if (!(Number.isInteger(o.priceLarge) && o.priceLarge >= 0)) error("builder", `${o.label || o.id}: the large-size price must be a whole number of rupees, 0 or more.`);
+    if (!(Number.isInteger(o.priceLarge) && o.priceLarge >= 0))
+      error("builder", `${o.label || o.id}: the large-size price must be a whole number of rupees, 0 or more.`);
   }
   for (const z of pb.sizes) if (!(z.price > 0)) error("builder", `${z.label}: a size needs a price above 0.`);
   for (const t of pb.toppings) if (t.diet !== "veg" && t.diet !== "non-veg") error("builder", `${t.label}: choose veg or non-veg.`);
-  for (const list of [pb.sizes, pb.bases, pb.cheeses, pb.toppings]) for (const d of dupes(list.map((o) => o.id))) error("builder", `Two builder choices use the code "${d}".`);
+  for (const list of [pb.sizes, pb.bases, pb.cheeses, pb.toppings])
+    for (const d of dupes(list.map((o) => o.id))) error("builder", `Two builder choices use the code "${d}".`);
   if (!(Number.isInteger(pb.maxToppings) && pb.maxToppings >= 1)) error("builder", "Allow at least 1 topping.");
   if (!(Number.isInteger(pb.maxQuantity) && pb.maxQuantity >= 1)) error("builder", "Allow at least 1 pizza per order.");
   const ex = c.copy.builderTeaser.example;

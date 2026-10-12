@@ -51,7 +51,12 @@
         "label": "Facebook",
         "url": "https://www.facebook.com/profile.php?id=61569856790290"
       }
-    ]
+    ],
+    "geo": {
+      "lat": 22.72316,
+      "lng": 88.47847
+    },
+    "deliveryKm": 5
   },
   "pageSeo": {
     "home": {
@@ -85,6 +90,10 @@
     "careers": {
       "title": "Careers | Jobs at a Pizza Café in Barasat",
       "description": "Work at Hungru Pizza, Colony More, Barasat: pizza makers, counter staff and delivery riders. Send us your details on WhatsApp."
+    },
+    "cart": {
+      "title": "Your Cart",
+      "description": "Your Hungru Pizza order: check it, then send it to us on WhatsApp with your name and area."
     },
     "notFound": {
       "title": "Page Not Found",
@@ -660,6 +669,113 @@
         "edit": "Change my details"
       },
       "ctaTitle": "Hungry while you are here?"
+    },
+    "cart": {
+      "buttonLabel": "Cart, {items}",
+      "item": "1 item",
+      "items": "{count} items",
+      "addLabel": "Add {item} to the cart",
+      "added": "Added to your cart:",
+      "viewCart": "View cart",
+      "builderAdd": "Add to cart",
+      "builtName": "Your own pizza",
+      "hero": {
+        "eyebrow": "Your order",
+        "title": "Your cart",
+        "lead": "Check what you have picked, then send it to us on WhatsApp with your name and area. We reply with the total and the time."
+      },
+      "emptyTitle": "Your cart is empty",
+      "emptyText": "Tap a price on the menu to add that dish, or build your own pizza.",
+      "menuButton": "See the menu",
+      "builderButton": "Build a pizza",
+      "listTitle": "In your cart",
+      "less": "One fewer {item}",
+      "more": "One more {item}",
+      "remove": "Remove {item}",
+      "clear": "Empty the cart",
+      "clearConfirm": "Yes, empty it",
+      "clearKeep": "Keep it",
+      "totalLabel": "Items total",
+      "totalNote": "At menu prices. Any delivery charge is added when we confirm your order on WhatsApp.",
+      "detailsTitle": "Your details",
+      "formBanner": "You have {items} in your cart.",
+      "formBannerLink": "Send your cart instead",
+      "newOrder": "Empty the cart and start again",
+      "extrasButton": "Add extras",
+      "extrasEdit": "Change extras",
+      "extrasTitle": "Extras for {item}",
+      "extrasLead": "Pick your extras at our menu prices. The price below updates as you choose.",
+      "extrasForAll": "This changes all {qty} on this line.",
+      "crustLegend": "Crust",
+      "cheeseLegend": "Cheese",
+      "toppingsLegend": "Extra toppings",
+      "toppingsHint": "Up to {max}.",
+      "addOnsLegend": "Add-ons",
+      "noCharge": "No extra cost",
+      "extrasEach": "One, with extras:",
+      "save": "Save",
+      "cancel": "Cancel"
+    },
+    "delivery": {
+      "note": "We deliver within {km} km of the café. Further away? Pick it up from us.",
+      "otherArea": "Somewhere else within {km} km",
+      "checkPrompt": "Not in the list? Let your phone check how far you are from the café. We deliver within {km} km.",
+      "checkButton": "Check my distance",
+      "checking": "Finding you…",
+      "inRange": "You are about {distance} km from the café, so we can deliver to you. A map link to this spot goes with your order, to help our rider find you.",
+      "outOfRange": "You are about {distance} km from the café. We deliver only within {km} km, so please pick it up from us, or call us.",
+      "failed": "We could not find where you are. Switch on location on your phone and check again, or pick your area from the list.",
+      "blocked": "Location is not allowed for this site. Tap the icon next to the web address, allow Location, then check again. Or pick your area from the list.",
+      "pickupButton": "Pick it up instead",
+      "needCheck": "Please check your distance first, or pick your area from the list.",
+      "tooFar": "We deliver only within {km} km. Please choose pickup, or call us.",
+      "otherInMessage": "Somewhere else, about {distance} km from the café",
+      "locationLabel": "Location"
+    },
+    "search": {
+      "button": "Search the menu and the site",
+      "title": "Search Hungru Pizza",
+      "placeholder": "Search the menu and more",
+      "clear": "Clear the search",
+      "close": "Close",
+      "suggestionsTitle": "Popular searches",
+      "suggestions": [
+        "Paneer pizza",
+        "Cheese burst",
+        "Chicken under ₹250",
+        "Momos",
+        "Kids' pizzas",
+        "Cold coffee",
+        "Opening hours",
+        "Delivery areas",
+        "Jobs"
+      ],
+      "results": "{count} results",
+      "noResults": "Nothing found for “{query}”.",
+      "noResultsHint": "Check the spelling, or try a dish, a price (“under 200”), an area or a page. Or just ask us.",
+      "askButton": "Ask us on WhatsApp",
+      "askText": "Hi Hungru Pizza, I was looking for “{query}” on your website. Do you have it?",
+      "partial": "No exact match. These come closest:",
+      "priceNote": "Dishes up to {price}, lowest price first.",
+      "cheapNote": "Lowest prices first.",
+      "more": "See all {count} on the menu",
+      "groups": {
+        "answer": "Quick answers",
+        "section": "Menu sections",
+        "page": "Pages",
+        "dish": "Dishes",
+        "area": "Delivery areas",
+        "post": "Blog",
+        "job": "Jobs",
+        "faq": "Questions",
+        "policy": "Policies"
+      },
+      "hoursTitle": "Opening hours",
+      "phoneTitle": "Phone and WhatsApp",
+      "addressTitle": "Address",
+      "deliveryTitle": "Home delivery",
+      "deliveryText": "Within {km} km of the café: {areas}.",
+      "keysHint": "↑ ↓ to move, Enter to open, Esc to close. Press / on any page to search."
     },
     "notFound": {
       "eyebrow": "Error 404",
@@ -1479,7 +1595,8 @@
       "seo": {
         "title": "Veg Pizza in Barasat | 44 Paneer and Veg Pizzas",
         "description": "44 veg pizzas at Hungru Pizza, Colony More, Barasat: tandoori paneer, paneer makhani, sweetcorn, mushroom and more, from ₹120. Cheese burst on any."
-      }
+      },
+      "addOns": []
     },
     {
       "slug": "chicken-pizzas",
@@ -2375,7 +2492,8 @@
       "seo": {
         "title": "Chicken Pizza in Barasat | 52 Chicken Pizzas",
         "description": "52 chicken pizzas at Hungru Pizza, Barasat: BBQ, tandoori, peri peri, keema, hariyali and Gondhoraj chicken, from ₹120. Cheese burst on any pizza."
-      }
+      },
+      "addOns": []
     },
     {
       "slug": "kullad-and-kids-pizzas",
@@ -2531,7 +2649,8 @@
       "seo": {
         "title": "Kullad Pizza and Kids' Pizza in Barasat",
         "description": "Paneer and chicken kullad pizza from ₹150, the boat-shaped Ginnie pizza and 7 inch kids' pizzas with frog, lion and mummy faces. Hungru Pizza, Barasat."
-      }
+      },
+      "addOns": []
     },
     {
       "slug": "starters-and-sides",
@@ -3043,7 +3162,24 @@
       "seo": {
         "title": "Chicken Wings, Garlic Bread and Fries in Barasat",
         "description": "Cheesy samosas, paneer and chicken popcorn, crunchy wings, bhetki fish fry, wontons, garlic bread from ₹80 and fries at Hungru Pizza, Barasat."
-      }
+      },
+      "addOns": [
+        {
+          "id": "liquid-cheese-dip",
+          "label": "Liquid cheese dip",
+          "price": 20
+        },
+        {
+          "id": "hariyali-chutney",
+          "label": "Hariyali chutney",
+          "price": 20
+        },
+        {
+          "id": "coriander-chutney",
+          "label": "Special coriander chutney",
+          "price": 20
+        }
+      ]
     },
     {
       "slug": "momos-burgers-sandwiches",
@@ -3355,7 +3491,8 @@
       "seo": {
         "title": "Momos, Burgers and Sandwiches in Barasat",
         "description": "Veg, corn cheese and chicken momos from ₹89, tandoori and hariyali momos, veg and chicken burgers from ₹99, and grilled sandwiches at Hungru Pizza."
-      }
+      },
+      "addOns": []
     },
     {
       "slug": "drinks-and-desserts",
@@ -3663,45 +3800,64 @@
       "seo": {
         "title": "Cold Coffee, Mojitos and Choco Lava in Barasat",
         "description": "Cold coffee, virgin mojito, Blue Lagoon, Oreo and mango milkshakes, Gandhoraj lassi, tea, filter coffee and choco lava cake at Hungru Pizza, Barasat."
-      }
+      },
+      "addOns": []
     }
   ],
   "localities": [
     {
       "slug": "colony-more",
-      "name": "Colony More"
+      "name": "Colony More",
+      "lat": 22.72316,
+      "lng": 88.47847
     },
     {
       "slug": "champadali",
-      "name": "Champadali"
+      "name": "Champadali",
+      "lat": 22.7197,
+      "lng": 88.48782
     },
     {
       "slug": "nabapally",
-      "name": "Nabapally"
+      "name": "Nabapally",
+      "lat": 22.72173,
+      "lng": 88.47739
     },
     {
       "slug": "kazipara",
-      "name": "Kazipara"
+      "name": "Kazipara",
+      "lat": 22.72265,
+      "lng": 88.50837
     },
     {
       "slug": "banamalipur",
-      "name": "Banamalipur"
+      "name": "Banamalipur",
+      "lat": 22.72419,
+      "lng": 88.48344
     },
     {
       "slug": "dakbungalow",
-      "name": "Dakbungalow"
+      "name": "Dakbungalow",
+      "lat": 22.71139,
+      "lng": 88.47549
     },
     {
       "slug": "hridaypur",
-      "name": "Hridaypur"
+      "name": "Hridaypur",
+      "lat": 22.711,
+      "lng": 88.47
     },
     {
       "slug": "rathtala",
-      "name": "Rathtala"
+      "name": "Rathtala",
+      "lat": 22.70779,
+      "lng": 88.47452
     },
     {
       "slug": "madhyamgram",
-      "name": "Madhyamgram"
+      "name": "Madhyamgram",
+      "lat": 22.69239,
+      "lng": 88.46541
     }
   ],
   "widerArea": "anywhere within about 5 km",
@@ -4340,7 +4496,7 @@
         "title": "Privacy policy",
         "navLabel": "Privacy",
         "lead": "How {business} collects, uses and protects your personal details when you visit this website, order from us, call us or message us on WhatsApp, and the rights Indian law gives you over them.",
-        "updated": "2026-10-11",
+        "updated": "2026-10-12",
         "seo": {
           "title": "Privacy Policy",
           "description": "How Hungru Pizza collects, uses and protects your personal details, and your rights under India’s Digital Personal Data Protection Act, 2023."
@@ -4356,7 +4512,7 @@
           },
           {
             "heading": "What we collect and why",
-            "body": "**When you order by WhatsApp, phone or the order form**\n- Your name, phone number, delivery address or area, your order and any notes, such as allergies or “ring the bell twice”.\n- Why: to confirm your order, make it, hand it over or deliver it, and contact you if something changes.\n\n**When you pay**\n- UPI and card payments show us your name, the payment reference and the amount. Cash needs nothing.\n- Why: to match your payment to your order and keep the records that tax law asks for.\n\n**When you apply for a job**\n- Your name, phone number, the job you want, your experience, where you live and anything else you choose to tell us.\n- Why: to consider you for the job, call you back and arrange a chat. Nothing else.\n\n**When you visit this website**\n- Like every website, our hosting provider automatically records technical details: your IP address, browser and device type, the page you asked for and the time.\n- Why: to deliver the pages, keep the site secure and fix faults. We do not use these details to identify you or to build a profile.\n\nWe do not ask for sensitive details such as passwords, card numbers, health records or Aadhaar numbers. If you tell us about a food allergy, we use it only to make your order safely."
+            "body": "**When you order by WhatsApp, phone or the order form**\n- Your name, phone number, delivery address or area, your order and any notes, such as allergies or “ring the bell twice”.\n- Why: to confirm your order, make it, hand it over or deliver it, and contact you if something changes.\n- If you use **Check my distance** in the order form, your phone tells this page where you are, and only after you allow it. The page uses it to work out how far you are from the café; it is not saved or sent anywhere. If you then send your order, the distance and a map link to that spot go in your WhatsApp message, so our rider can find you.\n\n**When you pay**\n- UPI and card payments show us your name, the payment reference and the amount. Cash needs nothing.\n- Why: to match your payment to your order and keep the records that tax law asks for.\n\n**When you apply for a job**\n- Your name, phone number, the job you want, your experience, where you live and anything else you choose to tell us.\n- Why: to consider you for the job, call you back and arrange a chat. Nothing else.\n\n**When you visit this website**\n- Like every website, our hosting provider automatically records technical details: your IP address, browser and device type, the page you asked for and the time.\n- Why: to deliver the pages, keep the site secure and fix faults. We do not use these details to identify you or to build a profile.\n\nWe do not ask for sensitive details such as passwords, card numbers, health records or Aadhaar numbers. If you tell us about a food allergy, we use it only to make your order safely."
           },
           {
             "heading": "Why we are allowed to use your details",
@@ -4478,7 +4634,7 @@
         "title": "Cookie policy",
         "navLabel": "Cookies",
         "lead": "Which cookies and browser storage this website uses (very few), what other companies may set, and how you can control them.",
-        "updated": "2026-10-11",
+        "updated": "2026-10-12",
         "seo": {
           "title": "Cookie Policy",
           "description": "This website uses no tracking or advertising cookies. See which cookies Google Maps may set, and how to control cookies in your browser."
@@ -4494,7 +4650,7 @@
           },
           {
             "heading": "Cookies we use",
-            "body": "**For visitors: no cookies, and one setting in local storage, only if you use it.**\n- **hungru-theme** (local storage): remembers whether you chose the light or the dark look with the switch at the top of the page. It holds just the word light or dark, never leaves your browser, and stays until you clear it. Without it, the site follows your device's own setting.\n\n**For the shop owner only:** our team edits this website through a private editing page. Signing in there sets one cookie, and the editor saves unfinished changes in that browser’s local storage. Visitors never get either of them.\n- **hungru_admin** (cookie): keeps the owner signed in to the editor. Strictly necessary. Only our server can read it, and it is deleted after 7 days or on signing out.\n- **hungru-admin-draft** (local storage): keeps edits that are not yet published, so they are not lost if the tab closes. Deleted when the changes are published or thrown away."
+            "body": "**For visitors: no cookies, and two things in local storage, only if you use them.**\n- **hungru-theme** (local storage): remembers whether you chose the light or the dark look with the switch at the top of the page. It holds just the word light or dark, never leaves your browser, and stays until you clear it. Without it, the site follows your device's own setting.\n- **hungru-cart** (local storage): what you have put in your cart (which dishes, sizes and how many), so it is still there if you reload or come back later. It never leaves your browser until you send your order to us on WhatsApp, and goes when you empty the cart or clear your browser's data.\n\n**For the shop owner only:** our team edits this website through a private editing page. Signing in there sets one cookie, and the editor saves unfinished changes in that browser’s local storage. Visitors never get either of them.\n- **hungru_admin** (cookie): keeps the owner signed in to the editor. Strictly necessary. Only our server can read it, and it is deleted after 7 days or on signing out.\n- **hungru-admin-draft** (local storage): keeps edits that are not yet published, so they are not lost if the tab closes. Deleted when the changes are published or thrown away."
           },
           {
             "heading": "Cookies set by other companies",

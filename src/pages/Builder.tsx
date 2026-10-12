@@ -1,5 +1,5 @@
 import { useEffect, useId, useState } from "react";
-import { Info, Minus, Phone, Plus } from "lucide-react";
+import { Info, Minus, Phone, Plus, ShoppingBag } from "lucide-react";
 import { DietMark } from "@/components/common/DietMark";
 import { WhatsAppIcon } from "@/components/common/icons";
 import { PageHero } from "@/components/common/PageHero";
@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { builder, business, copy, pageSeo } from "@/data/site";
 import type { BuilderOption, BuilderSize } from "@/data/types";
 import { clampQuantity, cleanToppings, extraCost, pizzaDiet, pricePizza } from "@/lib/builder";
+import { addToCart } from "@/lib/cart-store";
 import { formatINR } from "@/lib/format";
 import { paths, telHref } from "@/lib/paths";
 import { breadcrumbSchema } from "@/lib/schema";
@@ -98,8 +99,7 @@ export default function Builder() {
   const label = (list: BuilderOption[], id: string) => list.find((x) => x.id === id)?.label ?? id;
   const extraLabel = (o: BuilderOption) => extra(extraCost(o, sizeOption));
 
-  const toggleTopping = (id: string) =>
-    setToppings((t) => (t.includes(id) ? t.filter((x) => x !== id) : cleanToppings([...t, id], builder)));
+  const toggleTopping = (id: string) => setToppings((t) => (t.includes(id) ? t.filter((x) => x !== id) : cleanToppings([...t, id], builder)));
 
   const message = builderMessage(
     {
@@ -123,14 +123,7 @@ export default function Builder() {
       <section aria-label="Pizza builder" className="wrap py-14 md:py-20">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-10">
           <form className="flex min-w-0 flex-col gap-11 lg:col-span-7" onSubmit={(e) => e.preventDefault()} aria-label="Your pizza">
-            <RadioCards
-              legend={text.sizeLegend}
-              name="size"
-              options={builder.sizes}
-              value={size}
-              onChange={setSize}
-              priceLabel={(o) => formatINR(o.price)}
-            />
+            <RadioCards legend={text.sizeLegend} name="size" options={builder.sizes} value={size} onChange={setSize} priceLabel={(o) => formatINR(o.price)} />
             <RadioCards legend={text.baseLegend} name="base" options={builder.bases} value={base} onChange={setBase} priceLabel={extraLabel} />
             <RadioCards legend={text.cheeseLegend} name="cheese" options={builder.cheeses} value={cheese} onChange={setCheese} priceLabel={extraLabel} />
 
@@ -216,7 +209,15 @@ export default function Builder() {
                   <Info className="mt-0.5 size-4 shrink-0 text-maroon-600" aria-hidden="true" />
                   {text.disclaimer}
                 </p>
-                <Button asChild variant="whatsapp" size="lg" className="mt-4 w-full">
+                <Button
+                  size="lg"
+                  className="mt-4 w-full"
+                  onClick={() => addToCart({ kind: "pizza", size, base, cheese, toppings, qty: price.quantity }, `${copy.cart.builtName}, ${sizeOption.label}`)}
+                >
+                  <ShoppingBag />
+                  {copy.cart.builderAdd}
+                </Button>
+                <Button asChild variant="whatsapp" size="lg" className="mt-3 w-full">
                   <a href={waUrl(message)} target="_blank" rel="noopener noreferrer">
                     <WhatsAppIcon className="size-5" />
                     {text.orderButton}

@@ -1,5 +1,6 @@
 // JSON-LD builders. Placeholder reviews are deliberately never added to structured data.
-import { business, localities, pageSeo, photos, services, widerArea } from "@/data/site";
+import { business, localities, pageSeo, photos, services } from "@/data/site";
+import { deliveryLocalities } from "./distance";
 import type { BlogPost, Faq, MenuItem, Service } from "@/data/types";
 import { paths } from "./paths";
 import { canonicalUrl, siteOrigin } from "./seo";
@@ -9,7 +10,11 @@ import { ogImageUrl } from "./photo";
 const businessId = () => `${siteOrigin()}/#business`;
 const menuId = () => `${canonicalUrl(paths.services)}#menu`;
 /** The business's own pages elsewhere: social pages, delivery apps and its Google listing. */
-const sameAs = () => [...business.social, ...business.orderOnline].map((l) => l.url).concat(business.googleReviewsUrl).filter((u) => u.startsWith("https://"));
+const sameAs = () =>
+  [...business.social, ...business.orderOnline]
+    .map((l) => l.url)
+    .concat(business.googleReviewsUrl)
+    .filter((u) => u.startsWith("https://"));
 
 export function businessSchema() {
   return {
@@ -35,6 +40,7 @@ export function businessSchema() {
       postalCode: business.address.postalCode,
       addressCountry: business.address.country,
     },
+    geo: { "@type": "GeoCoordinates", latitude: business.geo.lat, longitude: business.geo.lng },
     hasMap: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(business.mapsQuery)}`,
     openingHoursSpecification: [
       {
@@ -44,9 +50,14 @@ export function businessSchema() {
         closes: business.hours.closes,
       },
     ],
+    // The named areas, and the delivery circle itself (radius in metres).
     areaServed: [
-      ...localities.map((l) => ({ "@type": "Place", name: `${l.name}, ${business.address.region}` })),
-      { "@type": "Place", name: `${widerArea[0]!.toUpperCase()}${widerArea.slice(1)} of ${business.address.locality}` },
+      ...deliveryLocalities(localities, business.geo, business.deliveryKm).map((l) => ({ "@type": "Place", name: `${l.name}, ${business.address.region}` })),
+      {
+        "@type": "GeoCircle",
+        geoMidpoint: { "@type": "GeoCoordinates", latitude: business.geo.lat, longitude: business.geo.lng },
+        geoRadius: business.deliveryKm * 1000,
+      },
     ],
     // A sample rating (demo mode) is never sent to Google.
     ...(business.demoMode
@@ -128,7 +139,9 @@ export function menuSchema() {
 }
 
 function postAuthor(post: BlogPost) {
-  return post.author && post.author !== business.name ? { "@type": "Person", name: post.author } : { "@type": "Organization", name: business.name, url: `${siteOrigin()}/` };
+  return post.author && post.author !== business.name
+    ? { "@type": "Person", name: post.author }
+    : { "@type": "Organization", name: business.name, url: `${siteOrigin()}/` };
 }
 
 /** One blog post, on its own page. */

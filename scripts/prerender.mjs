@@ -11,7 +11,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const dist = path.join(root, "dist");
 const ssrDir = path.join(root, "dist-ssr");
 
-const { render, routes, legalRoutes, siteUrl, contentProblems, faviconSource } = await import(pathToFileURL(path.join(ssrDir, "entry-server.js")).href);
+const { render, routes, unlistedRoutes, legalRoutes, siteUrl, contentProblems, faviconSource } = await import(pathToFileURL(path.join(ssrDir, "entry-server.js")).href);
 
 // Content edited in the admin panel is checked again here. On Vercel a failed build keeps the previous version live.
 for (const p of contentProblems.filter((x) => x.level === "warning")) console.warn(`! content: ${p.message}`);
@@ -118,7 +118,7 @@ function page(url, html, head) {
 }
 
 let count = 0;
-for (const url of routes) {
+for (const url of [...routes, ...unlistedRoutes]) {
   const { html, head } = await render(url);
   const outDir = path.join(dist, ...url.split("/").filter(Boolean));
   await mkdir(outDir, { recursive: true });

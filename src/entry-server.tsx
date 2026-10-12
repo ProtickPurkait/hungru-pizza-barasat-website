@@ -6,6 +6,7 @@ import { App } from "./App";
 import { eagerPages } from "./pages/eager";
 import { business, getContent, photos } from "./data/site";
 import { checkContent } from "./lib/content-check";
+import { paths } from "./lib/paths";
 import { legalRoutesFor, routesFor } from "./lib/routes";
 import { HeadContext, renderHeadHtml, type HeadData } from "./lib/seo";
 
@@ -33,6 +34,8 @@ export async function render(url: string): Promise<{ html: string; head: string 
 }
 
 export const routes = routesFor(getContent());
+/** Prerendered too, but kept out of the sitemap (and out of Google, with noindex): the cart. */
+export const unlistedRoutes = [paths.cart];
 /** Policy pages get a low priority in the sitemap. */
 export const legalRoutes = legalRoutesFor(getContent());
 export const siteUrl = business.siteUrl.replace(/\/$/, "");

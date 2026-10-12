@@ -1,5 +1,6 @@
 import { useId, useRef, useState, type FormEvent } from "react";
-import { CheckCircle2, MessageCircleQuestion, Phone } from "lucide-react";
+import { CheckCircle2, MessageCircleQuestion, Phone, ShoppingBag } from "lucide-react";
+import { Link } from "react-router";
 import { WhatsAppIcon } from "@/components/common/icons";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -8,31 +9,46 @@ import { NativeSelect, NativeSelectOption } from "@/components/ui/native-select"
 import { Textarea } from "@/components/ui/textarea";
 import { InlineText } from "@/components/common/Prose";
 import { RichText } from "@/components/common/RichText";
-import { business, copy, localities, whenOptions, widerArea } from "@/data/site";
-import { telHref } from "@/lib/paths";
+import { itemsText, useCartCount } from "@/components/layout/CartLinks";
+import { business, copy, localities, whenOptions } from "@/data/site";
+import { deliveryLocalities, formatKm, mapsLink } from "@/lib/distance";
+import { paths, telHref } from "@/lib/paths";
 import { MESSAGE_MAX, ORDER_MAX, validateOrder, type FormErrors } from "@/lib/validation";
 import { openWhatsApp, orderMessage, waUrl, type OrderForm as FormValues } from "@/lib/whatsapp";
 import { fill } from "@/lib/text";
 import { cn } from "@/lib/utils";
+import { DistanceCheck, type DistanceResult } from "./DistanceCheck";
 
 const fieldOrder: (keyof FormValues)[] = ["name", "phone", "locality", "when", "order", "message"];
+/** "Deliver to": somewhere not in the area list, checked by distance. */
+const ELSEWHERE = "elsewhere";
 
 interface OrderFormProps {
   /** Pre-selects the delivery area, e.g. on an area page. Use the locality name. */
   defaultLocality?: string;
+  /**
+   * On the cart page: the cart written out as order lines. The "your order" box is left out
+   * and the cart is sent instead; after sending, the visitor can empty the cart.
+   */
+  cart?: { text: string; onNewOrder: () => void };
   className?: string;
 }
 
 /** Order form. No backend: on submit it opens WhatsApp with the order written out. */
-export function OrderForm({ defaultLocality = "", className }: OrderFormProps) {
+export function OrderForm({ defaultLocality = "", cart, className }: OrderFormProps) {
   const uid = useId();
   const id = (name: string) => `${uid}-${name}`;
-  const [values, setValues] = useState<FormValues>({ name: "", phone: "", locality: defaultLocality, when: "", order: "", message: "" });
+  // Only the areas inside the delivery circle are offered (an area page outside it starts with nothing chosen).
+  const areas = deliveryLocalities(localities, business.geo, business.deliveryKm);
+  const start = areas.some((a) => a.name === defaultLocality) ? defaultLocality : "";
+  const [values, setValues] = useState<FormValues>({ name: "", phone: "", locality: start, when: "", order: "", message: "" });
+  const [distance, setDistance] = useState<DistanceResult>({ status: "idle" });
   const [errors, setErrors] = useState<FormErrors>({});
   const [sentUrl, setSentUrl] = useState<string | null>(null);
   const refs = useRef<Partial<Record<keyof FormValues, HTMLElement | null>>>({});
   const text = copy.form;
-  const otherArea = `Other (${widerArea})`;
+  const cartCount = useCartCount();
+  const km = business.deliveryKm;
   const ref = (key: keyof FormValues) => (el: HTMLElement | null) => {
     refs.current[key] = el;
   };
@@ -44,19 +60,33 @@ export function OrderForm({ defaultLocality = "", className }: OrderFormProps) {
 
   function onSubmit(e: FormEvent) {
     e.preventDefault();
-    const found = validateOrder(values);
+    let sending = cart ? { ...values, order: cart.text } : values;
+    const found = validateOrder(sending);
+    // A cart can be longer than a typed order; WhatsApp takes it all.
+    if (cart) delete found.order;
+    // Somewhere not in the list: only once the distance check says it is inside the delivery circle.
+    if (values.locality === ELSEWHERE) {
+      if (distance.status === "in")
+        sending = { ...sending, locality: fill(copy.delivery.otherInMessage, { distance: formatKm(distance.km) }), location: mapsLink(distance.at) };
+      else found.locality = distance.status === "out" ? fill(copy.delivery.tooFar, { km }) : copy.delivery.needCheck;
+    }
     setErrors(found);
     const first = fieldOrder.find((k) => found[k]);
     if (first) {
       refs.current[first]?.focus();
       return;
     }
-    const url = waUrl(orderMessage(values));
+    const url = waUrl(orderMessage(sending));
     setSentUrl(url);
     openWhatsApp(url);
   }
 
   const describedBy = (key: keyof FormValues) => (errors[key] ? id(`${key}-error`) : undefined);
+
+  const onDistance = (r: DistanceResult) => {
+    setDistance(r);
+    if (r.status === "in" && errors.locality) setErrors((e) => ({ ...e, locality: undefined }));
+  };
 
   const errorText = (key: keyof FormValues) =>
     errors[key] ? (
@@ -87,6 +117,11 @@ export function OrderForm({ defaultLocality = "", className }: OrderFormProps) {
             </a>
           </Button>
         </div>
+        {cart && (
+          <Button variant="outline" className="mt-3 w-full sm:w-auto" onClick={cart.onNewOrder}>
+            {copy.cart.newOrder}
+          </Button>
+        )}
         <button
           type="button"
           onClick={() => setSentUrl(null)}
@@ -100,6 +135,16 @@ export function OrderForm({ defaultLocality = "", className }: OrderFormProps) {
 
   return (
     <form noValidate onSubmit={onSubmit} className={cn("ground-light round-panel bg-sheet p-5 [--cut:28px] sm:p-9", className)} aria-label="Order form">
+      {/* Elsewhere on the site, a reminder that the cart is waiting, so it is not left behind. */}
+      {!cart && cartCount > 0 && (
+        <p className="mb-6 flex flex-wrap items-center gap-x-3 gap-y-2 rounded-md bg-cheese-300/35 px-4 py-3 text-sm text-ink dark:bg-ash-100">
+          <ShoppingBag className="size-5 shrink-0 text-maroon-600" aria-hidden="true" />
+          <span>{fill(copy.cart.formBanner, { items: itemsText(cartCount) })}</span>
+          <Link to={paths.cart} className="min-h-11 content-center font-semibold underline decoration-maroon-500 decoration-2 underline-offset-4">
+            {copy.cart.formBannerLink}
+          </Link>
+        </p>
+      )}
       <div className="grid gap-x-4 gap-y-5 sm:grid-cols-2">
         <div>
           <Label htmlFor={id("name")}>{text.name}</Label>
@@ -145,18 +190,22 @@ export function OrderForm({ defaultLocality = "", className }: OrderFormProps) {
             value={values.locality}
             onChange={(e) => update("locality", e.target.value)}
             aria-invalid={!!errors.locality}
-            aria-describedby={describedBy("locality")}
+            aria-describedby={[id("locality-note"), describedBy("locality")].filter(Boolean).join(" ")}
             required
           >
             <NativeSelectOption value="">{text.areaPlaceholder}</NativeSelectOption>
             <NativeSelectOption value={text.pickup}>{text.pickup}</NativeSelectOption>
-            {localities.map((l) => (
+            {areas.map((l) => (
               <NativeSelectOption key={l.slug} value={l.name}>
                 {l.name}
               </NativeSelectOption>
             ))}
-            <NativeSelectOption value={otherArea}>{otherArea}</NativeSelectOption>
+            <NativeSelectOption value={ELSEWHERE}>{fill(copy.delivery.otherArea, { km })}</NativeSelectOption>
           </NativeSelect>
+          <p id={id("locality-note")} className="mt-1.5 text-sm text-ash-600">
+            {fill(copy.delivery.note, { km })}
+          </p>
+          {values.locality === ELSEWHERE && <DistanceCheck result={distance} onResult={onDistance} onPickup={() => update("locality", text.pickup)} />}
           {errorText("locality")}
         </div>
 
@@ -182,23 +231,25 @@ export function OrderForm({ defaultLocality = "", className }: OrderFormProps) {
           {errorText("when")}
         </div>
 
-        <div className="sm:col-span-2">
-          <Label htmlFor={id("order")}>{text.order}</Label>
-          <Textarea
-            id={id("order")}
-            ref={ref("order")}
-            className="mt-1.5"
-            rows={3}
-            maxLength={ORDER_MAX + 50}
-            placeholder={text.orderPlaceholder}
-            value={values.order}
-            onChange={(e) => update("order", e.target.value)}
-            aria-invalid={!!errors.order}
-            aria-describedby={describedBy("order")}
-            required
-          />
-          {errorText("order")}
-        </div>
+        {!cart && (
+          <div className="sm:col-span-2">
+            <Label htmlFor={id("order")}>{text.order}</Label>
+            <Textarea
+              id={id("order")}
+              ref={ref("order")}
+              className="mt-1.5"
+              rows={3}
+              maxLength={ORDER_MAX + 50}
+              placeholder={text.orderPlaceholder}
+              value={values.order}
+              onChange={(e) => update("order", e.target.value)}
+              aria-invalid={!!errors.order}
+              aria-describedby={describedBy("order")}
+              required
+            />
+            {errorText("order")}
+          </div>
+        )}
 
         <div className="sm:col-span-2">
           <Label htmlFor={id("message")}>
@@ -219,10 +270,13 @@ export function OrderForm({ defaultLocality = "", className }: OrderFormProps) {
         </div>
       </div>
 
-      <p className="mt-5 flex items-start gap-3 rounded-md border-l-[3px] border-maroon-500 bg-ground-2 px-4 py-3 text-sm text-ash-700">
-        <MessageCircleQuestion className="mt-0.5 size-5 shrink-0 text-maroon-600" aria-hidden="true" />
-        <span>{text.menuNote}</span>
-      </p>
+      {/* "Not sure what to get?": not needed once the cart is chosen. */}
+      {!cart && (
+        <p className="mt-5 flex items-start gap-3 rounded-md border-l-[3px] border-maroon-500 bg-ground-2 px-4 py-3 text-sm text-ash-700">
+          <MessageCircleQuestion className="mt-0.5 size-5 shrink-0 text-maroon-600" aria-hidden="true" />
+          <span>{text.menuNote}</span>
+        </p>
+      )}
 
       <Button type="submit" variant="whatsapp" size="lg" className="mt-6 w-full">
         <WhatsAppIcon className="size-5" />

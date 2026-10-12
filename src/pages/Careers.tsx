@@ -36,7 +36,7 @@ function JobCard({ job, onApply }: { job: JobOpening; onApply: () => void }) {
   return (
     <article aria-labelledby={`job-${job.id}`} className="rounded-[var(--cut)] bg-sheet p-6 sm:p-8">
       <div className="flex flex-wrap items-center gap-3">
-        <h3 id={`job-${job.id}`} className="text-[1.9rem] sm:text-[2.3rem]">
+        <h3 id={`job-${job.id}`} data-flash className="text-[1.9rem] sm:text-[2.3rem]">
           {job.title}
         </h3>
         {job.placeholder && <DemoTag>Sample</DemoTag>}
