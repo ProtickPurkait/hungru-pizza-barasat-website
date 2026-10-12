@@ -1,7 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router";
 import { Reveal } from "@/components/common/Reveal";
-import { ServiceIcon } from "@/components/common/ServiceIcon";
 import { SitePhoto } from "@/components/common/SitePhoto";
 import { copy, services } from "@/data/site";
 import { formatINR } from "@/lib/format";
@@ -35,11 +34,8 @@ export function MenuTeaser() {
               // Uploaded photos are not cropped by the photo service; tall ones keep their top half, where a dish's face usually is.
               imgClassName="object-[50%_30%] transition-transform duration-700 ease-out-expo group-hover:scale-[1.06]"
             />
-            <span className="flex flex-1 flex-col px-4 pb-4 sm:px-5 sm:pb-5">
-              <span className="relative -mt-[1.375rem] grid size-11 place-items-center rounded-full bg-maroon-50 text-maroon-600 ring-4 ring-sheet">
-                <ServiceIcon icon={s.icon} className="size-5" />
-              </span>
-              <h3 className="mt-3 text-[1.35rem] leading-[1.02] sm:text-[1.5rem]">{s.shortName}</h3>
+            <span className="flex flex-1 flex-col p-4 sm:p-5">
+              <h3 className="text-[1.35rem] leading-[1.02] sm:text-[1.5rem]">{s.shortName}</h3>
               <span className="mt-1.5 text-sm text-ash-600">{fill(text.dishCount, { count: s.items.length })}</span>
               <span className="mt-auto flex items-end justify-between gap-2 pt-4">
                 <span className="flex items-baseline gap-1.5">
